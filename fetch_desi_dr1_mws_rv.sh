@@ -44,8 +44,9 @@ mkdir -p "${DATA_ROOT}/raw" "${DATA_ROOT}/derived" "${DATA_ROOT}/logs" "${DATA_R
 # File format: URL|SIZE_BYTES|SHA256|DESCRIPTION
 if [ "$QUICK_MODE" = true ]; then
     # Quick mode: smallest single-epoch file that still has multi-epoch data
+    # AUDIT FIX: Correct file size is 129271680 bytes (verified via HEAD request)
     FILES=(
-        "${BASE_URL}/rv_output/240521/rvpix_exp-special-bright.fits|135266880||Single-epoch RV (special-bright, ~129MB)"
+        "${BASE_URL}/rv_output/240521/rvpix_exp-special-bright.fits|129271680||Single-epoch RV (special-bright, ~123MB)"
     )
     echo "==> Quick mode: downloading minimal test file (~129 MB)"
 else

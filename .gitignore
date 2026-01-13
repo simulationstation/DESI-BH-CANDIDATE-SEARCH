@@ -1,0 +1,7 @@
+# Data files (downloaded separately)
+data/raw/*.fits
+data/logs/
+data/manifests/
+
+# Keep derived results tracked
+!data/derived/
