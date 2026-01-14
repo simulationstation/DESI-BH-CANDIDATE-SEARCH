@@ -20,6 +20,34 @@ where:
 
 ---
 
+## Analysis Results (2026-01-14)
+
+First measurement using DESI DR1 LRG × Planck SMICA:
+
+| Redshift Bin | N Galaxies | Amplitude (μK) | S/N |
+|--------------|------------|----------------|-----|
+| 0.40 < z < 0.66 | 712,875 | -344 ± 57 | 6.08σ |
+| 0.66 < z < 0.83 | 712,876 | -378 ± 81 | 4.66σ |
+| 0.83 < z < 1.10 | 712,876 | +172 ± 101 | 1.70σ |
+
+**Joint Amplitude: -263.60 ± 42.20 μK (6.25σ)**
+
+### Data Used
+- **DESI DR1 LRG**: 2,138,627 galaxies (NGC + SGC)
+- **Planck SMICA**: NSIDE=2048, 50M pixels
+- **Covariance**: 50-region spatial jackknife
+- **Separation range**: 20-150 Mpc/h (10 bins)
+
+### Interpretation
+The measured amplitude (~264 μK) exceeds the expected kSZ signal (~0.1-1 μK) by 2-3 orders of magnitude. This indicates the measurement is dominated by:
+- CMB primary anisotropies
+- tSZ contamination from galaxy clusters
+- Survey geometry effects
+
+Isolating the pure kSZ signal requires additional systematic controls (tSZ masking, null tests, ACT cross-check) implemented in the full pipeline.
+
+---
+
 ## Key Features
 
 - **Tomographic analysis**: Minimum 3 redshift bins for LRG
