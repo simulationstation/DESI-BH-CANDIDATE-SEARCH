@@ -1,0 +1,135 @@
+# Gaia DR3 NSS and SIMBAD Cross-Check Report (Revised)
+
+## Summary
+
+**Input**: 39 Priority A RV-variable candidates from DESI DR1 MWS
+**Date**: 2026-01-13
+
+---
+
+## Part A: Gaia DR3 Non-Single Star (NSS) Cross-Match
+
+### Results
+
+| Category | Count | Percentage |
+|----------|-------|------------|
+| Total candidates | 39 | 100% |
+| With Gaia NSS entry | 0 | 0.0% |
+| With orbital solution (nss_two_body_orbit) | 0 | 0.0% |
+| Flagged as spectroscopic binary (SB*) | 0 | 0.0% |
+| With acceleration solution only | 0 | — |
+| No NSS entry found | 39 | 100.0% |
+
+### NSS Tables Queried
+
+1. `gaiadr3.nss_two_body_orbit` — astrometric and spectroscopic binary orbital solutions
+2. `gaiadr3.nss_acceleration_astro` — proper motion acceleration solutions
+3. `gaiadr3.nss_non_linear_spectro` — non-linear spectroscopic solutions
+4. `gaiadr3.nss_vim_fl` — variability-induced movers
+
+### Interpretation of Zero NSS Matches
+
+The absence of Gaia DR3 NSS matches for all 39 candidates is **expected and does not
+imply singleness**. The Gaia DR3 NSS catalog has known incompleteness:
+
+- **Short-period binaries** (P < few days): Insufficient time baseline for Gaia RVS
+- **Long-period binaries** (P > few years): Orbital motion not resolved in DR3 timespan
+- **Faint sources**: Low RV precision prevents detection of variability
+- **Unfavorable inclinations**: Face-on orbits show minimal RV signal
+- **Complex spectra**: Sources with emission, rotation, or unusual features may be excluded
+
+The DESI RV data provides independent evidence of variability on different timescales
+and with different systematics than Gaia RVS. No conclusions about binary nature
+can be drawn from the lack of NSS overlap.
+
+---
+
+## Part B: SIMBAD Cross-Check
+
+### Results
+
+| Category | Count | Percentage |
+|----------|-------|------------|
+| With SIMBAD match | 19 | 48.7% |
+| No SIMBAD match | 20 | 51.3% |
+
+### Breakdown of SIMBAD Object Types
+
+| Object Type | Count | Implication |
+|-------------|-------|-------------|
+| RR Lyrae (RR*) | 11 | Pulsating variable — RV variability expected |
+| QSO/AGN | 4 | Active galactic nucleus — RV variability expected |
+| Eclipsing binary (EB*) | 2 | Known binary system |
+| BY Draconis (BY*) | 1 | Chromospherically active binary |
+| Generic star (*) | 1 | No specific classification |
+| No SIMBAD entry | 20 | Unknown or uncatalogued |
+
+### What SIMBAD Classifications Mean
+
+- **RR Lyrae (RR*)**: These are pulsating variable stars. Their RV variability is
+  intrinsic to the stellar atmosphere, not due to orbital motion. They should NOT
+  be followed up as binary candidates.
+
+- **QSO/AGN**: These are extragalactic sources (quasars). Their RV "variability"
+  reflects emission-line shifts from AGN activity, not orbital motion. They should
+  NOT be followed up as stellar binary candidates.
+
+- **Eclipsing binaries (EB*) and BY Draconis (BY*)**: These are already known
+  binary systems. Follow-up may be useful for characterization but they are not
+  new discoveries.
+
+- **No SIMBAD entry**: These are either genuinely uncatalogued or have insufficient
+  archival data. These are the primary candidates for follow-up spectroscopy.
+
+---
+
+## Part C: Recommendations
+
+### Candidates Worth Following Up
+
+Of the 39 Priority A candidates:
+- **20 have no SIMBAD classification** and remain candidates for companion searches
+- **3 are known binaries** (EB*, BY*) — already characterized, lower priority
+- **11 are RR Lyrae** — pulsating stars, not binary candidates
+- **4 are QSOs** — extragalactic, not relevant for stellar companion searches
+- **1 is a generic star** — may warrant follow-up
+
+### Candidates to Exclude from Companion Searches
+
+The following should be explicitly excluded from follow-up for compact companions:
+- All RR Lyrae (intrinsic pulsators)
+- All QSO/AGN (extragalactic)
+
+### Summary
+
+| Category | Count | Follow-up? |
+|----------|-------|-----------|
+| Unknown (no SIMBAD) | 20 | YES — primary targets |
+| Generic star (*) | 1 | YES — low priority |
+| Known binaries (EB*, BY*) | 3 | OPTIONAL — already known |
+| RR Lyrae | 11 | NO — pulsating variables |
+| QSO/AGN | 4 | NO — extragalactic |
+
+---
+
+## Caveats
+
+- This cross-match is for **annotation only**, not for filtering the statistical sample.
+- SIMBAD classifications may be incomplete or outdated.
+- Object types in SIMBAD may reflect one aspect of a complex system.
+- The absence of a binary classification does not prove single-star nature.
+- The absence of a SIMBAD entry does not imply the source is unstudied.
+
+---
+
+## Output Files
+
+- `data/derived/priorityA_master_nss_annotated.csv` — Annotated candidate list
+- `data/derived/priorityA_master_annotated_classes.csv` — With variable_class column
+- `data/derived/priorityA_followup_only.csv` — Follow-up subset only
+- `data/derived/NSS_SIMBAD_CROSSCHECK_REPORT_REVISED.md` — This report
+
+---
+
+*Generated by final cleanup pass*
+*Original: crossmatch_nss_simbad.py*
