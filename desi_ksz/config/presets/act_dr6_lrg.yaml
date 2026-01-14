@@ -1,0 +1,90 @@
+# DESI kSZ Analysis Configuration
+# ACT DR6 + DESI LRG
+
+# Pipeline identification
+name: "ACT DR6 x DESI LRG"
+description: "Pairwise kSZ analysis using ACT DR6 CMB maps and DESI LRG galaxies"
+version: "1.0"
+
+# Galaxy catalog settings
+catalog:
+  tracer: "LRG"
+  data_source: "DESI DR1 LSS"
+  data_dir: "data/ksz/catalogs"
+  redshift_bins:
+    - [0.4, 0.6]
+    - [0.6, 0.8]
+    - [0.8, 1.0]
+  quality_cuts:
+    z_flag: 0
+    nobs_min: 1
+    stellar_contamination: true
+
+# CMB map settings
+cmb:
+  source: "act_dr6"
+  frequency: "f150"
+  data_dir: "data/ksz/maps"
+  beam_fwhm_arcmin: 1.4
+  pixel_size_arcmin: 0.5
+
+# Aperture photometry settings
+aperture:
+  theta_inner: 1.8  # arcmin
+  theta_outer: 5.0  # arcmin
+  compensated: true
+
+# Pairwise estimator settings
+estimator:
+  separation_bins:
+    min: 20.0   # Mpc/h
+    max: 150.0  # Mpc/h
+    n_bins: 15
+  max_separation: 200.0  # Mpc/h (for pair search)
+
+# Covariance estimation
+covariance:
+  method: "jackknife"
+  n_regions: 100
+  region_method: "healpix"
+  hartlap_correction: true
+
+# Null tests
+null_tests:
+  tests:
+    - shuffle_temperatures
+    - scramble_redshifts
+    - hemisphere_split
+    - even_odd_split
+  n_realizations: 1000
+  pte_threshold: 0.05
+
+# Inference settings
+inference:
+  method: "analytic"  # or "mcmc"
+  prior_bounds:
+    A_ksz: [-5.0, 5.0]
+  # MCMC settings (if method: mcmc)
+  mcmc:
+    n_walkers: 32
+    n_steps: 5000
+    n_burnin: 1000
+
+# Output settings
+output:
+  base_dir: "data/ksz"
+  formats:
+    - csv
+    - fits
+    - h5
+  plots:
+    format: pdf
+    style: paper
+
+# Cosmology (Planck 2018)
+cosmology:
+  H0: 67.36
+  Om0: 0.3153
+  Ob0: 0.0493
+  sigma8: 0.8111
+  ns: 0.9649
