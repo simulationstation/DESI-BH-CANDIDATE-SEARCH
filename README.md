@@ -88,16 +88,21 @@ The initial search yielded 21 candidate systems. Following the validation pipeli
 | **RUWE** | 1.95 | Astrometric wobble |
 | **W1-W2** | 0.052 | No IR excess |
 
-#### Per-Epoch Radial Velocities
+#### Combined RV Time Series (LAMOST + DESI)
 
-| Epoch | MJD | RV (km/s) | σ_RV (km/s) |
-|-------|-----|-----------|-------------|
-| 1 | 59568.48825 | -86.39 | 0.55 |
-| 2 | 59605.38003 | +59.68 | 0.83 |
-| 3 | 59607.37393 | +26.43 | 1.06 |
-| 4 | 59607.38852 | +25.16 | 1.11 |
+| Source | MJD | Date | RV (km/s) | σ_RV (km/s) |
+|--------|-----|------|-----------|-------------|
+| LAMOST | 57457.000 | 2016-03-10 | -49.36 | 2.79 |
+| DESI | 59568.488 | 2021-12-20 | -86.39 | 0.55 |
+| DESI | 59605.380 | 2022-01-26 | +59.68 | 0.83 |
+| DESI | 59607.374 | 2022-01-28 | +26.43 | 1.06 |
+| DESI | 59607.389 | 2022-01-28 | +25.16 | 1.11 |
 
-**Note:** Epoch 1 has high leverage (d_max = 113). When removed, S drops from 79.8 to 19.8. Epochs 3 & 4 (same night, 21 min apart) are consistent at 0.83σ, validating pipeline reliability.
+**Total baseline:** 2150 days (5.9 years) across 5 epochs.
+
+**LAMOST classification:** dM0 (M0 dwarf) — confirms late-type primary assumption.
+
+**Note:** DESI Epoch 1 has high leverage (d_max = 113). When removed, S drops from 79.8 to 19.8. DESI Epochs 3 & 4 (same night, 21 min apart) are consistent at 0.83σ. LAMOST RV (-49.36 km/s) falls between DESI extrema, consistent with orbital motion.
 
 ---
 
@@ -124,11 +129,17 @@ The initial search yielded 21 candidate systems. Following the validation pipeli
 - Source appears isolated
 - No blending detected
 
+### Gaia DR3 NSS & Archival RVs
+- **No Gaia DR3 NSS solution** (two-body orbit, acceleration, compact companion)
+- **No Gaia epoch RVs** (star too faint for RVS at G=17.27)
+- **No RAVE/APOGEE/GALAH** cross-matches
+- **LAMOST DR7:** One epoch found (MJD 57457, RV = -49.36 km/s)
+
 ---
 
 ## Orbit Feasibility Analysis
 
-Using K_est = 73 km/s (ΔRV/2) and assuming M₁ = 0.5-1.0 M☉:
+Using K_est = 73 km/s (ΔRV/2) and M₁ ≈ 0.5 M☉ (from LAMOST dM0 classification):
 
 | Period (days) | f(M) (M☉) | M₂_min (M₁=0.7) | Interpretation |
 |---------------|-----------|-----------------|----------------|
@@ -151,7 +162,7 @@ Using K_est = 73 km/s (ΔRV/2) and assuming M₁ = 0.5-1.0 M☉:
 
 3. **Companion Type Ambiguity:** Negative-space analysis rules out M-dwarf and hot WD but cannot distinguish cool WD vs NS vs BH.
 
-4. **Primary Mass Uncertainty:** Parallax (0.12 ± 0.16 mas) is too uncertain to constrain primary mass. We assume M₁ ~ 0.5-1.2 M☉.
+4. **Primary Mass from Spectral Type:** LAMOST classifies the primary as dM0 (M0 dwarf), implying M₁ ≈ 0.5 M☉. This is more constraining than the parallax (0.12 ± 0.16 mas).
 
 5. **RUWE Interpretation:** RUWE = 1.95 indicates non-single-star astrometric behavior but is not a direct mass measurement.
 

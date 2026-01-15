@@ -1,0 +1,53 @@
+{
+  "source_id": 3802130935635096832,
+  "nss_solutions": {
+    "gaiadr3.nss_two_body_orbit": {
+      "found": false
+    },
+    "gaiadr3.nss_acceleration_astro": {
+      "found": false
+    },
+    "gaiadr3.nss_non_linear_spectro": {
+      "found": false
+    },
+    "gaiadr3.nss_vim_fl": {
+      "found": false
+    },
+    "gaiadr3.vari_compact_companion": {
+      "found": false
+    }
+  },
+  "epoch_rvs": {
+    "found": false
+  },
+  "crossmatches": {
+    "RAVE DR5": {
+      "found": false
+    },
+    "RAVE DR6": {
+      "found": false
+    },
+    "2MASS": {
+      "found": true,
+      "table": "gaiadr3.tmasspscxsc_best_neighbour",
+      "n_rows": 2
+    },
+    "AllWISE": {
+      "found": true,
+      "table": "gaiadr3.allwise_best_neighbour",
+      "n_rows": 1
+    }
+  },
+  "archival_rvs": {
+    "LAMOST": {
+      "found": true,
+      "n_entries": 1
+    },
+    "APOGEE": {
+      "found": false
+    },
+    "GALAH": {
+      "found": false
+    }
+  }
+}

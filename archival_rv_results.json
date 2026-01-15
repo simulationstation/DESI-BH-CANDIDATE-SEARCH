@@ -1,0 +1,51 @@
+{
+  "target": "Gaia DR3 3802130935635096832",
+  "query_date": "2026-01-15",
+  "gaia_nss": {
+    "nss_two_body_orbit": false,
+    "nss_acceleration_astro": false,
+    "nss_non_linear_spectro": false,
+    "nss_vim_fl": false,
+    "vari_compact_companion": false,
+    "vari_epoch_radial_velocity": false,
+    "note": "No Gaia DR3 NSS or epoch-RV solutions available. Star too faint for Gaia RVS (G=17.27)."
+  },
+  "archival_surveys": {
+    "RAVE_DR5": false,
+    "RAVE_DR6": false,
+    "APOGEE_DR17": false,
+    "GALAH_DR3": false,
+    "LAMOST_DR7": true
+  },
+  "lamost_data": {
+    "obsid": 437513049,
+    "obs_date": "2016-03-10",
+    "mjd": 57457,
+    "ra_deg": 164.523536,
+    "dec_deg": -1.660143,
+    "class": "STAR",
+    "subclass": "dM0",
+    "rv_kms": -49.36,
+    "rv_err_kms": 2.79,
+    "snr_g": 4.8,
+    "snr_r": 17.9,
+    "snr_i": 35.6
+  },
+  "combined_rv_epochs": [
+    {"source": "LAMOST", "mjd": 57457.0, "rv_kms": -49.36, "rv_err_kms": 2.79},
+    {"source": "DESI", "mjd": 59568.488, "rv_kms": -86.39, "rv_err_kms": 0.55},
+    {"source": "DESI", "mjd": 59605.380, "rv_kms": 59.68, "rv_err_kms": 0.83},
+    {"source": "DESI", "mjd": 59607.374, "rv_kms": 26.43, "rv_err_kms": 1.06},
+    {"source": "DESI", "mjd": 59607.389, "rv_kms": 25.16, "rv_err_kms": 1.11}
+  ],
+  "summary": {
+    "total_epochs": 5,
+    "baseline_days": 2150.4,
+    "baseline_years": 5.89,
+    "rv_min_kms": -86.39,
+    "rv_max_kms": 59.68,
+    "delta_rv_kms": 146.07,
+    "lamost_spectral_type": "dM0",
+    "primary_mass_estimate": "~0.5 M_sun (M0 dwarf)"
+  }
+}
