@@ -6,3 +6,9 @@ data/manifests/
 # Keep derived results tracked
 !data/derived/
 data/ksz/
+
+# Large files
+*.zip
+
+# Windows metadata
+*:Zone.Identifier

@@ -1,0 +1,108 @@
+Warning: the passwords of all user accounts have been inactivated.              Please visit https://cas.cosmos.esa.int/cas/passwd to set a new one. Workaround solutions for the Gaia Archive issues following the infrastructure upgrade: https://www.cosmos.esa.int/web/gaia/news#WorkaroundArchive
+======================================================================
+BH CANDIDATE VALIDATION PIPELINE
+======================================================================
+Started: 2026-01-14 18:20:50
+
+[PHASE 1] Loading candidate list...
+  Loaded 21 candidates from data/derived/priorityA_followup_only.csv
+  Columns: ['rank', 'targetid', 'gaia_source_id', 'survey', 'n_epochs', 'mjd_span', 'S', 'S_robust', 'd_max', 'delta_rv_kms', 'rv_err_median_kms', 'notes', 'gaia_nss_flag', 'gaia_nss_type', 'gaia_nss_notes', 'simbad_main_id', 'simbad_otype', 'simbad_binary_flag', 'variable_class']
+  Gaia Source IDs: ['1584997005586641280', '3891388499304470656', '6914501041337922944', '3827093418703158272', '3787512447507460352']... (showing first 5)
+
+[PHASE 2] Querying Gaia DR3, WISE, and SIMBAD for all candidates...
+  (This may take a few minutes with parallel queries)
+
+  [1/21] Validated Gaia 6914501041337922944: RUWE=1.0073548555374146, W1-W2=-0.180999755859375
+  [2/21] Validated Gaia 3827093418703158272: RUWE=1.038812518119812, W1-W2=-0.047000885009765625
+  [3/21] Validated Gaia 3891388499304470656: RUWE=0.9985419511795044, W1-W2=0.039000511169433594
+  [4/21] Validated Gaia 1584997005586641280: RUWE=0.9767066240310669, W1-W2=0.012000083923339844
+  [5/21] Validated Gaia 3787512447507460352: RUWE=0.939216136932373, W1-W2=0.020999908447265625
+  [6/21] Validated Gaia 1880759723584022528: RUWE=0.9920843243598938, W1-W2=0.010999679565429688
+  [7/21] Validated Gaia 3244963210786057984: RUWE=1.0721971988677979, W1-W2=0.0019998550415039062
+  [8/21] Validated Gaia 3843110008879900032: RUWE=0.9806398153305054, W1-W2=-0.09999942779541016
+  [9/21] Validated Gaia 3780868403682988032: RUWE=0.9597575068473816, W1-W2=-0.1099996566772461
+  [10/21] Validated Gaia 3856238482657768576: RUWE=1.0846149921417236, W1-W2=-0.08699989318847656
+  [11/21] Validated Gaia 3683541768991487104: RUWE=0.9752072691917419, W1-W2=-0.12599945068359375
+  [12/21] Validated Gaia 3823628002865715328: RUWE=0.9988903999328613, W1-W2=-0.04799938201904297
+  [13/21] Validated Gaia 3802130935635096832: RUWE=1.9535599946975708, W1-W2=0.05200004577636719
+  [14/21] Validated Gaia 3891796860498960768: RUWE=0.9629208445549011, W1-W2=-0.03699970245361328
+  [15/21] Validated Gaia 602361299180812800: RUWE=1.0115524530410767, W1-W2=0.010999679565429688
+  [16/21] Validated Gaia 3078449763965033472: RUWE=1.0969749689102173, W1-W2=0.7440004348754883
+  [17/21] Validated Gaia 4442920432493231872: RUWE=1.0680468082427979, W1-W2=-0.4669990539550781
+  [18/21] Validated Gaia 4410518344516247424: RUWE=0.9429680705070496, W1-W2=0.11599922180175781
+  [19/21] Validated Gaia 1732847539605117824: RUWE=0.953700840473175, W1-W2=0.5039997100830078
+  [20/21] Validated Gaia 1563820480355540352: RUWE=1.030983805656433, W1-W2=0.1660003662109375
+  [21/21] Validated Gaia 1473318613122088448: RUWE=1.0152837038040161, W1-W2=0.015999794006347656
+
+[PHASE 3] Scoring candidates...
+  Scoring complete. Top 5 candidates:
+    #1: Gaia 3802130935635096832 | BH_Prob=100 | RUWE=1.9535599946975708
+    #2: Gaia 1584997005586641280 | BH_Prob=80 | RUWE=0.9767066240310669
+    #3: Gaia 3891388499304470656 | BH_Prob=80 | RUWE=0.9985419511795044
+    #4: Gaia 3787512447507460352 | BH_Prob=75 | RUWE=0.939216136932373
+    #5: Gaia 3827093418703158272 | BH_Prob=75 | RUWE=1.038812518119812
+
+[PHASE 4] Saving results...
+  Saved full results to: validation_results_full.csv
+
+======================================================================
+TOP 3 BH CANDIDATES (Validation Ranking)
+======================================================================
+
+RANK #1: Gaia DR3 3802130935635096832
+  BH Probability Score: 100/100
+  RUWE: 1.9535599946975708
+  W1-W2 Color: 0.05200004577636719
+  RV Amplitude: 146.1 km/s
+  N_epochs: 4, MJD span: 38.9 days
+  SIMBAD: NO_MATCH
+  Reasons: RUWE=1.95>1.4 (wobble); AEN_sig=16.5>2 (astrometric wobble); W1-W2=0.052~0 (no IR excess); SIMBAD: No match (unknown, interesting)
+
+RANK #2: Gaia DR3 1584997005586641280
+  BH Probability Score: 80/100
+  RUWE: 0.9767066240310669
+  W1-W2 Color: 0.012000083923339844
+  RV Amplitude: 98.6 km/s
+  N_epochs: 3, MJD span: 355.0 days
+  SIMBAD: NO_MATCH
+  Reasons: RUWE=0.98<1.2 (stable); W1-W2=0.012~0 (no IR excess); SIMBAD: No match (unknown, interesting); S_robust=71.7>50 (strong RV signal)
+
+RANK #3: Gaia DR3 3891388499304470656
+  BH Probability Score: 80/100
+  RUWE: 0.9985419511795044
+  W1-W2 Color: 0.039000511169433594
+  RV Amplitude: 76.0 km/s
+  N_epochs: 3, MJD span: 94.8 days
+  SIMBAD: NO_MATCH
+  Reasons: RUWE=1.00<1.2 (stable); W1-W2=0.039~0 (no IR excess); SIMBAD: No match (unknown, interesting); S_robust=52.2>50 (strong RV signal)
+
+[PHASE 5] Deep Dive: Lightcurve for #1 Candidate...
+  Target: Gaia DR3 3802130935635096832
+  Coordinates: RA=164.52349428314767, DEC=-1.6601557742314024
+  Searching for TESS lightcurves...
+Could not resolve "Gaia DR3 3802130935635096832" to a sky position.
+No data found for target "<SkyCoord (ICRS): (ra, dec) in deg
+    (164.52349428, -1.66015577)>".
+  Searching for ZTF lightcurves...
+Could not resolve "Gaia DR3 3802130935635096832" to a sky position.
+  Searching for Kepler/K2 lightcurves...
+Could not resolve "Gaia DR3 3802130935635096832" to a sky position.
+Could not resolve "Gaia DR3 3802130935635096832" to a sky position.
+  No lightcurve data available from TESS/ZTF/Kepler
+  Generating placeholder plot...
+  Saved: validation_plots/candidate_1_lightcurve.png
+
+======================================================================
+VALIDATION COMPLETE
+======================================================================
+
+Total candidates validated: 21
+Results saved to: validation_results_full.csv
+Lightcurve plot: validation_plots/candidate_1_lightcurve.png
+
+Candidate Summary by BH Probability:
+  HIGH (>70): 7
+  MEDIUM (50-70): 10
+  LOW (<50): 4
+
+Completed: 2026-01-14 18:24:48
