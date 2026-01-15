@@ -1,0 +1,172 @@
+{
+  "lamost_zeropoint": {
+    "snr": 17.9,
+    "rv_nominal": -49.36,
+    "rv_err_nominal": 2.79,
+    "systematic_floor_kms": 3.0,
+    "rv_err_effective": 4.096840245848012,
+    "lamost_vs_desi_diff_kms": -25.36045734188802,
+    "significance_nominal": 8.970036175042576,
+    "significance_conservative": 6.152027934591561
+  },
+  "high_leverage": {
+    "high_leverage_epoch_idx": 1,
+    "rv_kms": -86.39,
+    "rv_err_kms": 0.55,
+    "d_max": 112.53797101778387,
+    "d_max_epoch_idx": 1.0,
+    "d_values": [
+      8.912503247233383,
+      112.53797101778387,
+      101.41459751833598,
+      48.04161881152722,
+      44.733437783980946
+    ],
+    "night3_consistent": 1.0,
+    "night3_significance": 0.8274537528082546,
+    "physically_plausible": true,
+    "artifact_rejected": true
+  },
+  "desi_validation": {
+    "n_desi_epochs": 4,
+    "desi_baseline_days": 38.90026999999827,
+    "total_baseline_days": 2150.3885200000004,
+    "desi_rv_errors": [
+      0.55,
+      0.83,
+      1.06,
+      1.11
+    ],
+    "same_night_checks": [
+      {
+        "epoch_i": 2,
+        "epoch_j": 3,
+        "source_i": "DESI",
+        "source_j": "DESI",
+        "mjd_i": 59607.37393,
+        "mjd_j": 59607.38852,
+        "dt_hours": 0.350159999972675,
+        "rv_i_kms": 26.43,
+        "rv_j_kms": 25.16,
+        "rv_diff_kms": 1.2699999999999996,
+        "err_diff_kms": 1.5348289807011075,
+        "significance_sigma": 0.8274537528082546,
+        "consistent_3sigma": 1.0
+      }
+    ]
+  },
+  "dossier": {
+    "target": {
+      "gaia_source_id": 3802130935635096832,
+      "desi_targetid": 39627745210139276,
+      "ra": 164.5235,
+      "dec": -1.6602,
+      "lamost_obsid": 579613097
+    },
+    "n_epochs": 5,
+    "n_lamost": 1,
+    "n_desi": 4,
+    "mjd_span_days": 2150.3885200000004,
+    "delta_rv_max_kms": 146.07,
+    "rv_weighted_mean_kms": -24.49411594021886,
+    "rv_weighted_mean_err_kms": 0.38961977234212924,
+    "chi2_constant": 27338.22581874297,
+    "chi2_reduced": 6834.556454685742,
+    "dof": 4,
+    "p_value_constant": 0.0,
+    "S": 43.78143945202796,
+    "S_min_LOO": 33.135816900855154,
+    "S_robust": 33.135816900855154,
+    "loo_drop_epoch_idx": 1,
+    "loo_drop_source": "DESI",
+    "S_loo_values": [
+      79.84113191702556,
+      33.135816900855154,
+      34.91306784555661,
+      46.17384705268502,
+      46.42620380032195
+    ],
+    "d_max": 112.53797101778387,
+    "d_max_epoch_idx": 1,
+    "d_max_source": "DESI",
+    "d_values": [
+      8.912503247233383,
+      112.53797101778387,
+      101.41459751833598,
+      48.04161881152722,
+      44.733437783980946
+    ],
+    "high_leverage_threshold": 100,
+    "has_high_leverage": true,
+    "night_consistency_checks": [
+      {
+        "epoch_i": 3,
+        "epoch_j": 4,
+        "source_i": "DESI",
+        "source_j": "DESI",
+        "mjd_i": 59607.37393,
+        "mjd_j": 59607.38852,
+        "dt_hours": 0.350159999972675,
+        "rv_i_kms": 26.43,
+        "rv_j_kms": 25.16,
+        "rv_diff_kms": 1.2699999999999996,
+        "err_diff_kms": 1.5348289807011075,
+        "significance_sigma": 0.8274537528082546,
+        "consistent_3sigma": 1.0
+      }
+    ],
+    "all_nights_consistent": true,
+    "epochs": [
+      {
+        "mjd": 57457.0,
+        "rv": -49.36,
+        "rv_err": 2.79,
+        "source": "LAMOST",
+        "instrument": "LAMOST-MRS",
+        "observation_id": "579613097",
+        "snr": 17.9,
+        "notes": "spectral_type=dM0; rv from template_cross_correlation"
+      },
+      {
+        "mjd": 59568.48825,
+        "rv": -86.39,
+        "rv_err": 0.55,
+        "source": "DESI",
+        "instrument": "DESI",
+        "observation_id": "bright_59568_expid",
+        "snr": null,
+        "notes": "high_leverage_epoch; most_negative_RV"
+      },
+      {
+        "mjd": 59605.38003,
+        "rv": 59.68,
+        "rv_err": 0.83,
+        "source": "DESI",
+        "instrument": "DESI",
+        "observation_id": "bright_59605_expid",
+        "snr": null,
+        "notes": "most_positive_RV"
+      },
+      {
+        "mjd": 59607.37393,
+        "rv": 26.43,
+        "rv_err": 1.06,
+        "source": "DESI",
+        "instrument": "DESI",
+        "observation_id": "bright_59607a_expid",
+        "snr": null,
+        "notes": "same_night_pair_1"
+      },
+      {
+        "mjd": 59607.38852,
+        "rv": 25.16,
+        "rv_err": 1.11,
+        "source": "DESI",
+        "instrument": "DESI",
+        "observation_id": "bright_59607b_expid",
+        "snr": null,
+        "notes": "same_night_pair_2"
+      }
+    ]
+  }
+}

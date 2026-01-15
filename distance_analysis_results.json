@@ -1,0 +1,44 @@
+{
+  "parallax": {
+    "parallax_mas": 0.119,
+    "parallax_err_mas": 0.16,
+    "parallax_snr": 0.7437499999999999,
+    "distance_pc": 8403.361344537816,
+    "distance_err_pc": 11298.637101899585,
+    "note": "Low SNR parallax (0.74); distance poorly constrained"
+  },
+  "spectrophotometric": {
+    "spectral_type": "dM0",
+    "G_app": 17.272505,
+    "M_G": 8.8,
+    "M_G_err": 0.4,
+    "distance_pc": 494.8812504251639,
+    "distance_err_pc": 91.16049520249885,
+    "bp_rp_observed": 1.888,
+    "bp_rp_expected": 2.0
+  },
+  "tension": {
+    "d_parallax_pc": 8403.361344537816,
+    "d_spectrophot_pc": 494.8812504251639,
+    "tension_sigma": 0.6999271351084554
+  },
+  "astrometry": {
+    "ruwe": 1.9535599946975708,
+    "aen_mas": 0.532,
+    "aen_sig": 16.49
+  },
+  "photocenter_wobble": {
+    "P_days": 16.0,
+    "M1_msun": 0.5,
+    "M2_msun": 2.6,
+    "d_pc": 494.8812504251639,
+    "a_AU": 0.18120292510401653,
+    "a1_AU": 0.15197664686143322,
+    "a_phot_mas": 0.3070972010575599
+  },
+  "adopted_distance": {
+    "d_pc": 494.8812504251639,
+    "d_err_pc": 91.16049520249885,
+    "method": "spectrophotometric (LAMOST dM0)"
+  }
+}

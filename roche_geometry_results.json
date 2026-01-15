@@ -1,0 +1,75 @@
+{
+  "primary": {
+    "M1_msun": 0.5,
+    "R1_rsun": 0.6,
+    "R1_rsun_err": 0.1,
+    "spectral_type": "dM0"
+  },
+  "configurations": [
+    {
+      "label": "Best circular fit",
+      "P_days": 15.9,
+      "M2_msun": 2.62,
+      "a_rsun": 38.885753793094864,
+      "R_L1_rsun": 9.663115912599663,
+      "filling_factor": 0.062091773029201124,
+      "A_ellip_ppm": 24.398405212918917,
+      "detached": 1.0
+    },
+    {
+      "label": "Short P, low M2",
+      "P_days": 10,
+      "M2_msun": 1.5,
+      "a_rsun": 24.612226686466748,
+      "R_L1_rsun": 7.1124695330226295,
+      "filling_factor": 0.08435888508404117,
+      "A_ellip_ppm": 55.08968062288014,
+      "detached": 1.0
+    },
+    {
+      "label": "Moderate P",
+      "P_days": 20,
+      "M2_msun": 2.0,
+      "a_rsun": 42.08631562801244,
+      "R_L1_rsun": 11.262345521723613,
+      "filling_factor": 0.05327487057138118,
+      "A_ellip_ppm": 14.6905814994347,
+      "detached": 1.0
+    },
+    {
+      "label": "Longer P",
+      "P_days": 30,
+      "M2_msun": 2.5,
+      "a_rsun": 58.60421180006566,
+      "R_L1_rsun": 14.753465045981134,
+      "filling_factor": 0.0406684123444913,
+      "A_ellip_ppm": 6.801195138627176,
+      "detached": 1.0
+    },
+    {
+      "label": "Long P, high M2",
+      "P_days": 50,
+      "M2_msun": 3.5,
+      "a_rsun": 90.672218364621,
+      "R_L1_rsun": 20.772823593407,
+      "filling_factor": 0.028883892327012852,
+      "A_ellip_ppm": 2.5708517624010736,
+      "detached": 1.0
+    },
+    {
+      "label": "Very long P",
+      "P_days": 80,
+      "M2_msun": 4.5,
+      "a_rsun": 133.61572340274526,
+      "R_L1_rsun": 28.48504055354752,
+      "filling_factor": 0.021063687758214412,
+      "A_ellip_ppm": 1.032931511679002,
+      "detached": 1.0
+    }
+  ],
+  "tess_comparison": {
+    "tess_scatter_ppm": 6320,
+    "tess_detection_limit_ppm": 459.51789165045676,
+    "n_detectable": 0
+  }
+}

@@ -1,0 +1,6 @@
+source,instrument,survey,mjd,rv_kms,rv_err_kms,snr,quality_flags,notes
+LAMOST,LAMOST-MRS,LAMOST_DR7,57457.000,-49.36,2.79,17.9,OK,spectral_type=dM0
+DESI,DESI,DESI_DR1,59568.488,-86.39,0.55,,OK,high_leverage_epoch
+DESI,DESI,DESI_DR1,59605.380,59.68,0.83,,OK,
+DESI,DESI,DESI_DR1,59607.374,26.43,1.06,,OK,same_night_pair_1
+DESI,DESI,DESI_DR1,59607.389,25.16,1.11,,OK,same_night_pair_2
