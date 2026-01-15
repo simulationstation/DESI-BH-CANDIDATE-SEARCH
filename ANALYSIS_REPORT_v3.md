@@ -18,7 +18,7 @@ This document presents a rigorous, comprehensive analysis of the dark companion 
 | **ZTF Photometry** | No significant rotation signal | ✓ RV not from starspots |
 | **LAMOST Primary Mass** | M₁ = 0.564 ± 0.056 M☉ | ✓ Refined from 0.5 M☉ |
 | **Gaia Astrometry** | RUWE=1.95, IPD=8% | ⚠ Borderline - not definitively single |
-| **Window Function FAP** | FAP = 0.00 (0/1000 trials) | ✓ Signal highly significant |
+| **Window Function FAP** | FAP < 0.1% (none of 1000 noise trials matched) | ✓ Signal highly significant |
 
 ### Updated Companion Mass Constraints
 
