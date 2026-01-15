@@ -1,341 +1,173 @@
-# DESI DR1 Pairwise kSZ Analysis Pipeline
+# DESI DR1 Radial Velocity Variability Search for Unseen Companions
 
-Publication-grade pairwise kinetic Sunyaev-Zel'dovich (kSZ) measurement using DESI DR1 galaxies cross-correlated with CMB temperature maps.
+A conservative, reproducible search for statistically significant radial-velocity (RV) variability in public DESI Data Release 1 Milky Way Survey (MWS) data. The goal is to identify stars whose RV variability exceeds measurement noise and remains robust under leave-one-out tests, producing a small, follow-up-ready shortlist of RV-variable stellar systems suitable for spectroscopic confirmation.
+
+**Final result: 21 candidate systems for follow-up observation.**
 
 ---
 
-## Overview
+## Motivation
 
-The pairwise kSZ effect measures the momentum of galaxy pairs through the CMB temperature decrement/increment caused by Compton scattering. This pipeline measures:
+Quiet compact companions (white dwarfs, neutron stars, black holes) are expected to be numerous in the Milky Way, yet difficult to identify when not accreting. Radial-velocity monitoring offers a gravity-only detection method, and DESI DR1 provides per-epoch RV measurements for millions of stars as part of the Milky Way Survey.
+
+---
+
+## Data
+
+We use public DESI DR1 MWS per-epoch RV products from `main-bright` and `main-dark` programs. For each epoch we extract:
+
+- Heliocentric radial velocity (RV)
+- RV uncertainty (σ_RV)
+- Observation time (MJD)
+- DESI target identifier
+- Gaia SOURCE_ID (when available)
+
+---
+
+## Selection Method
+
+### Per-Epoch Quality Cuts
+
+1. Finite RV and σ_RV
+2. σ_RV < 10 km/s
+3. |RV| < 500 km/s
+
+### Multi-Epoch Requirement
+
+Targets must have ≥2 epochs spanning >0.5 days (excludes same-night repeats).
+
+### RV Variability Metric
 
 ```
-p̂(r) = Σ_{ij} w_ij (T_i - T_j) c_ij / Σ_{ij} w_ij c_ij²
+ΔRV_max = max(RV) - min(RV)
+
+S = ΔRV_max / sqrt(Σ σ_RV,i²)
 ```
 
-where:
-- `T_i` = CMB temperature at galaxy i position (μK)
-- `c_ij` = geometric weight = ½ r̂_ij · (r̂_i - r̂_j)
-- `w_ij` = combined galaxy weights
-- `r` = comoving pair separation (Mpc/h)
+### Robustness Diagnostics
 
----
+To guard against single-epoch artifacts:
 
-## Analysis Results (2026-01-14)
+- **Leave-one-out minimum significance** (S_min,LOO): For each epoch k, compute S without that epoch. Take the minimum.
+- **Outlier leverage** (d_max): max_i |RV_i - median(RV)| / σ_RV,i
 
-First measurement using DESI DR1 LRG × Planck SMICA:
-
-| Redshift Bin | N Galaxies | Amplitude (μK) | S/N |
-|--------------|------------|----------------|-----|
-| 0.40 < z < 0.66 | 712,875 | -344 ± 57 | 6.08σ |
-| 0.66 < z < 0.83 | 712,876 | -378 ± 81 | 4.66σ |
-| 0.83 < z < 1.10 | 712,876 | +172 ± 101 | 1.70σ |
-
-**Joint Amplitude: -263.60 ± 42.20 μK (6.25σ)**
-
-### Data Used
-- **DESI DR1 LRG**: 2,138,627 galaxies (NGC + SGC)
-- **Planck SMICA**: NSIDE=2048, 50M pixels
-- **Covariance**: 50-region spatial jackknife
-- **Separation range**: 20-150 Mpc/h (10 bins)
-
-### Interpretation
-The measured amplitude (~264 μK) exceeds the expected kSZ signal (~0.1-1 μK) by 2-3 orders of magnitude. This indicates the measurement is dominated by:
-- CMB primary anisotropies
-- tSZ contamination from galaxy clusters
-- Survey geometry effects
-
-Isolating the pure kSZ signal requires additional systematic controls (tSZ masking, null tests, ACT cross-check) implemented in the full pipeline.
-
----
-
-## Key Features
-
-- **Tomographic analysis**: Minimum 3 redshift bins for LRG
-- **Multi-map cross-check**: Planck PR4 + ACT DR6 consistency
-- **Automated gating**: PASS/FAIL/INCONCLUSIVE decision system
-- **Full systematics suite**: 8+ null tests, injection recovery, tSZ controls
-- **Publication-ready outputs**: Bundled results with checksums
-
----
-
-## Pipeline Architecture
-
+For targets with N ≥ 3 epochs:
 ```
-desi_ksz/
-├── cli.py                  # Click-based CLI (35+ commands)
-├── config/                 # Configuration schemas and presets
-├── io/                     # DESI catalogs + CMB map I/O
-├── selection/              # Quality cuts, z-bins, weights
-├── maps/                   # HEALPix/CAR utilities, filtering, masking
-├── estimators/             # Pairwise momentum, aperture photometry
-├── covariance/             # Jackknife, Hartlap correction
-├── systematics/            # Null tests, tSZ leakage, referee checks
-├── sims/                   # Injection tests, CMB realizations
-├── inference/              # Likelihood, MCMC
-├── plots/                  # Publication figures
-├── runner/                 # Phase 3-4 execution driver, gates
-├── results/                # Results packager
-└── tests/                  # Comprehensive test suite
+S_robust = min(S, S_min,LOO)
 ```
 
 ---
 
-## Quick Start
+## Follow-up Candidate Selection
 
-### Planck-Only Run (Minimum Viable)
+1. Restrict to N ≥ 3 epochs with S_robust ≥ 10
+2. Cross-check against Gaia DR3 Non-Single Star (NSS) tables and SIMBAD
+3. Exclude known eclipsing binaries, chromospherically active binaries, pulsating variables (RR Lyrae), QSOs/AGN
+
+**Result: 21 follow-up-only candidates**
+
+---
+
+## Results
+
+| Rank | TargetID | Gaia Source ID | N | S_robust | d_max | MJD Span (d) |
+|------|----------|----------------|---|----------|-------|--------------|
+| 1 | 39628001431785529 | 2759088365339967488 | 4 | 91.1 | 101.2 | 298.2 |
+| 2 | 39632991214896712 | 1480681355298504960 | 3 | 81.1 | 302.7 | 311.2 |
+| 3 | 39633437979575384 | 1584997005586641280 | 3 | 71.7 | 105.3 | 355.0 |
+| 4 | 39627714713356667 | 3826086648304166400 | 4 | 55.4 | 55.3 | 4.0 |
+| 5 | 39627830035744797 | 3891388499304470656 | 3 | 52.2 | 108.5 | 94.8 |
+| 6 | 39627681263782079 | 6914501041337922944 | 3 | 49.1 | 79.2 | 3.0 |
+| 7 | 39633025553665365 | 1375654252266254080 | 3 | 44.8 | 219.7 | 25.9 |
+| 8 | 39627720727987709 | 3827093418703158272 | 7 | 43.8 | 110.1 | 102.7 |
+| 9 | 39627782317149427 | 3652971286995183488 | 5 | 42.7 | 196.3 | 109.7 |
+| 10 | 39627977599746474 | 2751843515722446208 | 4 | 37.8 | 61.1 | 43.9 |
+| 11 | 39627721168388315 | 3787512447507460352 | 3 | 35.6 | 63.2 | 122.7 |
+| 12 | 39628408488985455 | 1880759723584022528 | 3 | 33.4 | 47.6 | 13.0 |
+| 13 | 39627829624701236 | 3856238482657768576 | 3 | 20.6 | 133.2 | 14.9 |
+| 14 | 39627745210139276 | 3802130935635096832 | 4 | 19.8 | 205.2 | 38.9 |
+| 15 | 39633325534479674 | 1563820480355540352 | 3 | 15.2 | 86.0 | 29.0 |
+| 16 | 2803043443671040 | 2683995092712700928 | 3 | 12.1 | 127.2 | 204.4 |
+| 17 | 39627823941422728 | 3796405228833490048 | 3 | 8.1 | 121.9 | 78.8 |
+| 18 | 39633187848063014 | 1494748369624872320 | 3 | 6.7 | 109.1 | 356.0 |
+| 19 | 39627848897530159 | 1154235837614661120 | 3 | 6.2 | 235.8 | 54.9 |
+| 20 | 39627814730734330 | 2657253320657959552 | 3 | 5.9 | 87.3 | 83.8 |
+| 21 | 39627684568894169 | 3822906963755970432 | 4 | 5.3 | 161.4 | 113.7 |
+
+---
+
+## Usage
+
+### 1. Initial RV Candidate Analysis
 
 ```bash
-# Prepare data
-python -m desi_ksz.cli ingest-desi --tracer LRG --output data/ksz/catalogs
-python -m desi_ksz.cli ingest-maps --source planck_pr4 --output data/ksz/maps
-
-# Run Phase 3-4 measurement
-python -m desi_ksz.cli run-phase34 \
-    --catalog-file data/ksz/catalogs/LRG_catalog.npz \
-    --map-file data/ksz/maps/planck_pr4_smica.fits \
-    --tracer LRG \
-    --z-bins 0.4,0.5,0.6,0.7 \
-    --jackknife-k 100 \
-    --n-injection 100 \
-    --n-null 500 \
-    --tsz-mask-radii 5,10,15,20 \
-    --output data/ksz/phase34_planck
-
-# Package results
-python -m desi_ksz.cli package-results \
-    --result-file data/ksz/phase34_planck/phase34_result.json \
-    --output data/ksz/bundle_planck
+python analyze_rv_candidates.py --data-root data --max-rows 1000000
 ```
 
-### ACT + Planck Run (Full Cross-Check)
+Outputs: `data/derived/top_candidates_*.csv`
+
+### 2. Robust Triage with Leave-One-Out
 
 ```bash
-# Prepare ACT maps
-python -m desi_ksz.cli ingest-maps --source act_dr6 --output data/ksz/maps
-
-# Run with two independent maps
-python -m desi_ksz.cli run-phase34 \
-    --catalog-file data/ksz/catalogs/LRG_catalog.npz \
-    --map-file data/ksz/maps/act_dr6_coadd_f150.fits \
-    --map-file-secondary data/ksz/maps/planck_pr4_smica.fits \
-    --tracer LRG \
-    --z-bins 0.4,0.5,0.6,0.7,0.8 \
-    --jackknife-k 50,100,200 \
-    --n-injection 200 \
-    --n-null 1000 \
-    --tsz-mask-radii 5,10,15,20,25 \
-    --run-referee-checks \
-    --output data/ksz/phase34_act_planck
-
-# Package with full bundle
-python -m desi_ksz.cli package-results \
-    --result-file data/ksz/phase34_act_planck/phase34_result.json \
-    --bundle-name ksz_lrg_act_planck_v1 \
-    --output data/ksz/bundle_final
+python triage_rv_candidates.py --data-root data
 ```
 
----
+Outputs: `data/derived/triage_candidates_bright.csv`, `data/derived/triage_candidates_dark.csv`
 
-## Gate System
-
-The pipeline enforces quality gates with automatic PASS/FAIL/INCONCLUSIVE decisions:
-
-### Critical Gates (Cause FAIL)
-
-| Gate | Threshold | Description |
-|------|-----------|-------------|
-| `injection_bias` | \|bias\| < 2σ | Signal injection recovery unbiased |
-| `null_suite_pass_rate` | ≥ 80% | Null test suite pass rate |
-| `transfer_test` | \|bias\| < 5% | Map transfer function test |
-| `tsz_sweep_stability` | Δ < 1σ | tSZ mask sweep amplitude stable |
-| `covariance_hartlap` | α > 0.5 | Hartlap factor valid |
-| `map_consistency` | Δ < 2σ | ACT vs Planck consistent |
-
-### Warning Gates (Cause WARN)
-
-| Gate | Threshold | Description |
-|------|-----------|-------------|
-| `covariance_condition` | κ < 10⁶ | Covariance condition number |
-| `look_elsewhere` | p_adj > 0.01 | Look-elsewhere correction |
-| `anisotropy_residual` | < 3σ | Temperature anisotropy check |
-| `weight_leverage` | < 1σ | Weight leverage stability |
-| `split_consistency` | < 2σ | z-dependent split consistency |
-| `beam_sensitivity` | < 1σ | Beam perturbation sensitivity |
-| `ymap_regression` | < 2σ | y-map regression shift |
-
-### Decision Logic
-
-- **PASS**: All critical gates pass, ≤1 warning
-- **FAIL**: Any critical gate fails
-- **INCONCLUSIVE**: Critical pass but multiple warnings
-
----
-
-## Results Bundle Structure
-
-```
-ksz_results_YYYYMMDD_HHMMSS/
-├── plots/                  # Publication figures (PDF + PNG)
-├── tables/                 # CSV data tables
-│   ├── pairwise_momentum_*.csv
-│   ├── amplitude_summary.csv
-│   ├── null_test_summary.csv
-│   └── gate_evaluation.csv
-├── configs/                # YAML configuration used
-├── data/                   # NPY/NPZ data files
-├── manifest.json           # File listing with metadata
-├── checksums.sha256        # SHA256 for reproducibility
-├── summary.json            # Machine-readable results
-└── results.md              # Human-readable decision report
-```
-
----
-
-## Non-Negotiable Requirements
-
-The pipeline enforces these measurement requirements:
-
-1. **Two independent map products** (ACT + Planck)
-2. **LRG tomography with ≥3 z-bins**
-3. **Detection significance explicitly reported**
-4. **Jackknife covariance** with K ∈ {50, 100, 200}
-5. **tSZ leakage controls** via cluster mask sweep
-6. **Transfer function test** (< 5% bias)
-
----
-
-## Referee Attack Checks
-
-Five additional checks for robustness:
-
-1. **Look-elsewhere**: Sidak correction for trials factor
-2. **Anisotropy**: Spherical harmonic fitting (dipole/quadrupole)
-3. **Weight leverage**: Remove top 1% highest-weight galaxies
-4. **z-split**: Sky density quartile consistency
-5. **Beam sensitivity**: ±5% FWHM perturbation
-
----
-
-## CLI Commands Reference
+### 3. Cross-match with Gaia NSS and SIMBAD
 
 ```bash
-# Pipeline stages
-python -m desi_ksz.cli pipeline --config config.yaml
-python -m desi_ksz.cli ingest-desi --tracer LRG
-python -m desi_ksz.cli ingest-maps --source act_dr6
-python -m desi_ksz.cli compute-pairwise --z-bins 0.4,0.5,0.6,0.7
-python -m desi_ksz.cli covariance --method jackknife --n-regions 100
-
-# Validation
-python -m desi_ksz.cli injection-test -c catalog.npz -n 100
-python -m desi_ksz.cli null-suite -c catalog.npz -n 500
-python -m desi_ksz.cli transfer-test -c catalog.npz --nside 512
-python -m desi_ksz.cli tsz-sweep -c catalog.npz --mask-radii 0,5,10,15,20
-
-# Phase 3-4 execution
-python -m desi_ksz.cli run-phase34 --catalog-file cat.npz --map-file map.fits
-python -m desi_ksz.cli package-results --result-file result.json
-
-# Utilities
-python -m desi_ksz.cli info
-python -m desi_ksz.cli validate-config --config config.yaml
+python crossmatch_nss_simbad.py
 ```
 
----
+### 4. Build Priority Packet
 
-## Data Requirements
+```bash
+python build_priority_packet.py
+```
 
-| Dataset | Source | Size |
-|---------|--------|------|
-| DESI LRG | data.desi.lbl.gov/public/dr1 | ~5 GB |
-| Planck PR4 | NERSC / PLA | ~1.5 GB |
-| ACT DR6 | LAMBDA / NERSC | ~15 GB |
+### 5. Deep-dive Validation
+
+```bash
+python deep_dive_all_followup.py
+```
 
 ---
 
 ## Dependencies
 
 ```
-numpy>=1.24
-scipy>=1.10
-astropy>=5.3
-healpy>=1.16
-pixell>=0.20  # for ACT CAR maps
-fitsio>=1.2
-emcee>=3.1
-click>=8.1
-pyyaml>=6.0
-h5py>=3.8
-matplotlib>=3.7
-```
-
-Install with:
-```bash
-pip install -r requirements-ksz.txt
+numpy
+fitsio (or astropy)
+matplotlib (optional, for plots)
 ```
 
 ---
 
-## Running Tests
+## Data Requirements
 
-```bash
-# All tests
-pytest desi_ksz/tests/ -v
+DESI DR1 MWS per-epoch RV files:
+- `rvpix_exp-main-bright.fits`
+- `rvpix_exp-main-dark.fits`
 
-# Specific modules
-pytest desi_ksz/tests/test_gates.py -v
-pytest desi_ksz/tests/test_packager.py -v
-pytest desi_ksz/tests/test_referee_checks.py -v
-pytest desi_ksz/tests/test_estimators.py -v
-```
+Download from: https://data.desi.lbl.gov/public/dr1/
 
 ---
 
-## Pairwise kSZ Theory
+## Notes
 
-The pairwise momentum estimator measures the mean relative velocity of galaxy pairs:
-
-```
-p(r) = -τ̄ · T_CMB · v_12(r) / c
-```
-
-where:
-- `τ̄` = mean optical depth of halos
-- `T_CMB` = 2.725 K
-- `v_12(r)` = mean pairwise velocity at separation r
-
-The linear theory prediction:
-```
-v_12(r,z) = -(2/3) · f(z) H(z) a r ξ̄(r,z) / [1 + ξ(r,z)]
-```
-
-where `f(z) ≈ Ω_m(z)^0.55` is the growth rate.
+- Gaia DR3 NSS incompleteness (particularly for short/intermediate periods) means absence of NSS classification does not indicate singleness
+- Overlap with known variable classes is handled through annotation rather than removal
+- Further observations required to determine orbital parameters or companion masses
 
 ---
 
-## References
+## Author
 
-- [DESI DR1 LSS Catalogs](https://data.desi.lbl.gov/public/dr1/survey/catalogs/)
-- [ACT DR6 Maps](https://lambda.gsfc.nasa.gov/product/act/)
-- [Planck PR4](https://wiki.cosmos.esa.int/planck-legacy-archive/)
-- Hand et al. (2012): First pairwise kSZ detection
-- Schaan et al. (2021): ACT × BOSS kSZ measurement
-- Planck Collaboration (2016): Planck kSZ constraints
+Aiden
 
 ---
 
 ## License
 
-This pipeline is for use with publicly released DESI data. See DESI data policies for usage terms.
-
----
-
-## Citation
-
-If you use this pipeline, please cite:
-- DESI Collaboration (2024) for DR1 data
-- Relevant CMB map papers (Planck PR4, ACT DR6)
-
----
-
-*Pipeline developed 2026-01-14*
+For use with publicly released DESI data. See DESI data policies for usage terms.
