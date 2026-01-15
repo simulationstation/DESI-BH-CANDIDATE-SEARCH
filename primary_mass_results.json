@@ -1,0 +1,42 @@
+{
+  "primary": {
+    "target": "Gaia DR3 3802130935635096832",
+    "lamost_obsid": 579613097,
+    "method": "spectral_type_calibration",
+    "lamost_fetch": {
+      "status": "vizier_success",
+      "method": null,
+      "vizier_params": {
+        "snrg": 4.85
+      }
+    },
+    "teff_source": "spectral_type",
+    "feh_source": "prior",
+    "teff": 3850,
+    "teff_err": 100,
+    "feh": 0.0,
+    "feh_err": 0.3,
+    "mass_msun": 0.5643073310009665,
+    "mass_err": 0.055804792370185,
+    "mass_16": 0.5081794177176652,
+    "mass_84": 0.6176776255187112,
+    "radius_rsun": 0.565686957561731,
+    "radius_err": 0.047550041009869475
+  },
+  "companion": {
+    "M1_msun": 0.5643073310009665,
+    "M1_err": 0.055804792370185,
+    "f_M_median": 1.9519386548882887,
+    "f_M_16": 0.8298388818490777,
+    "f_M_84": 3.5983038263962794,
+    "M2_min_median": 2.8091438867934566,
+    "M2_min_mean": 2.8103306672256703,
+    "M2_min_std": 1.4299207035942967,
+    "M2_min_16": 1.2313643628785595,
+    "M2_min_84": 4.263894657545972,
+    "P_NS_or_heavier": 81.552,
+    "P_BH": 44.895,
+    "P_WD": 18.448,
+    "n_samples": 100000
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "target": {
+    "name": "Gaia DR3 3802130935635096832",
+    "ra": 164.5235,
+    "dec": -1.6602,
+    "search_radius_arcsec": 30.0,
+    "distance_pc": 495.0,
+    "distance_err_pc": 91.0
+  },
+  "xray_searches": {
+    "ROSAT_2RXS": {
+      "found": false,
+      "error": null
+    },
+    "XMM_4XMM": {
+      "found": false,
+      "error": null
+    },
+    "Chandra_CSC2": {
+      "found": false,
+      "error": null
+    },
+    "HEASARC_ROSAT": {
+      "found": false,
+      "error": null
+    }
+  },
+  "radio_searches": {
+    "NVSS": {
+      "found": false,
+      "error": null
+    },
+    "FIRST": {
+      "found": false,
+      "error": null
+    },
+    "VLASS": {
+      "found": false,
+      "error": null
+    }
+  },
+  "upper_limits": {
+    "ROSAT_2RXS": {
+      "detected": false,
+      "band": "0.1-2.4 keV",
+      "flux_limit_cgs": 1e-13,
+      "L_X_limit_erg_s": 2.9323250155700977e+30,
+      "L_X_limit_err": 1.1772502565315634e+30,
+      "notes": "ROSAT All-Sky Survey typical limit"
+    },
+    "XMM_4XMM": {
+      "detected": false,
+      "band": "0.2-12 keV",
+      "flux_limit_cgs": 5e-15,
+      "L_X_limit_erg_s": 1.4661625077850486e+29,
+      "L_X_limit_err": 5.886251282657817e+28,
+      "notes": "XMM-Newton Serendipitous Catalog (field-dependent)"
+    },
+    "Chandra_CSC2": {
+      "detected": false,
+      "band": "0.5-7 keV",
+      "flux_limit_cgs": 1e-15,
+      "L_X_limit_erg_s": 2.9323250155700977e+28,
+      "L_X_limit_err": 1.1772502565315635e+28,
+      "notes": "Chandra Source Catalog 2.0 (field-dependent)"
+    },
+    "NVSS": {
+      "detected": false,
+      "band": "1.4 GHz",
+      "flux_limit_mJy": 2.5,
+      "L_nu_limit_erg_s_Hz": 7.330812538925244e+17,
+      "notes": "NRAO VLA Sky Survey"
+    },
+    "FIRST": {
+      "detected": false,
+      "band": "1.4 GHz",
+      "flux_limit_mJy": 1.0,
+      "L_nu_limit_erg_s_Hz": 2.932325015570097e+17,
+      "notes": "Faint Images of the Radio Sky at Twenty-cm"
+    },
+    "VLASS": {
+      "detected": false,
+      "band": "3 GHz",
+      "flux_limit_mJy": 0.4,
+      "L_nu_limit_erg_s_Hz": 1.172930006228039e+17,
+      "notes": "VLA Sky Survey"
+    }
+  },
+  "interpretation": {
+    "xray_detected": false,
+    "radio_detected": false,
+    "best_xray_limit": {
+      "survey": "Chandra_CSC2",
+      "L_X_limit": 2.9323250155700977e+28
+    },
+    "xray_conclusion": "below_quiescent",
+    "best_radio_limit": {
+      "survey": "VLASS",
+      "L_nu_limit": 1.172930006228039e+17
+    },
+    "radio_conclusion": "non_detection",
+    "overall": "supports_dark_companion"
+  }
+}

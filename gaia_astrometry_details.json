@@ -1,0 +1,58 @@
+{
+  "target": "Gaia DR3 3802130935635096832",
+  "source_id": 3802130935635096832,
+  "query_status": "success",
+  "gaia_data": {
+    "source_id": 3802130935635096832,
+    "ra": 164.52349428314767,
+    "dec": -1.6601557742314024,
+    "parallax": 0.11894892049256606,
+    "parallax_error": 0.15998485684394836,
+    "pmra": -7.600405795077815,
+    "pmra_error": 0.17056076228618622,
+    "pmdec": 3.004263705149674,
+    "pmdec_error": 0.1349898725748062,
+    "ruwe": 1.9535599946975708,
+    "astrometric_excess_noise": 0.89570552110672,
+    "astrometric_excess_noise_sig": 16.493242263793945,
+    "astrometric_params_solved": 31,
+    "astrometric_n_good_obs_al": 201,
+    "astrometric_chi2_al": 783.3005981445312,
+    "astrometric_gof_al": 16.74595832824707,
+    "ipd_frac_multi_peak": 8,
+    "ipd_gof_harmonic_amplitude": 0.06213189661502838,
+    "ipd_frac_odd_win": 0,
+    "phot_g_mean_mag": 17.272504806518555,
+    "phot_bp_mean_mag": 18.087648391723633,
+    "phot_rp_mean_mag": 16.199726104736328,
+    "bp_rp": 1.8879222869873047,
+    "visibility_periods_used": 15,
+    "duplicated_source": false
+  },
+  "analysis": {
+    "parameters": {
+      "parallax": 0.11894892049256606,
+      "parallax_error": 0.15998485684394836,
+      "ruwe": 1.9535599946975708,
+      "astrometric_excess_noise": 0.89570552110672,
+      "astrometric_excess_noise_sig": 16.493242263793945,
+      "ipd_frac_multi_peak": 8,
+      "ipd_gof_harmonic_amplitude": 0.06213189661502838,
+      "phot_g_mean_mag": 17.272504806518555,
+      "astrometric_params_solved": 31,
+      "visibility_periods_used": 15
+    },
+    "flags": {
+      "ruwe": "elevated",
+      "aen": "significant",
+      "ipd_multi_peak": "some_multi",
+      "ipd_gof_harmonic": "normal",
+      "duplicated": false
+    },
+    "interpretation": {
+      "resolved_double": "uncertain",
+      "conclusion": "inconclusive",
+      "supports_dark_companion": "uncertain"
+    }
+  }
+}

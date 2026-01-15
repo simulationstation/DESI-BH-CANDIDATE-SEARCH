@@ -1,0 +1,29 @@
+{
+  "target": "Gaia DR3 3802130935635096832",
+  "n_epochs": 5,
+  "period_range": [
+    5.0,
+    100.0
+  ],
+  "n_realizations": 1000,
+  "real_data": {
+    "chi2_const": 27338.22581874297,
+    "best_period": 91.88442211055276,
+    "best_chi2": 0.5905744132748942,
+    "delta_chi2": 27337.635244329693
+  },
+  "noise_stats": {
+    "mean": 2.942059724001617,
+    "median": 2.3225151156280996,
+    "std": 2.353918638664373,
+    "max": 16.33364590715218
+  },
+  "fap": 0.0,
+  "fap_period_match": 0.0,
+  "interpretation": {
+    "fap": 0.0,
+    "delta_chi2": 27337.635244329693,
+    "significance": ">4sigma",
+    "conclusion": "highly_significant"
+  }
+}
