@@ -282,6 +282,14 @@ The most likely scenarios are **neutron star** or **stellar-mass black hole**, t
 
 ---
 
+## Paper
+
+The full analysis is documented in:
+
+**[DarkCandidate.pdf](DarkCandidate.pdf)** — "A Dark Companion Candidate from DESI DR1 Radial Velocity Variability"
+
+---
+
 ## Author
 
 Aiden Smith (A.I Sloperator)
