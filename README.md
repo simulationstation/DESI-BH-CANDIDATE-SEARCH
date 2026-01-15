@@ -100,6 +100,12 @@ S_robust = min(S, S_min,LOO)
 
 After multi-wavelength validation using Gaia DR3, AllWISE, SIMBAD, and TESS photometry, our **top black hole candidate** is:
 
+### The "Money Plot": Gravity vs Silence
+
+![Money Plot - RV vs TESS](money_plot.png)
+
+*Left: High radial velocity amplitude (146 km/s) indicates a massive unseen companion yanking the visible star. Right: Completely flat TESS light curve over 6 years shows no eclipses or ellipsoidal variations - the companion emits no detectable light.*
+
 ### Gaia DR3 3802130935635096832
 
 | Property | Value | Interpretation |
