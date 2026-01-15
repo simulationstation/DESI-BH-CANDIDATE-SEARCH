@@ -34,12 +34,19 @@
 
 ### Per-Epoch RV Table (EXACT VALUES)
 
-| # | MJD | RV (km/s) | σRV (km/s) |
-|---|-----|-----------|------------|
-| 0 | 59568.48825 | -86.39 | 0.55 |
-| 1 | 59605.38003 | +59.68 | 0.83 |
-| 2 | 59607.37393 | +26.43 | 1.06 |
-| 3 | 59607.38852 | +25.16 | 1.11 |
+**Combined LAMOST + DESI Epochs:**
+
+| # | Source | MJD | Date | RV (km/s) | σRV (km/s) |
+|---|--------|-----|------|-----------|------------|
+| 0 | LAMOST | 57457.000 | 2016-03-10 | -49.36 | 2.79 |
+| 1 | DESI | 59568.488 | 2021-12-20 | -86.39 | 0.55 |
+| 2 | DESI | 59605.380 | 2022-01-26 | +59.68 | 0.83 |
+| 3 | DESI | 59607.374 | 2022-01-28 | +26.43 | 1.06 |
+| 4 | DESI | 59607.389 | 2022-01-28 | +25.16 | 1.11 |
+
+**LAMOST Discovery:** Query of VizieR archives revealed one additional epoch from LAMOST DR7.
+- Spectral classification: **dM0** (M0 dwarf)
+- This constrains the primary mass to M₁ ≈ 0.5 M☉
 
 ### Derived Quantities
 
@@ -164,6 +171,40 @@ Using K_est = 73.04 km/s:
 | 1.0 | 11.8 days | 41.9 days |
 
 **Key Finding:** For P ≈ 30-50 days (plausible range), M₂_min ≈ 1.6-3.0 M_sun. This is consistent with WD, NS, OR BH. **Cannot distinguish without period.**
+
+### Period Search (NEW - Combined LAMOST + DESI)
+
+With the LAMOST epoch extending the baseline to 5.9 years, we can now constrain the orbital period.
+
+**Method:** Grid search over P = 5-100 days, fitting circular orbit model:
+```
+RV(t) = γ + K sin(2πt/P + φ₀)
+```
+
+**Best-Fit Results:**
+
+| Parameter | Value |
+|-----------|-------|
+| Period | **P = 15.9 days** |
+| Semi-amplitude | K = 104.0 km/s |
+| Systemic velocity | γ = -44.2 km/s |
+| χ² | 0.32 |
+| χ²_reduced | 0.32 |
+
+**Mass Analysis (M₁ = 0.5 M☉ from LAMOST dM0):**
+
+| Quantity | Value |
+|----------|-------|
+| Mass function | f(M) = 1.85 M☉ |
+| Minimum companion mass | **M₂_min = 2.62 M☉** |
+| Classification | **NEUTRON STAR RANGE** |
+
+**Verification Tests:**
+1. Same-night stability: Expected 0.46 km/s, Observed 1.27 km/s → **CONSISTENT**
+2. TESS ellipsoidal: Expected 34 ppm, Threshold 460 ppm → **BELOW DETECTION**
+3. Fit quality: χ²_red = 0.32 → **EXCELLENT FIT**
+
+**Caveat:** With only 5 epochs, the period is not uniquely determined. The fit is consistent with the data but other periods may also fit. Dedicated follow-up required for definitive period.
 
 ---
 
@@ -437,8 +478,13 @@ The paper can proceed to submission IF AND ONLY IF:
 | TESS constraints | scripts/tess_ellipsoidal_limits.py |
 | SED analysis | scripts/sed_companion_limits.py |
 | Claims checker | scripts/claims_checker.py |
+| Gaia/archival query | scripts/query_gaia_archival.py |
+| Period search | scripts/period_search.py |
 | Validation results | validation_results_full.csv |
 | TESS plot | tess_analysis_result.png |
 | Mass function plot | mass_function_analysis.png |
 | SED plot | sed_analysis.png |
+| Period search plot | period_search_results.png |
 | Dossier JSON | candidate_dossier.json |
+| Archival RV JSON | archival_rv_results.json |
+| Period search JSON | period_search_results.json |

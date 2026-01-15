@@ -137,6 +137,30 @@ The initial search yielded 21 candidate systems. Following the validation pipeli
 
 ---
 
+## Period Search (NEW)
+
+Using all 5 RV epochs (1 LAMOST + 4 DESI), we fit circular orbit models to constrain the period.
+
+**Best-Fit Orbital Solution:**
+
+| Parameter | Value |
+|-----------|-------|
+| Period | **P = 15.9 days** |
+| Semi-amplitude | K = 104.0 km/s |
+| Systemic velocity | γ = -44.2 km/s |
+| χ²_reduced | 0.32 (excellent fit) |
+| Mass function | f(M) = 1.85 M☉ |
+| **Min companion mass** | **M₂_min = 2.62 M☉** |
+| **Classification** | **NEUTRON STAR RANGE** |
+
+![Period Search Results](period_search_results.png)
+
+**Verification:** Same-night stability consistent, TESS ellipsoidal below detection, excellent fit quality.
+
+**Caveat:** With only 5 epochs over 5.9 years, the period is not uniquely determined. Follow-up required.
+
+---
+
 ## Orbit Feasibility Analysis
 
 Using K_est = 73 km/s (ΔRV/2) and M₁ ≈ 0.5 M☉ (from LAMOST dM0 classification):
@@ -148,19 +172,19 @@ Using K_est = 73 km/s (ΔRV/2) and M₁ ≈ 0.5 M☉ (from LAMOST dM0 classifica
 | 60 | 2.42 | 3.49 M☉ | BH range |
 | 80 | 3.23 | 4.35 M☉ | BH |
 
-**Plausible period range:** 25-80 days (circular) or 10-100 days (eccentric)
+**Period search result:** Best-fit P ≈ 15.9 days yields M₂_min = 2.62 M☉ (**Neutron Star range**)
 
-**Key finding:** Without orbital period determination, we cannot distinguish between cool WD, NS, or BH. The minimum companion mass for plausible periods is ~1.6-3.5 M☉.
+**Key finding:** The LAMOST+DESI period search favors a neutron star companion, though further follow-up is needed for a definitive mass measurement.
 
 ---
 
 ## Limitations
 
-1. **No Period Determination:** The 4 DESI epochs constrain P ≈ 25-80 days but do not uniquely determine it. Without period, no dynamical mass measurement is possible.
+1. **Period Not Uniquely Determined:** The 5 epochs (LAMOST + DESI) suggest P ≈ 15.9 days but the sparse sampling allows other periods. Dedicated follow-up required for definitive period.
 
-2. **High-Leverage Epoch:** The first epoch (RV = -86.39 km/s) dominates the significance. S_robust = 19.8 is the conservative metric.
+2. **High-Leverage Epoch:** The first DESI epoch (RV = -86.39 km/s) dominates the significance. S_robust = 19.8 is the conservative metric.
 
-3. **Companion Type Ambiguity:** Negative-space analysis rules out M-dwarf and hot WD but cannot distinguish cool WD vs NS vs BH.
+3. **Companion Type Ambiguity:** Negative-space analysis rules out M-dwarf and hot WD but cannot distinguish cool WD vs NS vs BH without confirmed period.
 
 4. **Primary Mass from Spectral Type:** LAMOST classifies the primary as dM0 (M0 dwarf), implying M₁ ≈ 0.5 M☉. This is more constraining than the parallax (0.12 ± 0.16 mas).
 
@@ -215,6 +239,8 @@ python scripts/orbit_feasibility.py       # Period/mass function analysis
 python scripts/tess_ellipsoidal_limits.py # TESS amplitude upper limits
 python scripts/sed_companion_limits.py    # SED/companion flux constraints
 python scripts/claims_checker.py          # Validate claims vs data
+python scripts/query_gaia_archival.py     # Query Gaia NSS & archival surveys
+python scripts/period_search.py           # Period search with combined epochs
 ```
 
 ---

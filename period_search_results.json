@@ -1,0 +1,18 @@
+{
+  "target": "Gaia DR3 3802130935635096832",
+  "n_epochs": 5,
+  "baseline_days": 2150.389000000003,
+  "best_fit": {
+    "period_days": 15.882941470735368,
+    "K_kms": 103.98544945412954,
+    "gamma_kms": -44.24567157428548,
+    "chi2": 0.31595230226927307,
+    "chi2_reduced": 0.31595230226927307
+  },
+  "mass_analysis": {
+    "M1_assumed_msun": 0.5,
+    "mass_function_msun": 1.849956617539421,
+    "M2_min_msun": 2.6225912372819282,
+    "classification": "NEUTRON STAR RANGE"
+  }
+}
