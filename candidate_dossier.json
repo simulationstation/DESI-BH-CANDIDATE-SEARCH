@@ -1,0 +1,53 @@
+{
+  "n_epochs": 4,
+  "mjd_span_days": 38.90026999999827,
+  "delta_rv_max_kms": 146.07,
+  "K_est_kms": 73.035,
+  "rv_weighted_mean_kms": -23.99954265811198,
+  "chi2_constant": 27257.21321716201,
+  "chi2_reduced": 9085.737739054004,
+  "dof": 3,
+  "S": 79.84113191702556,
+  "S_min_LOO": 19.78361562385236,
+  "S_robust": 19.78361562385236,
+  "loo_drop_epoch_idx": 0,
+  "d_max": 113.43719516706912,
+  "d_max_epoch_idx": 0,
+  "high_leverage": true,
+  "loo_significant_drop": true,
+  "night_consistency_checks": [
+    {
+      "epoch_i": 2,
+      "epoch_j": 3,
+      "mjd_i": 59607.37393,
+      "mjd_j": 59607.38852,
+      "dt_days": 0.014589999998861458,
+      "rv_diff_kms": 1.2699999999999996,
+      "err_diff_kms": 1.5348289807011075,
+      "significance": 0.8274537528082546,
+      "consistent": true
+    }
+  ],
+  "epochs": [
+    {
+      "mjd": 59568.48825,
+      "rv_kms": -86.39,
+      "rv_err_kms": 0.55
+    },
+    {
+      "mjd": 59605.38003,
+      "rv_kms": 59.68,
+      "rv_err_kms": 0.83
+    },
+    {
+      "mjd": 59607.37393,
+      "rv_kms": 26.43,
+      "rv_err_kms": 1.06
+    },
+    {
+      "mjd": 59607.38852,
+      "rv_kms": 25.16,
+      "rv_err_kms": 1.11
+    }
+  ]
+}

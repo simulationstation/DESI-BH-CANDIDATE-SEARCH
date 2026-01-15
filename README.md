@@ -2,7 +2,7 @@
 
 A conservative, reproducible search for statistically significant radial-velocity (RV) variability in public DESI Data Release 1 Milky Way Survey (MWS) data. Using only per-epoch RV measurements, we identify stars whose RV variability exceeds measurement noise and remains robust under leave-one-out tests. To distinguish potential non-interacting compact companions (Black Holes, Neutron Stars, White Dwarfs) from mundane binaries, we implement a **"Negative Space" multi-messenger validation pipeline**.
 
-**Result: Identification of Gaia DR3 3802130935635096832**, a high-priority candidate system displaying large radial-velocity variations (ΔRV ≈ 146 km/s) and significant astrometric wobble (RUWE = 1.95), yet exhibiting no infrared excess, photometric variability, or ultraviolet emission. These properties are consistent with a massive, invisible companion.
+**Top Candidate: Gaia DR3 3802130935635096832** — a high-priority system displaying large radial-velocity variations (ΔRV = 146 km/s) and significant astrometric wobble (RUWE = 1.95), yet exhibiting no infrared excess, photometric variability, or ultraviolet emission. These properties are consistent with a dark (non-luminous) companion. **Follow-up observations required to determine orbital period and companion mass.**
 
 ---
 
@@ -32,7 +32,7 @@ We use public DESI DR1 MWS per-epoch RV products from `main-bright` and `main-da
 2. σ_RV < 10 km/s
 3. |RV| < 500 km/s
 
-### RV Variability Metric
+### RV Variability Metrics
 
 ```
 ΔRV_max = max(RV) - min(RV)
@@ -42,159 +42,168 @@ S = ΔRV_max / sqrt(Σ σ_RV,i²)
 
 ### Robustness Diagnostics
 
-To guard against single-epoch artifacts, we compute a leave-one-out minimum significance (S_min,LOO). For targets with N ≥ 3 epochs:
+To guard against single-epoch artifacts, we compute:
+
+1. **S_min_LOO**: Leave-one-out minimum significance (minimum S when each epoch is removed in turn)
+2. **S_robust**: min(S, S_min_LOO) — conservative significance measure
+3. **d_max**: Maximum leverage metric identifying epochs with outsized influence
 
 ```
-S_robust = min(S, S_min,LOO)
+S_robust = min(S, S_min_LOO)
+d_max = max_i |RV_i - RV_mean| / σ_RV,i
 ```
 
-We restrict our sample to targets with N ≥ 3 epochs and select those with S_robust ≥ 10.
+We flag candidates with d_max > 100 as "high-leverage" (single epoch dominates the signal).
 
 ---
 
 ## Multi-Messenger Validation: The "Negative Space" Pipeline
 
-To isolate potential compact objects from the initial RV-variable shortlist, we applied a secondary validation pipeline designed to identify systems with **strong gravity** but **missing light**. A candidate is considered a high-confidence dark companion only if it satisfies:
+To isolate potential compact objects from the initial RV-variable shortlist, we apply a secondary validation pipeline designed to identify systems with **strong gravity** but **missing light**:
 
-1. **Significant Gravity (Gaia DR3):** Astrometric wobble indicative of an orbit, defined as RUWE > 1.4
-2. **No Infrared Excess (WISE):** To rule out M-dwarf companions, we require W1 - W2 < 0.1
-3. **Photometric Silence (TESS/ZTF):** Time-domain photometry rules out deep eclipses or contact binary features
-4. **Ultraviolet Silence (GALEX):** UV imaging rules out hot, young white dwarfs
-5. **Clean Source Isolation (Legacy Survey):** Deep imaging residuals ensure astrometric signal is not due to contamination
+1. **Significant Gravity (Gaia DR3):** Astrometric wobble indicative of an orbit (RUWE > 1.4)
+2. **No Infrared Excess (WISE):** W1 - W2 < 0.1 rules out M-dwarf companions
+3. **Photometric Silence (TESS/ZTF):** No deep eclipses or contact binary features
+4. **Ultraviolet Silence (GALEX):** No hot, young white dwarf signature
+5. **Clean Source Isolation (Legacy Survey):** No contamination from blended sources
 
 ---
 
 ## Results
 
-The initial search yielded 21 candidate systems. Following the validation pipeline, one target emerged as a high-probability dark companion candidate.
+The initial search yielded 21 candidate systems. Following the validation pipeline, one target emerged as the top dark companion candidate requiring follow-up.
 
-### Follow-up Candidate Systems (Top 10)
+### Top Dark Companion Candidate: Gaia DR3 3802130935635096832
 
-| Rank | TargetID | Gaia Source ID | N | S_robust | RUWE | Verdict |
-|------|----------|----------------|---|----------|------|---------|
-| 1 | 39627745210139276 | 3802130935635096832 | 4 | 100.0 | 1.95 | **Dark Companion** |
-| 2 | 39628001431785529 | 2759088365339967488 | 4 | 91.1 | 1.02 | Binary |
-| 3 | 39632991214896712 | 1480681355298504960 | 3 | 81.1 | 0.98 | Binary |
-| 4 | 39633437979575384 | 1584997005586641280 | 3 | 71.7 | 0.94 | Binary |
-| 5 | 39627714713356667 | 3826086648304166400 | 4 | 55.4 | 1.10 | Binary |
-| 6 | 39627830035744797 | 3891388499304470656 | 3 | 52.2 | 1.05 | Binary |
-| 7 | 39627681263782079 | 6914501041337922944 | 3 | 49.1 | 0.89 | Binary |
-| 8 | 39633025553665365 | 1375654252266254080 | 3 | 44.8 | 3.20 | Likely Binary |
-| 9 | 39627720727987709 | 3827093418703158272 | 7 | 43.8 | 1.15 | Binary |
-| 10 | 39627782317149427 | 3652971286995183488 | 5 | 42.7 | 1.20 | Binary |
+| Property | Value | Note |
+|----------|-------|------|
+| **Gaia Source ID** | 3802130935635096832 | |
+| **RA, Dec** | 164.5235, -1.6602 | Hydra |
+| **N epochs** | 4 | |
+| **ΔRV** | 146.07 km/s | |
+| **S** | 79.8 | Global significance |
+| **S_min_LOO** | 19.8 | LOO significance |
+| **S_robust** | 19.8 | Conservative |
+| **d_max** | 113.4 | **High leverage** |
+| **RUWE** | 1.95 | Astrometric wobble |
+| **W1-W2** | 0.052 | No IR excess |
+
+#### Per-Epoch Radial Velocities
+
+| Epoch | MJD | RV (km/s) | σ_RV (km/s) |
+|-------|-----|-----------|-------------|
+| 1 | 59568.48825 | -86.39 | 0.55 |
+| 2 | 59605.38003 | +59.68 | 0.83 |
+| 3 | 59607.37393 | +26.43 | 1.06 |
+| 4 | 59607.38852 | +25.16 | 1.11 |
+
+**Note:** Epoch 1 has high leverage (d_max = 113). When removed, S drops from 79.8 to 19.8. Epochs 3 & 4 (same night, 21 min apart) are consistent at 0.83σ, validating pipeline reliability.
 
 ---
 
-## Top Dark Companion Candidate: Gaia DR3 3802130935635096832
+## Negative Space Validation Results
 
-This system represents the most significant detection in our sample. It exhibits violent radial velocity variations (ΔRV ≈ 146 km/s) over a baseline of 39 days.
+### Infrared (WISE)
+- W1 - W2 = 0.052 (consistent with single star)
+- **Rules out:** M dwarf, brown dwarf, dusty disk
+- **Does not rule out:** WD, NS, BH
+
+### Ultraviolet (GALEX)
+- Non-detection in NUV
+- **Rules out:** Hot WD (T > 10,000 K)
+- **Does not rule out:** Cool WD (T < 6000 K), NS, BH
+
+### Photometry (TESS)
+- 37,832 data points across 6 sectors
+- No significant periodic signal (LS power = 0.0014)
+- No eclipses detected
+- **Rules out:** Contact binary, short-period eclipsing binary
+- **Does not rule out:** Detached binary with P > 10 days
+
+### Imaging (Legacy Survey)
+- Source appears isolated
+- No blending detected
+
+---
+
+## Orbit Feasibility Analysis
+
+Using K_est = 73 km/s (ΔRV/2) and assuming M₁ = 0.5-1.0 M☉:
+
+| Period (days) | f(M) (M☉) | M₂_min (M₁=0.7) | Interpretation |
+|---------------|-----------|-----------------|----------------|
+| 20 | 0.81 | 1.64 M☉ | NS range |
+| 40 | 1.61 | 2.60 M☉ | NS/BH boundary |
+| 60 | 2.42 | 3.49 M☉ | BH range |
+| 80 | 3.23 | 4.35 M☉ | BH |
+
+**Plausible period range:** 25-80 days (circular) or 10-100 days (eccentric)
+
+**Key finding:** Without orbital period determination, we cannot distinguish between cool WD, NS, or BH. The minimum companion mass for plausible periods is ~1.6-3.5 M☉.
+
+---
+
+## Limitations
+
+1. **No Period Determination:** The 4 DESI epochs constrain P ≈ 25-80 days but do not uniquely determine it. Without period, no dynamical mass measurement is possible.
+
+2. **High-Leverage Epoch:** The first epoch (RV = -86.39 km/s) dominates the significance. S_robust = 19.8 is the conservative metric.
+
+3. **Companion Type Ambiguity:** Negative-space analysis rules out M-dwarf and hot WD but cannot distinguish cool WD vs NS vs BH.
+
+4. **Primary Mass Uncertainty:** Parallax (0.12 ± 0.16 mas) is too uncertain to constrain primary mass. We assume M₁ ~ 0.5-1.2 M☉.
+
+5. **RUWE Interpretation:** RUWE = 1.95 indicates non-single-star astrometric behavior but is not a direct mass measurement.
+
+---
+
+## Visual Validation
 
 ### The "Money Plot": Gravity vs Silence
 
 ![Money Plot - RV vs TESS](money_plot.png)
 
-*Left: High radial velocity amplitude (146 km/s) indicates a massive unseen companion yanking the visible star. Right: Completely flat TESS light curve over 6 years shows no eclipses or ellipsoidal variations - the companion emits no detectable light.*
+*Left: High RV amplitude (146 km/s). Right: Flat TESS light curve — the companion emits no detectable light.*
 
-### Physical Parameters
-
-| Property | Value | Interpretation |
-|----------|-------|----------------|
-| **RA, Dec** | 164.5235, -1.6602 | Hydra constellation |
-| **RUWE** | 1.95 | Strong astrometric wobble (>1.4 threshold) |
-| **Astrometric Excess Noise** | 16.5σ | Highly significant orbital motion |
-| **RV Amplitude** | 146.1 km/s | Large velocity variations |
-| **W1-W2 Color** | 0.052 | No infrared excess (dark companion) |
-| **SIMBAD** | NO MATCH | Unknown object |
-
-### Visual Validation
-
-The source appears isolated in both standard DSS imaging and deep Legacy Survey imaging, confirming the high RUWE is intrinsic to binary motion and not due to source blending.
-
-![Aladin Sky View](dot.png)
-
-*Aladin Sky Atlas (DSS) view. The source appears isolated.*
+### Imaging
 
 ![Legacy Survey View](dot2.png)
 
-*Legacy Survey Viewer (DECaLS) deep imaging. The source remains a clean, single point source.*
+*Legacy Survey (DECaLS) deep imaging. Clean, isolated point source.*
 
-### Ultraviolet Constraints
-
-To constrain the nature of the unseen companion, we inspected GALEX Near-Ultraviolet (NUV) imaging. A hot white dwarf companion (T_eff ≳ 10,000 K) would exhibit significant UV excess. The target is **undetected in the ultraviolet**, ruling out a hot, young white dwarf companion.
+### GALEX Ultraviolet
 
 ![GALEX NUV](nodot3.png)
 
-*GALEX NUV imaging of the target field. The target is undetected in the ultraviolet.*
+*GALEX NUV: Target undetected. Rules out hot WD.*
 
-### TESS Photometry Analysis
-
-We analyzed 6 sectors of TESS photometry spanning 2,200 days (6 years) to search for eclipses or ellipsoidal variations.
-
-| Parameter | Value |
-|-----------|-------|
-| TESS Sectors | 6 (S9, S45, S46, S62, S72, S89) |
-| Total Data Points | 37,832 |
-| Time Baseline | 2,200 days |
-| Light Curve Scatter | 6.32 ppt |
-| Periodic Signal | **NONE DETECTED** |
+### TESS Photometry
 
 ![TESS Analysis](tess_analysis_result.png)
 
-*Left: DESI Radial Velocity measurements showing significant variability. Right: TESS photometry showing a lack of eclipses or ellipsoidal modulation, consistent with a non-interacting dark companion.*
+*TESS light curve and periodogram. No eclipses or ellipsoidal variations detected.*
 
 ---
 
-## Discussion
+## Analysis Scripts
 
-The discovery of **Gaia DR3 3802130935635096832** highlights the power of combining spectroscopic RVs with astrometric, photometric, and ultraviolet validation. Since the companion is optically and structurally dark (no IR excess, no eclipses), we can constrain its nature based on the lack of tidal interaction and UV emission.
-
-Assuming a standard K-dwarf primary (~0.7 M☉), the high velocity semi-amplitude (K ≈ 73 km/s) requires a massive companion.
-
-The **absence of GALEX UV emission** critically rules out the most common false positive for high-mass companions: the hot white dwarf. This restricts the candidate nature to either:
-- An evolved, cold white dwarf
-- A neutron star
-- A stellar-mass black hole
-
-**Conclusion: This system requires immediate spectroscopic monitoring to determine the orbital period and dynamic mass of the invisible companion.**
-
----
-
-## Usage
-
-### 1. Initial RV Candidate Analysis
-
+### Core Pipeline
 ```bash
-python analyze_rv_candidates.py --data-root data --max-rows 1000000
+python analyze_rv_candidates.py       # Initial RV candidate search
+python triage_rv_candidates.py        # Robust triage with LOO
+python crossmatch_nss_simbad.py       # Cross-match Gaia NSS/SIMBAD
+python build_priority_packet.py       # Build priority list
+python verify_candidates.py           # Multi-wavelength validation
+python analyze_tess_photometry.py     # TESS light curve analysis
 ```
 
-### 2. Robust Triage with Leave-One-Out
-
+### Diagnostic Scripts
 ```bash
-python triage_rv_candidates.py --data-root data
-```
-
-### 3. Cross-match with Gaia NSS and SIMBAD
-
-```bash
-python crossmatch_nss_simbad.py
-```
-
-### 4. Build Priority Packet
-
-```bash
-python build_priority_packet.py
-```
-
-### 5. Multi-wavelength Validation
-
-```bash
-python verify_candidates.py
-```
-
-### 6. TESS Photometry Analysis
-
-```bash
-python analyze_tess_photometry.py
+python scripts/compute_rv_dossier.py      # Compute S, S_LOO, d_max for target
+python scripts/orbit_feasibility.py       # Period/mass function analysis
+python scripts/tess_ellipsoidal_limits.py # TESS amplitude upper limits
+python scripts/sed_companion_limits.py    # SED/companion flux constraints
+python scripts/claims_checker.py          # Validate claims vs data
 ```
 
 ---
@@ -203,11 +212,12 @@ python analyze_tess_photometry.py
 
 ```
 numpy
-fitsio (or astropy)
+astropy / fitsio
 matplotlib
 astroquery
 lightkurve
 pandas
+scipy
 ```
 
 ---
@@ -222,12 +232,16 @@ Download from: https://data.desi.lbl.gov/public/dr1/
 
 ---
 
-## Notes
+## Conclusion
 
-- Gaia DR3 NSS incompleteness (particularly for short/intermediate periods) means absence of NSS classification does not indicate singleness
-- Overlap with known variable classes is handled through annotation rather than removal
-- Further observations required to determine orbital parameters or companion masses
-- **Spectroscopic follow-up recommended** for the top candidate to obtain orbital solution
+**Gaia DR3 3802130935635096832** is a high-amplitude RV binary candidate with a dark companion. The companion is:
+- Not an M dwarf (no IR excess)
+- Not a hot WD (no UV detection)
+- Not an eclipsing system (flat TESS light curve)
+
+The most likely scenarios are **neutron star** or **stellar-mass black hole**, though a cool white dwarf cannot be excluded without period determination.
+
+**Spectroscopic follow-up is required** to measure the orbital period and derive a dynamical companion mass.
 
 ---
 
