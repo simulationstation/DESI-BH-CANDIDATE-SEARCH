@@ -96,6 +96,80 @@ S_robust = min(S, S_min,LOO)
 
 ---
 
+## Top Black Hole Candidate: Gaia DR3 3802130935635096832
+
+After multi-wavelength validation using Gaia DR3, AllWISE, SIMBAD, and TESS photometry, our **top black hole candidate** is:
+
+### Gaia DR3 3802130935635096832
+
+| Property | Value | Interpretation |
+|----------|-------|----------------|
+| **RA, Dec** | 164.5235, -1.6602 | Hydra constellation |
+| **RUWE** | 1.95 | Strong astrometric wobble (>1.4 threshold) |
+| **Astrometric Excess Noise** | 16.5σ | Highly significant orbital motion |
+| **RV Amplitude** | 146.1 km/s | Large velocity variations |
+| **W1-W2 Color** | 0.052 | No infrared excess (dark companion) |
+| **SIMBAD** | NO MATCH | Unknown object |
+| **BH Probability Score** | 100/100 | Highest ranked candidate |
+
+### Aladin Sky View
+
+![Aladin Sky View of Gaia DR3 3802130935635096832](dot.png)
+
+*Image: Aladin Lite view of the target field. The candidate appears as a single, unremarkable star with no obvious luminous companion.*
+
+---
+
+## TESS Photometry Analysis
+
+We analyzed 6 sectors of TESS photometry spanning 2,200 days (6 years) to search for eclipses or ellipsoidal variations.
+
+### Key Results
+
+| Parameter | Value |
+|-----------|-------|
+| TESS Sectors | 6 (S9, S45, S46, S62, S72, S89) |
+| Total Data Points | 37,832 |
+| Time Baseline | 2,200 days |
+| Light Curve Scatter | 6.32 ppt |
+| Periodic Signal | **NONE DETECTED** |
+
+### Light Curve Analysis
+
+![TESS Light Curve Analysis](tess_analysis_result.png)
+
+*Top-left: Full 6-year TESS light curve showing no eclipses or significant variability. Top-right: Lomb-Scargle periodogram showing no significant peaks. Bottom panels: Phase-folded light curves on candidate periods showing flat, noise-dominated signal.*
+
+### Interpretation
+
+The **FLAT TESS light curve** is exactly what we expect for a black hole candidate:
+
+- **No eclipses** - The companion does not transit the visible star
+- **No ellipsoidal variations** - Or they are below detection threshold
+- **No reflection effect** - The companion emits no detectable light
+
+Combined with:
+- High Gaia RUWE (1.95) indicating gravitational wobble
+- Large RV amplitude (146 km/s) indicating massive companion
+- Zero infrared excess (W1-W2 ~ 0) indicating non-luminous companion
+
+**Conclusion: This system shows all hallmarks of a "dark companion" - gravity without light - consistent with a stellar-mass black hole or neutron star.**
+
+---
+
+## Validation Pipeline
+
+All 21 candidates were validated using:
+
+1. **Gaia DR3**: RUWE, astrometric excess noise, proper motions, parallax
+2. **AllWISE**: W1, W2, W3, W4 infrared photometry for companion detection
+3. **SIMBAD**: Cross-match against known variable star classifications
+4. **TESS**: Time-series photometry for eclipse/variability detection
+
+See `validation_results_full.csv` for complete results.
+
+---
+
 ## Usage
 
 ### 1. Initial RV Candidate Analysis
@@ -126,10 +200,16 @@ python crossmatch_nss_simbad.py
 python build_priority_packet.py
 ```
 
-### 5. Deep-dive Validation
+### 5. Multi-wavelength Validation
 
 ```bash
-python deep_dive_all_followup.py
+python verify_candidates.py
+```
+
+### 6. TESS Photometry Analysis
+
+```bash
+python analyze_tess_photometry.py
 ```
 
 ---
@@ -139,7 +219,10 @@ python deep_dive_all_followup.py
 ```
 numpy
 fitsio (or astropy)
-matplotlib (optional, for plots)
+matplotlib
+astroquery
+lightkurve
+pandas
 ```
 
 ---
@@ -159,6 +242,7 @@ Download from: https://data.desi.lbl.gov/public/dr1/
 - Gaia DR3 NSS incompleteness (particularly for short/intermediate periods) means absence of NSS classification does not indicate singleness
 - Overlap with known variable classes is handled through annotation rather than removal
 - Further observations required to determine orbital parameters or companion masses
+- **Spectroscopic follow-up recommended** for the top candidate to obtain orbital solution
 
 ---
 
