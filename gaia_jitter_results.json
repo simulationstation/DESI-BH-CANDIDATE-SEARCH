@@ -1,0 +1,38 @@
+{
+  "target": "Gaia DR3 3802130935635096832",
+  "analysis": "astrometric_jitter_consistency",
+  "status": "success",
+  "inputs_used": {
+    "P_days": 21.847469561538293,
+    "K_kms": 95.35424262201114,
+    "e": 0.18173059656764498,
+    "M1_msun": 0.5643073310009665,
+    "M1_err": 0.055804792370185,
+    "M2_min_msun": 2.731840427992157,
+    "distance_pc": 495.0,
+    "distance_err_pc": 91.0,
+    "ruwe": 1.9535599946975708,
+    "astrometric_excess_noise_mas": 0.89570552110672,
+    "astrometric_excess_noise_sig": 16.493242263793945,
+    "G_mag": 17.272504806518555
+  },
+  "calculations": {
+    "a_rel_AU": 0.22761951983966092,
+    "a1_AU": 0.1886505860672024,
+    "alpha_pred_mas": 0.38111229508525735,
+    "sigma_AL_assumed_mas": 1.3540110731008475,
+    "epsilon_ruwe_mas": 2.2723180892584023
+  },
+  "comparison": {
+    "alpha_pred_mas": 0.38111229508525735,
+    "epsilon_ruwe_mas": 2.2723180892584023,
+    "epsilon_aen_mas": 0.89570552110672,
+    "alpha_over_epsilon_ruwe": 0.16771960619722823,
+    "alpha_over_epsilon_aen": 0.42548838441272624
+  },
+  "interpretation": {
+    "qualitative_flag": "mild_tension",
+    "interpretation": "MILD TENSION",
+    "avg_ratio": 0.2966039953049772
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "target": "Gaia DR3 3802130935635096832",
+  "ra": 164.5235,
+  "dec": -1.6602,
+  "analysis": "background_blend_audit",
+  "cutout": {
+    "status": "success",
+    "bands": {
+      "g": "success",
+      "r": "success",
+      "z": "success"
+    },
+    "method": "legacy_api",
+    "pixscale_arcsec": 0.262,
+    "cutout_size_pix": 64
+  },
+  "psf_analysis": {
+    "status": "success",
+    "centroid_x": 31.569610821109777,
+    "centroid_y": 32.3147357727217,
+    "Ixx": 12.651634384640262,
+    "Iyy": 13.026242940388268,
+    "Ixy": 0.1390325228850507,
+    "ellipticity": 0.009085060014345671,
+    "position_angle_deg": 71.70709003072929,
+    "fwhm_pix": 8.438309949022415,
+    "fwhm_arcsec": 2.210837206643873,
+    "n_secondary_peaks": 0,
+    "asymmetry": 0.3295501871056356,
+    "residual_std": 0.1153017489666234,
+    "band_used": "r"
+  },
+  "gaia_ipd": {
+    "ipd_frac_multi_peak": 8,
+    "ipd_gof_harmonic_amplitude": 0.06213189661502838,
+    "ipd_frac_odd_win": 0,
+    "duplicated_source": false
+  },
+  "evidence": {
+    "imaging": [
+      [
+        "ellipticity",
+        "low",
+        "e=0.009 < 0.1: consistent with single PSF"
+      ],
+      [
+        "asymmetry",
+        "high",
+        "A=0.330 > 0.1: asymmetric"
+      ],
+      [
+        "secondary_peaks",
+        "none",
+        "No secondary peaks detected"
+      ]
+    ],
+    "gaia": [
+      [
+        "ipd_frac_multi_peak",
+        "borderline",
+        "8%: borderline"
+      ],
+      [
+        "ipd_gof_harmonic",
+        "low",
+        "0.062 < 0.1: no periodic pattern"
+      ],
+      [
+        "duplicated_source",
+        "no",
+        "Not duplicated"
+      ]
+    ],
+    "overall": "possible_blend",
+    "conclusion": "Some evidence for blend; further investigation recommended",
+    "blend_score": 3
+  },
+  "qualitative_blend_flag": "possible_blend",
+  "textual_notes": "Some evidence for blend; further investigation recommended"
+}

@@ -382,6 +382,14 @@ python scripts/gaia_astrometry_details.py # Gaia IPD flag analysis
 python scripts/window_function_analysis.py    # FAP Monte Carlo
 ```
 
+### Strengthening Analyses (v4)
+```bash
+python scripts/astrometric_jitter_analysis.py   # RUWE vs orbital wobble consistency
+python scripts/legacy_blend_audit.py            # Legacy Survey blend check
+python scripts/injection_recovery_alias_test.py # Period aliasing test
+python scripts/lamost_spectrum_refit.py         # Independent M₁ verification
+```
+
 ---
 
 ## Output Files
@@ -405,6 +413,11 @@ python scripts/window_function_analysis.py    # FAP Monte Carlo
 | `primary_mass_results.json` | Refined primary mass |
 | `gaia_astrometry_details.json` | Gaia IPD flag analysis |
 | `window_function_results.json` | FAP Monte Carlo results |
+| `ANALYSIS_REPORT_v4.md` | Final strengthening report |
+| `gaia_jitter_results.json` | Astrometric wobble consistency |
+| `legacy_blend_results.json` | Legacy Survey blend audit |
+| `injection_recovery_results.json` | Period aliasing test |
+| `primary_mass_refit_results.json` | Independent M₁ verification |
 
 ---
 

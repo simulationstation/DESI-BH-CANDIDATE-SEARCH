@@ -1,0 +1,136 @@
+{
+  "target": "Gaia DR3 3802130935635096832",
+  "analysis": "injection_recovery_alias_test",
+  "config": {
+    "period_classes": {
+      "short": [
+        1.0,
+        5.0
+      ],
+      "intermediate": [
+        5.0,
+        15.0
+      ],
+      "target": [
+        15.0,
+        30.0
+      ],
+      "long": [
+        30.0,
+        100.0
+      ]
+    },
+    "n_realizations_per_class": 500,
+    "K_range_kms": [
+      80,
+      110
+    ],
+    "gamma_range_kms": [
+      -60,
+      -20
+    ],
+    "n_period_grid": 150
+  },
+  "results_by_class": {
+    "short": {
+      "n_total": 500,
+      "recovery_counts": {
+        "short": 34,
+        "intermediate": 109,
+        "target": 98,
+        "long": 257,
+        "very_long": 2,
+        "failed": 0,
+        "unknown": 0
+      },
+      "recovery_fractions": {
+        "short": 0.068,
+        "intermediate": 0.218,
+        "target": 0.196,
+        "long": 0.514,
+        "very_long": 0.004,
+        "failed": 0.0,
+        "unknown": 0.0
+      }
+    },
+    "intermediate": {
+      "n_total": 500,
+      "recovery_counts": {
+        "short": 22,
+        "intermediate": 95,
+        "target": 98,
+        "long": 285,
+        "very_long": 0,
+        "failed": 0,
+        "unknown": 0
+      },
+      "recovery_fractions": {
+        "short": 0.044,
+        "intermediate": 0.19,
+        "target": 0.196,
+        "long": 0.57,
+        "very_long": 0.0,
+        "failed": 0.0,
+        "unknown": 0.0
+      }
+    },
+    "target": {
+      "n_total": 500,
+      "recovery_counts": {
+        "short": 12,
+        "intermediate": 50,
+        "target": 83,
+        "long": 353,
+        "very_long": 2,
+        "failed": 0,
+        "unknown": 0
+      },
+      "recovery_fractions": {
+        "short": 0.024,
+        "intermediate": 0.1,
+        "target": 0.166,
+        "long": 0.706,
+        "very_long": 0.004,
+        "failed": 0.0,
+        "unknown": 0.0
+      }
+    },
+    "long": {
+      "n_total": 500,
+      "recovery_counts": {
+        "short": 16,
+        "intermediate": 35,
+        "target": 54,
+        "long": 389,
+        "very_long": 6,
+        "failed": 0,
+        "unknown": 0
+      },
+      "recovery_fractions": {
+        "short": 0.032,
+        "intermediate": 0.07,
+        "target": 0.108,
+        "long": 0.778,
+        "very_long": 0.012,
+        "failed": 0.0,
+        "unknown": 0.0
+      }
+    }
+  },
+  "metrics": {
+    "frac_short_recovered_as_target": 0.196,
+    "frac_intermediate_recovered_as_target": 0.196,
+    "frac_long_recovered_as_target": 0.108,
+    "avg_alias_fap_for_target": 0.16666666666666666,
+    "frac_target_recovered_correctly": 0.166,
+    "frac_target_aliased_to_short": 0.024,
+    "frac_target_aliased_to_intermediate": 0.1,
+    "frac_target_aliased_to_long": 0.706
+  },
+  "interpretation": {
+    "frac_target_recovered_correctly": 0.166,
+    "avg_alias_fap": 0.16666666666666666,
+    "short_to_target_alias": 0.196,
+    "conclusion": "Poor recovery; period uncertain"
+  }
+}
