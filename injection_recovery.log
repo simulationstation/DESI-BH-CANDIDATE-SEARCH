@@ -1,0 +1,72 @@
+======================================================================
+INJECTION-RECOVERY ALIAS ANALYSIS
+======================================================================
+Target: Gaia DR3 3802130935635096832
+
+Period classes:
+  short: 1.0-5.0 days
+  intermediate: 5.0-15.0 days
+  target: 15.0-30.0 days
+  long: 30.0-100.0 days
+
+Realizations per class: 500
+K range: 80-110 km/s
+
+======================================================================
+INJECTION-RECOVERY ALIAS TEST
+======================================================================
+
+Epochs: 5
+Baseline: 2150.4 days
+
+Using 8 parallel workers
+
+Simulating short periods (1.0-5.0 days)...
+  N = 500
+    Recovered as short: 34 (6.8%)
+    Recovered as intermediate: 109 (21.8%)
+    Recovered as target: 98 (19.6%)
+    Recovered as long: 257 (51.4%)
+    Recovered as very_long: 2 (0.4%)
+
+Simulating intermediate periods (5.0-15.0 days)...
+  N = 500
+    Recovered as short: 22 (4.4%)
+    Recovered as intermediate: 95 (19.0%)
+    Recovered as target: 98 (19.6%)
+    Recovered as long: 285 (57.0%)
+
+Simulating target periods (15.0-30.0 days)...
+  N = 500
+    Recovered as short: 12 (2.4%)
+    Recovered as intermediate: 50 (10.0%)
+    Recovered as target: 83 (16.6%)
+    Recovered as long: 353 (70.6%)
+    Recovered as very_long: 2 (0.4%)
+
+Simulating long periods (30.0-100.0 days)...
+  N = 500
+    Recovered as short: 16 (3.2%)
+    Recovered as intermediate: 35 (7.0%)
+    Recovered as target: 54 (10.8%)
+    Recovered as long: 389 (77.8%)
+    Recovered as very_long: 6 (1.2%)
+
+======================================================================
+ALIAS METRICS
+======================================================================
+
+Fraction of TARGET periods recovered correctly: 16.6%
+
+Alias FAP (fraction of non-target periods recovered as target):
+  short → target: 19.6%
+  intermediate → target: 19.6%
+  long → target: 10.8%
+
+Average alias FAP for target period: 16.7%
+
+Creating diagnostic plots...
+Saved: injection_recovery_plot.png
+Conclusion: Poor recovery; period uncertain
+
+Saved: injection_recovery_results.json

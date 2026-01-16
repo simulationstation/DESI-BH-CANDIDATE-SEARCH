@@ -1,0 +1,37 @@
+2026-01-15 18:09:11,176 - __main__ - INFO - Starting full pipeline run in runs/real_run_20260115_180911
+2026-01-15 18:09:11,176 - __main__ - INFO - ============================================================
+2026-01-15 18:09:11,176 - __main__ - INFO - STAGE 0: Environment Setup and Sanity Checks
+2026-01-15 18:09:11,176 - __main__ - INFO - ============================================================
+2026-01-15 18:09:11,698 - __main__ - INFO - Git hash: e42cabef7a6c01aa00dfef66e587d8c1cdeb99ba
+2026-01-15 18:09:11,698 - __main__ - INFO - Python: 3.12.3 (main, Jan  8 2026, 11:30:50) [GCC 13.3.0]
+2026-01-15 18:09:11,698 - __main__ - INFO - Platform: Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39
+2026-01-15 18:09:11,698 - __main__ - INFO - CPU count: 32
+2026-01-15 18:09:11,698 - __main__ - INFO - Random seed: 42
+2026-01-15 18:09:11,698 - __main__ - INFO - Running quick unit tests...
+2026-01-15 18:10:10,535 - __main__ - WARNING - Could not run unit tests: Command '['/usr/bin/python3', '-m', 'pytest', '-q', '--tb=no', 'rare_companions/tests/', '-x']' timed out after 60 seconds
+2026-01-15 18:10:10,535 - __main__ - INFO - Found 0 DESI data files
+2026-01-15 18:10:10,536 - __main__ - INFO - ============================================================
+2026-01-15 18:10:10,536 - __main__ - INFO - STAGE 1: RV Metrics Scan
+2026-01-15 18:10:10,536 - __main__ - INFO - ============================================================
+2026-01-15 18:10:10,928 - __main__ - INFO - Loading DESI per-epoch RV data...
+2026-01-15 18:10:10,928 - rare_companions.ingest.desi - INFO - Loading DESI DR1 RV data...
+2026-01-15 18:10:10,928 - rare_companions.ingest.desi - INFO - Loading data/raw/rvpix_exp-main-bright.fits...
+2026-01-15 18:10:16,898 - rare_companions.ingest.desi - ERROR - Error loading data/raw/rvpix_exp-main-bright.fits: 'MJD'
+2026-01-15 18:10:16,898 - rare_companions.ingest.desi - INFO - Loading data/raw/rvpix_exp-main-dark.fits...
+2026-01-15 18:10:20,216 - rare_companions.ingest.desi - ERROR - Error loading data/raw/rvpix_exp-main-dark.fits: 'MJD'
+2026-01-15 18:10:20,217 - rare_companions.ingest.desi - INFO - Loaded 0 total epochs for 0 unique targets
+2026-01-15 18:10:20,243 - __main__ - INFO - Loaded 0 unique targets from DESI
+2026-01-15 18:10:20,244 - __main__ - INFO -   Total epochs: 0
+2026-01-15 18:10:20,244 - __main__ - INFO -   Targets with 3+ epochs: 0
+2026-01-15 18:10:20,244 - __main__ - INFO -   Targets with 5+ epochs: 0
+2026-01-15 18:10:20,244 - __main__ - INFO - Created 0 RVTimeSeries with 3+ epochs
+2026-01-15 18:10:20,244 - __main__ - WARNING - No real DESI data found. Generating synthetic data for demonstration.
+2026-01-15 18:10:20,427 - __main__ - INFO - Total targets for Stage 1: 500
+2026-01-15 18:10:20,429 - __main__ - INFO - After basic filters: 494 targets
+2026-01-15 18:10:20,521 - __main__ - INFO - Saved RV metrics to runs/real_run_20260115_180911/stage1_rv_metrics.csv
+2026-01-15 18:10:20,522 - __main__ - INFO - ============================================================
+2026-01-15 18:10:20,522 - __main__ - INFO - STAGE 2: Fast Screening (All Experiments)
+2026-01-15 18:10:20,522 - __main__ - INFO - ============================================================
+2026-01-15 18:10:20,578 - __main__ - INFO - Running experiment: E1_mass_gap
+2026-01-15 18:10:20,579 - rare_companions.experiments.base - INFO - Running experiment: E1_mass_gap
+2026-01-15 18:10:20,579 - rare_companions.experiments.base - INFO - Input targets: 494

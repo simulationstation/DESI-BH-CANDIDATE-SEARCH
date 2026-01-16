@@ -65,56 +65,53 @@ class DESIRVLoader:
             logger.info(f"Loading {path}...")
             try:
                 with fits.open(path) as hdu:
-                    # DESI per-epoch RV files have specific structure
-                    # Main data is in extension 1
-                    data = Table(hdu[1].data)
+                    # DESI rvspecfit files have RVTAB and FIBERMAP extensions
+                    # RVTAB has VRAD, VRAD_ERR, TEFF, LOGG, FEH
+                    # FIBERMAP has MJD, TARGET_RA, TARGET_DEC, etc.
+                    # Tables are row-aligned
 
-                    # Required columns
-                    required_cols = ['TARGETID', 'MJD', 'VRAD', 'VRAD_ERR']
-                    missing = [c for c in required_cols if c not in data.colnames]
-                    if missing:
-                        # Try alternate column names
-                        alt_names = {
-                            'TARGETID': ['TARGET_ID', 'TARGETID'],
-                            'MJD': ['MJD_OBS', 'MJD'],
-                            'VRAD': ['RV', 'VHELIO', 'VRAD'],
-                            'VRAD_ERR': ['RV_ERR', 'VHELIO_ERR', 'VRAD_ERR', 'VERR']
-                        }
-                        for col in missing:
-                            for alt in alt_names.get(col, []):
-                                if alt in data.colnames:
-                                    data.rename_column(alt, col)
-                                    break
+                    rvtab = hdu['RVTAB'].data
+                    fibermap = hdu['FIBERMAP'].data
 
-                    # Filter by RV error
-                    mask = data['VRAD_ERR'] < max_rv_err
-                    mask &= np.isfinite(data['VRAD'])
-                    mask &= np.isfinite(data['VRAD_ERR'])
-                    mask &= data['VRAD_ERR'] > 0
+                    n_rows = len(rvtab)
+                    logger.info(f"  Found {n_rows} rows")
 
-                    data = data[mask]
+                    # Build mask for quality filtering
+                    mask = np.ones(n_rows, dtype=bool)
+                    mask &= np.isfinite(rvtab['VRAD'])
+                    mask &= np.isfinite(rvtab['VRAD_ERR'])
+                    mask &= rvtab['VRAD_ERR'] > 0
+                    mask &= rvtab['VRAD_ERR'] < max_rv_err
+                    mask &= np.abs(rvtab['VRAD']) < 500  # Exclude extreme values
 
-                    for row in data:
+                    # Apply mask
+                    indices = np.where(mask)[0]
+                    logger.info(f"  After quality filter: {len(indices)} epochs")
+
+                    # Extract data efficiently
+                    for idx in indices:
                         epoch = DESIEpoch(
-                            mjd=float(row['MJD']),
-                            rv=float(row['VRAD']),
-                            rv_err=float(row['VRAD_ERR']),
-                            targetid=int(row['TARGETID']),
+                            mjd=float(fibermap['MJD'][idx]),
+                            rv=float(rvtab['VRAD'][idx]),
+                            rv_err=float(rvtab['VRAD_ERR'][idx]),
+                            targetid=int(rvtab['TARGETID'][idx]),
                             survey='DESI',
                             program=program,
-                            healpix=int(row.get('HEALPIX', 0)) if 'HEALPIX' in data.colnames else 0,
-                            snr=float(row.get('SNR', 0)) if 'SNR' in data.colnames else 0,
-                            teff=float(row.get('TEFF', np.nan)) if 'TEFF' in data.colnames else np.nan,
-                            logg=float(row.get('LOGG', np.nan)) if 'LOGG' in data.colnames else np.nan,
-                            feh=float(row.get('FEH', np.nan)) if 'FEH' in data.colnames else np.nan,
-                            quality_flags=int(row.get('QUAL_FLAG', 0)) if 'QUAL_FLAG' in data.colnames else 0
+                            healpix=int(rvtab['HEALPIX'][idx]) if 'HEALPIX' in rvtab.dtype.names else 0,
+                            snr=float(rvtab['SN_R'][idx]) if 'SN_R' in rvtab.dtype.names else 0,
+                            teff=float(rvtab['TEFF'][idx]) if 'TEFF' in rvtab.dtype.names else np.nan,
+                            logg=float(rvtab['LOGG'][idx]) if 'LOGG' in rvtab.dtype.names else np.nan,
+                            feh=float(rvtab['FEH'][idx]) if 'FEH' in rvtab.dtype.names else np.nan,
+                            quality_flags=int(rvtab['RVS_WARN'][idx]) if 'RVS_WARN' in rvtab.dtype.names else 0
                         )
                         all_epochs.append(epoch)
 
-                    logger.info(f"  Loaded {len(data)} epochs from {program}")
+                    logger.info(f"  Loaded {len(indices)} epochs from {program}")
 
             except Exception as e:
                 logger.error(f"Error loading {path}: {e}")
+                import traceback
+                traceback.print_exc()
                 continue
 
         # Group epochs by targetid

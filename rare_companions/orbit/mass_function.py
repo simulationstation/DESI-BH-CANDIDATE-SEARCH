@@ -47,7 +47,7 @@ def compute_mass_function(P: float, K: float, e: float = 0.0) -> float:
     return f_M_kg / MSUN
 
 
-def compute_m2_min(f_M: float, M1: float) -> float:
+def compute_m2_min(f_M: float, M1: float, max_m2: float = 100.0) -> float:
     """
     Compute minimum companion mass from mass function.
 
@@ -60,6 +60,8 @@ def compute_m2_min(f_M: float, M1: float) -> float:
         Mass function (solar masses)
     M1 : float
         Primary mass (solar masses)
+    max_m2 : float
+        Maximum allowed M2 (for capping pathological fits)
 
     Returns
     -------
@@ -69,20 +71,38 @@ def compute_m2_min(f_M: float, M1: float) -> float:
     if f_M <= 0 or M1 <= 0:
         return 0.0
 
+    # Cap f_M to avoid pathological results
+    # For reasonable systems, f_M < 100 Msun (even massive BH binaries)
+    if f_M > 1000:
+        logger.debug(f"f_M={f_M:.2f} very large, capping M2_min at {max_m2}")
+        return max_m2
+
     # Solve: M2^3 - f_M * (M1 + M2)^2 = 0
     def func(m2):
         return m2**3 - f_M * (M1 + m2)**2
 
     try:
-        # M2_min is bounded by f_M^(1/3) < M2 < some large value
-        m2_low = max(0.001, f_M**(1/3) * 0.1)
-        m2_high = max(100, f_M**(1/3) * 100)
+        # For small f_M, M2_min ~ f_M^(1/3)
+        # For large f_M, M2_min approaches sqrt(f_M * M1^2)^(1/3) ~ f_M^(1/3)
+        m2_low = 0.001
+        m2_high = min(max_m2 * 10, max(100, f_M + M1))
 
-        return brentq(func, m2_low, m2_high)
+        # Check if there's a root in the interval
+        f_low = func(m2_low)
+        f_high = func(m2_high)
+
+        if f_low * f_high > 0:
+            # No sign change, use approximation
+            m2_approx = f_M**(1/3) * (1 + M1 / (3 * max(f_M**(1/3), 0.1)))**(2/3)
+            return min(m2_approx, max_m2)
+
+        result = brentq(func, m2_low, m2_high)
+        return min(result, max_m2)
     except Exception as e:
-        logger.debug(f"Failed to solve for M2_min: {e}")
+        logger.debug(f"Failed to solve for M2_min (f_M={f_M:.2f}, M1={M1:.2f}): {e}")
         # Approximation for large f_M
-        return f_M**(1/3) * (1 + M1 / (3 * f_M**(1/3)))**(2/3)
+        m2_approx = f_M**(1/3) * (1 + M1 / (3 * max(f_M**(1/3), 0.1)))**(2/3)
+        return min(m2_approx, max_m2)
 
 
 def compute_m2_at_inclination(f_M: float, M1: float, sin_i: float) -> float:

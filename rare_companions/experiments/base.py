@@ -29,8 +29,14 @@ from ..ingest.unified import RVTimeSeries
 from ..rv.hardening import RVHardener, RVMetrics
 from ..orbit.fast_screen import FastOrbitScreen, FastOrbitResult
 from ..config import Config
+from multiprocessing import Pool, cpu_count
+from functools import partial
 
 logger = logging.getLogger(__name__)
+
+# Global variables for multiprocessing (must be picklable)
+_global_config = None
+_global_experiment_name = None
 
 
 @dataclass
@@ -67,6 +73,8 @@ class Candidate:
     # Flags
     passed_hardening: bool
     passed_negative_space: bool
+    is_pathological: bool = False
+    pathology_reasons: List[str] = field(default_factory=list)
     kill_reasons: List[str] = field(default_factory=list)
 
     # Additional data
@@ -95,6 +103,8 @@ class Candidate:
             'total_score': self.total_score,
             'passed_hardening': self.passed_hardening,
             'passed_negative_space': self.passed_negative_space,
+            'is_pathological': self.is_pathological,
+            'pathology_reasons': self.pathology_reasons,
             'kill_reasons': self.kill_reasons,
             'metadata': self.metadata
         }
@@ -185,12 +195,22 @@ class BaseExperiment(ABC):
 
         filter_stats = {'input': len(timeseries_list)}
 
-        # Stage 1: Basic filtering and fast screen
-        stage1_candidates = []
-        for ts in timeseries_list:
-            candidate = self._process_stage1(ts)
-            if candidate is not None:
-                stage1_candidates.append(candidate)
+        # Stage 1: Basic filtering and fast screen (PARALLEL)
+        n_workers = min(self.config.budget.max_parallel_workers, cpu_count() - 1, len(timeseries_list))
+        n_workers = max(1, n_workers)
+
+        logger.info(f"Processing Stage 1 with {n_workers} parallel workers...")
+
+        if n_workers > 1 and len(timeseries_list) > 100:
+            # Use multiprocessing for large datasets
+            stage1_candidates = self._parallel_stage1(timeseries_list, n_workers)
+        else:
+            # Sequential for small datasets
+            stage1_candidates = []
+            for ts in timeseries_list:
+                candidate = self._process_stage1(ts)
+                if candidate is not None:
+                    stage1_candidates.append(candidate)
 
         filter_stats['after_stage1'] = len(stage1_candidates)
         logger.info(f"After Stage 1: {len(stage1_candidates)} candidates")
@@ -246,6 +266,49 @@ class BaseExperiment(ABC):
 
         return result
 
+    def _parallel_stage1(self, timeseries_list: List[RVTimeSeries], n_workers: int) -> List[Candidate]:
+        """Process Stage 1 in parallel using multiprocessing."""
+        from concurrent.futures import ProcessPoolExecutor, as_completed
+
+        candidates = []
+        total = len(timeseries_list)
+        processed = 0
+
+        # Use ProcessPoolExecutor for parallel processing
+        # Chunk the data for better efficiency
+        chunk_size = max(1, total // (n_workers * 4))
+
+        try:
+            with ProcessPoolExecutor(max_workers=n_workers) as executor:
+                # Submit all tasks
+                futures = {
+                    executor.submit(self._process_stage1, ts): ts
+                    for ts in timeseries_list
+                }
+
+                for future in as_completed(futures):
+                    processed += 1
+                    if processed % 500 == 0:
+                        logger.info(f"  Processed {processed}/{total} targets...")
+
+                    try:
+                        result = future.result(timeout=60)
+                        if result is not None:
+                            candidates.append(result)
+                    except Exception as e:
+                        # Log but continue on individual failures
+                        pass
+
+        except Exception as e:
+            logger.warning(f"Parallel processing failed, falling back to sequential: {e}")
+            # Fallback to sequential
+            for ts in timeseries_list:
+                candidate = self._process_stage1(ts)
+                if candidate is not None:
+                    candidates.append(candidate)
+
+        return candidates
+
     def _process_stage1(self, ts: RVTimeSeries) -> Optional[Candidate]:
         """
         Stage 1 processing: basic metrics and fast orbit screen.
@@ -279,6 +342,45 @@ class BaseExperiment(ABC):
         from ..orbit.mass_function import compute_m2_min
         m2_min = compute_m2_min(f_M, M1)
 
+        # Apply pathology guardrails
+        guardrails = self.config.guardrails
+        is_pathological = False
+        pathology_reasons = []
+
+        # Check K amplitude
+        if K > guardrails.max_K_amplitude:
+            is_pathological = True
+            pathology_reasons.append(f"K={K:.1f} km/s exceeds max {guardrails.max_K_amplitude}")
+
+        # Check M2_min
+        if m2_min > guardrails.max_m2_min:
+            is_pathological = True
+            pathology_reasons.append(f"M2_min={m2_min:.1f} Msun exceeds max {guardrails.max_m2_min}")
+
+        # Check period relative to baseline
+        baseline = ts.mjd.max() - ts.mjd.min()
+        if baseline > 0 and P > baseline * guardrails.max_period_to_baseline_ratio:
+            is_pathological = True
+            pathology_reasons.append(f"Period {P:.1f}d > {guardrails.max_period_to_baseline_ratio}x baseline {baseline:.1f}d")
+
+        # Check delta_chi2
+        if orbit.delta_chi2 < guardrails.min_delta_chi2:
+            is_pathological = True
+            pathology_reasons.append(f"delta_chi2={orbit.delta_chi2:.1f} < min {guardrails.min_delta_chi2}")
+
+        # Compute period reliability based on n_epochs
+        if ts.n_epochs < guardrails.min_epochs_for_period_reliability:
+            period_reliability = 0.2  # Low confidence in period
+        elif ts.n_epochs < 6:
+            period_reliability = 0.4
+        elif ts.n_epochs < 10:
+            period_reliability = 0.6
+        else:
+            period_reliability = 0.8
+
+        # Reduce cleanliness for pathological fits
+        cleanliness = 1.0 if not is_pathological else 0.3
+
         # Create candidate
         candidate = Candidate(
             targetid=ts.targetid,
@@ -296,12 +398,14 @@ class BaseExperiment(ABC):
             prob_ns_or_heavier=0.0,  # Computed later
             prob_bh=0.0,
             physics_score=0.0,
-            cleanliness_score=1.0,
-            period_reliability_score=0.5,
+            cleanliness_score=cleanliness,
+            period_reliability_score=period_reliability,
             followup_score=0.0,
             total_score=0.0,
             passed_hardening=self.hardener.passes_hardening(metrics),
             passed_negative_space=True,  # Check in stage 2
+            is_pathological=is_pathological,
+            pathology_reasons=pathology_reasons,
             metadata={
                 'rv_metrics': metrics.to_dict(),
                 'orbit_screen': {
@@ -311,9 +415,15 @@ class BaseExperiment(ABC):
                     'delta_chi2': orbit.delta_chi2,
                     'is_multimodal': orbit.is_multimodal
                 },
-                'M1': M1
+                'M1': M1,
+                'baseline_days': baseline
             }
         )
+
+        # If pathological and this experiment excludes pathological fits, reject
+        if is_pathological and self.name in guardrails.exclude_pathological_from:
+            logger.debug(f"Rejecting pathological candidate {ts.targetid} from {self.name}: {pathology_reasons}")
+            return None
 
         # Apply experiment-specific stage 1 filter
         if not self.stage1_filter(candidate, metrics, orbit):
@@ -349,11 +459,17 @@ class BaseExperiment(ABC):
 
     def _compute_physics_score(self, candidate: Candidate) -> float:
         """Compute physics score based on mass function and probabilities."""
-        # Higher score for higher M2_min
-        m2_score = min(1.0, candidate.m2_min / 5.0)
+        # If pathological, cap the physics score
+        if candidate.is_pathological:
+            return 0.3  # Low physics score for pathological fits
 
-        # Higher score for larger RV amplitude
-        rv_score = min(1.0, candidate.delta_rv / 200.0)
+        # Higher score for higher M2_min (capped at reasonable values)
+        m2_capped = min(candidate.m2_min, self.config.guardrails.max_m2_min)
+        m2_score = min(1.0, m2_capped / 5.0)
+
+        # Higher score for larger RV amplitude (capped)
+        rv_capped = min(candidate.delta_rv, self.config.guardrails.max_K_amplitude)
+        rv_score = min(1.0, rv_capped / 200.0)
 
         # Higher score for higher significance
         sig_score = min(1.0, candidate.S_robust / 50.0)

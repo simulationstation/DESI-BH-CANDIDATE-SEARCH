@@ -1,0 +1,40 @@
+2026-01-15 18:12:41,687 - __main__ - INFO - Starting full pipeline run in runs/real_run_20260115_181241
+2026-01-15 18:12:41,687 - __main__ - INFO - ============================================================
+2026-01-15 18:12:41,687 - __main__ - INFO - STAGE 0: Environment Setup and Sanity Checks
+2026-01-15 18:12:41,687 - __main__ - INFO - ============================================================
+2026-01-15 18:12:42,367 - __main__ - INFO - Git hash: e42cabef7a6c01aa00dfef66e587d8c1cdeb99ba
+2026-01-15 18:12:42,367 - __main__ - INFO - Python: 3.12.3 (main, Jan  8 2026, 11:30:50) [GCC 13.3.0]
+2026-01-15 18:12:42,367 - __main__ - INFO - Platform: Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39
+2026-01-15 18:12:42,367 - __main__ - INFO - CPU count: 32
+2026-01-15 18:12:42,367 - __main__ - INFO - Random seed: 42
+2026-01-15 18:12:42,367 - __main__ - INFO - Running quick unit tests...
+2026-01-15 18:13:41,147 - __main__ - WARNING - Could not run unit tests: Command '['/usr/bin/python3', '-m', 'pytest', '-q', '--tb=no', 'rare_companions/tests/', '-x']' timed out after 60 seconds
+2026-01-15 18:13:41,150 - __main__ - INFO - Found 0 DESI data files
+2026-01-15 18:13:41,150 - __main__ - INFO - ============================================================
+2026-01-15 18:13:41,150 - __main__ - INFO - STAGE 1: RV Metrics Scan
+2026-01-15 18:13:41,150 - __main__ - INFO - ============================================================
+2026-01-15 18:13:41,697 - __main__ - INFO - Loading DESI per-epoch RV data...
+2026-01-15 18:13:41,697 - rare_companions.ingest.desi - INFO - Loading DESI DR1 RV data...
+2026-01-15 18:13:41,697 - rare_companions.ingest.desi - INFO - Loading data/raw/rvpix_exp-main-bright.fits...
+2026-01-15 18:13:42,571 - rare_companions.ingest.desi - INFO -   Found 3572976 rows
+2026-01-15 18:13:42,821 - rare_companions.ingest.desi - INFO -   After quality filter: 3038422 epochs
+2026-01-15 18:16:38,926 - rare_companions.ingest.desi - INFO -   Loaded 3038422 epochs from bright
+2026-01-15 18:16:38,927 - rare_companions.ingest.desi - INFO - Loading data/raw/rvpix_exp-main-dark.fits...
+2026-01-15 18:16:39,914 - rare_companions.ingest.desi - INFO -   Found 1818406 rows
+2026-01-15 18:16:40,042 - rare_companions.ingest.desi - INFO -   After quality filter: 649794 epochs
+2026-01-15 18:17:18,504 - rare_companions.ingest.desi - INFO -   Loaded 649794 epochs from dark
+2026-01-15 18:17:21,739 - rare_companions.ingest.desi - INFO - Loaded 3688216 total epochs for 2989643 unique targets
+2026-01-15 18:17:21,782 - __main__ - INFO - Loaded 2989643 unique targets from DESI
+2026-01-15 18:17:21,959 - __main__ - INFO -   Total epochs: 3688216
+2026-01-15 18:17:21,959 - __main__ - INFO -   Targets with 3+ epochs: 97823
+2026-01-15 18:17:21,959 - __main__ - INFO -   Targets with 5+ epochs: 9937
+2026-01-15 18:17:22,704 - __main__ - INFO - Created 97823 RVTimeSeries with 3+ epochs
+2026-01-15 18:17:22,704 - __main__ - INFO - Total targets for Stage 1: 97823
+2026-01-15 18:17:23,013 - __main__ - INFO - After basic filters: 9397 targets
+2026-01-15 18:17:24,365 - __main__ - INFO - Saved RV metrics to runs/real_run_20260115_181241/stage1_rv_metrics.csv
+2026-01-15 18:17:24,865 - __main__ - INFO - ============================================================
+2026-01-15 18:17:24,865 - __main__ - INFO - STAGE 2: Fast Screening (All Experiments)
+2026-01-15 18:17:24,865 - __main__ - INFO - ============================================================
+2026-01-15 18:17:24,897 - __main__ - INFO - Running experiment: E1_mass_gap
+2026-01-15 18:17:24,897 - rare_companions.experiments.base - INFO - Running experiment: E1_mass_gap
+2026-01-15 18:17:24,897 - rare_companions.experiments.base - INFO - Input targets: 9397

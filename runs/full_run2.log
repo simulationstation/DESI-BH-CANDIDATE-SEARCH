@@ -1,0 +1,35 @@
+2026-01-15 18:01:19,812 - __main__ - INFO - Starting full pipeline run in runs/real_run_20260115_180119
+2026-01-15 18:01:19,812 - __main__ - INFO - ============================================================
+2026-01-15 18:01:19,812 - __main__ - INFO - STAGE 0: Environment Setup and Sanity Checks
+2026-01-15 18:01:19,812 - __main__ - INFO - ============================================================
+2026-01-15 18:01:20,313 - __main__ - INFO - Git hash: e42cabef7a6c01aa00dfef66e587d8c1cdeb99ba
+2026-01-15 18:01:20,313 - __main__ - INFO - Python: 3.12.3 (main, Jan  8 2026, 11:30:50) [GCC 13.3.0]
+2026-01-15 18:01:20,313 - __main__ - INFO - Platform: Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39
+2026-01-15 18:01:20,313 - __main__ - INFO - CPU count: 32
+2026-01-15 18:01:20,313 - __main__ - INFO - Random seed: 42
+2026-01-15 18:01:20,313 - __main__ - INFO - Running quick unit tests...
+2026-01-15 18:02:19,140 - __main__ - WARNING - Could not run unit tests: Command '['/usr/bin/python3', '-m', 'pytest', '-q', '--tb=no', 'rare_companions/tests/', '-x']' timed out after 60 seconds
+2026-01-15 18:02:19,140 - __main__ - INFO - Found 0 DESI data files
+2026-01-15 18:02:19,141 - __main__ - INFO - ============================================================
+2026-01-15 18:02:19,141 - __main__ - INFO - STAGE 1: RV Metrics Scan
+2026-01-15 18:02:19,141 - __main__ - INFO - ============================================================
+2026-01-15 18:02:19,490 - __main__ - WARNING - No real DESI data found. Generating synthetic data for demonstration.
+2026-01-15 18:02:19,524 - __main__ - INFO - Total targets for Stage 1: 500
+2026-01-15 18:02:19,526 - __main__ - INFO - After basic filters: 494 targets
+2026-01-15 18:02:19,610 - __main__ - INFO - Saved RV metrics to runs/real_run_20260115_180119/stage1_rv_metrics.csv
+2026-01-15 18:02:19,612 - __main__ - INFO - ============================================================
+2026-01-15 18:02:19,612 - __main__ - INFO - STAGE 2: Fast Screening (All Experiments)
+2026-01-15 18:02:19,612 - __main__ - INFO - ============================================================
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/primary/DESI-BH-CANDIDATE-SEARCH/rare_companions/full_run.py", line 643, in <module>
+    main()
+  File "/home/primary/DESI-BH-CANDIDATE-SEARCH/rare_companions/full_run.py", line 639, in main
+    runner.run_all()
+  File "/home/primary/DESI-BH-CANDIDATE-SEARCH/rare_companions/full_run.py", line 238, in run_all
+    experiment_results = self.stage2_fast_screen(timeseries_list)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/primary/DESI-BH-CANDIDATE-SEARCH/rare_companions/full_run.py", line 392, in stage2_fast_screen
+    from .experiments.e8_anomalies import AnomaliesExperiment
+ImportError: cannot import name 'AnomaliesExperiment' from 'rare_companions.experiments.e8_anomalies' (/home/primary/DESI-BH-CANDIDATE-SEARCH/rare_companions/experiments/e8_anomalies.py). Did you mean: 'AnomalyExperiment'?

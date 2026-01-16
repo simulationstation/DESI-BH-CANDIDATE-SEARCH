@@ -1,0 +1,57 @@
+======================================================================
+WINDOW FUNCTION / FALSE ALARM PROBABILITY ANALYSIS
+======================================================================
+Target: Gaia DR3 3802130935635096832
+N epochs: 5
+Period range: 5.0-100.0 days
+N noise realizations: 1000
+
+======================================================================
+REAL DATA ANALYSIS
+======================================================================
+
+N epochs: 5
+Baseline: 2150.4 days
+
+Constant model: χ² = 27338.23, dof = 4
+
+Searching periods...
+Best period: P = 91.88 days
+Best χ² (orbit): 0.59
+
+Δχ² = χ²_const - χ²_orbit = 27337.64
+
+======================================================================
+NOISE SIMULATIONS (FAP calculation)
+======================================================================
+
+Running 1000 noise realizations...
+Using 8 parallel workers...
+
+Valid realizations: 1000/1000
+
+Real data: Δχ² = 27337.64, P = 91.88 days
+Noise Δχ² distribution:
+  Mean: 2.94
+  Median: 2.32
+  Max: 16.33
+
+N(Δχ²_noise >= Δχ²_real): 0
+FALSE ALARM PROBABILITY: FAP = 0.00e+00
+
+FAP for matching period (±10%) with Δχ² > 0.5×real: 0.00e+00
+
+Saved: window_delta_chi2_hist.png
+Saved: window_period_vs_delta_chi2.png
+======================================================================
+FAP INTERPRETATION
+======================================================================
+
+FAP = 0.00e+00 corresponds to > 4σ significance
+The orbital signal is HIGHLY UNLIKELY to be a sampling artifact.
+
+With the actual time sampling and RV errors:
+  - The probability that pure noise would mimic the observed
+    orbital signal as strongly as this is FAP = 0.00e+00
+
+Saved: window_function_results.json

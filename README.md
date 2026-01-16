@@ -599,3 +599,48 @@ For use with publicly released DESI data. See DESI data policies for usage terms
 ---
 
 *Analysis completed 2026-01-15. All results derived from public DESI DR1, LAMOST DR7, Gaia DR3, TESS, WISE, and GALEX data.*
+
+---
+
+## Full DESI DR1 Multi-Experiment Search (In Progress)
+
+**Status: RUNNING**
+
+We are currently executing a comprehensive search across the entire DESI DR1 radial velocity dataset using the `rare_companions` multi-experiment framework. This pipeline screens ~3.7 million RV epochs from ~3 million unique targets.
+
+### Pipeline Overview
+
+| Stage | Description | Status |
+|-------|-------------|--------|
+| Stage 0 | Environment setup & sanity checks | ✅ Complete |
+| Stage 1 | RV metrics scan (ΔRV > 20 km/s filter) | ✅ Complete (9,397 targets) |
+| Stage 2 | Fast screening (8 experiments) | 🔄 Running |
+| Stage 3 | Deep inference (top candidates) | ⏳ Pending |
+| Stage 4 | Final scoring & report | ⏳ Pending |
+
+### Experiments
+
+| Experiment | Description | Status |
+|------------|-------------|--------|
+| E1_mass_gap | Mass gap objects (3-5 M☉) | 🔄 Running |
+| E2_dark_companions | Generic dark companions | ⏳ Queued |
+| E3_triple_system | Hierarchical triples | ⏳ Queued |
+| E4_brown_dwarf | Brown dwarf companions | ⏳ Queued |
+| E5_neutron_star | Neutron star companions | ⏳ Queued |
+| E6_wd_merger | WD merger progenitors | ⏳ Queued |
+| E7_runaway | Runaway star companions | ⏳ Queued |
+| E8_anomaly | Anomalous RV systems | ⏳ Queued |
+
+### Technical Details
+
+- **Data**: DESI DR1 bright + dark programs (3,688,216 epochs)
+- **Targets after filtering**: 9,397 (3+ epochs, ΔRV > 20 km/s)
+- **Parallelization**: 8 CPU cores per experiment
+- **Checkpointing**: Per-experiment (resumable between experiments)
+- **Output directory**: `runs/real_run_20260115_183016/`
+
+### RESULTS WILL BE UPDATED AS THEY FINISH
+
+Results from each experiment will be saved to the `runs/` directory as they complete. Final leaderboard and analysis report will be generated after all experiments finish.
+
+---

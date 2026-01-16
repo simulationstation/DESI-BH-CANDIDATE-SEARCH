@@ -1,0 +1,80 @@
+{
+  "stage0": {
+    "completed": true,
+    "timestamp": "2026-01-15T18:10:10.535905",
+    "metadata": {
+      "manifest": {
+        "run_name": "real_run",
+        "timestamp": "2026-01-15T18:09:11.176944",
+        "git_hash": "e42cabef7a6c01aa00dfef66e587d8c1cdeb99ba",
+        "python_version": "3.12.3 (main, Jan  8 2026, 11:30:50) [GCC 13.3.0]",
+        "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+        "hostname": "reggin",
+        "cpu_count": 32,
+        "random_seed": 42,
+        "pip_freeze": [
+          "aiobotocore==3.1.0",
+          "aiohappyeyeballs==2.6.1",
+          "aiohttp==3.13.3",
+          "aioitertools==0.13.0",
+          "aiosignal==1.4.0",
+          "-e git+ssh://git@github.com/simulationstation/M1t3SubspaceSweep.git@647e43c523c47cbd64400218cf5bf483793ea175#egg=alpha_em_soup",
+          "-e git+ssh://git@github.com/simulationstation/M1t3SubspaceSweep.git@647e43c523c47cbd64400218cf5bf483793ea175#egg=alpha_soup",
+          "-e git+ssh://git@github.com/simulationstation/M1t3SubspaceSweep.git@647e43c523c47cbd64400218cf5bf483793ea175#egg=alpha_soup_wave",
+          "amazon-braket-default-simulator==1.32.0",
+          "amazon-braket-schemas==1.27.0",
+          "amazon-braket-sdk==1.106.5",
+          "annotated-types==0.7.0",
+          "antlr4-python3-runtime==4.13.2",
+          "asteval==1.0.8",
+          "astropy==6.0.1",
+          "astropy-iers-data==0.2025.12.8.0.38.44",
+          "astroquery==0.4.11",
+          "attrs==23.2.0",
+          "Automat==22.10.0",
+          "awkward==2.8.11",
+          "awkward_cpp==51",
+          "Babel==2.10.3",
+          "backoff==2.2.1",
+          "backports.entry-points-selectable==1.3.0",
+          "-e git+ssh://git@github.com/simulationstation/MSOUP.git@89f5c8bf941c2896e63aecc57b5ea273dae3699a#egg=bao_overlap&subdirectory=repo",
+          "bcrypt==3.2.2",
+          "beautifulsoup4==4.14.3",
+          "blinker==1.7.0",
+          "bokeh==3.8.2",
+          "boltons==25.0.0",
+          "boto3==1.42.13",
+          "botocore==1.42.13",
+          "camb==1.6.5",
+          "certifi==2023.11.17",
+          "chardet==5.2.0",
+          "charset-normalizer==3.4.4",
+          "click==8.1.6",
+          "cloud-init==25.1.4",
+          "cloudpickle==2.2.1",
+          "cobaya==3.6",
+          "colorama==0.4.6",
+          "command-not-found==0.3",
+          "configobj==5.0.8",
+          "constantly==23.10.4",
+          "contourpy==1.3.3",
+          "corner==2.2.3",
+          "cramjam==2.11.0",
+          "cryptography==41.0.7",
+          "cycler==0.12.1",
+          "Cython==3.2.2"
+        ]
+      },
+      "data_files": []
+    }
+  },
+  "stage1": {
+    "completed": true,
+    "timestamp": "2026-01-15T18:10:20.521259",
+    "metadata": {
+      "n_targets": 500,
+      "n_filtered": 494,
+      "metrics_path": "runs/real_run_20260115_180911/stage1_rv_metrics.csv"
+    }
+  }
+}

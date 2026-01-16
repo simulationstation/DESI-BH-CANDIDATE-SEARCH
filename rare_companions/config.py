@@ -15,8 +15,9 @@ import subprocess
 @dataclass
 class DataPaths:
     """Paths to input data files."""
-    desi_bright: str = "data/rvpix_exp-main-bright.fits"
-    desi_dark: str = "data/rvpix_exp-main-dark.fits"
+    desi_bright: str = "data/raw/rvpix_exp-main-bright.fits"
+    desi_dark: str = "data/raw/rvpix_exp-main-dark.fits"
+    desi_special: str = "data/raw/rvpix_exp-special-bright.fits"
     lamost_catalog: str = "data/lamost_dr7_stellar.fits"
     gaia_cache: str = "cache/gaia_cache.pkl"
     output_dir: str = "runs"
@@ -46,6 +47,27 @@ class OrbitConfig:
 
 
 @dataclass
+class PathologyGuardrails:
+    """Guardrails to prevent obviously pathological fits from polluting results."""
+    # Maximum allowed K amplitude (km/s) - anything above is flagged pathological
+    max_K_amplitude: float = 500.0
+    # Maximum allowed M2_min (Msun) before flagging as pathological
+    max_m2_min: float = 100.0
+    # Minimum epochs required for MCMC (below this, only fast screen)
+    min_epochs_for_mcmc: int = 4
+    # Minimum epochs for any period reliability claim
+    min_epochs_for_period_reliability: int = 5
+    # Maximum allowed period relative to baseline
+    max_period_to_baseline_ratio: float = 2.0
+    # Minimum delta_chi2 improvement over constant model
+    min_delta_chi2: float = 10.0
+    # Exclude pathological fits from these experiments (send to E8 instead)
+    exclude_pathological_from: List[str] = field(default_factory=lambda: [
+        'E1_mass_gap', 'E2_dark_companions', 'E4_brown_dwarf'
+    ])
+
+
+@dataclass
 class ComputeBudget:
     """Compute budget limits for staged processing."""
     stage1_all_targets: bool = True
@@ -70,6 +92,7 @@ class Config:
     selection: SelectionThresholds = field(default_factory=SelectionThresholds)
     orbit: OrbitConfig = field(default_factory=OrbitConfig)
     budget: ComputeBudget = field(default_factory=ComputeBudget)
+    guardrails: PathologyGuardrails = field(default_factory=PathologyGuardrails)
     experiments: Dict[str, ExperimentConfig] = field(default_factory=dict)
     random_seed: int = 42
 
@@ -92,6 +115,7 @@ class Config:
             'selection': self.selection.__dict__,
             'orbit': self.orbit.__dict__,
             'budget': self.budget.__dict__,
+            'guardrails': {k: v for k, v in self.guardrails.__dict__.items()},
             'experiments': {k: v.__dict__ for k, v in self.experiments.items()},
             'random_seed': self.random_seed
         }
@@ -110,6 +134,8 @@ class Config:
             config.orbit = OrbitConfig(**d['orbit'])
         if 'budget' in d:
             config.budget = ComputeBudget(**d['budget'])
+        if 'guardrails' in d:
+            config.guardrails = PathologyGuardrails(**d['guardrails'])
         if 'experiments' in d:
             config.experiments = {
                 k: ExperimentConfig(**v) for k, v in d['experiments'].items()
