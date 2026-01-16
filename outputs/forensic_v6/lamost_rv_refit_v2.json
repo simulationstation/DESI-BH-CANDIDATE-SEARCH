@@ -1,0 +1,122 @@
+{
+  "method": "Self-template cross-correlation v2 (with telluric masking)",
+  "file_hashes": {
+    "lamost_437513049.fits": "58aed377d194704d5f9e3bc5bddaeda4b2b3107f0758ad7f31885aba27c05ab8",
+    "lamost_870813030.fits": "0888fb557fabf249f96c276561a9ae716a0a93d44ccadc961030495f2faa92e4"
+  },
+  "epoch1": {
+    "obsid": 437513049,
+    "date_obs": "2016-03-10T15:05:24.28",
+    "mjd": 57457,
+    "helio_rv_header_kms": 1.47925,
+    "snr_i": 35.64
+  },
+  "epoch2": {
+    "obsid": 870813030,
+    "date_obs": "2020-12-20T21:02:0.000",
+    "mjd": 59203,
+    "helio_rv_header_kms": -29.22628,
+    "snr_i": 27.03
+  },
+  "telluric_regions_masked": [
+    [
+      6270,
+      6330
+    ],
+    [
+      6860,
+      6960
+    ],
+    [
+      7160,
+      7340
+    ],
+    [
+      7590,
+      7700
+    ],
+    [
+      8130,
+      8350
+    ],
+    [
+      8940,
+      9200
+    ]
+  ],
+  "wavelength_regions_used": [
+    [
+      6350,
+      6850,
+      "TiO-6500"
+    ],
+    [
+      6980,
+      7150,
+      "TiO-7050"
+    ],
+    [
+      6350,
+      7150,
+      "Combined-Red"
+    ]
+  ],
+  "region_results": [
+    {
+      "region": "TiO-6500",
+      "wl_range": [
+        6350,
+        6850
+      ],
+      "n_pixels": 329,
+      "delta_rv_kms": -13.967073963023326,
+      "delta_rv_err_kms": 0.5,
+      "fwhm_kms": 217.15177253470046,
+      "peak_height": 0.9134641489211408,
+      "fit_quality": "GOOD",
+      "sb2_flag": false
+    },
+    {
+      "region": "TiO-7050",
+      "wl_range": [
+        6980,
+        7150
+      ],
+      "n_pixels": 105,
+      "delta_rv_kms": 4.492357019592265,
+      "delta_rv_err_kms": 0.5,
+      "fwhm_kms": 148.68513419330932,
+      "peak_height": 0.9016087666858599,
+      "fit_quality": "GOOD",
+      "sb2_flag": false
+    },
+    {
+      "region": "Combined-Red",
+      "wl_range": [
+        6350,
+        7150
+      ],
+      "n_pixels": 453,
+      "delta_rv_kms": -9.570065477142633,
+      "delta_rv_err_kms": 0.5,
+      "fwhm_kms": 189.95624836386583,
+      "peak_height": 0.9148986726269784,
+      "fit_quality": "GOOD",
+      "sb2_flag": false
+    }
+  ],
+  "combined": {
+    "delta_rv_kms": -6.3482608068578985,
+    "delta_rv_err_kms": 4.554550033893786,
+    "scatter_kms": 7.872850692965393,
+    "n_regions_used": 3,
+    "significance_sigma": 1.3938283166538472
+  },
+  "header_comparison": {
+    "header_delta_rv_kms": -30.70553,
+    "refit_minus_header_kms": 24.357269193142102,
+    "consistent": false
+  },
+  "verdict": "NOT DETECTED",
+  "verdict_reason": "\u0394RV = -6.3 \u00b1 4.6 km/s (1.4\u03c3)"
+}

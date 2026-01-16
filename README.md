@@ -472,15 +472,18 @@ The v5 analysis used **inconsistent RV definitions**:
 
 **Corrected ΔRV:** -30.7 km/s (not +20.1 km/s as claimed in v5)
 
-Despite this error, **RV variability is confirmed** — the true magnitude is actually *larger* than v5 claimed.
+**Important:** The header values suggest variability, but independent CCF refit is inconclusive (see below).
 
 ### Validation Results
 
 | Check | V5 Claim | V6 Finding | Verdict |
 |-------|----------|------------|---------|
-| LAMOST ΔRV | +20.1 km/s at 4.5σ | **-30.7 km/s** (HELIO_RV) | ✅ **PASS** — variability confirmed |
+| LAMOST ΔRV (header) | +20.1 km/s at 4.5σ | **-30.7 km/s** (HELIO_RV) | Suggestive |
+| LAMOST ΔRV (CCF refit) | — | **-6.3 ± 4.6 km/s** (1.4σ) | ⚠️ **INCONCLUSIVE** |
 | Neighbor separation | 0.688" | **0.688"** (Gaia DR3 + EDR3) | ✅ **PASS** — exact match |
 | Neighbor ΔG | 2.21 mag | **2.21 mag** | ✅ **PASS** — exact match |
+
+**Critical Finding:** CCF refit does NOT match header values. Different wavelength regions show 18 km/s spread (-14 to +4.5 km/s), suggesting possible blend contamination or pipeline issues.
 
 ### LAMOST FITS Header Values (Raw Data)
 
@@ -510,14 +513,14 @@ File hashes (SHA256):
 
 ### Implications
 
-1. **RV variability is REAL** — 30.7 km/s HELIO_RV difference over 4.8 years
-2. **Neighbor is REAL** — confirmed in multiple Gaia releases with identical parameters
-3. **V5 conclusion SURVIVES** — despite methodology error, core findings are supported
-4. **Blend concern UNCHANGED** — 13% flux contamination still cannot explain 146 km/s DESI amplitude
+1. **LAMOST variability is UNCERTAIN** — Headers show 30.7 km/s difference, but CCF refit gives -6.3 ± 4.6 km/s (1.4σ)
+2. **Neighbor is REAL** — confirmed in multiple Gaia releases with identical parameters (0.688", ΔG=2.21)
+3. **DESI signal remains primary evidence** — The 146 km/s DESI amplitude is NOT affected by LAMOST uncertainty
+4. **Blend-aware DESI analysis recommended** — Check CCFs for multi-peak structure given confirmed neighbor
 
 ### External Validation Scripts
 ```bash
-python scripts/forensic_v6_lamost_rv.py      # LAMOST RV re-measurement from FITS
+python scripts/forensic_v6_lamost_rv_v2.py   # LAMOST RV re-measurement (with telluric masking)
 python scripts/forensic_v6_neighbor_check.py # Multi-catalog neighbor confirmation
 ```
 
@@ -526,11 +529,10 @@ python scripts/forensic_v6_neighbor_check.py # Multi-catalog neighbor confirmati
 | File | Description |
 |------|-------------|
 | `outputs/forensic_v6/FORENSIC_V6_EXTERNAL_VALIDATION.md` | Full validation report |
-| `outputs/forensic_v6/lamost_rv_refit_results.json` | LAMOST RV analysis with file hashes |
+| `outputs/forensic_v6/lamost_rv_refit_v2.json` | LAMOST CCF refit with telluric masking |
 | `outputs/forensic_v6/neighbor_catalog_crosscheck.json` | Multi-catalog neighbor results |
-| `outputs/forensic_v6/figures/lamost_ccf_diagnostics.png` | CCF peak analysis |
-| `outputs/forensic_v6/figures/lamost_epoch_overlay.png` | Spectrum comparison |
-| `outputs/forensic_v6/figures/neighbor_field_cutouts.png` | Legacy Survey cutouts |
+| `outputs/forensic_v6/figures/lamost_ccf_diagnostics_v2.png` | CCF by wavelength region |
+| `outputs/forensic_v6/figures/lamost_epoch_overlay_v2.png` | Spectrum comparison |
 
 ---
 
@@ -720,7 +722,7 @@ Download from: https://data.desi.lbl.gov/public/dr1/
 - Primary mass independently verified (M₁ ~ 0.6 M☉)
 - v4 analyses reveal expected 5-epoch limitations, not contradictions
 - v5 forensic audit confirms candidate survives all proposed "kill modes"
-- v6 external validation confirms RV variability (30.7 km/s) and neighbor (0.688") using raw FITS data
+- v6 external validation: neighbor confirmed (0.688"); LAMOST variability inconclusive from CCF refit (-6.3 ± 4.6 km/s, 1.4σ)
 
 **Spectroscopic follow-up (10-20 epochs over 30-60 days) is REQUIRED to:**
 1. Uniquely determine the orbital period
