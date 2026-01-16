@@ -1,0 +1,65 @@
+============================================================
+E9 LASER SEARCH (SPARCL VERSION)
+============================================================
+announcement=Data set deprecation notice: on November 19, 2025 the SDSS/BOSS DR16 data sets were deprecated. Please use the new SDSS/BOSS DR17 data sets instead.
+
+Connected to SPARCL
+
+--- Searching GALAXY spectra ---
+Found 3000 GALAXY spectra
+/home/primary/DESI-BH-CANDIDATE-SEARCH/scripts/run_e9_sparcl.py:56: RuntimeWarning: divide by zero encountered in divide
+  ivar_sigma = np.where(ivar > 0, 1.0/np.sqrt(ivar), np.inf)
+  Processed 100/3000, found 39 candidates
+  Processed 600/3000, found 51 candidates
+  Processed 1100/3000, found 39 candidates
+  Processed 1600/3000, found 56 candidates
+  Processed 2100/3000, found 25 candidates
+  Processed 2600/3000, found 20 candidates
+
+--- Searching STAR spectra ---
+Found 3000 STAR spectra
+  Processed 100/3000, found 3 candidates
+  Processed 600/3000, found 2 candidates
+  Processed 1100/3000, found 12 candidates
+  Processed 1600/3000, found 1 candidates
+  Processed 2100/3000, found 4 candidates
+  Processed 2600/3000, found 10 candidates
+
+--- Searching QSO spectra ---
+Found 3000 QSO spectra
+  Processed 100/3000, found 2 candidates
+  Processed 600/3000, found 1 candidates
+  Processed 1100/3000, found 4 candidates
+  Processed 1600/3000, found 4 candidates
+  Processed 2100/3000, found 0 candidates
+  Processed 2600/3000, found 2 candidates
+
+============================================================
+SEARCH COMPLETE
+Processed: 9000 spectra
+Candidates: 1455
+============================================================
+
+Results saved to data/e9_laser_candidates_sparcl.csv
+
+Top 20 candidates by SNR:
+  λ=7434.4Å SNR=80.2 FWHM=3.20Å GALAXY
+  λ=7195.2Å SNR=74.2 FWHM=2.40Å GALAXY
+  λ=6100.8Å SNR=72.5 FWHM=3.20Å GALAXY
+  λ=7194.4Å SNR=72.0 FWHM=3.20Å GALAXY
+  λ=5489.6Å SNR=68.7 FWHM=2.40Å GALAXY
+  λ=7428.8Å SNR=62.7 FWHM=4.00Å GALAXY
+  λ=6994.4Å SNR=60.0 FWHM=3.20Å GALAXY
+  λ=6927.2Å SNR=59.6 FWHM=4.00Å GALAXY
+  λ=5488.8Å SNR=58.8 FWHM=3.20Å GALAXY
+  λ=7173.6Å SNR=58.4 FWHM=3.20Å GALAXY
+  λ=5336.0Å SNR=57.6 FWHM=3.20Å GALAXY
+  λ=9353.6Å SNR=55.6 FWHM=4.80Å GALAXY
+  λ=5649.6Å SNR=54.5 FWHM=2.40Å GALAXY
+  λ=7086.4Å SNR=53.2 FWHM=3.20Å GALAXY
+  λ=5284.8Å SNR=53.1 FWHM=3.20Å GALAXY
+  λ=7996.8Å SNR=53.0 FWHM=3.20Å GALAXY
+  λ=7404.8Å SNR=52.5 FWHM=3.20Å GALAXY
+  λ=6900.0Å SNR=52.5 FWHM=3.20Å GALAXY
+  λ=6104.8Å SNR=52.4 FWHM=3.20Å GALAXY
+  λ=5299.2Å SNR=51.4 FWHM=2.40Å GALAXY
