@@ -1,0 +1,163 @@
+======================================================================
+DESI BLEND-AWARE RV ANALYSIS v4
+======================================================================
+
+Target: Gaia DR3 3802130935635096832
+DESI TARGETID: 39627745210139276
+
+Known neighbor: sep=0.688", dG=2.21
+Expected flux ratio (G-band): 0.130
+Fixed b values to test: [0.05, 0.13, 0.2]
+Using 8 CPU workers
+
+======================================================================
+LOADING TEMPLATES
+======================================================================
+PHOENIX wavelength grid: 1569128 points
+Downsampling templates...
+  Primary Teff=3600K loaded
+  Primary Teff=3800K loaded
+  Primary Teff=4000K loaded
+  Neighbor Teff=2800K loaded
+  Neighbor Teff=3000K loaded
+  Neighbor Teff=3200K loaded
+Downsampled grid: 4000 points
+
+======================================================================
+LOADING DESI SPECTRA
+======================================================================
+Epoch1: coadd_20268_20211219_p2.fits (MJD 59568.488, catalog RV: -86.4 km/s)
+Epoch2: coadd_24976_20220125_p7.fits (MJD 59605.38, catalog RV: +59.7 km/s)
+Epoch3: coadd_23137_20220127_p0.fits (MJD 59607.38, catalog RV: +25.8 km/s)
+
+======================================================================
+ANALYSIS 1: SINGLE-STAR FITS
+======================================================================
+
+--- Epoch1 (catalog RV: -86.4 km/s) ---
+  R       : primary v= -80.0, neighbor v= -79.0, chi2_ratio=0.98
+  Z       : primary v= -87.0, neighbor v= -79.0, chi2_ratio=1.15
+  COMBINED: primary v= -81.0, neighbor v= -80.0, chi2_ratio=1.06
+
+--- Epoch2 (catalog RV: +59.7 km/s) ---
+  R       : primary v= +63.0, neighbor v= +62.0, chi2_ratio=1.00
+  Z       : primary v= +58.0, neighbor v= +63.0, chi2_ratio=1.19
+  COMBINED: primary v= +63.0, neighbor v= +63.0, chi2_ratio=1.06
+
+--- Epoch3 (catalog RV: +25.8 km/s) ---
+  R       : primary v= -41.0, neighbor v= -41.0, chi2_ratio=0.97
+  Z       : primary v= +26.0, neighbor v= +34.0, chi2_ratio=1.14
+  COMBINED: primary v= +24.0, neighbor v= +25.0, chi2_ratio=1.05
+  [Checkpoint saved: stage=1]
+
+======================================================================
+ANALYSIS 2: FIXED-b TWO-COMPONENT FITS
+======================================================================
+
+--- Epoch1 ---
+  R b=0.05: v1= -80.8, v2=  +9.7, dBIC=-182.4 *
+  R b=0.13: v1= -80.8, v2= +11.6, dBIC=-458.4 *
+  R b=0.20: v1= -80.8, v2= +12.1, dBIC=-673.7 *
+  Z b=0.05: v1= -80.2, v2= +91.7, dBIC=-20.8 *
+  Z b=0.13: v1= -80.2, v2= +91.7, dBIC=-69.9 *
+  Z b=0.20: v1= -80.2, v2= +91.7, dBIC=-108.4 *
+  COMBINED b=0.05: v1= -80.9, v2= +20.4, dBIC=-270.9 *
+  COMBINED b=0.13: v1= -80.9, v2= +20.5, dBIC=-661.5 *
+  COMBINED b=0.20: v1= -80.9, v2= +26.7, dBIC=-953.0 *
+
+--- Epoch2 ---
+  R b=0.05: v1= +63.0, v2= -33.7, dBIC=-74.6 *
+  R b=0.13: v1= +62.9, v2= -32.9, dBIC=-194.0 *
+  R b=0.20: v1= +62.9, v2= -32.8, dBIC=-286.9 *
+  Z b=0.05: v1= +57.9, v2= -76.5, dBIC=-4.7 
+  Z b=0.13: v1= +58.0, v2= -76.3, dBIC=-19.3 *
+  Z b=0.20: v1= +58.0, v2= -76.3, dBIC=-28.1 *
+  COMBINED b=0.05: v1= +62.9, v2= -33.8, dBIC=-103.0 *
+  COMBINED b=0.13: v1= +62.9, v2= -33.8, dBIC=-257.0 *
+  COMBINED b=0.20: v1= +62.8, v2= -33.7, dBIC=-369.9 *
+
+--- Epoch3 ---
+  R b=0.05: v1= -40.5, v2= +48.8, dBIC=-117.1 *
+  R b=0.13: v1= -40.5, v2= +48.8, dBIC=-298.3 *
+  R b=0.20: v1= -40.5, v2= +48.8, dBIC=-440.0 *
+  Z b=0.05: v1= +32.1, v2= -42.6, dBIC=-11.2 *
+  Z b=0.13: v1= +32.1, v2= -42.2, dBIC=-42.8 *
+  Z b=0.20: v1= +32.2, v2= -42.2, dBIC=-64.8 *
+  COMBINED b=0.05: v1= +23.8, v2= -58.9, dBIC=-164.4 *
+  COMBINED b=0.13: v1= +23.8, v2= -58.8, dBIC=-407.3 *
+  COMBINED b=0.20: v1= +23.9, v2= -58.8, dBIC=-589.3 *
+  [Checkpoint saved: stage=2]
+
+======================================================================
+ANALYSIS 3: FREE-b PER ARM MODEL
+======================================================================
+  b constrained to [0.02, 0.25], flagging boundary hits
+
+--- Epoch1 ---
+  R: b=0.250, v1= -80.8, v2= +12.4 BOUNDARY HIT
+  Z: b=0.250, v1= -87.1, v2= +91.4 BOUNDARY HIT
+
+--- Epoch2 ---
+  R: b=0.250, v1= +62.8, v2= -32.1 BOUNDARY HIT
+  Z: b=0.250, v1= +58.0, v2= -76.3 BOUNDARY HIT
+
+--- Epoch3 ---
+  R: b=0.250, v1= +12.2, v2= -68.2 BOUNDARY HIT
+  Z: b=0.250, v1= +26.0, v2= -49.0 BOUNDARY HIT
+  [Checkpoint saved: stage=3]
+
+======================================================================
+ANALYSIS 4: EPOCH 3 R-ARM MASK SENSITIVITY
+======================================================================
+  R (standard mask):  v =   -41.0 km/s (1563 pixels)
+  R (TiO-only mask):  v =   -41.0 km/s (1063 pixels)
+  Z (reference):      v =   +26.0 km/s
+  R_std - Z diff:       -67.0 km/s
+  R_tio - Z diff:       -67.0 km/s
+  [Checkpoint saved: stage=4]
+
+======================================================================
+COMPONENT SWITCHING ANALYSIS
+======================================================================
+
+Epoch1:
+  R: primary= -80.0, neighbor= -79.0, diff=1.0, ratio=0.98 
+  Z: primary= -87.0, neighbor= -79.0, diff=8.0, ratio=1.15 
+  COMBINED: primary= -81.0, neighbor= -80.0, diff=1.0, ratio=1.06 
+
+Epoch2:
+  R: primary= +63.0, neighbor= +62.0, diff=1.0, ratio=1.00 
+  Z: primary= +58.0, neighbor= +63.0, diff=5.0, ratio=1.19 
+  COMBINED: primary= +63.0, neighbor= +63.0, diff=0.0, ratio=1.06 
+
+Epoch3:
+  R: primary= -41.0, neighbor= -41.0, diff=0.0, ratio=0.97 
+  Z: primary= +26.0, neighbor= +34.0, diff=8.0, ratio=1.14 
+  COMBINED: primary= +24.0, neighbor= +25.0, diff=1.0, ratio=1.05 
+
+======================================================================
+SAVING OUTPUTS
+======================================================================
+Saved: desi_epoch_rv_refit_v4.json
+Saved: desi_blend_fixed_b_tests_v4.json
+Saved: desi_arm_b_fit_v4.json
+Saved: desi_neighbor_switch_risk_v4.json
+Saved: desi_mask_sensitivity_v4.json
+
+======================================================================
+GENERATING FIGURES
+======================================================================
+Saved: arm_split_rv_v4.png
+Saved: fixed_b_model_comparison_v4.png
+Saved: epoch3_R_mask_sensitivity_v4.png
+Saved: bR_bZ_posterior_or_grid_v4.png
+
+======================================================================
+WRITING REPORT
+======================================================================
+Saved: DESI_BLEND_AWARE_REPORT_v4.md
+  [Checkpoint cleared]
+
+======================================================================
+ANALYSIS COMPLETE
+======================================================================

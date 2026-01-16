@@ -1,0 +1,21 @@
+{
+  "epoch": "Epoch3",
+  "R_standard": {
+    "v": -41.0,
+    "sigma_v_renorm": 1.2700620041425708,
+    "chi2_red": 4.804107509834838,
+    "n_pix": 1563
+  },
+  "R_tio_only": {
+    "v": -41.0,
+    "sigma_v_renorm": 1.569736229765937,
+    "chi2_red": 4.370888118530873,
+    "n_pix": 1063
+  },
+  "Z_reference": {
+    "v": 26.0,
+    "sigma_v_renorm": 1.5948916898696257
+  },
+  "R_std_vs_Z_diff": -67.0,
+  "R_tio_vs_Z_diff": -67.0
+}
