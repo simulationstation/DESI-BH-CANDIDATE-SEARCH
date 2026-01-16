@@ -1,0 +1,127 @@
+# Configuration for rare_companions multi-experiment search
+# All paths are relative to repository root unless absolute
+
+run_name: "rare_companions_full"
+
+data_paths:
+  # DESI DR1 per-epoch RV files
+  # Download from: https://data.desi.lbl.gov/public/dr1/
+  desi_bright: "data/rvpix_exp-main-bright.fits"
+  desi_dark: "data/rvpix_exp-main-dark.fits"
+
+  # LAMOST DR7 catalog (optional, for cross-match)
+  lamost_catalog: "data/lamost_dr7_stellar.fits"
+
+  # Cache directory for Gaia queries
+  gaia_cache: "cache/gaia_cache.pkl"
+
+  # Output directory for runs
+  output_dir: "runs"
+
+selection:
+  # Minimum number of RV epochs required
+  min_epochs: 3
+
+  # Minimum RV swing to be considered variable (km/s)
+  min_delta_rv: 20.0
+
+  # Minimum robust significance (S_robust = min LOO S)
+  min_s_robust: 5.0
+
+  # Maximum individual RV error allowed (km/s)
+  max_rv_err: 50.0
+
+  # p-value threshold for rejecting constant RV
+  min_chi2_pvalue: 1.0e-6
+
+  # Maximum RUWE for astrometric quality
+  max_ruwe: 5.0
+
+orbit:
+  # Period search range (days)
+  period_min: 0.5
+  period_max: 1000.0
+  period_grid_points: 500
+
+  # MCMC parameters for deep fits
+  mcmc_walkers: 32
+  mcmc_steps: 3000
+  mcmc_burnin: 500
+
+  # Maximum eccentricity allowed
+  eccentricity_max: 0.95
+
+budget:
+  # Stage 1: Run basic metrics on all targets
+  stage1_all_targets: true
+
+  # Stage 2: Deep orbital fits for top K per experiment
+  stage2_deep_fit_top_k: 100
+
+  # Stage 3: Generate full dossiers for top N per experiment
+  stage3_dossier_top_n: 20
+
+  # Maximum parallel workers
+  max_parallel_workers: 8
+
+  # Injection-recovery realizations per candidate
+  injection_recovery_realizations: 200
+
+experiments:
+  # E1: Mass-gap compact companion candidates (2-5 Msun)
+  E1_mass_gap:
+    enabled: true
+    custom_params:
+      m2_min_lower: 2.0  # Msun
+      m2_min_upper: 5.0  # Msun
+      require_dark: true
+
+  # E2: NS/BH dark companions around M/K dwarfs
+  E2_dark_companions:
+    enabled: true
+    custom_params:
+      primary_types: ["K", "M"]
+      max_ir_excess: 0.15  # W1-W2
+      max_photometric_var: 0.05  # mag
+
+  # E3: Detached double white dwarfs / LISA progenitors
+  E3_dwd_lisa:
+    enabled: true
+    custom_params:
+      require_wd_primary: true
+      period_max: 10.0  # days, for LISA band
+
+  # E4: Brown dwarf desert systems
+  E4_brown_dwarf:
+    enabled: true
+    custom_params:
+      m2_min_lower: 0.013  # ~13 M_Jupiter
+      m2_min_upper: 0.08  # Msun
+
+  # E5: Hierarchical triples / RV two-component systems
+  E5_hierarchical:
+    enabled: true
+    custom_params:
+      min_delta_bic: 10.0  # for model selection
+
+  # E6: Accretion on/off systems (quiescent XRB candidates)
+  E6_accretion:
+    enabled: true
+    custom_params:
+      require_xray_radio: false  # can be either detection or limit
+
+  # E7: Halo/cluster population candidates
+  E7_halo_cluster:
+    enabled: true
+    custom_params:
+      min_velocity: 200.0  # km/s total space velocity
+      max_metallicity: -1.0  # [Fe/H]
+
+  # E8: Weirdest-of-the-weird anomaly list
+  E8_anomalies:
+    enabled: true
+    custom_params:
+      min_m2_min: 3.0  # Msun
+      require_all_clean: true
+
+random_seed: 42

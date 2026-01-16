@@ -1,0 +1,12 @@
+{
+  "run_dir": "runs/smoke_test_run",
+  "mode": "smoke_test",
+  "n_input": 100,
+  "experiments_run": [
+    "E1_mass_gap",
+    "E2_dark_companions",
+    "E8_anomalies"
+  ],
+  "n_candidates": 35,
+  "status": "SUCCESS"
+}
