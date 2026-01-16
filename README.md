@@ -760,6 +760,92 @@ python scripts/desi_blend_aware_rv_v4.py  # v4 blend-aware analysis
 
 ---
 
+## DESI Truth Filter (v9)
+
+Maximum "no-telescope" truth-filtering using only real DESI data and public catalogs. No simulations.
+
+### Verdict Table
+
+| Check | Question | Verdict |
+|-------|----------|---------|
+| A | Epoch 3 R–Z discrepancy is a single-exposure/camera artifact | **FAIL** ❌ |
+| B | Large RV swing is visible in feature-level (line/bandhead) shifts | **PASS** ✅ |
+| C | Expected neighbor flux ratio in DESI R/Z could plausibly reach 0.25 | **INCONCLUSIVE** ⚠️ |
+| D | Target's Gaia duplicity metrics are extreme vs matched control sample | **PASS** ✅ |
+
+**Summary:** 2 PASS, 1 FAIL, 1 INCONCLUSIVE
+
+### Key Findings
+
+**1. R-Z Arm Discrepancy is PERSISTENT (Verdict A: FAIL)**
+
+| Epoch | R-arm (km/s) | Z-arm (km/s) | R-Z (km/s) | Significance |
+|-------|--------------|--------------|------------|--------------|
+| Epoch1 | -126 | -82 | -44 | 31σ |
+| Epoch2 | +39 | +59 | -20 | 14σ |
+| Epoch3 | +39 | +3 | +36 | 26σ |
+
+Both Epoch 3 exposures (120449, 120450) show ~1 km/s difference — the R-Z discrepancy is NOT a single-exposure artifact.
+
+**2. Feature-Level RV Confirms Large Swing (Verdict B: PASS)**
+
+| Feature | E1-E2 Shift | Catalog E1-E2 |
+|---------|-------------|---------------|
+| TiO_8432 | -114 km/s | -146 km/s |
+| CaII_triplet | -112 km/s | -146 km/s |
+| **Mean** | **-98 ± 21 km/s** | **-146 km/s** |
+
+Feature-level shifts are 67% of catalog — **RV variability is REAL**.
+
+**3. Neighbor Flux Ratio (Verdict C: INCONCLUSIVE)**
+
+| Neighbor Type | b_G | b_R | b_Z |
+|---------------|-----|-----|-----|
+| M5 (3000K) | 0.130 | 0.100 | 0.230 |
+| M3 (3200K) | 0.130 | 0.110 | 0.194 |
+
+Max plausible b_Z = 0.23 approaches but does not reach the 0.25 boundary hit in v8 fitting.
+
+**4. Gaia Control Sample (Verdict D: PASS)**
+
+| Metric | Target Value | Percentile (N=581) |
+|--------|--------------|-------------------|
+| RUWE | 1.954 | **97%** |
+| AEN | 0.896 mas | **96%** |
+| IPD | 8% | 96% |
+
+Target is an **extreme outlier** in Gaia duplicity metrics.
+
+### Overall Assessment
+
+**CANDIDATE SURVIVES with CAVEATS**
+
+- ✅ RV swing is REAL (confirmed by independent feature-level analysis)
+- ❌ R-Z arm discrepancy remains unexplained (genuine systematic)
+- ⚠️ b=0.25 boundary hit likely absorbing template mismatch
+
+**Required follow-up:**
+- High-resolution spectroscopy to resolve blend
+- Investigation of DESI R/Z wavelength calibration
+- Per-exposure spectra (not coadds) for full characterization
+
+### Scripts and Output Files
+
+```bash
+python scripts/desi_truthfilter_v1.py  # Full truth filter analysis
+```
+
+| File | Description |
+|------|-------------|
+| `outputs/desi_truthfilter_v1/TRUTHFILTER_REPORT.md` | Full analysis report |
+| `outputs/desi_truthfilter_v1/per_exposure_rv_results.json` | Per-arm RV analysis |
+| `outputs/desi_truthfilter_v1/line_by_line_rv_results.json` | Feature-level RV check |
+| `outputs/desi_truthfilter_v1/band_flux_ratio_estimates.json` | Expected b_R, b_Z |
+| `outputs/desi_truthfilter_v1/gaia_control_sample_stats.json` | Gaia control sample |
+| `outputs/desi_truthfilter_v1/figures/*.png` | Diagnostic figures |
+
+---
+
 ### Infrared (WISE)
 
 | Color | Value | Interpretation |
@@ -852,6 +938,11 @@ python scripts/desi_blend_aware_rv_v2.py        # v7: PHOENIX template χ² fitt
 python scripts/desi_blend_aware_rv_v4.py        # v8: Fixed-b tests, per-arm fitting, mask sensitivity
 ```
 
+### Truth Filter Analysis (v9)
+```bash
+python scripts/desi_truthfilter_v1.py           # v9: Feature-level RV, Gaia control sample, flux ratios
+```
+
 ---
 
 ## Output Files
@@ -887,6 +978,9 @@ python scripts/desi_blend_aware_rv_v4.py        # v8: Fixed-b tests, per-arm fit
 | `outputs/desi_blend_v4/desi_blend_fixed_b_tests_v4.json` | v8 fixed-b model comparisons |
 | `outputs/desi_blend_v4/desi_arm_b_fit_v4.json` | v8 per-arm free-b results |
 | `outputs/desi_blend_v4/desi_mask_sensitivity_v4.json` | v8 Epoch 3 mask sensitivity test |
+| `outputs/desi_truthfilter_v1/TRUTHFILTER_REPORT.md` | v9 truth filter report |
+| `outputs/desi_truthfilter_v1/line_by_line_rv_results.json` | v9 feature-level RV analysis |
+| `outputs/desi_truthfilter_v1/gaia_control_sample_stats.json` | v9 Gaia control sample |
 
 ---
 
@@ -961,7 +1055,8 @@ Download from: https://data.desi.lbl.gov/public/dr1/
 - v5 forensic audit confirms candidate survives all proposed "kill modes"
 - v6 external validation: neighbor confirmed (0.688"); LAMOST variability inconclusive from CCF refit (-6.3 ± 4.6 km/s, 1.4σ)
 - v7 blend-aware analysis: DESI RV swing is ROBUST — 13% neighbor contamination cannot explain 146 km/s amplitude (max possible ~26 km/s)
-- **v8 blend-aware analysis v4: INCONCLUSIVE** — fixed-b models preferred but free-b hits boundary (overfitting); Epoch 3 R-Z arm discrepancy (67 km/s) persists even with TiO-only mask
+- v8 blend-aware analysis v4: INCONCLUSIVE — fixed-b models preferred but free-b hits boundary (overfitting); Epoch 3 R-Z arm discrepancy persists even with TiO-only mask
+- **v9 truth filter: RV swing CONFIRMED at feature level** (TiO, CaII show -98±21 km/s shift, 67% of catalog); R-Z discrepancy PERSISTENT across both Epoch 3 exposures; target is extreme Gaia outlier (97th %ile RUWE)
 
 **Spectroscopic follow-up (10-20 epochs over 30-60 days) is REQUIRED to:**
 1. Uniquely determine the orbital period

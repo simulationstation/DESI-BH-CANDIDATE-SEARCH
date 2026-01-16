@@ -1,0 +1,116 @@
+{
+  "feature_windows": {
+    "TiO_8432": [
+      8400,
+      8470
+    ],
+    "CaII_triplet": [
+      8480,
+      8700
+    ],
+    "TiO_7050": [
+      7030,
+      7100
+    ]
+  },
+  "reference_epoch": "Epoch2",
+  "features": {
+    "TiO_8432": {
+      "wavelength_range": [
+        8400,
+        8470
+      ],
+      "epochs": {
+        "Epoch1": {
+          "v_kms": -62.0,
+          "sigma_v_kms": 2.0,
+          "n_pixels": 82,
+          "delta_v_vs_ref": -114.0,
+          "sigma_delta": 2.8284271247461903
+        },
+        "Epoch2": {
+          "v_kms": 52.0,
+          "sigma_v_kms": 2.0,
+          "n_pixels": 86
+        },
+        "Epoch3": {
+          "v_kms": 52.0,
+          "sigma_v_kms": 2.0,
+          "n_pixels": 88,
+          "delta_v_vs_ref": 0.0,
+          "sigma_delta": 2.8284271247461903
+        }
+      }
+    },
+    "CaII_triplet": {
+      "wavelength_range": [
+        8480,
+        8700
+      ],
+      "epochs": {
+        "Epoch1": {
+          "v_kms": -58.0,
+          "sigma_v_kms": 2.0,
+          "n_pixels": 275,
+          "delta_v_vs_ref": -112.0,
+          "sigma_delta": 2.8284271247461903
+        },
+        "Epoch2": {
+          "v_kms": 54.0,
+          "sigma_v_kms": 2.0,
+          "n_pixels": 271
+        },
+        "Epoch3": {
+          "v_kms": 26.0,
+          "sigma_v_kms": 2.0,
+          "n_pixels": 275,
+          "delta_v_vs_ref": -28.0,
+          "sigma_delta": 2.8284271247461903
+        }
+      }
+    },
+    "TiO_7050": {
+      "wavelength_range": [
+        7030,
+        7100
+      ],
+      "epochs": {
+        "Epoch1": {
+          "v_kms": 132.0,
+          "sigma_v_kms": 2.0,
+          "n_pixels": 87,
+          "delta_v_vs_ref": -68.0,
+          "sigma_delta": 2.8284271247461903
+        },
+        "Epoch2": {
+          "v_kms": 200.0,
+          "sigma_v_kms": 2.0,
+          "n_pixels": 82
+        },
+        "Epoch3": {
+          "v_kms": 200.0,
+          "sigma_v_kms": 2.0,
+          "n_pixels": 87,
+          "delta_v_vs_ref": 0.0,
+          "sigma_delta": 2.8284271247461903
+        }
+      }
+    }
+  },
+  "catalog_rvs": {
+    "Epoch1": -86.39,
+    "Epoch2": 59.68,
+    "Epoch3": 25.8
+  },
+  "summary": {
+    "n_features_analyzed": 3,
+    "epoch1_mean_delta_v": -98.0,
+    "epoch1_std_delta_v": 21.228911104120876,
+    "epoch3_mean_delta_v": -9.333333333333334,
+    "epoch3_std_delta_v": 13.199326582148887,
+    "catalog_swing": {
+      "epoch1_vs_epoch2": -146.07,
+      "epoch3_vs_epoch2": -33.879999999999995
+    }
+  }
+}

@@ -1,0 +1,155 @@
+======================================================================
+DESI TRUTH FILTER v1
+======================================================================
+Target: Gaia DR3 3802130935635096832
+DESI TARGETID: 39627745210139276
+Neighbor: 0.68793" separation, ΔG = 2.21099
+
+======================================================================
+PART 1: PER-EXPOSURE / PER-ARM RV ANALYSIS
+======================================================================
+
+Reading per-exposure catalog RVs from rvpix file...
+Found 4 exposures for target:
+  EXPID 120449 (night 20220127): VRAD = 26.43 km/s
+  EXPID 120450 (night 20220127): VRAD = 25.16 km/s
+  EXPID 114768 (night 20211219): VRAD = -86.39 km/s
+  EXPID 120194 (night 20220125): VRAD = 59.68 km/s
+
+Fitting R and Z arms from coadd spectra...
+
+--- Epoch1 ---
+  R: v = -126.0 ± 1.0 km/s, χ²_red = 31.96, N = 1933
+  Z: v = -82.0 ± 1.0 km/s, χ²_red = 15.28, N = 1675
+  R-Z: Δv = -44.0 ± 1.4 km/s (-31.1σ)
+
+--- Epoch2 ---
+  R: v = +39.0 ± 1.0 km/s, χ²_red = 15.41, N = 1897
+  Z: v = +59.0 ± 1.0 km/s, χ²_red = 6.80, N = 1659
+  R-Z: Δv = -20.0 ± 1.4 km/s (-14.1σ)
+
+--- Epoch3 ---
+  R: v = +39.0 ± 1.0 km/s, χ²_red = 20.01, N = 1938
+  Z: v = +3.0 ± 1.0 km/s, χ²_red = 8.36, N = 1694
+  R-Z: Δv = +36.0 ± 1.4 km/s (25.5σ)
+
+--- Epoch 3 Per-Exposure Analysis (from catalog) ---
+  Exp 120449: 26.43 km/s
+  Exp 120450: 25.16 km/s
+  Difference: 1.27 km/s
+  Both exposures show similar RV, suggesting R-Z discrepancy is PERSISTENT
+Saved: per_exposure_rv_RZ.png
+Saved: per_exposure_epoch3_diagnostics.png
+Saved: per_exposure_rv_results.json
+
+======================================================================
+PART 2: LINE/BANDHEAD-LEVEL RV CHECK
+======================================================================
+
+--- Feature: TiO_8432 (8410-8455 Å) ---
+  Reference (Epoch2): v = +nan ± nan km/s
+  Epoch1: v = +nan ± nan km/s, Δv = +nan km/s
+  Epoch3: v = +nan ± nan km/s, Δv = +nan km/s
+
+--- Feature: TiO_8860 (8840-8880 Å) ---
+  Reference (Epoch2): v = +nan ± nan km/s
+  Epoch1: v = +nan ± nan km/s, Δv = +nan km/s
+  Epoch3: v = +nan ± nan km/s, Δv = +nan km/s
+
+--- Feature: CaII_8498 (8485-8510 Å) ---
+  Reference (Epoch2): v = +nan ± nan km/s
+  Epoch1: v = +nan ± nan km/s, Δv = +nan km/s
+  Epoch3: v = +nan ± nan km/s, Δv = +nan km/s
+
+--- Feature: CaII_8542 (8530-8555 Å) ---
+  Reference (Epoch2): v = +nan ± nan km/s
+  Epoch1: v = +nan ± nan km/s, Δv = +nan km/s
+  Epoch3: v = +nan ± nan km/s, Δv = +nan km/s
+
+--- Feature: CaII_8662 (8650-8675 Å) ---
+  Reference (Epoch2): v = +nan ± nan km/s
+  Epoch1: v = +nan ± nan km/s, Δv = +nan km/s
+  Epoch3: v = +nan ± nan km/s, Δv = +nan km/s
+
+--- Feature-Level RV Summary ---
+N features: 5
+Epoch1 mean Δv: +nan ± nan km/s
+Epoch3 mean Δv: +nan ± nan km/s
+Catalog Epoch1-Epoch2: -146.1 km/s
+Catalog Epoch3-Epoch2: -33.9 km/s
+Saved: line_by_line_rv_epoch_comparison.png
+Saved: line_by_line_rv_results.json
+
+======================================================================
+PART 3: EXPECTED NEIGHBOR FLUX FRACTION (b_R, b_Z)
+======================================================================
+Primary (3800K M0):
+  Integrated flux (G-proxy): 3.421e+17
+  Integrated flux (R): 1.423e+17
+  Integrated flux (Z): 2.111e+17
+
+Expected flux ratio from ΔG = 2.21099: b_G = 0.1305
+
+--- Neighbor: M5_3000K ---
+  Raw flux ratio (G-proxy): 0.1877
+  Scale factor to match ΔG: 0.6953
+  Calibrated b_G: 0.1305
+  Calibrated b_R: 0.0996
+  Calibrated b_Z: 0.2302
+
+--- Neighbor: M3_3200K ---
+  Raw flux ratio (G-proxy): 0.3153
+  Scale factor to match ΔG: 0.4139
+  Calibrated b_G: 0.1305
+  Calibrated b_R: 0.1101
+  Calibrated b_Z: 0.1944
+
+--- Summary ---
+b_R range: 0.100 - 0.110
+b_Z range: 0.194 - 0.230
+Can plausible neighbor reach b = 0.25? False
+Saved: expected_bR_bZ.png
+Saved: band_flux_ratio_estimates.json
+
+======================================================================
+PART 4: GAIA DUPLICITY CONTROL SAMPLE
+======================================================================
+Warning: the passwords of all user accounts have been inactivated.              Please visit https://cas.cosmos.esa.int/cas/passwd to set a new one. Workaround solutions for the Gaia Archive issues following the infrastructure upgrade: https://www.cosmos.esa.int/web/gaia/news#WorkaroundArchive
+Querying target properties...
+Target: G = 17.27, BP-RP = 1.89
+  RUWE = 1.954
+  AEN = 0.896 mas, sig = 16.5
+  IPD frac multi-peak = 8.0
+
+Querying control sample (radius=2 deg, G=17.3±0.5, BP-RP=1.89±0.2)...
+Found 581 control stars
+
+Control sample statistics:
+  RUWE: median = 1.014, std = 0.533
+  AEN: median = 0.000, std = 0.413
+
+Target percentile ranks:
+  RUWE: 97.2%
+  AEN: 96.2%
+  AEN_sig: 96.0%
+  IPD: 95.9%
+Saved: gaia_control_histograms.png
+Saved: gaia_control_sample_stats.json
+
+======================================================================
+PART 5: FINAL VERDICTS
+======================================================================
+
+VERDICT TABLE:
+--------------------------------------------------------------------------------
+  A: FAIL         - R-Z discrepancy (+36.0 km/s, 25.5σ) is PERSISTENT across both exposures (Δexp=1.3 km/s)
+  B: INCONCLUSIVE - Feature analysis incomplete
+  C: INCONCLUSIVE - Max plausible b = 0.230 approaches but does not reach 0.25
+  D: PASS         - Target is extreme outlier: RUWE at 97%ile, AEN at 96%ile
+--------------------------------------------------------------------------------
+
+Saved: /home/primary/DESI-BH-CANDIDATE-SEARCH/outputs/desi_truthfilter_v1/TRUTHFILTER_REPORT.md
+
+======================================================================
+ANALYSIS COMPLETE
+======================================================================

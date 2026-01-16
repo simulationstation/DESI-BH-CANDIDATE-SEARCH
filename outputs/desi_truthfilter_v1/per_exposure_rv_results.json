@@ -1,0 +1,144 @@
+{
+  "note": "Per-exposure spectra NOT available locally. Analysis uses coadd spectra.",
+  "limitation": "For Epoch 3 (2 exposures), coadd combines both - cannot separate.",
+  "missing_files": [
+    "spectra-{petal}-{expid}.fits for EXPIDs 114768, 120194, 120449, 120450",
+    "These would be at $DESI_ROOT/spectro/redux/iron/tiles/cumulative/"
+  ],
+  "epochs": {
+    "Epoch1": {
+      "coadd_file": "coadd_20268_20211219_p2.fits",
+      "file_hash": "1f3aefba5e346da2",
+      "exposures": [
+        114768
+      ],
+      "n_exposures": 1,
+      "arms": {
+        "R": {
+          "v_kms": -126.0,
+          "sigma_v_kms": 1.0,
+          "chi2_red": 31.95887432065711,
+          "n_pixels": 1933,
+          "wave_range": [
+            5760.0,
+            7620.000000000423
+          ]
+        },
+        "Z": {
+          "v_kms": -82.0,
+          "sigma_v_kms": 1.0,
+          "chi2_red": 15.275483354066722,
+          "n_pixels": 1675,
+          "wave_range": [
+            7520.0,
+            9824.000000000524
+          ]
+        }
+      },
+      "R_minus_Z": {
+        "delta_v_kms": -44.0,
+        "sigma_kms": 1.4142135623730951,
+        "significance_sigma": -31.11269837220809
+      }
+    },
+    "Epoch2": {
+      "coadd_file": "coadd_24976_20220125_p7.fits",
+      "file_hash": "87af27aa867295ee",
+      "exposures": [
+        120194
+      ],
+      "n_exposures": 1,
+      "arms": {
+        "R": {
+          "v_kms": 39.0,
+          "sigma_v_kms": 1.0,
+          "chi2_red": 15.40980442790558,
+          "n_pixels": 1897,
+          "wave_range": [
+            5760.0,
+            7620.000000000423
+          ]
+        },
+        "Z": {
+          "v_kms": 59.0,
+          "sigma_v_kms": 1.0,
+          "chi2_red": 6.797016644920247,
+          "n_pixels": 1659,
+          "wave_range": [
+            7520.0,
+            9824.000000000524
+          ]
+        }
+      },
+      "R_minus_Z": {
+        "delta_v_kms": -20.0,
+        "sigma_kms": 1.4142135623730951,
+        "significance_sigma": -14.14213562373095
+      }
+    },
+    "Epoch3": {
+      "coadd_file": "coadd_23137_20220127_p0.fits",
+      "file_hash": "0ee485970c0b14e0",
+      "exposures": [
+        120449,
+        120450
+      ],
+      "n_exposures": 2,
+      "arms": {
+        "R": {
+          "v_kms": 39.0,
+          "sigma_v_kms": 1.0,
+          "chi2_red": 20.01416892219835,
+          "n_pixels": 1938,
+          "wave_range": [
+            5760.0,
+            7620.000000000423
+          ]
+        },
+        "Z": {
+          "v_kms": 3.0,
+          "sigma_v_kms": 1.0,
+          "chi2_red": 8.356035703861526,
+          "n_pixels": 1694,
+          "wave_range": [
+            7520.0,
+            9824.000000000524
+          ]
+        }
+      },
+      "R_minus_Z": {
+        "delta_v_kms": 36.0,
+        "sigma_kms": 1.4142135623730951,
+        "significance_sigma": 25.45584412271571
+      }
+    }
+  },
+  "per_exposure_catalog_rvs": {
+    "120449": {
+      "night": 20220127,
+      "vrad_catalog": 26.42652657409842,
+      "vrad_err_catalog": 1.0620173551471033
+    },
+    "120450": {
+      "night": 20220127,
+      "vrad_catalog": 25.156098158694054,
+      "vrad_err_catalog": 1.1125645409888967
+    },
+    "114768": {
+      "night": 20211219,
+      "vrad_catalog": -86.39155157444253,
+      "vrad_err_catalog": 0.5465829608813039
+    },
+    "120194": {
+      "night": 20220125,
+      "vrad_catalog": 59.678391968991555,
+      "vrad_err_catalog": 0.8251817154663924
+    }
+  },
+  "epoch3_exposure_comparison": {
+    "exp_120449_vrad": 26.42652657409842,
+    "exp_120450_vrad": 25.156098158694054,
+    "delta_between_exposures": 1.2704284154043677,
+    "note": "These are full-spectrum RVs, not R/Z split. Both are similar (~1 km/s apart)."
+  }
+}
