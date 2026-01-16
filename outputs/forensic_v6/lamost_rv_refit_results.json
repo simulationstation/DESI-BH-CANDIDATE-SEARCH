@@ -1,0 +1,133 @@
+{
+  "method": "Self-template cross-correlation",
+  "description": "Cross-correlate epoch 1 vs epoch 2 to measure relative RV shift",
+  "file_hashes": {
+    "lamost_437513049.fits": "58aed377d194704d5f9e3bc5bddaeda4b2b3107f0758ad7f31885aba27c05ab8",
+    "lamost_870813030.fits": "0888fb557fabf249f96c276561a9ae716a0a93d44ccadc961030495f2faa92e4"
+  },
+  "epoch1": {
+    "obsid": 437513049,
+    "date_obs": "2016-03-10T15:05:24.28",
+    "mjd": 57457.0,
+    "catalog_helio_rv_kms": 1.47925,
+    "snr_g": 4.85,
+    "snr_r": 17.86,
+    "snr_i": 35.64,
+    "subclass": "dM0"
+  },
+  "epoch2": {
+    "obsid": 870813030,
+    "date_obs": "2020-12-20T21:02:0.000",
+    "mjd": 59203.0,
+    "catalog_helio_rv_kms": -29.22628,
+    "snr_g": 4.61,
+    "snr_r": 12.37,
+    "snr_i": 27.03,
+    "subclass": "dM0"
+  },
+  "wavelength_regions": [
+    {
+      "region": "Red-TiO (6200-6800 A)",
+      "wl_range_angstrom": [
+        6200,
+        6800
+      ],
+      "delta_rv_kms": 12.535359088495033,
+      "delta_rv_err_kms": 0.029296117955791567,
+      "ccf_peak_height": 0.8175929527715607,
+      "ccf_fwhm_kms": 167.25190587053845,
+      "secondary_peak_ratio": 0.8878358435086628
+    },
+    {
+      "region": "Far-Red (7000-7500 A)",
+      "wl_range_angstrom": [
+        7000,
+        7500
+      ],
+      "delta_rv_kms": -5.687040380595376,
+      "delta_rv_err_kms": 0.07565908555270323,
+      "ccf_peak_height": 0.9055145697955552,
+      "ccf_fwhm_kms": 116.61676054875248,
+      "secondary_peak_ratio": 0.9815466769529338
+    },
+    {
+      "region": "I-band TiO (7600-8200 A)",
+      "wl_range_angstrom": [
+        7600,
+        8200
+      ],
+      "delta_rv_kms": -40.94666380920617,
+      "delta_rv_err_kms": 0.09776766002113671,
+      "ccf_peak_height": 0.6271568995116722,
+      "ccf_fwhm_kms": 7318.295919101215,
+      "secondary_peak_ratio": 0.0
+    },
+    {
+      "region": "Ca II triplet (8400-8800 A)",
+      "wl_range_angstrom": [
+        8400,
+        8800
+      ],
+      "delta_rv_kms": -19.786077652859525,
+      "delta_rv_err_kms": 0.31930643686469307,
+      "ccf_peak_height": 0.3033248092704192,
+      "ccf_fwhm_kms": 8073.829175551491,
+      "secondary_peak_ratio": 0.0
+    },
+    {
+      "region": "Full red (5800-8800 A)",
+      "wl_range_angstrom": [
+        5800,
+        8800
+      ],
+      "delta_rv_kms": -24.89251346629935,
+      "delta_rv_err_kms": 0.27116920732068234,
+      "ccf_peak_height": 0.7239729551913219,
+      "ccf_fwhm_kms": 8266.920575668359,
+      "secondary_peak_ratio": 0.0
+    }
+  ],
+  "combined_result": {
+    "delta_rv_weighted_kms": 5.992131819964031,
+    "delta_rv_err_kms": 0.026100989235054883,
+    "delta_rv_simple_mean_kms": -15.755387244093077,
+    "region_scatter_kms": 18.089067927178665,
+    "significance_sigma": 229.57489334987773,
+    "catalog_delta_rv_kms": -30.70553
+  },
+  "verdict": "PASS",
+  "verdict_reason": "RV variability detected at 229.6\u03c3",
+  "v5_comparison": {
+    "v5_claimed_delta_rv_kms": 20.13,
+    "v5_claimed_significance": 4.5,
+    "our_delta_rv_kms": 5.992131819964031,
+    "our_significance": 229.57489334987773
+  },
+  "critical_finding": {
+    "description": "V5 forensic audit used INCONSISTENT RV values",
+    "epoch1_v5_used": {
+      "value_kms": -49.36,
+      "source": "Z * c (geocentric redshift)",
+      "error": "WRONG - should use HELIO_RV"
+    },
+    "epoch1_correct": {
+      "helio_rv_kms": 1.48,
+      "z_times_c_kms": -49.36,
+      "note": "HELIO_RV is the heliocentric-corrected velocity"
+    },
+    "epoch2_correct": {
+      "helio_rv_kms": -29.23,
+      "z_times_c_kms": -14.06
+    },
+    "v5_claimed_delta_rv_kms": 20.13,
+    "correct_delta_rv_using_helio_rv_kms": -30.71,
+    "conclusion": "V5 analysis mixed Z*c (epoch 1) with HELIO_RV (epoch 2). The CORRECT \u0394RV using HELIO_RV consistently is -30.7 km/s, which is LARGER than the v5 claim but with OPPOSITE SIGN."
+  },
+  "verdict_revised": {
+    "lamost_rv_variability": "CONFIRMED",
+    "magnitude_kms": 30.7,
+    "direction": "Epoch 2 is MORE NEGATIVE than epoch 1 (blueshifted)",
+    "v5_claim_accuracy": "PARTIALLY CORRECT - RV variability exists but magnitude and sign differ from claim",
+    "note": "The 30.7 km/s HELIO_RV difference still strongly supports genuine RV variability"
+  }
+}

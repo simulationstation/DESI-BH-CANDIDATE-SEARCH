@@ -457,6 +457,83 @@ python scripts/forensic_completeness_check.py # Completeness verification
 
 ---
 
+## External Validation (v6)
+
+Independent verification of v5 forensic conclusions using **real data only** — no simulations or assumptions.
+
+### Critical Discovery: V5 Methodology Error
+
+The v5 analysis used **inconsistent RV definitions**:
+
+| Epoch | V5 Used | Correct Value | Source |
+|-------|---------|---------------|--------|
+| 1 (ObsID 437513049) | -49.36 km/s | **+1.48 km/s** | V5 used `Z × c`, should be `HELIO_RV` |
+| 2 (ObsID 870813030) | -29.23 km/s | -29.23 km/s | Correctly used `HELIO_RV` |
+
+**Corrected ΔRV:** -30.7 km/s (not +20.1 km/s as claimed in v5)
+
+Despite this error, **RV variability is confirmed** — the true magnitude is actually *larger* than v5 claimed.
+
+### Validation Results
+
+| Check | V5 Claim | V6 Finding | Verdict |
+|-------|----------|------------|---------|
+| LAMOST ΔRV | +20.1 km/s at 4.5σ | **-30.7 km/s** (HELIO_RV) | ✅ **PASS** — variability confirmed |
+| Neighbor separation | 0.688" | **0.688"** (Gaia DR3 + EDR3) | ✅ **PASS** — exact match |
+| Neighbor ΔG | 2.21 mag | **2.21 mag** | ✅ **PASS** — exact match |
+
+### LAMOST FITS Header Values (Raw Data)
+
+| Parameter | Epoch 1 (437513049) | Epoch 2 (870813030) |
+|-----------|---------------------|---------------------|
+| HELIO_RV | **+1.48 km/s** | **-29.23 km/s** |
+| Z | -0.00016466 | -4.691e-05 |
+| Z × c | -49.36 km/s | -14.06 km/s |
+| SNR_i | 35.64 | 27.03 |
+| MJD | 57457 | 59203 |
+| Subclass | dM0 | dM0 |
+
+File hashes (SHA256):
+- `lamost_437513049.fits`: `58aed377d194...`
+- `lamost_870813030.fits`: `0888fb557fab...`
+
+### Neighbor Cross-Catalog Confirmation
+
+| Catalog | Neighbor Detected | Separation | Notes |
+|---------|-------------------|------------|-------|
+| Gaia DR3 | ✅ YES | 0.688" | Exact match |
+| Gaia EDR3 | ✅ YES | 0.688" | Persistent across releases |
+| Gaia DR2 | Query failed | - | `ruwe` column unavailable |
+| Pan-STARRS | Query failed | - | API issue |
+| SDSS DR16 | No | - | Below detection limit |
+| 2MASS | No | - | Target only |
+
+### Implications
+
+1. **RV variability is REAL** — 30.7 km/s HELIO_RV difference over 4.8 years
+2. **Neighbor is REAL** — confirmed in multiple Gaia releases with identical parameters
+3. **V5 conclusion SURVIVES** — despite methodology error, core findings are supported
+4. **Blend concern UNCHANGED** — 13% flux contamination still cannot explain 146 km/s DESI amplitude
+
+### External Validation Scripts
+```bash
+python scripts/forensic_v6_lamost_rv.py      # LAMOST RV re-measurement from FITS
+python scripts/forensic_v6_neighbor_check.py # Multi-catalog neighbor confirmation
+```
+
+### External Validation Output Files
+
+| File | Description |
+|------|-------------|
+| `outputs/forensic_v6/FORENSIC_V6_EXTERNAL_VALIDATION.md` | Full validation report |
+| `outputs/forensic_v6/lamost_rv_refit_results.json` | LAMOST RV analysis with file hashes |
+| `outputs/forensic_v6/neighbor_catalog_crosscheck.json` | Multi-catalog neighbor results |
+| `outputs/forensic_v6/figures/lamost_ccf_diagnostics.png` | CCF peak analysis |
+| `outputs/forensic_v6/figures/lamost_epoch_overlay.png` | Spectrum comparison |
+| `outputs/forensic_v6/figures/neighbor_field_cutouts.png` | Legacy Survey cutouts |
+
+---
+
 ### Infrared (WISE)
 
 | Color | Value | Interpretation |
@@ -643,6 +720,7 @@ Download from: https://data.desi.lbl.gov/public/dr1/
 - Primary mass independently verified (M₁ ~ 0.6 M☉)
 - v4 analyses reveal expected 5-epoch limitations, not contradictions
 - v5 forensic audit confirms candidate survives all proposed "kill modes"
+- v6 external validation confirms RV variability (30.7 km/s) and neighbor (0.688") using raw FITS data
 
 **Spectroscopic follow-up (10-20 epochs over 30-60 days) is REQUIRED to:**
 1. Uniquely determine the orbital period

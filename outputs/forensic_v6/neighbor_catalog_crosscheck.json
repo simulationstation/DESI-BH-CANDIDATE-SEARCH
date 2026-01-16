@@ -1,0 +1,126 @@
+{
+  "target": {
+    "gaia_source_id": 3802130935635096832,
+    "ra": 164.523494,
+    "dec": -1.660156
+  },
+  "claimed_neighbor": {
+    "gaia_source_id": 3802130935634233472,
+    "claimed_separation_arcsec": 0.688,
+    "claimed_delta_g_mag": 2.21
+  },
+  "catalog_queries": {
+    "gaia_dr3": {
+      "status": "SUCCESS",
+      "n_sources": 2,
+      "sources": [
+        {
+          "source_id": 3802130935635096832,
+          "ra": 164.52349428314767,
+          "dec": -1.6601557742314024,
+          "sep_arcsec": 0.0013033629448101194,
+          "g_mag": 17.272504806518555,
+          "bp_mag": 18.087648391723633,
+          "rp_mag": 16.199726104736328,
+          "parallax": 0.11894892049256606,
+          "pmra": -7.600405795077815,
+          "pmdec": 3.004263705149674,
+          "ruwe": 1.9535599946975708,
+          "role": "TARGET"
+        },
+        {
+          "source_id": 3802130935634233472,
+          "ra": 164.5234497904232,
+          "dec": -1.6599700894078402,
+          "sep_arcsec": 0.6879259459918556,
+          "g_mag": 19.48349380493164,
+          "bp_mag": null,
+          "rp_mag": null,
+          "parallax": null,
+          "pmra": null,
+          "pmdec": null,
+          "ruwe": null,
+          "role": "CLAIMED_NEIGHBOR"
+        }
+      ],
+      "neighbor_found": true,
+      "neighbor_separation_arcsec": 0.6879259459918556,
+      "neighbor_delta_g_mag": 2.210988998413086
+    },
+    "gaia_edr3": {
+      "status": "SUCCESS",
+      "n_sources": 2,
+      "neighbor_found": true
+    },
+    "gaia_dr2": {
+      "status": "FAILED"
+    },
+    "panstarrs_dr2": {
+      "status": "FAILED"
+    },
+    "sdss_dr16": {
+      "status": "SUCCESS",
+      "n_sources": 4,
+      "sources": [
+        {
+          "ra": 164.523529,
+          "dec": -1.660159,
+          "sep_arcsec": 0.126409314624748,
+          "g_mag": 18.42300033569336,
+          "r_mag": 17.170000076293945,
+          "i_mag": 16.545000076293945
+        },
+        {
+          "ra": 164.523526,
+          "dec": -1.660164,
+          "sep_arcsec": 0.11869853079589747,
+          "g_mag": 18.42799949645996,
+          "r_mag": 17.17099952697754,
+          "i_mag": 16.54599952697754
+        },
+        {
+          "ra": 164.523515,
+          "dec": -1.660149,
+          "sep_arcsec": 0.07965929304543291,
+          "g_mag": 18.41900062561035,
+          "r_mag": 17.16200065612793,
+          "i_mag": 16.51300048828125
+        },
+        {
+          "ra": 164.523512,
+          "dec": -1.660151,
+          "sep_arcsec": 0.0672273430229949,
+          "g_mag": 18.423999786376953,
+          "r_mag": 17.163999557495117,
+          "i_mag": 16.517000198364258
+        }
+      ]
+    },
+    "2mass": {
+      "status": "SUCCESS",
+      "n_sources": 1,
+      "sources": [
+        {
+          "ra": 164.523518,
+          "dec": -1.660114,
+          "sep_arcsec": 0.17412677742464888,
+          "j_mag": 14.973999977111816,
+          "h_mag": 14.210000038146973,
+          "k_mag": 14.010000228881836
+        }
+      ]
+    },
+    "legacy_dr10": {
+      "status": "FAILED",
+      "error": "Expecting value: line 3 column 1 (char 2)"
+    }
+  },
+  "summary": {
+    "confirmations": [
+      "Gaia DR3",
+      "Gaia EDR3"
+    ],
+    "verdict": "PASS",
+    "verdict_reason": "Neighbor confirmed in Gaia DR3 with consistent separation and magnitude"
+  }
+}

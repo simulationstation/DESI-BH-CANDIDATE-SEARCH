@@ -13,6 +13,7 @@ data/ksz/
 lamost_spectra/
 desi_spectra/
 temp_data/
+data/lamost/
 
 # TESS cutouts
 astrocut_*/
