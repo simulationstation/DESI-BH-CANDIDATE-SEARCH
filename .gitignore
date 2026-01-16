@@ -2,13 +2,27 @@
 data/raw/*.fits
 data/logs/
 data/manifests/
+data/e9_cache/
+data/e9_results/
+data/ksz/
 
 # Keep derived results tracked
 !data/derived/
-data/ksz/
+
+# Downloaded spectra (Globus/direct downloads)
+lamost_spectra/
+desi_spectra/
+temp_data/
+
+# TESS cutouts
+astrocut_*/
 
 # Large files
 *.zip
 
 # Windows metadata
 *:Zone.Identifier
+
+# Python cache
+__pycache__/
+*.pyc

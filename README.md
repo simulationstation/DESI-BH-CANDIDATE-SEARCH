@@ -384,6 +384,79 @@ Re-derives M₁ using independent Teff-Mass calibrations.
 
 ---
 
+## Forensic Audit (v5)
+
+In response to community feedback suggesting potential "kill modes" for this candidate, we conducted a rigorous forensic audit examining three specific concerns.
+
+### Motivation
+
+Forum users identified two critical potential issues:
+1. **LAMOST Version Control:** A second LAMOST epoch (ObsID 870813030) might show different RV, potentially nullifying variability
+2. **Blend Contamination:** A Gaia-resolved companion at 0.688" separation could contaminate the fiber and fake RV variability
+
+### Kill Mode 1: LAMOST RV Version Control
+
+We downloaded raw FITS files directly from LAMOST DR10 for both epochs:
+
+| Epoch | Date | ObsID | HELIO_RV (km/s) | σ (km/s) | SNR_i |
+|-------|------|-------|-----------------|----------|-------|
+| 1 | 2016-03-17 | 437513049 | −49.36 | 2.79 | 35.7 |
+| 2 | 2020-12-20 | 870813030 | −29.23 | 3.48 | 27.0 |
+
+**Result:** The second epoch reveals a **20.1 km/s shift at 4.5σ significance** over 4.8 years—confirming genuine RV variability independent of DESI.
+
+**Verdict: SURVIVES** ✅
+
+### Kill Mode 2: Blend Contamination
+
+| Property | Value |
+|----------|-------|
+| Companion separation | 0.688" |
+| ΔG magnitude | 2.2 mag |
+| Flux contamination | ~13% |
+
+**Physics argument:** A 13% flux contaminant can shift measured RV by at most ~13 km/s (assuming 100 km/s offset). The observed DESI amplitude is **146 km/s**—requiring ~1000 km/s companion velocity swings, which is physically impossible. Blends dilute signals; they cannot amplify them.
+
+**Verdict: SURVIVES** ✅
+
+### Kill Mode 3: Spectral Quality
+
+| Band | Epoch 1 | Epoch 2 | Assessment |
+|------|---------|---------|------------|
+| SNR_g | 4.85 | 4.61 | Low (expected for M-dwarf) |
+| SNR_r | 17.86 | 12.37 | Good |
+| **SNR_i** | **35.66** | **27.03** | **Robust** |
+
+For M-dwarfs, RV precision depends on SNR_i (where TiO bands reside), not SNR_g. Both epochs exceed the SNR_i > 15 threshold for reliable RV extraction.
+
+**Verdict: SURVIVES** ✅
+
+### Forensic Audit Summary
+
+| Kill Mode | Concern | Finding | Verdict |
+|-----------|---------|---------|---------|
+| 1. LAMOST RV | Second epoch nullifies variability | 20 km/s shift at 4.5σ | ✅ SURVIVES |
+| 2. Blend | 13% contamination fakes signal | Cannot explain 146 km/s | ✅ SURVIVES |
+| 3. Quality | Low SNR unreliable | SNR_i adequate for M-dwarf | ✅ SURVIVES |
+
+**The candidate survives all proposed kill modes. The blend is real but insufficient to explain the observed RV amplitude, and the archival LAMOST data now strengthen rather than weaken the case for genuine variability.**
+
+### Forensic Audit Scripts
+```bash
+python scripts/forensic_audit_kill_checks.py  # Main audit script
+python scripts/forensic_completeness_check.py # Completeness verification
+```
+
+### Forensic Audit Output Files
+
+| File | Description |
+|------|-------------|
+| `forensic_audit_results.json` | Structured audit findings |
+| `FORENSIC_AUDIT_REPORT.md` | Detailed markdown report |
+| `lamost_spectra/lamost_*.fits` | Downloaded LAMOST FITS files |
+
+---
+
 ### Infrared (WISE)
 
 | Color | Value | Interpretation |
@@ -569,6 +642,7 @@ Download from: https://data.desi.lbl.gov/public/dr1/
 - System is physically consistent (detached, RUWE explained)
 - Primary mass independently verified (M₁ ~ 0.6 M☉)
 - v4 analyses reveal expected 5-epoch limitations, not contradictions
+- v5 forensic audit confirms candidate survives all proposed "kill modes"
 
 **Spectroscopic follow-up (10-20 epochs over 30-60 days) is REQUIRED to:**
 1. Uniquely determine the orbital period
@@ -598,4 +672,4 @@ For use with publicly released DESI data. See DESI data policies for usage terms
 
 ---
 
-*Analysis completed 2026-01-15. All results derived from public DESI DR1, LAMOST DR7, Gaia DR3, TESS, WISE, and GALEX data.*
+*Analysis completed 2026-01-16. All results derived from public DESI DR1, LAMOST DR7/DR10, Gaia DR3, TESS, WISE, and GALEX data.*

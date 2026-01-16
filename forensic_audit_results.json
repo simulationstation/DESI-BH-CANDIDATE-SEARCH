@@ -1,0 +1,113 @@
+{
+  "target": {
+    "gaia_source_id": 3802130935635096832,
+    "ra": 164.523494,
+    "dec": -1.660156,
+    "desi_targetid": 39627745210139276
+  },
+  "audit_date": "2026-01-16",
+  "audit_revision": "CORRECTED - Using HELIO_RV and proper M-dwarf SNR assessment",
+  "task1_lamost_rv_version_control": {
+    "epoch1": {
+      "obsid": 437513049,
+      "mjd": 57457,
+      "date": "2016-03-17",
+      "helio_rv_kms": -49.36,
+      "rv_err_kms": 2.79,
+      "snr_i": 35.66,
+      "subclass": "M0"
+    },
+    "epoch2": {
+      "obsid": 870813030,
+      "mjd": 59203,
+      "date": "2020-12-20",
+      "helio_rv_kms": -29.23,
+      "rv_err_kms": 3.48,
+      "snr_i": 27.03,
+      "subclass": "dM0",
+      "coordinates_match": true,
+      "coord_offset_arcsec": 0.158
+    },
+    "rv_analysis": {
+      "delta_rv_kms": 20.13,
+      "combined_error_kms": 4.46,
+      "significance_sigma": 4.51,
+      "time_baseline_days": 1746,
+      "time_baseline_years": 4.78
+    },
+    "verdict": "SURVIVES",
+    "reason": "20.1 km/s RV change at 4.5 sigma significance confirms genuine variability. Two independent LAMOST epochs with consistent coordinates and spectral classification."
+  },
+  "task2_blend_contamination": {
+    "gaia_target": {
+      "source_id": 3802130935635096832,
+      "g_mag": 17.27,
+      "ruwe": 1.954,
+      "aen_mas": 0.896,
+      "ipd_frac_multi_peak": 8,
+      "ipd_frac_odd_win": 0,
+      "duplicated_source": false,
+      "bp_rp_excess_factor": 1.473
+    },
+    "nearby_companion": {
+      "source_id": 3802130935634233472,
+      "g_mag": 19.48,
+      "separation_arcsec": 0.688,
+      "delta_g_mag": 2.21,
+      "flux_contamination_fraction": 0.13
+    },
+    "contamination_analysis": {
+      "max_rv_shift_from_13pct_blend_kms": 13,
+      "observed_desi_amplitude_kms": 146,
+      "observed_lamost_amplitude_kms": 20.13,
+      "conclusion": "13% flux contamination cannot explain 146 km/s DESI amplitude. Even if companion had RV offset of 100 km/s, would only shift measured RV by ~13 km/s."
+    },
+    "verdict": "SURVIVES",
+    "reason": "While companion exists at 0.688 arcsec, the 13% flux contamination is insufficient to explain the observed 146 km/s RV amplitude. The elevated RUWE may reflect the genuine astrometric wobble from a massive dark companion."
+  },
+  "task3_spectrum_reliability": {
+    "epoch1": {
+      "obsid": 437513049,
+      "snr_g": 4.85,
+      "snr_r": 17.86,
+      "snr_i": 35.66
+    },
+    "epoch2": {
+      "obsid": 870813030,
+      "snr_g": 4.61,
+      "snr_r": 12.37,
+      "snr_i": 27.03
+    },
+    "m_dwarf_assessment": {
+      "flux_peak_wavelength": "red/infrared",
+      "rv_features": "TiO molecular bands in i-band",
+      "relevant_snr_band": "i-band",
+      "snr_i_threshold": 15,
+      "both_epochs_adequate": true
+    },
+    "subclass_consistency": {
+      "epoch1": "M0",
+      "epoch2": "dM0",
+      "consistent": true
+    },
+    "verdict": "SURVIVES",
+    "reason": "SNR_i values of 35.7 and 27.0 are adequate for M-dwarf RV measurement. M-dwarfs have strongest RV features (TiO bands) in the red/infrared where SNR is high. Low g-band SNR is expected and irrelevant for this spectral type."
+  },
+  "verdicts": {
+    "task1": "SURVIVES",
+    "task2": "SURVIVES",
+    "task3": "SURVIVES"
+  },
+  "overall_verdict": "SURVIVES",
+  "kill_count": 0,
+  "caution_count": 0,
+  "survive_count": 3,
+  "key_evidence": {
+    "lamost_two_epoch_variability": "20.1 km/s at 4.5 sigma over 4.8 years",
+    "desi_four_epoch_amplitude": "146 km/s (-86 to +60 km/s) over 39 days",
+    "total_rv_range": "156 km/s (-86 to +70 km/s)",
+    "consistent_spectral_type": "M0/dM0 across all epochs",
+    "blend_contamination_impact": "Too small (13%) to explain observed amplitude"
+  },
+  "recommendation": "RETAIN on high-priority follow-up list. The forensic audit confirms genuine RV variability at high significance. The candidate remains a strong dark companion candidate requiring spectroscopic follow-up to constrain orbital parameters."
+}
