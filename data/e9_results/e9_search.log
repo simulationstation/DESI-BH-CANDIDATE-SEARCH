@@ -1,0 +1,10 @@
+2026-01-15 21:41:32,027 - INFO - Injected laser at λ=6500.0Å in fiber 42 with SNR=15.0
+2026-01-15 21:41:32,064 - INFO - Injected laser at λ=5577.3Å in fiber 42 with SNR=20.0
+2026-01-15 21:41:32,086 - INFO - Discovering DESI DR1 files (target: 1 files)...
+2026-01-15 21:41:32,089 - INFO - Downloading: coadd-main-bright-9557.fits
+2026-01-15 21:47:17,265 - INFO - Injected laser at λ=6500.0Å in fiber 42 with SNR=15.0
+2026-01-15 21:47:17,300 - INFO - Injected laser at λ=5577.3Å in fiber 42 with SNR=20.0
+2026-01-15 21:47:17,322 - INFO - Discovering DESI DR1 files (target: 1 files)...
+2026-01-15 21:47:17,322 - INFO - Found 1 available files
+2026-01-15 21:47:17,322 - INFO - Processing 1 local files with 1 workers
+2026-01-15 21:47:17,357 - INFO - Processing complete in 0.0s

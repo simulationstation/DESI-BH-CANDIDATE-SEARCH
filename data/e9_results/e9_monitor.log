@@ -1,0 +1,66 @@
+Sat Jan 17 08:36:45 HST 2026: Checking...
+  Complete files: 7
+======================================================================
+E9 LASER SEARCH - LOCAL HEALPIX FILES
+======================================================================
+Start: 2026-01-17 08:36:46.191504
+Data dir: /home/primary/MSOUP/data/e9_healpix
+Already processed: 7 files
+Existing candidates: 0
+Found 7 total files, 0 new
+No new files to process. Waiting for transfers...
+  Transfer Status:                       ACTIVE
+Sat Jan 17 08:38:37 HST 2026: Checking...
+  Complete files: 9
+
+======================================================================
+SUMMARY
+======================================================================
+Files processed: 9
+Sky fibers: 648
+Candidates: 0
+Resolved (FWHM>1): 0
+
+End: 2026-01-17 08:38:38.310250
+  Transfer Status:                       ACTIVE
+Sat Jan 17 08:40:29 HST 2026: Checking...
+  Complete files: 11
+
+======================================================================
+SUMMARY
+======================================================================
+Files processed: 11
+Sky fibers: 858
+Candidates: 0
+Resolved (FWHM>1): 0
+
+End: 2026-01-17 08:40:31.489784
+  Transfer Status:                       ACTIVE
+Sat Jan 17 08:42:23 HST 2026: Checking...
+  Complete files: 13
+
+======================================================================
+SUMMARY
+======================================================================
+Files processed: 13
+Sky fibers: 1049
+Candidates: 0
+Resolved (FWHM>1): 0
+
+End: 2026-01-17 08:42:26.296858
+  Transfer Status:                       ACTIVE
+Sat Jan 17 08:44:17 HST 2026: Checking...
+  Complete files: 16
+
+======================================================================
+SUMMARY
+======================================================================
+Files processed: 16
+Sky fibers: 1049
+Candidates: 0
+Resolved (FWHM>1): 0
+
+End: 2026-01-17 08:44:20.325253
+  Transfer Status:                       ACTIVE
+Sat Jan 17 08:46:11 HST 2026: Checking...
+  Complete files: 18

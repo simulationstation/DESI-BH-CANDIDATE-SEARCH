@@ -1,0 +1,48 @@
+======================================================================
+E9 LASER SEARCH - LOCAL HEALPIX FILES
+======================================================================
+Start: 2026-01-17 08:33:40.152759
+Data dir: /home/primary/MSOUP/data/e9_healpix
+Already processed: 0 files
+Existing candidates: 0
+Found 4 total files, 4 new
+
+======================================================================
+PROCESSING
+======================================================================
+
+[1/4] coadd-main-bright-4102.fits
+  0 candidates from 218 sky fibers
+
+[2/4] coadd-main-bright-4131.fits
+  Error: 'FITS_record' object has no attribute 'dtype'
+  0 candidates from 0 sky fibers
+
+[3/4] coadd-main-bright-4137.fits
+  Error: 'FITS_record' object has no attribute 'dtype'
+  0 candidates from 0 sky fibers
+
+[4/4] coadd-main-bright-4224.fits
+  Error: 'FITS_record' object has no attribute 'dtype'
+  0 candidates from 0 sky fibers
+Traceback (most recent call last):
+  File "/home/primary/DESI-BH-CANDIDATE-SEARCH/scripts/run_e9_local_healpix.py", line 236, in <module>
+    main()
+  File "/home/primary/DESI-BH-CANDIDATE-SEARCH/scripts/run_e9_local_healpix.py", line 209, in main
+    save_checkpoint(checkpoint)
+  File "/home/primary/DESI-BH-CANDIDATE-SEARCH/scripts/run_e9_local_healpix.py", line 63, in save_checkpoint
+    json.dump(checkpoint, f, indent=2)
+  File "/usr/lib/python3.12/json/__init__.py", line 179, in dump
+    for chunk in iterable:
+  File "/usr/lib/python3.12/json/encoder.py", line 432, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "/usr/lib/python3.12/json/encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "/usr/lib/python3.12/json/encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "/usr/lib/python3.12/json/encoder.py", line 439, in _iterencode
+    o = _default(o)
+        ^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type int64 is not JSON serializable

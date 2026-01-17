@@ -1,0 +1,54 @@
+======================================================================
+E9 INTERSTELLAR LASER SEARCH - LOCAL CFRAME FILES
+======================================================================
+Start time: 2026-01-17 08:06:39.572088
+
+Found 12 cframe files in data/per_exposure
+Already processed: 0
+Remaining to process: 12
+
+Files to process:
+  cframe-b0-00120449.fits
+  cframe-b0-00120450.fits
+  cframe-b2-00114768.fits
+  cframe-b7-00120194.fits
+  cframe-r0-00120449.fits
+  cframe-r0-00120450.fits
+  cframe-r2-00114768.fits
+  cframe-r7-00120194.fits
+  cframe-z0-00120449.fits
+  cframe-z0-00120450.fits
+  cframe-z2-00114768.fits
+  cframe-z7-00120194.fits
+
+======================================================================
+INITIALIZING LASER SEARCH PIPELINE
+======================================================================
+  Detection threshold: 6.0σ
+  Max FWHM: 5 pixels
+  Airglow rejection: ±2.5Å
+  Workers: 8
+
+======================================================================
+RUNNING LASER SEARCH
+======================================================================
+
+======================================================================
+RESULTS
+======================================================================
+
+Files processed this run: 12
+Detections this run: 0
+Passed all cuts: 0
+
+======================================================================
+CUMULATIVE TOTALS
+======================================================================
+Total files processed: 12
+Total detections: 0
+Total passed all cuts: 0
+No candidates passed all cuts!
+No candidates at all!
+
+End time: 2026-01-17 08:06:39.825109
+======================================================================

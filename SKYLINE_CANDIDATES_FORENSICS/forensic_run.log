@@ -1,0 +1,327 @@
+Loading candidate data...
+Total priority candidates: 89
+Already processed: 13
+Remaining to process: 76
+
+Connecting to SPARCL...
+announcement=Data set deprecation notice: on November 19, 2025 the SDSS/BOSS DR16 data sets were deprecated. Please use the new SDSS/BOSS DR17 data sets instead.
+
+============================================================
+E9 PHASE 2: FORENSIC VERIFICATION (ALL CANDIDATES)
+============================================================
+
+[1/76] TARGET: 234514848677889 (GALAXY)
+  Signal: 74.2 sigma at 7195.2 A
+  [CLEAN] VERDICT: REAL_SIGNAL - Gaussian wings (wing ratio: 0.63)
+
+[2/76] TARGET: 234514848677889 (GALAXY)
+  Signal: 68.7 sigma at 5489.6 A
+  [CLEAN] VERDICT: REAL_SIGNAL - Gaussian wings (wing ratio: 0.49)
+
+[3/76] TARGET: 39628517314400472 (GALAXY)
+  Signal: 54.5 sigma at 5649.6 A
+  [CLEAN] VERDICT: REAL_SIGNAL - Gaussian wings (wing ratio: 0.66)
+
+[4/76] TARGET: 39627805096414741 (GALAXY)
+  Signal: 51.4 sigma at 5299.2 A
+  [CLEAN] VERDICT: REAL_SIGNAL - Gaussian wings (wing ratio: 0.61)
+
+[5/76] TARGET: 39627706727401785 (GALAXY)
+  Signal: 49.0 sigma at 5264.0 A
+  [CLEAN] VERDICT: REAL_SIGNAL - Gaussian wings (wing ratio: 0.57)
+
+[6/76] TARGET: 39627805096414741 (GALAXY)
+  Signal: 46.6 sigma at 6945.6 A
+  [CLEAN] VERDICT: REAL_SIGNAL - Gaussian wings (wing ratio: 0.59)
+
+[7/76] TARGET: 39627758103432254 (GALAXY)
+  Signal: 44.6 sigma at 5472.8 A
+  [CLEAN] VERDICT: REAL_SIGNAL - Gaussian wings (wing ratio: 0.54)
+
+[8/76] TARGET: 39627811907964923 (GALAXY)
+  Signal: 44.2 sigma at 7215.2 A
+  [CLEAN] VERDICT: REAL_SIGNAL - Gaussian wings (wing ratio: 0.60)
+
+[9/76] TARGET: 39628521584200098 (GALAXY)
+  Signal: 42.8 sigma at 7003.2 A
+  [CLEAN] VERDICT: REAL_SIGNAL - Gaussian wings (wing ratio: 0.62)
+
+[10/76] TARGET: 39627800373628335 (GALAXY)
+  Signal: 42.4 sigma at 6678.4 A
+  [CLEAN] VERDICT: REAL_SIGNAL - Gaussian wings (wing ratio: 0.52)
+
+[11/76] TARGET: 39627823480046780 (GALAXY)
+  Signal: 42.3 sigma at 7175.2 A
+  [CLEAN] VERDICT: REAL_SIGNAL - Gaussian wings (wing ratio: 0.59)
+
+[12/76] TARGET: 39633453825658473 (GALAXY)
+  Signal: 41.0 sigma at 7151.2 A
+  [CLEAN] VERDICT: REAL_SIGNAL - Gaussian wings (wing ratio: 0.62)
+
+[13/76] TARGET: 39627751509987674 (GALAXY)
+  Signal: 38.9 sigma at 6696.0 A
+  [CLEAN] VERDICT: REAL_SIGNAL - Gaussian wings (wing ratio: 0.63)
+
+[14/76] TARGET: 234514848677889 (GALAXY)
+  Signal: 38.4 sigma at 4088.0 A
+  [CLEAN] VERDICT: REAL_SIGNAL - Gaussian wings (wing ratio: 0.46)
+
+[15/76] TARGET: 39633109787869577 (GALAXY)
+  Signal: 37.8 sigma at 6751.2 A
+  [CLEAN] VERDICT: REAL_SIGNAL - Gaussian wings (wing ratio: 0.55)
+
+[16/76] TARGET: 39627764273254925 (GALAXY)
+  Signal: 37.5 sigma at 7106.4 A
+  [CLEAN] VERDICT: REAL_SIGNAL - Gaussian wings (wing ratio: 0.54)
+
+[17/76] TARGET: 39627788319198751 (GALAXY)
+  Signal: 37.4 sigma at 6913.6 A
+  [CLEAN] VERDICT: REAL_SIGNAL - Gaussian wings (wing ratio: 0.44)
+
+[18/76] TARGET: 39627800373628335 (GALAXY)
+  Signal: 36.8 sigma at 5095.2 A
+  [CLEAN] VERDICT: REAL_SIGNAL - Gaussian wings (wing ratio: 0.34)
+
+[19/76] TARGET: 39627830648111502 (GALAXY)
+  Signal: 36.4 sigma at 6754.4 A
+  [CLEAN] VERDICT: REAL_SIGNAL - Gaussian wings (wing ratio: 0.69)
+
+[20/76] TARGET: 39633421911195991 (GALAXY)
+  Signal: 35.9 sigma at 5560.8 A
+  [CLEAN] VERDICT: REAL_SIGNAL - Gaussian wings (wing ratio: 0.67)
+
+[21/76] TARGET: 39632955240351970 (GALAXY)
+  Signal: 35.2 sigma at 6852.8 A
+  [CLEAN] VERDICT: REAL_SIGNAL - Gaussian wings (wing ratio: 0.55)
+
+[22/76] TARGET: 39633453825658473 (GALAXY)
+  Signal: 34.6 sigma at 5455.2 A
+  [CLEAN] VERDICT: REAL_SIGNAL - Gaussian wings (wing ratio: 0.49)
+
+[23/76] TARGET: 39633136421700963 (GALAXY)
+  Signal: 34.2 sigma at 5180.8 A
+  [CLEAN] VERDICT: REAL_SIGNAL - Gaussian wings (wing ratio: 0.63)
+
+[24/76] TARGET: 39628022197781419 (GALAXY)
+  Signal: 34.1 sigma at 7076.8 A
+  [CLEAN] VERDICT: REAL_SIGNAL - Gaussian wings (wing ratio: 0.54)
+
+[25/76] TARGET: 39633321893822639 (GALAXY)
+  Signal: 33.2 sigma at 7167.2 A
+  [CLEAN] VERDICT: REAL_SIGNAL - Gaussian wings (wing ratio: 0.70)
+
+[26/76] TARGET: 39627782354900447 (GALAXY)
+  Signal: 32.9 sigma at 6604.0 A
+  [CLEAN] VERDICT: REAL_SIGNAL - Gaussian wings (wing ratio: 0.41)
+
+[27/76] TARGET: 39633552869952831 (GALAXY)
+  Signal: 32.5 sigma at 7801.6 A
+  [CLEAN] VERDICT: REAL_SIGNAL - Gaussian wings (wing ratio: 0.47)
+
+[28/76] TARGET: 39633304265164680 (GALAXY)
+  Signal: 32.1 sigma at 7102.4 A
+  [CLEAN] VERDICT: REAL_SIGNAL - Gaussian wings (wing ratio: 0.64)
+
+[29/76] TARGET: 1070229195063307 (GALAXY)
+  Signal: 32.0 sigma at 6730.4 A
+  [CLEAN] VERDICT: REAL_SIGNAL - Gaussian wings (wing ratio: 0.65)
+
+[30/76] TARGET: 234514848677889 (GALAXY)
+  Signal: 31.4 sigma at 5330.4 A
+  [CLEAN] VERDICT: REAL_SIGNAL - Gaussian wings (wing ratio: 0.65)
+
+[31/76] TARGET: 39633297017405855 (GALAXY)
+  Signal: 30.3 sigma at 6262.4 A
+  [CLEAN] VERDICT: REAL_SIGNAL - Gaussian wings (wing ratio: 0.52)
+
+[32/76] TARGET: 39627788319198751 (GALAXY)
+  Signal: 30.1 sigma at 5274.4 A
+  [CLEAN] VERDICT: REAL_SIGNAL - Gaussian wings (wing ratio: 0.38)
+
+[33/76] TARGET: 39633123218032778 (GALAXY)
+  Signal: 29.2 sigma at 5880.8 A
+  [CLEAN] VERDICT: REAL_SIGNAL - Gaussian wings (wing ratio: 0.55)
+
+[34/76] TARGET: 39627736876062734 (GALAXY)
+  Signal: 28.9 sigma at 7104.8 A
+  [CLEAN] VERDICT: REAL_SIGNAL - Gaussian wings (wing ratio: 0.66)
+
+[35/76] TARGET: 39628037297276253 (GALAXY)
+  Signal: 28.4 sigma at 7499.2 A
+  [CLEAN] VERDICT: REAL_SIGNAL - Gaussian wings (wing ratio: 0.59)
+
+[36/76] TARGET: 39628520011336075 (GALAXY)
+  Signal: 28.4 sigma at 6796.8 A
+  [CLEAN] VERDICT: REAL_SIGNAL - Gaussian wings (wing ratio: 0.56)
+
+[37/76] TARGET: 39628373646905700 (GALAXY)
+  Signal: 28.2 sigma at 5387.2 A
+  [CLEAN] VERDICT: REAL_SIGNAL - Gaussian wings (wing ratio: 0.47)
+
+[38/76] TARGET: 39628384606619708 (GALAXY)
+  Signal: 27.3 sigma at 8279.2 A
+  [CLEAN] VERDICT: COSMIC_RAY - Sharp spike (wing ratio: -0.06)
+
+[39/76] TARGET: 39633561250171425 (GALAXY)
+  Signal: 27.2 sigma at 5329.6 A
+  [CLEAN] VERDICT: REAL_SIGNAL - Gaussian wings (wing ratio: 0.64)
+
+[40/76] TARGET: 39627800394600435 (QSO)
+  Signal: 26.9 sigma at 8921.6 A
+  [CLEAN] VERDICT: COSMIC_RAY - Sharp spike (wing ratio: 0.07)
+
+[41/76] TARGET: 39633553876585078 (GALAXY)
+  Signal: 26.8 sigma at 9097.6 A
+  [CLEAN] VERDICT: REAL_SIGNAL - Gaussian wings (wing ratio: 0.41)
+
+[42/76] TARGET: 39627866886902850 (GALAXY)
+  Signal: 26.6 sigma at 6605.6 A
+  [CLEAN] VERDICT: REAL_SIGNAL - Gaussian wings (wing ratio: 0.57)
+
+[43/76] TARGET: 39627758153765798 (GALAXY)
+  Signal: 26.5 sigma at 9316.0 A
+  [CLEAN] VERDICT: REAL_SIGNAL - Gaussian wings (wing ratio: 0.33)
+
+[44/76] TARGET: 39628373646905700 (GALAXY)
+  Signal: 26.4 sigma at 7061.6 A
+  [CLEAN] VERDICT: REAL_SIGNAL - Gaussian wings (wing ratio: 0.64)
+
+[45/76] TARGET: 39627811907964923 (GALAXY)
+  Signal: 25.7 sigma at 5504.8 A
+  [CLEAN] VERDICT: REAL_SIGNAL - Gaussian wings (wing ratio: 0.63)
+
+[46/76] TARGET: 39627811408841534 (GALAXY)
+  Signal: 25.6 sigma at 5492.0 A
+  [CLEAN] VERDICT: REAL_SIGNAL - Gaussian wings (wing ratio: 0.51)
+
+[47/76] TARGET: 39633561250171425 (GALAXY)
+  Signal: 25.3 sigma at 4088.0 A
+  [CLEAN] VERDICT: REAL_SIGNAL - Gaussian wings (wing ratio: 0.40)
+
+[48/76] TARGET: 39633548247827736 (GALAXY)
+  Signal: 25.3 sigma at 7683.2 A
+  [CLEAN] VERDICT: REAL_SIGNAL - Gaussian wings (wing ratio: 0.42)
+
+[49/76] TARGET: 39633548252020872 (GALAXY)
+  Signal: 25.0 sigma at 5955.2 A
+  [CLEAN] VERDICT: REAL_SIGNAL - Gaussian wings (wing ratio: 0.54)
+
+[50/76] TARGET: 39633136421700963 (GALAXY)
+  Signal: 24.9 sigma at 5284.8 A
+  [CLEAN] VERDICT: REAL_SIGNAL - Gaussian wings (wing ratio: 0.64)
+
+[51/76] TARGET: 39633405586967656 (GALAXY)
+  Signal: 24.3 sigma at 7069.6 A
+  [CLEAN] VERDICT: REAL_SIGNAL - Gaussian wings (wing ratio: 0.52)
+
+[52/76] TARGET: 39628517314400472 (GALAXY)
+  Signal: 24.3 sigma at 5595.2 A
+  [CLEAN] VERDICT: REAL_SIGNAL - Gaussian wings (wing ratio: 0.50)
+
+[53/76] TARGET: 39633502034988233 (QSO)
+  Signal: 23.7 sigma at 8669.6 A
+  [CLEAN] VERDICT: REAL_SIGNAL - Gaussian wings (wing ratio: 0.51)
+
+[54/76] TARGET: 39633136421700963 (GALAXY)
+  Signal: 23.5 sigma at 3974.4 A
+  [CLEAN] VERDICT: REAL_SIGNAL - Gaussian wings (wing ratio: 0.42)
+
+[55/76] TARGET: 39633547065034778 (QSO)
+  Signal: 23.5 sigma at 7201.6 A
+  [CLEAN] VERDICT: AMBIGUOUS - Intermediate profile (wing ratio: 0.17)
+
+[56/76] TARGET: 39628390034047694 (GALAXY)
+  Signal: 23.4 sigma at 5008.0 A
+  [CLEAN] VERDICT: REAL_SIGNAL - Gaussian wings (wing ratio: 0.42)
+
+[57/76] TARGET: 39627758103432254 (GALAXY)
+  Signal: 23.4 sigma at 4076.0 A
+  [CLEAN] VERDICT: REAL_SIGNAL - Gaussian wings (wing ratio: 0.41)
+
+[58/76] TARGET: 39627782321345666 (GALAXY)
+  Signal: 23.4 sigma at 8467.2 A
+  [CLEAN] VERDICT: AMBIGUOUS - Intermediate profile (wing ratio: 0.14)
+
+[59/76] TARGET: 39627938835990130 (GALAXY)
+  Signal: 23.3 sigma at 5127.2 A
+  [CLEAN] VERDICT: REAL_SIGNAL - Gaussian wings (wing ratio: 0.55)
+
+[60/76] TARGET: 39627764122258962 (GALAXY)
+  Signal: 23.1 sigma at 6735.2 A
+  [CLEAN] VERDICT: REAL_SIGNAL - Gaussian wings (wing ratio: 0.45)
+
+[61/76] TARGET: 39627782354896370 (GALAXY)
+  Signal: 23.0 sigma at 6046.4 A
+  [CLEAN] VERDICT: REAL_SIGNAL - Gaussian wings (wing ratio: 0.61)
+
+[62/76] TARGET: 39628521580005440 (GALAXY)
+  Signal: 22.9 sigma at 5471.2 A
+  [CLEAN] VERDICT: AMBIGUOUS - Intermediate profile (wing ratio: 0.18)
+
+[63/76] TARGET: 39628517314400472 (GALAXY)
+  Signal: 22.7 sigma at 5484.8 A
+  [CLEAN] VERDICT: REAL_SIGNAL - Gaussian wings (wing ratio: 0.60)
+
+[64/76] TARGET: 39633481000552132 (QSO)
+  Signal: 22.4 sigma at 6336.8 A
+  [CLEAN] VERDICT: REAL_SIGNAL - Gaussian wings (wing ratio: 0.21)
+
+[65/76] TARGET: 39628287525259908 (GALAXY)
+  Signal: 22.2 sigma at 6874.4 A
+  [CLEAN] VERDICT: REAL_SIGNAL - Gaussian wings (wing ratio: 0.66)
+
+[66/76] TARGET: 39627764273254925 (GALAXY)
+  Signal: 22.1 sigma at 5421.6 A
+  [CLEAN] VERDICT: REAL_SIGNAL - Gaussian wings (wing ratio: 0.43)
+
+[67/76] TARGET: 39627811387867314 (QSO)
+  Signal: 21.9 sigma at 7916.8 A
+  [CLEAN] VERDICT: COSMIC_RAY - Sharp spike (wing ratio: 0.00)
+
+[68/76] TARGET: 39632955240351970 (GALAXY)
+  Signal: 21.8 sigma at 5228.0 A
+  [CLEAN] VERDICT: REAL_SIGNAL - Gaussian wings (wing ratio: 0.45)
+
+[69/76] TARGET: 39633553876585078 (GALAXY)
+  Signal: 21.7 sigma at 7666.4 A
+  [CLEAN] VERDICT: REAL_SIGNAL - Gaussian wings (wing ratio: 0.43)
+
+[70/76] TARGET: 39633561250171425 (GALAXY)
+  Signal: 21.5 sigma at 5436.0 A
+  [CLEAN] VERDICT: REAL_SIGNAL - Gaussian wings (wing ratio: 0.62)
+
+[71/76] TARGET: 39627706727401785 (GALAXY)
+  Signal: 20.9 sigma at 5213.6 A
+  [CLEAN] VERDICT: REAL_SIGNAL - Gaussian wings (wing ratio: 0.58)
+
+[72/76] TARGET: 39628443926662332 (GALAXY)
+  Signal: 20.9 sigma at 6735.2 A
+  [CLEAN] VERDICT: REAL_SIGNAL - Gaussian wings (wing ratio: 0.70)
+
+[73/76] TARGET: 39632946302289775 (GALAXY)
+  Signal: 20.5 sigma at 7020.8 A
+  [CLEAN] VERDICT: REAL_SIGNAL - Gaussian wings (wing ratio: 0.59)
+
+[74/76] TARGET: 39632931014052985 (GALAXY)
+  Signal: 20.4 sigma at 7444.0 A
+  [CLEAN] VERDICT: REAL_SIGNAL - Gaussian wings (wing ratio: 0.64)
+
+[75/76] TARGET: 39633153945502066 (GALAXY)
+  Signal: 20.4 sigma at 6789.6 A
+  [CLEAN] VERDICT: REAL_SIGNAL - Gaussian wings (wing ratio: 0.63)
+
+[76/76] TARGET: 39633342391388448 (GALAXY)
+  Signal: 20.3 sigma at 9441.6 A
+  [CLEAN] VERDICT: AMBIGUOUS - Intermediate profile (wing ratio: 0.16)
+Traceback (most recent call last):
+  File "/home/primary/DESI-BH-CANDIDATE-SEARCH/scripts/verify_lasers_all.py", line 147, in <module>
+    combined = pd.concat([existing, new_results[existing.columns.tolist()]], ignore_index=True)
+                                    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/primary/.local/lib/python3.12/site-packages/pandas/core/frame.py", line 4108, in __getitem__
+    indexer = self.columns._get_indexer_strict(key, "columns")[1]
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/primary/.local/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 6200, in _get_indexer_strict
+    self._raise_if_missing(keyarr, indexer, axis_name)
+  File "/home/primary/.local/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 6252, in _raise_if_missing
+    raise KeyError(f"{not_found} not in index")
+KeyError: "['key'] not in index"

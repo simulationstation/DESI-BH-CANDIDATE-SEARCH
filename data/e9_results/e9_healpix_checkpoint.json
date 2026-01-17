@@ -1,0 +1,27 @@
+{
+  "processed_files": [
+    "/home/primary/MSOUP/data/e9_healpix/main/bright/41/4101/coadd-main-bright-4101.fits",
+    "/home/primary/MSOUP/data/e9_healpix/main/bright/41/4134/coadd-main-bright-4134.fits",
+    "/home/primary/MSOUP/data/e9_healpix/main/bright/40/4099/coadd-main-bright-4099.fits",
+    "/home/primary/MSOUP/data/e9_healpix/main/bright/41/4137/coadd-main-bright-4137.fits",
+    "/home/primary/MSOUP/data/e9_healpix/main/bright/41/4112/coadd-main-bright-4112.fits",
+    "/home/primary/MSOUP/data/e9_healpix/main/bright/41/4131/coadd-main-bright-4131.fits",
+    "/home/primary/MSOUP/data/e9_healpix/main/bright/42/4224/coadd-main-bright-4224.fits",
+    "/home/primary/MSOUP/data/e9_healpix/main/bright/41/4138/coadd-main-bright-4138.fits",
+    "/home/primary/MSOUP/data/e9_healpix/main/bright/41/4120/coadd-main-bright-4120.fits",
+    "/home/primary/MSOUP/data/e9_healpix/main/bright/41/4117/coadd-main-bright-4117.fits",
+    "/home/primary/MSOUP/data/e9_healpix/main/bright/40/4098/coadd-main-bright-4098.fits",
+    "/home/primary/MSOUP/data/e9_healpix/main/bright/41/4102/coadd-main-bright-4102.fits",
+    "/home/primary/MSOUP/data/e9_healpix/main/bright/41/4108/coadd-main-bright-4108.fits",
+    "/home/primary/MSOUP/data/e9_healpix/main/bright/41/4104/coadd-main-bright-4104.fits",
+    "/home/primary/MSOUP/data/e9_healpix/main/bright/41/4113/coadd-main-bright-4113.fits",
+    "/home/primary/MSOUP/data/e9_healpix/main/bright/41/4129/coadd-main-bright-4129.fits"
+  ],
+  "candidates": [],
+  "stats": {
+    "files": 16,
+    "sky_fibers": 1049,
+    "detections": 0
+  },
+  "last_update": "2026-01-17T08:44:20.323346"
+}

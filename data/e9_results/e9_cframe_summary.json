@@ -1,0 +1,106 @@
+{
+  "timestamp": "2026-01-17T08:11:04.632379",
+  "files_processed": 12,
+  "total_sky_fibers": 768,
+  "total_detections": 4284,
+  "clean_candidates": 5,
+  "resolved_candidates": 2,
+  "file_stats": [
+    {
+      "file": "cframe-b0-00120449.fits",
+      "band": "b",
+      "n_sky_fibers": 55,
+      "wave_min": 3600.0,
+      "wave_max": 5800.0000000005,
+      "n_candidates": 687
+    },
+    {
+      "file": "cframe-b0-00120450.fits",
+      "band": "b",
+      "n_sky_fibers": 55,
+      "wave_min": 3600.0,
+      "wave_max": 5800.0000000005,
+      "n_candidates": 711
+    },
+    {
+      "file": "cframe-b2-00114768.fits",
+      "band": "b",
+      "n_sky_fibers": 51,
+      "wave_min": 3600.0,
+      "wave_max": 5800.0000000005,
+      "n_candidates": 130
+    },
+    {
+      "file": "cframe-b7-00120194.fits",
+      "band": "b",
+      "n_sky_fibers": 95,
+      "wave_min": 3600.0,
+      "wave_max": 5800.0000000005,
+      "n_candidates": 1
+    },
+    {
+      "file": "cframe-r0-00120449.fits",
+      "band": "r",
+      "n_sky_fibers": 55,
+      "wave_min": 5760.0,
+      "wave_max": 7620.000000000423,
+      "n_candidates": 559
+    },
+    {
+      "file": "cframe-r0-00120450.fits",
+      "band": "r",
+      "n_sky_fibers": 55,
+      "wave_min": 5760.0,
+      "wave_max": 7620.000000000423,
+      "n_candidates": 550
+    },
+    {
+      "file": "cframe-r2-00114768.fits",
+      "band": "r",
+      "n_sky_fibers": 51,
+      "wave_min": 5760.0,
+      "wave_max": 7620.000000000423,
+      "n_candidates": 91
+    },
+    {
+      "file": "cframe-r7-00120194.fits",
+      "band": "r",
+      "n_sky_fibers": 95,
+      "wave_min": 5760.0,
+      "wave_max": 7620.000000000423,
+      "n_candidates": 6
+    },
+    {
+      "file": "cframe-z0-00120449.fits",
+      "band": "z",
+      "n_sky_fibers": 55,
+      "wave_min": 7520.0,
+      "wave_max": 9824.000000000524,
+      "n_candidates": 653
+    },
+    {
+      "file": "cframe-z0-00120450.fits",
+      "band": "z",
+      "n_sky_fibers": 55,
+      "wave_min": 7520.0,
+      "wave_max": 9824.000000000524,
+      "n_candidates": 743
+    },
+    {
+      "file": "cframe-z2-00114768.fits",
+      "band": "z",
+      "n_sky_fibers": 51,
+      "wave_min": 7520.0,
+      "wave_max": 9824.000000000524,
+      "n_candidates": 144
+    },
+    {
+      "file": "cframe-z7-00120194.fits",
+      "band": "z",
+      "n_sky_fibers": 95,
+      "wave_min": 7520.0,
+      "wave_max": 9824.000000000524,
+      "n_candidates": 9
+    }
+  ]
+}

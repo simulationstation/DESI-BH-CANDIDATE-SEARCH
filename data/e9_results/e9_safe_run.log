@@ -1,0 +1,12 @@
+
+======================================================================
+E9 INTERSTELLAR LASER SEARCH - MEMORY SAFE VERSION
+======================================================================
+
+Configuration:
+  Workers: 4 (limited for memory safety)
+  Batch size: 10
+  Detection threshold: 8.0 σ
+  Max FWHM: 4.0 pixels
+
+[1] Discovering DESI DR1 files...

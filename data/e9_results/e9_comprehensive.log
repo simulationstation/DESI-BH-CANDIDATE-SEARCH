@@ -1,0 +1,28 @@
+======================================================================
+E9 COMPREHENSIVE LASER SEARCH - ALL DESI DR1 HEALPIX
+======================================================================
+Start time: 2026-01-17 08:14:28.143930
+
+Checkpoint: 0 healpix already processed
+Existing candidates: 0
+
+Fetching healpix list from DESI...
+Found 13994 healpix pixels in main/bright
+Remaining to process: 13994
+
+======================================================================
+PROCESSING
+======================================================================
+
+[1/13994] Healpix 0
+    Downloading coadd-main-bright-0.fits... OK (291.3 MB)
+    Processing...       Error processing: 'FITS_record' object has no attribute 'dtype'
+Found 0 candidates from 74 sky fibers
+
+[2/13994] Healpix 1
+    Downloading coadd-main-bright-1.fits... OK (347.0 MB)
+    Processing...       Error processing: 'FITS_record' object has no attribute 'dtype'
+Found 0 candidates from 131 sky fibers
+
+[3/13994] Healpix 2
+    Downloading coadd-main-bright-2.fits... 

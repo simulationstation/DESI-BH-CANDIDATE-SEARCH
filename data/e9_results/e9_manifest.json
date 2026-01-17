@@ -1,0 +1,139 @@
+{
+  "version": 2,
+  "created": "2026-01-17T08:00:00",
+  "processed_healpix": {
+    "4131": {
+      "survey": "main",
+      "program": "bright",
+      "timestamp": "2026-01-17T08:42:26.296516",
+      "n_sky_fibers": 0,
+      "n_candidates": 0
+    },
+    "4113": {
+      "survey": "main",
+      "program": "bright",
+      "timestamp": "2026-01-17T08:42:26.296516",
+      "n_sky_fibers": 0,
+      "n_candidates": 0
+    },
+    "4112": {
+      "survey": "main",
+      "program": "bright",
+      "timestamp": "2026-01-17T08:42:26.296516",
+      "n_sky_fibers": 0,
+      "n_candidates": 0
+    },
+    "4224": {
+      "survey": "main",
+      "program": "bright",
+      "timestamp": "2026-01-17T08:42:26.296516",
+      "n_sky_fibers": 0,
+      "n_candidates": 0
+    },
+    "4104": {
+      "survey": "main",
+      "program": "bright",
+      "timestamp": "2026-01-17T08:42:26.296516",
+      "n_sky_fibers": 0,
+      "n_candidates": 0
+    },
+    "4117": {
+      "survey": "main",
+      "program": "bright",
+      "timestamp": "2026-01-17T08:42:26.296516",
+      "n_sky_fibers": 0,
+      "n_candidates": 0
+    },
+    "4120": {
+      "survey": "main",
+      "program": "bright",
+      "timestamp": "2026-01-17T08:42:26.296516",
+      "n_sky_fibers": 0,
+      "n_candidates": 0
+    },
+    "4134": {
+      "survey": "main",
+      "program": "bright",
+      "timestamp": "2026-01-17T08:42:26.296516",
+      "n_sky_fibers": 0,
+      "n_candidates": 0
+    },
+    "4102": {
+      "survey": "main",
+      "program": "bright",
+      "timestamp": "2026-01-17T08:42:26.296516",
+      "n_sky_fibers": 0,
+      "n_candidates": 0
+    },
+    "4137": {
+      "survey": "main",
+      "program": "bright",
+      "timestamp": "2026-01-17T08:42:26.296516",
+      "n_sky_fibers": 0,
+      "n_candidates": 0
+    },
+    "4099": {
+      "survey": "main",
+      "program": "bright",
+      "timestamp": "2026-01-17T08:42:26.296516",
+      "n_sky_fibers": 0,
+      "n_candidates": 0
+    },
+    "4138": {
+      "survey": "main",
+      "program": "bright",
+      "timestamp": "2026-01-17T08:42:26.296516",
+      "n_sky_fibers": 0,
+      "n_candidates": 0
+    },
+    "4101": {
+      "survey": "main",
+      "program": "bright",
+      "timestamp": "2026-01-17T08:42:26.296516",
+      "n_sky_fibers": 0,
+      "n_candidates": 0
+    },
+    "4098": {
+      "survey": "main",
+      "program": "bright",
+      "timestamp": "2026-01-17T08:45:36.359140",
+      "n_sky_fibers": 216,
+      "n_candidates": 3
+    },
+    "4122": {
+      "survey": "main",
+      "program": "bright",
+      "timestamp": "2026-01-17T08:45:36.359172",
+      "n_sky_fibers": 175,
+      "n_candidates": 49
+    },
+    "4108": {
+      "survey": "main",
+      "program": "bright",
+      "timestamp": "2026-01-17T08:45:36.359183",
+      "n_sky_fibers": 163,
+      "n_candidates": 58
+    },
+    "4129": {
+      "survey": "main",
+      "program": "bright",
+      "timestamp": "2026-01-17T08:45:36.359190",
+      "n_sky_fibers": 194,
+      "n_candidates": 1
+    },
+    "4110": {
+      "survey": "main",
+      "program": "bright",
+      "timestamp": "2026-01-17T08:45:36.359192",
+      "n_sky_fibers": 206,
+      "n_candidates": 11
+    }
+  },
+  "stats": {
+    "total_healpix": 18,
+    "total_sky_fibers": 2003,
+    "total_candidates": 122,
+    "total_resolved": 72
+  },
+  "last_update": "2026-01-17T08:45:37.013912"
+}

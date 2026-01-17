@@ -1,0 +1,26 @@
+{
+  "processed_files": [
+    "data/per_exposure/cframe-b7-00120194.fits",
+    "data/per_exposure/cframe-z2-00114768.fits",
+    "data/per_exposure/cframe-z7-00120194.fits",
+    "data/per_exposure/cframe-r0-00120449.fits",
+    "data/per_exposure/cframe-r2-00114768.fits",
+    "data/per_exposure/cframe-r7-00120194.fits",
+    "data/per_exposure/cframe-b0-00120450.fits",
+    "data/per_exposure/cframe-b0-00120449.fits",
+    "data/per_exposure/cframe-z0-00120450.fits",
+    "data/per_exposure/cframe-b2-00114768.fits",
+    "data/per_exposure/cframe-z0-00120449.fits",
+    "data/per_exposure/cframe-r0-00120450.fits"
+  ],
+  "candidates": [],
+  "last_run": "2026-01-17T08:06:39.824485",
+  "stats": {
+    "files_processed": 12,
+    "fibers_processed": 0,
+    "initial_detections": 0,
+    "passed_all_cuts": 0,
+    "rejected_airglow": 0,
+    "rejected_spatial": 0
+  }
+}

@@ -1,0 +1,14 @@
+=================================================================
+E9 INTERSTELLAR LASER SEARCH
+Searching for monochromatic anomalies in DESI sky fibers
+=================================================================
+
+Configuration:
+  Files to download: 15
+  Processing workers: 6
+  Detection threshold: 8.0σ
+  Max FWHM: 4 pixels
+
+[PHASE 1] Downloading 15 DESI files...
+  Downloading coadd-main-bright-9550.fits... HTTP 504
+  Downloading coadd-main-bright-9551.fits... 
