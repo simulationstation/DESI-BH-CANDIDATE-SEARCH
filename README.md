@@ -1,6 +1,8 @@
 # DESI DR1 Radial Velocity Search for Dark Compact Companions
 
-A rigorous, reproducible search for non-interacting compact companions (neutron stars, black holes) using public DESI DR1 and LAMOST DR7 radial velocity data. This repository implements a **"Negative Space" multi-messenger validation pipeline** to identify systems with strong gravitational signatures but no detectable companion light.
+A conservative, fully reproducible search for radial-velocity variability in the public DESI DR1 Milky Way Survey. This repository implements a **"Negative Space" multi-wavelength validation pipeline** to identify systems with strong gravitational signatures but no detectable companion light.
+
+**Paper:** "A DESI DR1 Radial-Velocity Search for Dark Compact Companions: A Strong but Unconfirmed Candidate Around a dM0 Star"
 
 ---
 
@@ -10,59 +12,81 @@ A rigorous, reproducible search for non-interacting compact companions (neutron 
 |----------|-------|
 | **Gaia Source ID** | 3802130935635096832 |
 | **DESI TargetID** | 39627745210139276 |
-| **Coordinates** | RA=164.5235, Dec=-1.6602 |
-| **Primary Star** | M0 dwarf (LAMOST) |
-| **Distance** | 495 ± 91 pc (spectrophotometric) |
+| **Coordinates** | RA=164.5235°, Dec=-1.6602° |
+| **Primary Star** | dM0 dwarf (~3850–4050 K) |
+| **Stellar Mass** | M₁ ≈ 0.56 ± 0.06 M☉ |
 
-### Key Results
+### Classification: Strong but Unconfirmed
 
-| Metric | Value | Interpretation |
-|--------|-------|----------------|
-| **ΔRV_max** | 146 km/s | Large RV swing |
-| **Period** | 21.8 days (68% CI: 15.3-25.3) | MCMC posterior |
-| **K** | 95 km/s | Semi-amplitude |
-| **e** | 0.18 | Mild eccentricity |
-| **M₁ (primary)** | **0.564 ± 0.056 M☉** | Refined from LAMOST |
-| **M₂_min** | **2.81 M☉** (68% CI: 1.23-4.26) | Minimum companion mass |
-| **Pr(M₂ > 1.4 M☉)** | **82%** | NS or heavier |
-| **Pr(M₂ > 3.0 M☉)** | **45%** | Black hole range |
+This candidate shows extreme RV variability that survives multiple validation tests, but wavelength-dependent systematics prevent a definitive dynamical mass claim.
 
-### Companion Classification
+### Key Observational Results (DESI-only)
 
-| Type | Mass Range | Probability |
-|------|------------|-------------|
-| Massive WD | 0.8 - 1.4 M☉ | ~13% |
-| **Neutron Star** | 1.4 - 3.0 M☉ | **~50%** |
-| Black Hole | > 3.0 M☉ | ~37% |
+| Metric | Value | Notes |
+|--------|-------|-------|
+| **ΔRV_max** | 146 km/s | Maximum RV span over 38.9 days |
+| **N_epochs** | 4 | Two nearly simultaneous on MJD 59607 |
+| **Δχ²** | ~2.7×10⁴ | Constant-RV model rejected |
+| **S_robust** | ~19.8 | Significant under leave-one-out tests |
+| **K_min** | ~73 km/s | Minimum semi-amplitude |
 
-**The companion is DARK** — no detection at any wavelength (optical, IR, UV).
+### Critical Forensic Findings
+
+| Issue | Status |
+|-------|--------|
+| Gaia-resolved neighbor at 0.69" | **Real** (ΔG ≈ 2.21 mag, ~13% flux) |
+| Blend-aware RV remeasurement | **Swing persists** (~142 km/s) |
+| R–Z arm discrepancy | **Unresolved** (~67 km/s in one epoch) |
+| LAMOST RV confirmation | **Inconclusive** (internal inconsistencies) |
+
+### Why the Blend Cannot Explain the RV Swing
+
+Simple flux dilution bounds the maximum blend-induced RV bias:
+
+```
+|ΔRV_blend| ≲ b × |RV₂ - RV₁| ≈ 0.13 × 200 ≈ 26 km/s
+```
+
+The observed 146 km/s swing is **~6× larger** than physically possible from a 13% contaminant.
+
+### What Remains Unresolved
+
+The persistent R–Z arm discrepancy (~67 km/s) indicates wavelength-dependent systematics that are not fully understood. This could arise from:
+- Differential blending (b_Z > b_R for late-M neighbors)
+- Template mismatch
+- Wavelength calibration issues
+
+**The most efficient next step is high-resolution spectroscopy with spatial discrimination of the two components.**
 
 ---
 
 ## RV Dataset
 
-### Complete Epoch Table (5 epochs, 5.9-year baseline)
+### DESI DR1 Epochs (Primary Evidence)
 
-| # | Source | MJD | Date | RV (km/s) | σRV (km/s) | Notes |
-|---|--------|-----|------|-----------|------------|-------|
-| 0 | LAMOST | 57457.000 | 2016-03-10 | -49.36 | 2.79 | spectral_type=dM0 |
-| 1 | DESI | 59568.488 | 2021-12-20 | **-86.39** | 0.55 | high_leverage |
-| 2 | DESI | 59605.380 | 2022-01-26 | +59.68 | 0.83 | |
-| 3 | DESI | 59607.374 | 2022-01-28 | +26.43 | 1.06 | same_night_1 |
-| 4 | DESI | 59607.389 | 2022-01-28 | +25.16 | 1.11 | same_night_2 |
+| Epoch | MJD | Date (UT) | RV (km/s) | σRV (km/s) |
+|-------|-----|-----------|-----------|------------|
+| 1 | 59568.488 | 2021-12-20 | **-86.39** | 0.55 |
+| 2 | 59605.380 | 2022-01-26 | +59.68 | 0.83 |
+| 3 | 59607.374 | 2022-01-28 | +26.43 | 1.06 |
+| 4 | 59607.389 | 2022-01-28 | +25.16 | 1.11 |
 
-### Archival Search Results
+**Baseline:** 38.9 days | **ΔRV_max:** 146.07 km/s
 
-| Survey | Result |
-|--------|--------|
-| Gaia DR3 NSS | NOT FOUND |
-| Gaia epoch RVs | NOT FOUND (G=17.27 too faint) |
-| LAMOST DR7 | **FOUND** (1 epoch) |
-| APOGEE DR17 | NOT FOUND |
-| GALAH DR3 | NOT FOUND |
-| RAVE DR5/6 | NOT FOUND |
-| SDSS/BOSS | NOT FOUND |
-| 6dF DR3 | NOT FOUND |
+### LAMOST Archival Spectroscopy
+
+Two LAMOST spectra exist (ObsIDs 437513049 and 870813030). These robustly support the dM0 classification but **RV values are treated as non-decisive** for orbit fitting due to internal inconsistencies across methods (FITS-header values vs CCF refits).
+
+### Multi-Wavelength Validation Surveys
+
+| Survey | Result | Implication |
+|--------|--------|-------------|
+| WISE W1-W2 | 0.05 mag | No IR excess (rules out luminous cool companion) |
+| GALEX NUV | Non-detection | No hot WD signature |
+| TESS | No eclipses/ellipsoidal | Consistent with detached system |
+| ZTF g,r | <25 mmag variability | Rules out starspot-driven RV |
+| ROSAT/XMM/Chandra | Non-detection | Consistent with quiescent compact object |
+| NVSS/FIRST/VLASS | Non-detection | No radio counterpart |
 
 ---
 
@@ -943,6 +967,13 @@ python scripts/desi_blend_aware_rv_v4.py        # v8: Fixed-b tests, per-arm fit
 python scripts/desi_truthfilter_v1.py           # v9: Feature-level RV, Gaia control sample, flux ratios
 ```
 
+### Forensic Diagnostic Scripts
+```bash
+python scripts/forensic_arm_discrepancy.py <fits_file>  # R-Z arm CCF analysis with template mismatch check
+python scripts/verify_gaia_metrics.py                    # Fetch and verify Gaia DR3 RUWE/AEN for target
+python scripts/make_rv_plot.py                           # Generate publication-quality RV plot
+```
+
 ---
 
 ## Output Files
@@ -1025,17 +1056,17 @@ If you are reviewing results only, you can inspect the JSON outputs and reports 
 
 ## Limitations
 
-1. **Period not uniquely determined:** 5 epochs allow a range of solutions. MCMC posterior shows P = 21.8 days (68% CI: 15.3-25.3). Injection-recovery confirms only 16.6% correct recovery rate.
+From the paper, several limitations prevent a definitive claim:
 
-2. **High-leverage epoch:** DESI epoch at RV = -86.39 km/s has d_max = 112.5, but signal remains robust (S_robust = 33.1, 75.7% retained).
+1. **Sparse RV sampling:** DESI provides only 4 epochs (two nearly simultaneous). This proves strong variability but cannot uniquely determine the orbit.
 
-3. **Primary mass assumption:** M₁ ~ 0.6 M☉ from LAMOST dM0, independently verified to < 1σ. If M₁ is larger, M₂_min increases.
+2. **Resolved neighbor / blending:** A Gaia-resolved neighbor at ρ ≈ 0.69" with ΔG ≈ 2.21 mag contaminates the DESI 1.5" fiber aperture.
 
-4. **Inclination unknown:** M₂_min is for edge-on (i = 90°). True M₂ ≥ M₂_min.
+3. **Arm-dependent systematics:** A persistent R–Z discrepancy of up to ~67 km/s in one epoch indicates a wavelength-dependent pathology that is not fully understood.
 
-5. **Blend rigorously tested:** A confirmed neighbor at 0.688" (ΔG=2.21, ~13% flux) contaminates the DESI fiber. v7 blend-aware analysis with PHOENIX templates proves this cannot explain the 146 km/s RV swing — maximum blend-induced shift is ~26 km/s. The RV variability is **ROBUST** to blending.
+4. **LAMOST RV instability:** LAMOST spectra support the dM0 typing, but independent RV confirmation is inconclusive due to internal inconsistencies across measurement methods.
 
-6. **Astrometric wobble has mild tension:** Predicted wobble (0.38 mas) is ~2× smaller than Gaia AEN (0.90 mas), but explainable by inclination/distance uncertainties.
+5. **Inclination unknown:** The minimum companion mass M₂_min assumes edge-on geometry (i = 90°). True M₂ ≥ M₂_min.
 
 ---
 
@@ -1056,25 +1087,30 @@ If you are reviewing results only, you can inspect the JSON outputs and reports 
 
 ## Conclusion
 
-**Gaia DR3 3802130935635096832 is a STRONG dark compact companion candidate.**
+**Gaia DR3 3802130935635096832 is classified as a STRONG BUT UNCONFIRMED dark compact companion candidate.**
 
-- RV variability is robust (S_robust = 33.1, χ²_red = 6,835, FAP < 0.1%)
-- Companion is dark (no IR/UV/optical excess)
-- **82% probability** companion is NS or heavier (M₂ > 1.4 M☉)
-- **45% probability** companion is a black hole (M₂ > 3.0 M☉)
-- System is physically consistent (detached, RUWE explained)
-- Primary mass independently verified (M₁ ~ 0.6 M☉)
-- v4 analyses reveal expected 5-epoch limitations, not contradictions
-- v5 forensic audit confirms candidate survives all proposed "kill modes"
-- v6 external validation: neighbor confirmed (0.688"); LAMOST variability inconclusive from CCF refit (-6.3 ± 4.6 km/s, 1.4σ)
-- v7 blend-aware analysis: DESI RV swing is ROBUST — 13% neighbor contamination cannot explain 146 km/s amplitude (max possible ~26 km/s)
-- v8 blend-aware analysis v4: INCONCLUSIVE — fixed-b models preferred but free-b hits boundary (overfitting); Epoch 3 R-Z arm discrepancy persists even with TiO-only mask
-- **v9 truth filter: RV swing CONFIRMED at feature level** (TiO, CaII show -98±21 km/s shift, 67% of catalog); R-Z discrepancy PERSISTENT across both Epoch 3 exposures; target is extreme Gaia outlier (97th %ile RUWE)
+### What the Data Show
 
-**Spectroscopic follow-up (10-20 epochs over 30-60 days) is REQUIRED to:**
-1. Uniquely determine the orbital period
-2. Measure a dynamical companion mass
-3. Definitively classify the companion
+- **Large RV variability is real:** ΔRV_max ≈ 146 km/s, constant-RV rejected at Δχ² ≈ 2.7×10⁴
+- **Variability is robust:** Survives leave-one-out tests (S_robust ≈ 19.8)
+- **Companion is dark:** No IR excess, no UV excess, no eclipses
+- **Blend cannot explain the swing:** 13% flux contaminant produces ≤26 km/s bias, not 146 km/s
+- **Gaia astrometry supports binarity:** RUWE = 1.95, AEN = 0.90 mas (16.5σ)
+
+### What Remains Unresolved
+
+- **R–Z arm discrepancy (~67 km/s):** Indicates wavelength-dependent systematics
+- **Blend is real:** Gaia-resolved neighbor at 0.69" contaminates the fiber
+- **Period not uniquely determined:** Only 4 DESI epochs
+- **LAMOST RVs are inconsistent:** Cannot be used for independent confirmation
+
+### Required Follow-Up
+
+**High-resolution spectroscopy with spatial discrimination** is the most efficient next step to:
+1. Separate the two components and measure RVs independently
+2. Uniquely determine the orbital period with dense monitoring
+3. Measure a dynamical companion mass
+4. Definitively classify the companion as WD, NS, or BH
 
 ---
 
@@ -1099,4 +1135,4 @@ For use with publicly released DESI data. See DESI data policies for usage terms
 
 ---
 
-*Analysis completed 2026-01-16. All results derived from public DESI DR1, LAMOST DR7/DR10, Gaia DR3, TESS, WISE, GALEX data, and PHOENIX-ACES stellar atmosphere models.*
+*Last updated 2026-01-16. All results derived from public DESI DR1, LAMOST DR7/DR10, Gaia DR3, TESS, WISE, GALEX data, and PHOENIX-ACES stellar atmosphere models.*
