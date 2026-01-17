@@ -1,0 +1,10 @@
+{
+  "E1_mass_gap": 50,
+  "E2_dark_companions": 50,
+  "E3_dwd_lisa": 50,
+  "E4_brown_dwarf": 10,
+  "E5_hierarchical": 50,
+  "E6_accretion": 50,
+  "E7_halo_cluster": 50,
+  "E8_anomalies": 50
+}

@@ -1,0 +1,102 @@
+======================================================================
+ZTF PHOTOMETRY VALIDATION - E4 BROWN DWARF CANDIDATES
+Using IRSA Direct Query (Real Data)
+======================================================================
+Generated: 2026-01-15T20:37:42.693350
+
+
+============================================================
+Processing: BD_Candidate_1
+  DESI TargetID: 39627793289448405
+  Period: 0.5 days, G=16.4
+  RA: 150.370905, Dec: 0.183262
+============================================================
+  Querying IRSA ZTF at RA=150.3709, Dec=0.1833...
+  Found 763 ZTF observations
+  Columns: ['oid', 'expid', 'hjd', 'mjd', 'mag', 'magerr', 'catflags', 'filtercode', 'ra', 'dec', 'chi', 'sharp', 'filefracday', 'field', 'ccdid', 'qid', 'limitmag', 'magzp', 'magzprms', 'clrcoeff', 'clrcounc', 'exptime', 'airmass', 'programid']
+  Using columns: time=mjd, mag=mag, err=magerr, filter=filtercode
+  Filters found: ['zg' 'zr' 'zi']
+  Filter counts: {'zg': 259, 'zr': 450, 'zi': 54}
+
+  CLASSIFICATION: FALSE POSITIVE - Contact Binary
+  Confidence: High
+  Max amplitude: 1.227 mag
+    • Large amplitude variation: 1.23 mag
+    • W UMa-type contact binary signature
+    • REJECT: This is a stellar binary, not a dark companion
+    • CAUTION: Period (0.5d) near 1-day alias
+  Saved: /home/primary/DESI-BH-CANDIDATE-SEARCH/detailed_reports_e4/39627793289448405_ztf_irsa_validation.png
+
+============================================================
+Processing: BD_Candidate_2
+  DESI TargetID: 39627785240582464
+  Period: 0.7 days, G=17.2
+  RA: 30.691535, Dec: -0.000485
+============================================================
+  Querying IRSA ZTF at RA=30.6915, Dec=-0.0005...
+  Found 970 ZTF observations
+  Columns: ['oid', 'expid', 'hjd', 'mjd', 'mag', 'magerr', 'catflags', 'filtercode', 'ra', 'dec', 'chi', 'sharp', 'filefracday', 'field', 'ccdid', 'qid', 'limitmag', 'magzp', 'magzprms', 'clrcoeff', 'clrcounc', 'exptime', 'airmass', 'programid']
+  Using columns: time=mjd, mag=mag, err=magerr, filter=filtercode
+  Filters found: ['zg' 'zr' 'zi']
+  Filter counts: {'zg': 435, 'zr': 430, 'zi': 105}
+
+  CLASSIFICATION: FALSE POSITIVE - Contact Binary
+  Confidence: High
+  Max amplitude: 1.000 mag
+    • Large amplitude variation: 1.00 mag
+    • W UMa-type contact binary signature
+    • REJECT: This is a stellar binary, not a dark companion
+  Saved: /home/primary/DESI-BH-CANDIDATE-SEARCH/detailed_reports_e4/39627785240582464_ztf_irsa_validation.png
+
+============================================================
+Processing: BD_Candidate_3
+  DESI TargetID: 39627743385616469
+  Period: 1.1 days, G=18.8
+  RA: 55.751012, Dec: -1.852596
+============================================================
+  Querying IRSA ZTF at RA=55.7510, Dec=-1.8526...
+  Found 835 ZTF observations
+  Columns: ['oid', 'expid', 'hjd', 'mjd', 'mag', 'magerr', 'catflags', 'filtercode', 'ra', 'dec', 'chi', 'sharp', 'filefracday', 'field', 'ccdid', 'qid', 'limitmag', 'magzp', 'magzprms', 'clrcoeff', 'clrcounc', 'exptime', 'airmass', 'programid']
+  Using columns: time=mjd, mag=mag, err=magerr, filter=filtercode
+  Filters found: ['zg' 'zr']
+  Filter counts: {'zg': 421, 'zr': 414}
+
+  CLASSIFICATION: LIKELY FALSE POSITIVE - Eclipsing Binary
+  Confidence: Medium-High
+  Max amplitude: 0.259 mag
+    • Significant amplitude: 0.26 mag
+    • Deep eclipses suggest stellar companion
+    • Likely REJECT: Probably stellar binary
+  Saved: /home/primary/DESI-BH-CANDIDATE-SEARCH/detailed_reports_e4/39627743385616469_ztf_irsa_validation.png
+
+============================================================
+Processing: BD_Candidate_4
+  DESI TargetID: 39627842371195432
+  Period: 0.5 days, G=16.4
+  RA: 195.961529, Dec: 2.206382
+============================================================
+  Querying IRSA ZTF at RA=195.9615, Dec=2.2064...
+  Found 766 ZTF observations
+  Columns: ['oid', 'expid', 'hjd', 'mjd', 'mag', 'magerr', 'catflags', 'filtercode', 'ra', 'dec', 'chi', 'sharp', 'filefracday', 'field', 'ccdid', 'qid', 'limitmag', 'magzp', 'magzprms', 'clrcoeff', 'clrcounc', 'exptime', 'airmass', 'programid']
+  Using columns: time=mjd, mag=mag, err=magerr, filter=filtercode
+  Filters found: ['zg' 'zr' 'zi']
+  Filter counts: {'zg': 266, 'zr': 398, 'zi': 102}
+
+  CLASSIFICATION: CANDIDATE - Possible Ellipsoidal
+  Confidence: Medium
+  Max amplitude: 0.069 mag
+    • Small amplitude: 0.069 mag
+    • Could be ellipsoidal variation from tidal distortion
+    • VALID with caution: Consistent with BD companion causing tidal distortion
+    • CAUTION: Period (0.5d) near 1-day alias
+  Saved: /home/primary/DESI-BH-CANDIDATE-SEARCH/detailed_reports_e4/39627842371195432_ztf_irsa_validation.png
+
+======================================================================
+GENERATING FINAL REPORT
+======================================================================
+Report saved: /home/primary/DESI-BH-CANDIDATE-SEARCH/detailed_reports_e4/ZTF_VALIDATION_REPORT_IRSA.md
+JSON saved: /home/primary/DESI-BH-CANDIDATE-SEARCH/detailed_reports_e4/ztf_validation_results_irsa.json
+
+======================================================================
+ZTF VALIDATION COMPLETE
+======================================================================

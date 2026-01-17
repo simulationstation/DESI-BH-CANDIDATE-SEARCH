@@ -1,0 +1,16 @@
+{
+  "targetid": 39627744937510176,
+  "experiment": "E4_brown_dwarf",
+  "ra": 0.0,
+  "dec": 0.0,
+  "n_epochs": 6,
+  "delta_rv": 41.13209882956383,
+  "best_period": 0.9480084499438706,
+  "best_K": 21.72559293868702,
+  "m2_min": 0.05970776655762225,
+  "physics_score": 0.6039315616942008,
+  "total_score": 0.7155693776394316,
+  "is_pathological": false,
+  "pathology_reasons": [],
+  "notes": "Basic dossier - full MCMC not run"
+}

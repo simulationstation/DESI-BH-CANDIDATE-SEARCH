@@ -1,0 +1,96 @@
+{
+  "target_id": 39627745210139276,
+  "flux_ratio_bounds": {
+    "min": 0.02,
+    "max": 0.3
+  },
+  "expected_flux_ratio_G": 0.13049804333888423,
+  "two_component_per_epoch": [
+    {
+      "label": "Epoch1",
+      "combined": {
+        "v1": -80.87773458969971,
+        "v2": 23.878236648582135,
+        "b": 0.29999999990935444,
+        "chi2": 15341.736477104278,
+        "chi2_red": 5.7958959112596435,
+        "n_pix": 2654,
+        "n_params": 7,
+        "bic_single": 17115.97902150416,
+        "bic_two": 15396.923239608523,
+        "delta_bic": -1719.0557818956386,
+        "two_preferred": true,
+        "primary_teff": 3600,
+        "neighbor_teff": 3400
+      }
+    },
+    {
+      "label": "Epoch2",
+      "combined": {
+        "v1": 72.7603327151779,
+        "v2": -8.768708070570007e-05,
+        "b": 0.2999999999076989,
+        "chi2": 8175.851959604765,
+        "chi2_red": 3.137318480278114,
+        "n_pix": 2613,
+        "n_params": 7,
+        "bic_single": 8845.711571170343,
+        "bic_two": 8230.92973946341,
+        "delta_bic": -614.7818317069323,
+        "two_preferred": true,
+        "primary_teff": 3600,
+        "neighbor_teff": 3400
+      }
+    },
+    {
+      "label": "Epoch3",
+      "combined": {
+        "v1": 23.98390761841013,
+        "v2": -58.956099473566354,
+        "b": 0.29999999999976706,
+        "chi2": 10778.710306356748,
+        "chi2_red": 4.03999636670043,
+        "n_pix": 2675,
+        "n_params": 7,
+        "bic_single": 11870.950401503938,
+        "bic_two": 10833.952238972059,
+        "delta_bic": -1036.9981625318796,
+        "two_preferred": true,
+        "primary_teff": 3600,
+        "neighbor_teff": 3400
+      }
+    }
+  ],
+  "arm_split_diagnostics": [
+    {
+      "label": "Epoch1",
+      "rv_R": -78.97357462500928,
+      "rv_Z": -87.04414274834556,
+      "sigma_R_renorm": 1.5555880565536895,
+      "sigma_Z_renorm": 7.976218339526082,
+      "delta_rv": -8.070568123336287,
+      "delta_sigma": 8.126494521101007,
+      "significance": -0.9931180169235944
+    },
+    {
+      "label": "Epoch2",
+      "rv_R": 73.53842398101013,
+      "rv_Z": 57.93370625833854,
+      "sigma_R_renorm": 6.447878715588834,
+      "sigma_Z_renorm": 3.942002146308971,
+      "delta_rv": -15.604717722671587,
+      "delta_sigma": 7.557414958333838,
+      "significance": -2.0648221394094146
+    },
+    {
+      "label": "Epoch3",
+      "rv_R": -40.85266468028689,
+      "rv_Z": 25.874927553867636,
+      "sigma_R_renorm": 2.6378102734589777,
+      "sigma_Z_renorm": 6.229113704616503,
+      "delta_rv": 66.72759223415453,
+      "delta_sigma": 6.764606461857693,
+      "significance": 9.86422382593855
+    }
+  ]
+}

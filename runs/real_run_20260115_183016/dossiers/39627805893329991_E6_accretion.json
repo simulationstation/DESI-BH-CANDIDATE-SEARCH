@@ -1,0 +1,16 @@
+{
+  "targetid": 39627805893329991,
+  "experiment": "E6_accretion",
+  "ra": 0.0,
+  "dec": 0.0,
+  "n_epochs": 5,
+  "delta_rv": 412.2282590173143,
+  "best_period": 8.24486349444083,
+  "best_K": 252.04406376750097,
+  "m2_min": 15.330798778986601,
+  "physics_score": 0.8391232680121289,
+  "total_score": 0.7989826405381849,
+  "is_pathological": false,
+  "pathology_reasons": [],
+  "notes": "Basic dossier - full MCMC not run"
+}

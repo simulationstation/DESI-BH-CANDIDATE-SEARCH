@@ -1,0 +1,143 @@
+======================================================================
+E2_dark_companions MCMC Verification
+======================================================================
+
+Loading E1 results from /home/primary/DESI-BH-CANDIDATE-SEARCH/runs/real_run_20260115_183016/candidates/E2_dark_companions_results.json
+Found 50 candidates
+Loading DESI RV data...
+  Loading data/raw/rvpix_exp-main-bright.fits...
+  Loading data/raw/rvpix_exp-main-dark.fits...
+  Loaded epochs for 2989643 targets
+
+Processing top 30 candidates by score...
+
+[1] Processing target 39627781323096335...
+  6 epochs, ΔRV = 227.1 km/s
+  MCMC: P=23.9d, K=238.5km/s, M2_min=34.48M☉
+
+[2] Processing target 39627775400742282...
+  6 epochs, ΔRV = 231.6 km/s
+  MCMC: P=11.7d, K=132.4km/s, M2_min=5.14M☉
+
+[3] Processing target 39627660803968944...
+  9 epochs, ΔRV = 180.5 km/s
+  MCMC: P=93.4d, K=69.1km/s, M2_min=4.87M☉
+
+[4] Processing target 39627697734815982...
+  7 epochs, ΔRV = 223.2 km/s
+  MCMC: P=8.5d, K=122.9km/s, M2_min=2.99M☉
+
+[5] Processing target 39627672464130135...
+  7 epochs, ΔRV = 155.0 km/s
+  MCMC: P=1.3d, K=180.0km/s, M2_min=1.42M☉
+
+[6] Processing target 39627580969583320...
+  5 epochs, ΔRV = 298.4 km/s
+  MCMC: P=19.7d, K=127.4km/s, M2_min=5.45M☉
+
+[7] Processing target 39627634937694383...
+  5 epochs, ΔRV = 120.1 km/s
+  MCMC: P=10.2d, K=116.0km/s, M2_min=2.96M☉
+
+[8] Processing target 39627786842800776...
+  5 epochs, ΔRV = 219.5 km/s
+  MCMC: P=21.9d, K=163.0km/s, M2_min=8.24M☉
+
+[9] Processing target 39627872045893843...
+  5 epochs, ΔRV = 422.7 km/s
+  MCMC: P=14.7d, K=245.8km/s, M2_min=29.41M☉
+
+[10] Processing target 39627933777661858...
+  5 epochs, ΔRV = 264.0 km/s
+  MCMC: P=3.6d, K=279.9km/s, M2_min=8.95M☉
+
+[11] Processing target 39632996227090858...
+  5 epochs, ΔRV = 247.4 km/s
+  MCMC: P=27.3d, K=145.3km/s, M2_min=12.61M☉
+
+[12] Processing target 39632935875250494...
+  5 epochs, ΔRV = 487.7 km/s
+  MCMC: P=7.9d, K=320.0km/s, M2_min=44.05M☉
+
+[13] Processing target 39627805893329991...
+  5 epochs, ΔRV = 412.2 km/s
+  MCMC: P=9.3d, K=265.4km/s, M2_min=20.37M☉
+
+[14] Processing target 39627624485487722...
+  7 epochs, ΔRV = 58.7 km/s
+  MCMC: P=33.5d, K=89.3km/s, M2_min=4.04M☉
+
+[15] Processing target 39632994691977319...
+  7 epochs, ΔRV = 124.9 km/s
+  MCMC: P=30.7d, K=68.6km/s, M2_min=2.22M☉
+
+[16] Processing target 39627775883085095...
+  5 epochs, ΔRV = 82.3 km/s
+WARNING:root:Too few points to create valid contours
+  MCMC: P=1.6d, K=242.0km/s, M2_min=3.85M☉
+
+[17] Processing target 39627697256661738...
+  5 epochs, ΔRV = 144.1 km/s
+  MCMC: P=23.3d, K=246.4km/s, M2_min=38.90M☉
+
+[18] Processing target 39628527955347936...
+  4 epochs, ΔRV = 681.1 km/s
+  MCMC: P=227.7d, K=449.2km/s, M2_min=nanM☉
+
+[19] Processing target 39627842408943267...
+  4 epochs, ΔRV = 258.7 km/s
+  MCMC: P=72.7d, K=157.5km/s, M2_min=35.43M☉
+
+[20] Processing target 39627867411190557...
+  4 epochs, ΔRV = 362.8 km/s
+WARNING:root:Too few points to create valid contours
+  MCMC: P=1.3d, K=250.9km/s, M2_min=3.46M☉
+
+[21] Processing target 39627921429627193...
+  4 epochs, ΔRV = 257.8 km/s
+  MCMC: P=34.9d, K=132.8km/s, M2_min=7.43M☉
+
+[22] Processing target 39627569259091193...
+  4 epochs, ΔRV = 437.9 km/s
+  MCMC: P=49.3d, K=290.1km/s, M2_min=77.57M☉
+
+[23] Processing target 39632936437288261...
+  4 epochs, ΔRV = 213.6 km/s
+  MCMC: P=1.1d, K=257.1km/s, M2_min=3.46M☉
+
+[24] Processing target 39627920607545906...
+  4 epochs, ΔRV = 380.0 km/s
+  MCMC: P=12.8d, K=246.0km/s, M2_min=22.00M☉
+
+[25] Processing target 39627860964543690...
+  4 epochs, ΔRV = 237.7 km/s
+  MCMC: P=1.8d, K=250.3km/s, M2_min=3.25M☉
+
+[26] Processing target 39627691502079881...
+  4 epochs, ΔRV = 500.2 km/s
+  MCMC: P=22.1d, K=257.5km/s, M2_min=31.68M☉
+
+[27] Processing target 39627697768369126...
+  4 epochs, ΔRV = 420.9 km/s
+WARNING:root:Too few points to create valid contours
+  MCMC: P=1.2d, K=267.1km/s, M2_min=4.01M☉
+
+[28] Processing target 39632986462751504...
+  4 epochs, ΔRV = 205.5 km/s
+  MCMC: P=27.3d, K=226.3km/s, M2_min=43.34M☉
+
+[29] Processing target 39632971258400629...
+  4 epochs, ΔRV = 429.5 km/s
+  MCMC: P=93.0d, K=253.7km/s, M2_min=80.14M☉
+
+[30] Processing target 39632940988106485...
+  4 epochs, ΔRV = 315.1 km/s
+  MCMC: P=4.8d, K=196.6km/s, M2_min=4.93M☉
+
+Generating summary report...
+
+Report saved to /home/primary/DESI-BH-CANDIDATE-SEARCH/detailed_reports_e2/MCMC_VERIFICATION_REPORT.md
+
+Completed: 30/30 candidates successfully processed
+
+Done!

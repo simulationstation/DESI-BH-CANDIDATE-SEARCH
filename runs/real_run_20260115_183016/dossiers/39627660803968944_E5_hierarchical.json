@@ -1,0 +1,16 @@
+{
+  "targetid": 39627660803968944,
+  "experiment": "E5_hierarchical",
+  "ra": 0.0,
+  "dec": 0.0,
+  "n_epochs": 9,
+  "delta_rv": 180.5088612962611,
+  "best_period": 91.4954252785741,
+  "best_K": 69.61629261151359,
+  "m2_min": 4.3191439122533435,
+  "physics_score": 0.8696377824882746,
+  "total_score": 0.8645217796619765,
+  "is_pathological": false,
+  "pathology_reasons": [],
+  "notes": "Basic dossier - full MCMC not run"
+}

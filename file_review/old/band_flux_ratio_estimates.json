@@ -1,0 +1,49 @@
+{
+  "neighbor_delta_G": 2.21099,
+  "expected_flux_ratio_G": 0.13049804333888423,
+  "band_definitions": {
+    "G_proxy": [
+      4000,
+      9000
+    ],
+    "R": [
+      5760,
+      7620
+    ],
+    "Z": [
+      7520,
+      9824
+    ]
+  },
+  "approximation_note": "Using flat throughput approximation for DESI bands",
+  "neighbor_models": {
+    "M5_3000K": {
+      "template_file": "phoenix_m5_3000_5.0.fits",
+      "raw_ratio_G": 0.18769640281846048,
+      "scale_factor": 0.695261290996086,
+      "calibrated_b_G": 0.13049804333888423,
+      "calibrated_b_R": 0.09962927088443889,
+      "calibrated_b_Z": 0.2302048472208812
+    },
+    "M3_3200K": {
+      "template_file": "phoenix_3200_5.0.fits",
+      "raw_ratio_G": 0.31528540493716123,
+      "scale_factor": 0.4139044855720279,
+      "calibrated_b_G": 0.13049804333888423,
+      "calibrated_b_R": 0.11005006025932909,
+      "calibrated_b_Z": 0.19437514496852015
+    }
+  },
+  "summary": {
+    "b_R_range": [
+      0.09962927088443889,
+      0.11005006025932909
+    ],
+    "b_Z_range": [
+      0.19437514496852015,
+      0.2302048472208812
+    ],
+    "max_plausible_b": 0.2302048472208812,
+    "can_reach_0p25": false
+  }
+}

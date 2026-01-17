@@ -1,0 +1,61 @@
+============================================================
+E9 STREAMING LASER SEARCH - Globus/DESI Sky Fibers
+============================================================
+Already processed: 227 tiles
+[10] 41 sky, 0 hits | Total: 228 tiles, 0 cands
+[20] 60 sky, 0 hits | Total: 229 tiles, 0 cands
+[21] 58 sky, 0 hits | Total: 230 tiles, 0 cands
+[23] 88 sky, 0 hits | Total: 231 tiles, 0 cands
+[24] 163 sky, 0 hits | Total: 232 tiles, 0 cands
+[28] Transfer error: Command 'globus transfer "6b4e1f6a-e600-11ed-9b9b-c9bb788c490e:/dr1/spectro/redux/iron/tiles/pernight/28/20210407/coadd-0-28-20210407.fits" "d1294d08-e055-11f0-a4db-0213754b0ca1:~/DESI-BH-CANDIDATE-SEARCH/temp_data/coadd-28.fits" --label "E9-laser"' timed out after 30 seconds
+SKIP
+[29] 41 sky, 0 hits | Total: 233 tiles, 0 cands
+[30] 40 sky, 0 hits | Total: 234 tiles, 0 cands
+[31] 40 sky, 0 hits | Total: 235 tiles, 0 cands
+[32] 40 sky, 0 hits | Total: 236 tiles, 0 cands
+[33] 40 sky, 0 hits | Total: 237 tiles, 0 cands
+[34] 40 sky, 0 hits | Total: 238 tiles, 0 cands
+[35] 40 sky, 2 hits | Total: 239 tiles, 2 cands
+  >>> 6343.2Å SNR=13.0 RA=179.499 DEC=-1.254
+  >>> 7482.4Å SNR=16.3 RA=179.694 DEC=-0.806
+[36] 43 sky, 1 hits | Total: 240 tiles, 3 cands
+  >>> 7403.2Å SNR=24.3 RA=179.608 DEC=-0.700
+[37] 42 sky, 0 hits | Total: 241 tiles, 3 cands
+[38] 45 sky, 0 hits | Total: 242 tiles, 3 cands
+[39] 41 sky, 0 hits | Total: 243 tiles, 3 cands
+[40] 40 sky, 0 hits | Total: 244 tiles, 3 cands
+[41] 49 sky, 0 hits | Total: 245 tiles, 3 cands
+[42] 71 sky, 0 hits | Total: 246 tiles, 3 cands
+[43] 116 sky, 0 hits | Total: 247 tiles, 3 cands
+[44] 51 sky, 0 hits | Total: 248 tiles, 3 cands
+[45] 51 sky, 0 hits | Total: 249 tiles, 3 cands
+[46] 51 sky, 0 hits | Total: 250 tiles, 3 cands
+[47] 48 sky, 0 hits | Total: 251 tiles, 3 cands
+[48] 54 sky, 0 hits | Total: 252 tiles, 3 cands
+[49] 56 sky, 0 hits | Total: 253 tiles, 3 cands
+[50] 135 sky, 0 hits | Total: 254 tiles, 3 cands
+[51] 163 sky, 0 hits | Total: 255 tiles, 3 cands
+[52] 296 sky, 0 hits | Total: 256 tiles, 3 cands
+[53] 145 sky, 0 hits | Total: 257 tiles, 3 cands
+[55] 40 sky, 0 hits | Total: 258 tiles, 3 cands
+[56] 40 sky, 0 hits | Total: 259 tiles, 3 cands
+[57] 40 sky, 0 hits | Total: 260 tiles, 3 cands
+[58] 40 sky, 0 hits | Total: 261 tiles, 3 cands
+[59] 40 sky, 0 hits | Total: 262 tiles, 3 cands
+[60] 44 sky, 0 hits | Total: 263 tiles, 3 cands
+[61] 42 sky, 0 hits | Total: 264 tiles, 3 cands
+[62] 41 sky, 0 hits | Total: 265 tiles, 3 cands
+[63] 43 sky, 0 hits | Total: 266 tiles, 3 cands
+[64] 45 sky, 0 hits | Total: 267 tiles, 3 cands
+[65] 45 sky, 0 hits | Total: 268 tiles, 3 cands
+[66] 41 sky, 0 hits | Total: 269 tiles, 3 cands
+[67] 40 sky, 0 hits | Total: 270 tiles, 3 cands
+[68] 66 sky, 0 hits | Total: 271 tiles, 3 cands
+[69] 54 sky, 0 hits | Total: 272 tiles, 3 cands
+[70] 50 sky, 0 hits | Total: 273 tiles, 3 cands
+[71] 51 sky, 0 hits | Total: 274 tiles, 3 cands
+[72]  Error: "Extension 'R_WAVELENGTH' not found."
+56 sky, 0 hits | Total: 275 tiles, 3 cands
+[73]  Error: "Extension 'R_WAVELENGTH' not found."
+56 sky, 0 hits | Total: 276 tiles, 3 cands
+[74] 

@@ -1,0 +1,193 @@
+======================================================================
+DESI BLEND-AWARE RV RE-MEASUREMENT v3
+======================================================================
+
+Target: Gaia DR3 3802130935635096832
+DESI TARGETID: 39627745210139276
+
+Confirmed neighbor: sep=0.688", ΔG=2.21
+Expected flux ratio (G-band): 0.130
+Allowed flux ratio range: [0.02, 0.3]
+
+Using 31 CPU cores for parallel processing
+
+======================================================================
+LOADING TEMPLATES
+======================================================================
+Original wavelength grid: 1569128 points
+Downsampling templates to DESI resolution (~0.5 Å)...
+  Primary Teff=3400K, logg=4.5: loaded and downsampled
+  Primary Teff=3600K, logg=4.5: loaded and downsampled
+  Primary Teff=3800K, logg=4.5: loaded and downsampled
+  Primary Teff=4000K, logg=4.5: loaded and downsampled
+  Neighbor Teff=2800K, logg=5.0: loaded and downsampled
+  Neighbor Teff=3000K, logg=5.0: loaded and downsampled
+  Neighbor Teff=3200K, logg=5.0: loaded and downsampled
+  Neighbor Teff=3400K, logg=5.0: loaded and downsampled
+Downsampled wavelength grid: 4000 points, 5500.0-9499.0 Å
+
+======================================================================
+LOADING DESI SPECTRA
+======================================================================
+Epoch1: coadd_20268_20211219_p2.fits
+  SHA256: 1f3aefba5e346da2...
+  MJD: 59568.488, Catalog RV: -86.39 km/s
+Epoch2: coadd_24976_20220125_p7.fits
+  SHA256: 87af27aa867295ee...
+  MJD: 59605.38, Catalog RV: +59.68 km/s
+Epoch3: coadd_23137_20220127_p0.fits
+  SHA256: 0ee485970c0b14e0...
+  MJD: 59607.38, Catalog RV: +25.80 km/s
+
+======================================================================
+ANALYSIS 1: SINGLE-STAR PRIMARY-ONLY FITS (PARALLEL, 8 workers)
+======================================================================
+  Running 36 parallel fits...
+
+--- Epoch1 (Catalog RV: -86.4 km/s) ---
+  R       : best Teff=3400K, v=  -79.0 km/s, σ_formal=0.61, σ_renorm=1.6, χ²_red=6.4
+  Z       : best Teff=4000K, v=  -87.0 km/s, σ_formal=3.51, σ_renorm=8.0, χ²_red=5.2
+  COMBINED: best Teff=3600K, v=  -80.9 km/s, σ_formal=0.39, σ_renorm=1.0, χ²_red=6.4
+
+--- Epoch2 (Catalog RV: +59.7 km/s) ---
+  R       : best Teff=3600K, v=  +73.5 km/s, σ_formal=3.37, σ_renorm=6.4, χ²_red=3.7
+  Z       : best Teff=4000K, v=  +57.9 km/s, σ_formal=2.56, σ_renorm=3.9, χ²_red=2.4
+  COMBINED: best Teff=3600K, v=  +61.2 km/s, σ_formal=1.18, σ_renorm=2.2, χ²_red=3.4
+
+--- Epoch3 (Catalog RV: +25.8 km/s) ---
+  R       : best Teff=3400K, v=  -40.9 km/s, σ_formal=1.21, σ_renorm=2.6, χ²_red=4.7
+  Z       : best Teff=4000K, v=  +25.9 km/s, σ_formal=3.42, σ_renorm=6.2, χ²_red=3.3
+  COMBINED: best Teff=3600K, v=  +23.8 km/s, σ_formal=0.64, σ_renorm=1.3, χ²_red=4.4
+  [CHECKPOINT SAVED: stage=1]
+
+======================================================================
+ANALYSIS 2: NEIGHBOR-ONLY FITS (PARALLEL, 8 workers)
+======================================================================
+  Running 36 parallel fits...
+
+--- Epoch1 ---
+  R       : best Teff=3400K, v=  -79.0 km/s, χ²=9674, χ²_red=6.2
+  Z       : best Teff=3400K, v=  -81.4 km/s, χ²=5675, χ²_red=5.8
+  COMBINED: best Teff=3400K, v=  -80.6 km/s, χ²=17039, χ²_red=6.4
+
+--- Epoch2 ---
+  R       : best Teff=3400K, v=  +62.5 km/s, χ²=5471, χ²_red=3.6
+  Z       : best Teff=3400K, v=  +62.5 km/s, χ²=2658, χ²_red=2.7
+  COMBINED: best Teff=3400K, v=  +61.1 km/s, χ²=8863, χ²_red=3.4
+
+--- Epoch3 ---
+  R       : best Teff=3400K, v=  -40.9 km/s, χ²=7235, χ²_red=4.6
+  Z       : best Teff=3400K, v=  +33.6 km/s, χ²=3685, χ²_red=3.7
+  COMBINED: best Teff=3400K, v=  +24.2 km/s, χ²=11789, χ²_red=4.4
+  [CHECKPOINT SAVED: stage=2]
+
+======================================================================
+ANALYSIS 3: TWO-COMPONENT PER-EPOCH FITS (PARALLEL)
+======================================================================
+
+--- Epoch1 ---
+  R       : v1=  -78.8, v2=  +20.3, b=0.300, ΔBIC=-1267.9 (TWO PREF)
+  Z       : v1=  -87.1, v2=  +89.7, b=0.300, ΔBIC=-214.9 (TWO PREF)
+  COMBINED: v1=  -80.9, v2=  +23.9, b=0.300, ΔBIC=-1719.1 (TWO PREF)
+
+--- Epoch2 ---
+  R       : v1=  +74.0, v2=   -0.0, b=0.300, ΔBIC=-512.0 (TWO PREF)
+  Z       : v1=  +57.6, v2= +116.8, b=0.300, ΔBIC=-36.6 (TWO PREF)
+  COMBINED: v1=  +72.8, v2=   -0.0, b=0.300, ΔBIC=-614.8 (TWO PREF)
+
+--- Epoch3 ---
+  R       : v1=  -45.0, v2=  +29.2, b=0.300, ΔBIC=-822.5 (TWO PREF)
+  Z       : v1=  +25.4, v2=  +82.0, b=0.300, ΔBIC=-85.6 (TWO PREF)
+  COMBINED: v1=  +24.0, v2=  -59.0, b=0.300, ΔBIC=-1037.0 (TWO PREF)
+  [CHECKPOINT SAVED: stage=3]
+
+======================================================================
+ANALYSIS 4: CROSS-EPOCH CONSTANT-v2 MODEL
+======================================================================
+
+Constant-v2 model results:
+  v2 (shared): +0.0 km/s
+  b (shared): 0.300
+  Epoch1: v1=-81.1 km/s
+  Epoch2: v1=+63.3 km/s
+  Epoch3: v1=+40.5 km/s
+  Total χ²: 36259.5
+  χ²_red: 4.58
+
+  Comparison to primary-only model:
+  Primary-only χ²: 37714.4
+  BIC primary-only: 37849.1
+  BIC const-v2: 36412.2
+  ΔBIC (const-v2 - primary): -1436.9
+  Verdict: CONST-V2 FAVORED
+
+======================================================================
+ANALYSIS 5: WAVELENGTH-DEPENDENT RV DIAGNOSTICS
+======================================================================
+Epoch1: RV_R=  -79.0, RV_Z=  -87.0, Δ=-8.1 km/s (-1.0σ)
+Epoch2: RV_R=  +73.5, RV_Z=  +57.9, Δ=-15.6 km/s (-2.1σ)
+Epoch3: RV_R=  -40.9, RV_Z=  +25.9, Δ=+66.7 km/s (9.9σ)
+
+======================================================================
+FINAL VERDICTS
+======================================================================
+
+1) RV swing robust across arms/templates?
+   Fitted swing: 142.1 km/s (catalog: 146.1)
+   Arm consistency: NO
+   Verdict: INCONCLUSIVE
+
+2) Neighbor-only fits competitive?
+   Epoch1: χ²_primary=17077, χ²_neighbor=17039, ratio=1.00
+   Epoch2: χ²_primary=8806, χ²_neighbor=8863, ratio=1.01
+   Epoch3: χ²_primary=11831, χ²_neighbor=11789, ratio=1.00
+   Verdict: FAIL
+
+3) Two-component per-epoch favored?
+   Epoch1: ΔBIC=-1719.1 (TWO PREF)
+   Epoch2: ΔBIC=-614.8 (TWO PREF)
+   Epoch3: ΔBIC=-1037.0 (TWO PREF)
+   Verdict: FAIL
+
+4) Cross-epoch constant-v2 model favored?
+   ΔBIC: -1436.9
+   Best b: 0.300 (expected ~0.130)
+   Verdict: FAIL
+
+5) Can blend switching plausibly explain the observed extrema?
+   Neighbor-only RVs: ['-80.6', '+61.1', '+24.2']
+   Two-comp v2 values: ['+23.9', '-0.0', '-59.0']
+   v2 stable across epochs: NO
+   Verdict: INCONCLUSIVE
+
+======================================================================
+OVERALL VERDICT: COMPROMISED
+======================================================================
+PASS: 0, FAIL: 3, INCONCLUSIVE: 2
+
+Evidence suggests blend contamination may affect RV measurements.
+
+======================================================================
+GENERATING FIGURES
+======================================================================
+Generating chi2_vs_v_by_epoch_v3.png...
+Generating rv_by_method_v3.png...
+Generating neighbor_only_vs_primary_v3.png...
+Generating constant_v2_model_comparison_v3.png...
+Generating arm_split_rv_v3.png...
+All figures generated.
+
+======================================================================
+SAVING OUTPUTS
+======================================================================
+Saved: /home/primary/DESI-BH-CANDIDATE-SEARCH/outputs/desi_blend_v3/desi_epoch_rv_refit_v3.json
+Saved: /home/primary/DESI-BH-CANDIDATE-SEARCH/outputs/desi_blend_v3/desi_model_comparison_v3.json
+Saved: /home/primary/DESI-BH-CANDIDATE-SEARCH/outputs/desi_blend_v3/desi_constant_v2_fit_v3.json
+
+Writing report...
+Saved: /home/primary/DESI-BH-CANDIDATE-SEARCH/outputs/desi_blend_v3/DESI_BLEND_AWARE_REPORT_v3.md
+  [CHECKPOINT CLEARED]
+
+======================================================================
+ANALYSIS COMPLETE
+======================================================================

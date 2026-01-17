@@ -1,0 +1,132 @@
+{
+  "target_id": 39627745210139276,
+  "verdict": "MULTIPEAK_DETECTED",
+  "switching_detected": false,
+  "multipeak_epochs": [
+    "Epoch1 (MJD 59568)",
+    "Epoch2 (MJD 59605)",
+    "Epoch3 (MJD 59607, coadd)"
+  ],
+  "epochs": [
+    {
+      "label": "Epoch1 (MJD 59568)",
+      "mjd": 59568.48825,
+      "multipeak": true,
+      "switching": false,
+      "masks": {
+        "TiO-6500": {
+          "n_peaks": 2,
+          "peak1_v": -0.02370902913689881,
+          "peak2_v": 78.00000000000001,
+          "height_ratio": 0.37820718888412147,
+          "v_separation": 78.02370902913691,
+          "multipeak": null
+        },
+        "TiO-7200": {
+          "n_peaks": 2,
+          "peak1_v": 0.08227446742065617,
+          "peak2_v": 58.00000000000001,
+          "height_ratio": 0.6514689932198053,
+          "v_separation": 57.917725532579354,
+          "multipeak": null
+        },
+        "FarRed": {
+          "n_peaks": 3,
+          "peak1_v": 0.19054374148322797,
+          "peak2_v": 177.0837465932808,
+          "height_ratio": 0.1566635338489852,
+          "v_separation": 176.89320285179758,
+          "multipeak": null
+        },
+        "Combined": {
+          "n_peaks": 3,
+          "peak1_v": -0.0178519129239483,
+          "peak2_v": 30.000000000000004,
+          "height_ratio": 0.783783358287504,
+          "v_separation": 30.017851912923952,
+          "multipeak": null
+        }
+      }
+    },
+    {
+      "label": "Epoch2 (MJD 59605)",
+      "mjd": 59605.38003,
+      "multipeak": true,
+      "switching": false,
+      "masks": {
+        "TiO-6500": {
+          "n_peaks": 3,
+          "peak1_v": 11.13380422218664,
+          "peak2_v": -144.73892424881333,
+          "height_ratio": 0.9118400339623778,
+          "v_separation": 155.87272847099996,
+          "multipeak": null
+        },
+        "TiO-7200": {
+          "n_peaks": 3,
+          "peak1_v": -124.09680947766243,
+          "peak2_v": 18.24761523741945,
+          "height_ratio": 0.9844365397003979,
+          "v_separation": 142.34442471508189,
+          "multipeak": null
+        },
+        "FarRed": {
+          "n_peaks": 3,
+          "peak1_v": -7.041411505405124,
+          "peak2_v": -139.1557783299309,
+          "height_ratio": 0.7582127603478511,
+          "v_separation": 132.11436682452577,
+          "multipeak": null
+        },
+        "Combined": {
+          "n_peaks": 3,
+          "peak1_v": 6.942830187805609,
+          "peak2_v": -142.9222690360774,
+          "height_ratio": 0.991482372891572,
+          "v_separation": 149.86509922388302,
+          "multipeak": null
+        }
+      }
+    },
+    {
+      "label": "Epoch3 (MJD 59607, coadd)",
+      "mjd": 59607.38,
+      "multipeak": true,
+      "switching": false,
+      "masks": {
+        "TiO-6500": {
+          "n_peaks": 3,
+          "peak1_v": -76.65447566340414,
+          "peak2_v": -83.46223713016379,
+          "height_ratio": 0.9988420282425315,
+          "v_separation": 6.8077614667596436,
+          "multipeak": null
+        },
+        "TiO-7200": {
+          "n_peaks": 3,
+          "peak1_v": -31.029830350496653,
+          "peak2_v": 54.255737163862186,
+          "height_ratio": 0.9612563426773786,
+          "v_separation": 85.28556751435883,
+          "multipeak": null
+        },
+        "FarRed": {
+          "n_peaks": 3,
+          "peak1_v": -10.041002054225237,
+          "peak2_v": -140.6705908630814,
+          "height_ratio": 0.6490511652847694,
+          "v_separation": 130.62958880885617,
+          "multipeak": null
+        },
+        "Combined": {
+          "n_peaks": 3,
+          "peak1_v": -51.570187283968544,
+          "peak2_v": -73.8236501057395,
+          "height_ratio": 0.9689236706300626,
+          "v_separation": 22.25346282177096,
+          "multipeak": null
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+[
+  {
+    "label": "Epoch1",
+    "arms": {
+      "R": {
+        "primary_v": -80.0,
+        "neighbor_v": -79.0,
+        "v_diff": 1.0,
+        "chi2_ratio": 0.9783224651729351,
+        "competitive": 1.0,
+        "switching_risk": 0.0
+      },
+      "Z": {
+        "primary_v": -87.0,
+        "neighbor_v": -79.0,
+        "v_diff": 8.0,
+        "chi2_ratio": 1.1452641638221854,
+        "competitive": 1.0,
+        "switching_risk": 0.0
+      },
+      "combined": {
+        "primary_v": -81.0,
+        "neighbor_v": -80.0,
+        "v_diff": 1.0,
+        "chi2_ratio": 1.0585325577387437,
+        "competitive": 1.0,
+        "switching_risk": 0.0
+      }
+    }
+  },
+  {
+    "label": "Epoch2",
+    "arms": {
+      "R": {
+        "primary_v": 63.0,
+        "neighbor_v": 62.0,
+        "v_diff": 1.0,
+        "chi2_ratio": 0.9983548325345193,
+        "competitive": 1.0,
+        "switching_risk": 0.0
+      },
+      "Z": {
+        "primary_v": 58.0,
+        "neighbor_v": 63.0,
+        "v_diff": 5.0,
+        "chi2_ratio": 1.1871576869305178,
+        "competitive": 1.0,
+        "switching_risk": 0.0
+      },
+      "combined": {
+        "primary_v": 63.0,
+        "neighbor_v": 63.0,
+        "v_diff": 0.0,
+        "chi2_ratio": 1.06313247465005,
+        "competitive": 1.0,
+        "switching_risk": 0.0
+      }
+    }
+  },
+  {
+    "label": "Epoch3",
+    "arms": {
+      "R": {
+        "primary_v": -41.0,
+        "neighbor_v": -41.0,
+        "v_diff": 0.0,
+        "chi2_ratio": 0.9673501154203548,
+        "competitive": 1.0,
+        "switching_risk": 0.0
+      },
+      "Z": {
+        "primary_v": 26.0,
+        "neighbor_v": 34.0,
+        "v_diff": 8.0,
+        "chi2_ratio": 1.1435419193039116,
+        "competitive": 1.0,
+        "switching_risk": 0.0
+      },
+      "combined": {
+        "primary_v": 24.0,
+        "neighbor_v": 25.0,
+        "v_diff": 1.0,
+        "chi2_ratio": 1.045217481466607,
+        "competitive": 1.0,
+        "switching_risk": 0.0
+      }
+    }
+  }
+]

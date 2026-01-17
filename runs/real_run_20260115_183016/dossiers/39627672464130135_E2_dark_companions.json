@@ -1,0 +1,16 @@
+{
+  "targetid": 39627672464130135,
+  "experiment": "E2_dark_companions",
+  "ra": 0.0,
+  "dec": 0.0,
+  "n_epochs": 7,
+  "delta_rv": 155.02080589087063,
+  "best_period": 1.0708645280052622,
+  "best_K": 385.1186330968777,
+  "m2_min": 7.074453513751429,
+  "physics_score": 0.9303294214277289,
+  "total_score": 0.8221317685710916,
+  "is_pathological": false,
+  "pathology_reasons": [],
+  "notes": "Basic dossier - full MCMC not run"
+}

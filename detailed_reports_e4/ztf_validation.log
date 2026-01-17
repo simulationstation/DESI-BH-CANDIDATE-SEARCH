@@ -1,0 +1,66 @@
+======================================================================
+ZTF PHOTOMETRY VALIDATION - E4 BROWN DWARF CANDIDATES
+======================================================================
+Generated: 2026-01-15T20:34:06.352569
+
+
+============================================================
+Processing: BD_Candidate_1
+  DESI TargetID: 39627793289448405
+  Period: 0.5 days, G=16.4
+============================================================
+  Querying ALeRCE...
+  Found ZTF object: ZTF23abnzxhm
+  ZTF-g: 0 points, ZTF-r: 0 points
+
+  CLASSIFICATION: INSUFFICIENT DATA
+  Confidence: N/A
+    - Only 0 total ZTF points
+No artists with labels found to put in legend.  Note that artists whose label start with an underscore are ignored when legend() is called with no argument.
+  Saved: /home/primary/DESI-BH-CANDIDATE-SEARCH/detailed_reports_e4/39627793289448405_ztf_validation.png
+
+============================================================
+Processing: BD_Candidate_2
+  DESI TargetID: 39627785240582464
+  Period: 0.7 days, G=17.2
+============================================================
+  Querying ALeRCE...
+  Found ZTF object: ZTF18abtmnsr
+  ZTF-g: 0 points, ZTF-r: 0 points
+
+  CLASSIFICATION: INSUFFICIENT DATA
+  Confidence: N/A
+    - Only 0 total ZTF points
+No artists with labels found to put in legend.  Note that artists whose label start with an underscore are ignored when legend() is called with no argument.
+  Saved: /home/primary/DESI-BH-CANDIDATE-SEARCH/detailed_reports_e4/39627785240582464_ztf_validation.png
+
+============================================================
+Processing: BD_Candidate_3
+  DESI TargetID: 39627743385616469
+  Period: 1.1 days, G=18.8
+============================================================
+  Querying ALeRCE...
+  No ZTF data found via ALeRCE
+
+============================================================
+Processing: BD_Candidate_4
+  DESI TargetID: 39627842371195432
+  Period: 0.5 days, G=16.4
+============================================================
+  Querying ALeRCE...
+  Found ZTF object: ZTF24abtjpuc
+  ZTF-g: 0 points, ZTF-r: 0 points
+
+  CLASSIFICATION: INSUFFICIENT DATA
+  Confidence: N/A
+    - Only 0 total ZTF points
+No artists with labels found to put in legend.  Note that artists whose label start with an underscore are ignored when legend() is called with no argument.
+  Saved: /home/primary/DESI-BH-CANDIDATE-SEARCH/detailed_reports_e4/39627842371195432_ztf_validation.png
+
+======================================================================
+GENERATING REPORT
+======================================================================
+Report saved: /home/primary/DESI-BH-CANDIDATE-SEARCH/detailed_reports_e4/ZTF_VALIDATION_REPORT.md
+JSON saved: /home/primary/DESI-BH-CANDIDATE-SEARCH/detailed_reports_e4/ztf_validation_results.json
+
+Done!

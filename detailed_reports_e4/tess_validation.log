@@ -1,0 +1,66 @@
+======================================================================
+TESS PHOTOMETRY VALIDATION - E4 BROWN DWARF CANDIDATES
+======================================================================
+Generated: 2026-01-15T20:29:08.046659
+
+
+============================================================
+Processing: BD_Candidate_1 (Priority: Highest)
+  DESI TargetID: 39627793289448405
+  Period: 0.5 days
+============================================================
+  Searching TESS for RA=150.3709, Dec=0.1833...
+No data found for target "<SkyCoord (ICRS): (ra, dec) in deg
+    (150.370905, 0.183262)>".
+No data found for target "<SkyCoord (ICRS): (ra, dec) in deg
+    (150.370905, 0.183262)>".
+  No TESS data found
+  No TESS data available for this target
+
+============================================================
+Processing: BD_Candidate_2 (Priority: High)
+  DESI TargetID: 39627785240582464
+  Period: 0.7 days
+============================================================
+  Searching TESS for RA=30.6915, Dec=-0.0005...
+No data found for target "<SkyCoord (ICRS): (ra, dec) in deg
+    (30.691535, -0.000485)>".
+No data found for target "<SkyCoord (ICRS): (ra, dec) in deg
+    (30.691535, -0.000485)>".
+  No TESS data found
+  No TESS data available for this target
+
+============================================================
+Processing: BD_Candidate_3 (Priority: High)
+  DESI TargetID: 39627743385616469
+  Period: 1.1 days
+============================================================
+  Searching TESS for RA=55.7510, Dec=-1.8526...
+No data found for target "<SkyCoord (ICRS): (ra, dec) in deg
+    (55.751012, -1.852596)>".
+No data found for target "<SkyCoord (ICRS): (ra, dec) in deg
+    (55.751012, -1.852596)>".
+  No TESS data found
+  No TESS data available for this target
+
+============================================================
+Processing: BD_Candidate_4 (Priority: High)
+  DESI TargetID: 39627842371195432
+  Period: 0.5 days
+============================================================
+  Searching TESS for RA=195.9615, Dec=2.2064...
+No data found for target "<SkyCoord (ICRS): (ra, dec) in deg
+    (195.961529, 2.206382)>".
+No data found for target "<SkyCoord (ICRS): (ra, dec) in deg
+    (195.961529, 2.206382)>".
+  No TESS data found
+  No TESS data available for this target
+
+======================================================================
+SUMMARY REPORT
+======================================================================
+
+Report saved to: /home/primary/DESI-BH-CANDIDATE-SEARCH/detailed_reports_e4/TESS_VALIDATION_REPORT.md
+JSON results saved to: /home/primary/DESI-BH-CANDIDATE-SEARCH/detailed_reports_e4/tess_validation_results.json
+
+Done!

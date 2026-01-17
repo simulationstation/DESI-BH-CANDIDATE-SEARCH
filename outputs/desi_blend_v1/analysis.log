@@ -1,0 +1,183 @@
+============================================================
+DESI BLEND-AWARE RV RE-MEASUREMENT
+============================================================
+
+Target: Gaia DR3 3802130935635096832
+DESI TARGETID: 39627745210139276
+
+Confirmed neighbor: sep=0.688", ΔG=2.21 mag
+Expected flux contamination: 13.0%
+
+============================================================
+LOADING SPECTRA
+============================================================
+
+Loading Epoch1 (MJD 59568)...
+  File: /home/primary/DESI-BH-CANDIDATE-SEARCH/data/desi_spectra/coadd_20268_20211219_p2.fits
+  Hash: 1f3aefba5e346da2...
+
+Loading Epoch2 (MJD 59605)...
+  File: /home/primary/DESI-BH-CANDIDATE-SEARCH/data/desi_spectra/coadd_24976_20220125_p7.fits
+  Hash: 87af27aa867295ee...
+
+Loading Epoch3 (MJD 59607, coadd)...
+  File: /home/primary/DESI-BH-CANDIDATE-SEARCH/data/desi_spectra/coadd_23137_20220127_p0.fits
+  Hash: 0ee485970c0b14e0...
+
+Loaded 3 epoch spectra
+
+============================================================
+PART 1: SINGLE-TEMPLATE RV ANALYSIS
+============================================================
+
+Using Epoch1 (MJD 59568) as template
+
+--- Epoch1 (MJD 59568) ---
+  Catalog RV: -86.39 km/s
+  TiO-6500: ΔRV = -0.0 ± 0.0 km/s, FWHM = 64 km/s [GOOD]
+  TiO-7200: ΔRV = +0.1 ± 0.0 km/s, FWHM = 54 km/s [GOOD]
+  FarRed: ΔRV = +0.2 ± 0.0 km/s, FWHM = 50 km/s [GOOD]
+  Combined: ΔRV = -0.0 ± 0.0 km/s, FWHM = 155 km/s [BROAD]
+  Mean ΔRV: +0.1 km/s, Scatter: 0.1 km/s [GOOD]
+
+--- Epoch2 (MJD 59605) ---
+  Catalog RV: 59.68 km/s
+  TiO-6500: ΔRV = +11.1 ± 0.1 km/s, FWHM = 132 km/s [GOOD]
+  TiO-7200: ΔRV = -124.1 ± 0.1 km/s, FWHM = 91 km/s [GOOD]
+  FarRed: ΔRV = -7.0 ± 0.3 km/s, FWHM = 471 km/s [BROAD]
+  Combined: ΔRV = +6.9 ± 1.4 km/s, FWHM = 141 km/s [GOOD]
+  Mean ΔRV: -28.3 km/s, Scatter: 55.7 km/s [POOR]
+
+--- Epoch3 (MJD 59607, coadd) ---
+  Catalog RV: 25.80 km/s
+  TiO-6500: ΔRV = -76.7 ± 0.6 km/s, FWHM = 471 km/s [BROAD]
+  TiO-7200: ΔRV = -31.0 ± 0.2 km/s, FWHM = 56 km/s [GOOD]
+  FarRed: ΔRV = -10.0 ± 0.1 km/s, FWHM = 89 km/s [GOOD]
+  Combined: ΔRV = -51.6 ± 0.8 km/s, FWHM = 14 km/s [GOOD]
+  Mean ΔRV: -42.3 km/s, Scatter: 24.7 km/s [POOR]
+
+--- RV SWING SUMMARY ---
+Measured ΔRV swing (relative): 42.4 km/s
+Catalog ΔRV swing: 146.1 km/s
+
+============================================================
+PART 2: CCF PEAK MULTIPLICITY ANALYSIS
+============================================================
+
+--- Epoch1 (MJD 59568) ---
+  TiO-6500: MULTIPEAK - v1=-0.0, v2=78.0, ratio=0.38
+  TiO-7200: MULTIPEAK - v1=0.1, v2=58.0, ratio=0.65
+  FarRed: single peak at v=0.2 km/s
+  Combined: MULTIPEAK - v1=-0.0, v2=30.0, ratio=0.78
+
+--- Epoch2 (MJD 59605) ---
+  TiO-6500: MULTIPEAK - v1=11.1, v2=-144.7, ratio=0.91
+  TiO-7200: MULTIPEAK - v1=-124.1, v2=18.2, ratio=0.98
+  FarRed: MULTIPEAK - v1=-7.0, v2=-139.2, ratio=0.76
+  Combined: MULTIPEAK - v1=6.9, v2=-142.9, ratio=0.99
+
+--- Epoch3 (MJD 59607, coadd) ---
+  TiO-6500: single peak at v=-76.7 km/s
+  TiO-7200: MULTIPEAK - v1=-31.0, v2=54.3, ratio=0.96
+  FarRed: MULTIPEAK - v1=-10.0, v2=-140.7, ratio=0.65
+  Combined: MULTIPEAK - v1=-51.6, v2=-73.8, ratio=0.97
+
+--- COMPONENT SWITCHING CHECK ---
+Primary peak velocity changes: [-28.32321096 -14.05847719]
+Maximum velocity change: 28.3 km/s
+
+Verdict: MULTIPEAK_DETECTED
+
+============================================================
+PART 3: WAVELENGTH-SPLIT RV TEST
+============================================================
+
+--- Epoch1 (MJD 59568) ---
+  blue (5800-6400 Å): ΔRV = +0.1 km/s
+  red (7400-8800 Å): ΔRV = -0.0 km/s
+  ΔRV_split (red - blue): -0.1 km/s
+
+--- Epoch2 (MJD 59605) ---
+  blue (5800-6400 Å): ΔRV = -135.7 km/s
+  red (7400-8800 Å): ΔRV = -127.2 km/s
+  ΔRV_split (red - blue): +8.5 km/s
+
+--- Epoch3 (MJD 59607, coadd) ---
+  blue (5800-6400 Å): ΔRV = -101.3 km/s
+  red (7400-8800 Å): ΔRV = -64.0 km/s
+  ΔRV_split (red - blue): +37.3 km/s
+
+--- WAVELENGTH SPLIT SUMMARY ---
+Mean split: +15.2 km/s
+Split scatter: 16.0 km/s
+WARNING: Large wavelength-dependent RV detected
+
+============================================================
+PART 4: TWO-TEMPLATE BLEND FIT
+============================================================
+
+Using self-template approach: fit each epoch as single vs two-component model
+Expected neighbor flux fraction: 0.130
+
+--- Epoch1 (MJD 59568) ---
+  Single: a=1.000, v1=+0.0 km/s, χ²=4
+  Two: a=0.870, v1=+0.0, b=0.130, v2=+0.0 km/s, χ²=4
+  ΔBIC = 14.6 (negative favors two-template)
+
+--- Epoch2 (MJD 59605) ---
+  Single: a=1.000, v1=+15.0 km/s, χ²=3004
+  Two: a=0.530, v1=-18.2, b=0.470, v2=+144.7 km/s, χ²=2414
+  ΔBIC = -574.6 (negative favors two-template)
+
+--- Epoch3 (MJD 59607, coadd) ---
+  Single: a=0.998, v1=+17.8 km/s, χ²=3614
+  Two: a=0.516, v1=+17.2, b=0.482, v2=+119.1 km/s, χ²=2999
+  ΔBIC = -599.8 (negative favors two-template)
+
+--- TWO-TEMPLATE FIT SUMMARY ---
+Epochs preferring two-template: 2/3
+  Epoch2 (MJD 59605): ΔBIC = -574.6
+  Epoch3 (MJD 59607, coadd): ΔBIC = -599.8
+
+============================================================
+GENERATING FIGURES
+============================================================
+
+Generating epoch_spectra_overlays.png...
+Generating ccf_peaks_by_epoch.png...
+Generating rv_by_method.png...
+Generating wavelength_split_rv.png...
+Generating two_template_fit_residuals.png...
+All figures generated.
+
+============================================================
+FINAL VERDICT
+============================================================
+
+| Check | Result | Notes |
+|-------|--------|-------|
+| Single-template RV stability | **FAIL** | Max scatter: 55.7 km/s |
+| CCF peak multiplicity | **FAIL** | MULTIPEAK_DETECTED |
+| Wavelength-split consistency | **FAIL** | LARGE_SPLIT |
+| Two-template preference | **FAIL** | TWO_TEMPLATE_PREFERRED |
+| Blend explains amplitude | **PASS** | Blending (max ~13 km/s effect) cannot explain 146 km/s swing |
+
+Summary: 1 PASS, 4 FAIL, 0 INCONCLUSIVE
+
+**OVERALL VERDICT: COMPROMISED**
+
+Evidence suggests blend effects may compromise RV measurements; candidate requires further investigation.
+
+============================================================
+SAVING OUTPUTS
+============================================================
+Saved: /home/primary/DESI-BH-CANDIDATE-SEARCH/outputs/desi_blend_v1/desi_epoch_rv_refit.json
+Saved: /home/primary/DESI-BH-CANDIDATE-SEARCH/outputs/desi_blend_v1/desi_ccf_diagnostics.json
+Saved: /home/primary/DESI-BH-CANDIDATE-SEARCH/outputs/desi_blend_v1/desi_two_template_fit.json
+
+Writing report...
+Saved: /home/primary/DESI-BH-CANDIDATE-SEARCH/outputs/desi_blend_v1/DESI_BLEND_AWARE_REPORT.md
+
+============================================================
+ANALYSIS COMPLETE
+============================================================

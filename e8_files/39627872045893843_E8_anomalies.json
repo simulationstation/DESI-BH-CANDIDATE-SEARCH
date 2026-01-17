@@ -1,0 +1,16 @@
+{
+  "targetid": 39627872045893843,
+  "experiment": "E8_anomalies",
+  "ra": 0.0,
+  "dec": 0.0,
+  "n_epochs": 5,
+  "delta_rv": 422.7442068107904,
+  "best_period": 14.486024682498515,
+  "best_K": 223.7304882237787,
+  "m2_min": 19.494546164008685,
+  "physics_score": 0.9,
+  "total_score": 0.84,
+  "is_pathological": false,
+  "pathology_reasons": [],
+  "notes": "Basic dossier - full MCMC not run"
+}

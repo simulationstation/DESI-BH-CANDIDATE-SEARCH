@@ -1,0 +1,329 @@
+============================================================
+E9 DIRECT FORENSIC VERIFICATION (INCREMENTAL)
+============================================================
+Total candidates: 557
+Already analyzed: 100 candidates (skipping)
+New candidates to analyze: 100
+Unique tiles to download: 18
+
+[1/18] Tile 7 (1 candidates)
+  Downloading coadd-0-7-20210429.fits...
+  Analyzing 1 candidates...
+    [x] 7370.4A SNR=20.8 -> COSMIC_RAY
+
+[2/18] Tile 80951 (13 candidates)
+  Downloading coadd-0-80951-20210425.fits...
+  Analyzing 13 candidates...
+    [x] 6040.8A SNR=20.6 -> COSMIC_RAY
+    [x] 6724.0A SNR=20.4 -> COSMIC_RAY
+    [?] 6111.2A SNR=20.3 -> AMBIGUOUS
+    [?] 6820.0A SNR=20.3 -> AMBIGUOUS
+    [+] 6935.2A SNR=20.0 -> REAL_SIGNAL
+    [?] 7276.8A SNR=19.0 -> AMBIGUOUS
+    [?] 7412.8A SNR=18.8 -> AMBIGUOUS
+    [?] 7269.6A SNR=18.7 -> AMBIGUOUS
+    [?] 6591.2A SNR=18.4 -> AMBIGUOUS
+    [?] 7017.6A SNR=18.3 -> AMBIGUOUS
+    [?] 7120.8A SNR=18.3 -> AMBIGUOUS
+    [x] 6200.0A SNR=18.2 -> COSMIC_RAY
+    [?] 7267.2A SNR=17.3 -> AMBIGUOUS
+
+[3/18] Tile 80949 (13 candidates)
+  Tile not found
+
+[4/18] Tile 80954 (17 candidates)
+  Downloading coadd-0-80954-20210425.fits...
+  Analyzing 17 candidates...
+    [?] 7036.0A SNR=20.5 -> AMBIGUOUS
+    [?] 6801.6A SNR=20.4 -> AMBIGUOUS
+    [?] 7040.8A SNR=20.3 -> AMBIGUOUS
+    [+] 6681.6A SNR=20.3 -> REAL_SIGNAL
+    [?] 6212.0A SNR=20.1 -> AMBIGUOUS
+    [?] 7359.2A SNR=19.8 -> AMBIGUOUS
+    [?] 6936.8A SNR=19.7 -> AMBIGUOUS
+    [?] 6358.4A SNR=19.5 -> AMBIGUOUS
+    [?] 7023.2A SNR=19.2 -> AMBIGUOUS
+    [?] 7424.0A SNR=18.6 -> AMBIGUOUS
+    [?] 6642.4A SNR=18.5 -> AMBIGUOUS
+    [+] 6247.2A SNR=18.2 -> REAL_SIGNAL
+    [?] 7085.6A SNR=17.8 -> AMBIGUOUS
+    [x] 6288.8A SNR=17.6 -> COSMIC_RAY
+    [x] 6892.0A SNR=17.5 -> COSMIC_RAY
+    [?] 6136.0A SNR=17.2 -> AMBIGUOUS
+    [?] 6458.4A SNR=17.2 -> AMBIGUOUS
+
+[5/18] Tile 80958 (26 candidates)
+  Downloading coadd-0-80958-20210425.fits...
+  Analyzing 26 candidates...
+    [x] 5850.4A SNR=20.4 -> COSMIC_RAY
+    [?] 6125.6A SNR=20.3 -> AMBIGUOUS
+    [?] 7588.0A SNR=20.1 -> AMBIGUOUS
+    [x] 7289.6A SNR=20.0 -> COSMIC_RAY
+    [?] 7244.0A SNR=19.9 -> AMBIGUOUS
+    [x] 6627.2A SNR=19.8 -> COSMIC_RAY
+    [?] 5815.2A SNR=19.6 -> AMBIGUOUS
+    [?] 6956.8A SNR=19.5 -> AMBIGUOUS
+    [?] 6001.6A SNR=19.2 -> AMBIGUOUS
+    [?] 6764.0A SNR=18.7 -> AMBIGUOUS
+    [?] 6723.2A SNR=18.4 -> AMBIGUOUS
+    [x] 6882.4A SNR=18.2 -> COSMIC_RAY
+    [?] 6368.8A SNR=18.1 -> AMBIGUOUS
+    [+] 7092.8A SNR=18.0 -> REAL_SIGNAL
+    [?] 6920.0A SNR=17.8 -> AMBIGUOUS
+    [+] 7595.2A SNR=17.7 -> REAL_SIGNAL
+    [x] 6488.8A SNR=17.7 -> COSMIC_RAY
+    [?] 7461.6A SNR=17.6 -> AMBIGUOUS
+    [?] 7442.4A SNR=17.4 -> AMBIGUOUS
+    [?] 7228.0A SNR=17.4 -> AMBIGUOUS
+    [?] 5922.4A SNR=17.3 -> AMBIGUOUS
+    [?] 6145.6A SNR=17.3 -> AMBIGUOUS
+    [?] 6448.0A SNR=17.2 -> AMBIGUOUS
+    [?] 7512.0A SNR=17.2 -> AMBIGUOUS
+    [?] 6637.6A SNR=17.0 -> AMBIGUOUS
+    [+] 5867.2A SNR=17.0 -> REAL_SIGNAL
+
+[6/18] Tile 80956 (8 candidates)
+  Tile not found
+
+[7/18] Tile 80962 (3 candidates)
+  Downloading coadd-0-80962-20210422.fits...
+  Analyzing 3 candidates...
+    [?] 6322.4A SNR=19.8 -> AMBIGUOUS
+    [?] 5922.4A SNR=19.1 -> AMBIGUOUS
+    [?] 7437.6A SNR=17.5 -> AMBIGUOUS
+
+[8/18] Tile 80963 (1 candidates)
+  Downloading coadd-0-80963-20210424.fits...
+  Analyzing 1 candidates...
+    [?] 6410.4A SNR=19.6 -> AMBIGUOUS
+
+[9/18] Tile 80742 (3 candidates)
+  Downloading coadd-0-80742-20210328.fits...
+  Analyzing 3 candidates...
+    [?] 6123.2A SNR=19.2 -> AMBIGUOUS
+    [?] 6424.0A SNR=18.0 -> AMBIGUOUS
+    [?] 6431.2A SNR=18.0 -> AMBIGUOUS
+
+[10/18] Tile 80952 (2 candidates)
+  Downloading coadd-0-80952-20210425.fits...
+  Analyzing 2 candidates...
+    [?] 6761.6A SNR=19.1 -> AMBIGUOUS
+    [x] 7462.4A SNR=17.6 -> COSMIC_RAY
+
+[11/18] Tile 80960 (3 candidates)
+  Downloading coadd-0-80960-20210424.fits...
+  Analyzing 3 candidates...
+    [?] 5870.4A SNR=19.0 -> AMBIGUOUS
+    [?] 5955.2A SNR=17.5 -> AMBIGUOUS
+    [?] 7278.4A SNR=17.0 -> AMBIGUOUS
+
+[12/18] Tile 80938 (3 candidates)
+  Downloading coadd-0-80938-20210422.fits...
+  Analyzing 3 candidates...
+    [+] 6790.4A SNR=18.9 -> REAL_SIGNAL
+    [?] 6892.8A SNR=18.1 -> AMBIGUOUS
+    [?] 7240.8A SNR=17.2 -> AMBIGUOUS
+
+[13/18] Tile 80959 (2 candidates)
+  Downloading coadd-0-80959-20210424.fits...
+  Analyzing 2 candidates...
+    [?] 5936.0A SNR=18.7 -> AMBIGUOUS
+    [~] 6547.2A SNR=18.5 -> KNOWN_LINE
+
+[14/18] Tile 80730 (1 candidates)
+  Downloading coadd-0-80730-20210322.fits...
+  Analyzing 1 candidates...
+    [x] 5920.0A SNR=17.7 -> COSMIC_RAY
+
+[15/18] Tile 80950 (1 candidates)
+  Downloading coadd-0-80950-20210422.fits...
+  Analyzing 1 candidates...
+    [?] 6330.4A SNR=17.6 -> AMBIGUOUS
+
+[16/18] Tile 80955 (1 candidates)
+  Tile not found
+
+[17/18] Tile 81062 (1 candidates)
+  Downloading coadd-0-81062-20210327.fits...
+  Analyzing 1 candidates...
+    [x] 7060.0A SNR=17.4 -> COSMIC_RAY
+
+[18/18] Tile 80970 (1 candidates)
+  Downloading coadd-0-80970-20210424.fits...
+  Analyzing 1 candidates...
+    [x] 6467.2A SNR=17.1 -> COSMIC_RAY
+
+============================================================
+FORENSICS SUMMARY
+============================================================
+
+Total analyzed (all time): 200
+  AMBIGUOUS: 115
+  COSMIC_RAY: 46
+  TILE_NOT_FOUND: 22
+  REAL_SIGNAL: 13
+  KNOWN_LINE: 4
+
+*** REAL SIGNAL CANDIDATES (13) ***
+  7457.6 A | SNR 20.7
+    RA=163.7517 DEC=78.8192
+    https://www.legacysurvey.org/viewer?ra=163.7517210830479&dec=78.81917331592248&layer=ls-dr9&zoom=16
+  6211.2 A | SNR 26.4
+    RA=194.2124 DEC=73.5832
+    https://www.legacysurvey.org/viewer?ra=194.21237009411112&dec=73.5831945828484&layer=ls-dr9&zoom=16
+  6267.2 A | SNR 22.7
+    RA=180.0127 DEC=74.8306
+    https://www.legacysurvey.org/viewer?ra=180.01271177720298&dec=74.83064747420669&layer=ls-dr9&zoom=16
+  6432.8 A | SNR 23.3
+    RA=210.9240 DEC=68.7387
+    https://www.legacysurvey.org/viewer?ra=210.9240298165628&dec=68.73869018340926&layer=ls-dr9&zoom=16
+  5916.8 A | SNR 21.8
+    RA=224.7526 DEC=68.7860
+    https://www.legacysurvey.org/viewer?ra=224.75257026941168&dec=68.78597145646135&layer=ls-dr9&zoom=16
+  5960.0 A | SNR 21.1
+    RA=180.5975 DEC=78.5682
+    https://www.legacysurvey.org/viewer?ra=180.5975281006096&dec=78.56815575049626&layer=ls-dr9&zoom=16
+  6935.2 A | SNR 20.0
+    RA=179.7136 DEC=74.3061
+    https://www.legacysurvey.org/viewer?ra=179.71359101896263&dec=74.30608201776224&layer=ls-dr9&zoom=16
+  6681.6 A | SNR 20.3
+    RA=194.6152 DEC=73.4621
+    https://www.legacysurvey.org/viewer?ra=194.6152406113431&dec=73.46209881603902&layer=ls-dr9&zoom=16
+  6247.2 A | SNR 18.2
+    RA=194.8851 DEC=73.4644
+    https://www.legacysurvey.org/viewer?ra=194.88506446704864&dec=73.46441909636025&layer=ls-dr9&zoom=16
+  7092.8 A | SNR 18.0
+    RA=211.1864 DEC=78.9986
+    https://www.legacysurvey.org/viewer?ra=211.18640178601703&dec=78.99861321154997&layer=ls-dr9&zoom=16
+  7595.2 A | SNR 17.7
+    RA=209.5024 DEC=79.1203
+    https://www.legacysurvey.org/viewer?ra=209.502418565018&dec=79.12033985693608&layer=ls-dr9&zoom=16
+  5867.2 A | SNR 17.0
+    RA=209.7844 DEC=78.7974
+    https://www.legacysurvey.org/viewer?ra=209.78439248522588&dec=78.79741829613367&layer=ls-dr9&zoom=16
+  6790.4 A | SNR 18.9
+    RA=120.4603 DEC=69.0112
+    https://www.legacysurvey.org/viewer?ra=120.46029161153116&dec=69.01118810654755&layer=ls-dr9&zoom=16
+
+*** AMBIGUOUS (115) ***
+  6132.0 A | SNR 79.3 | Intermediate (w1=0.33, w2=0.01)
+  7583.2 A | SNR 30.8 | Intermediate (w1=0.24, w2=0.19)
+  7424.0 A | SNR 30.2 | Intermediate (w1=0.51, w2=-0.02)
+  6917.6 A | SNR 28.8 | Intermediate (w1=0.35, w2=-0.14)
+  7427.2 A | SNR 28.3 | Intermediate (w1=0.27, w2=-0.00)
+  6042.4 A | SNR 27.2 | Intermediate (w1=0.35, w2=-0.10)
+  5977.6 A | SNR 26.7 | Intermediate (w1=0.38, w2=-0.03)
+  6932.0 A | SNR 25.4 | Intermediate (w1=0.37, w2=-0.11)
+  6026.4 A | SNR 25.3 | Intermediate (w1=0.33, w2=-0.03)
+  7437.6 A | SNR 24.8 | Intermediate (w1=0.43, w2=-0.03)
+  5916.8 A | SNR 47.2 | Intermediate (w1=0.30, w2=0.03)
+  5879.2 A | SNR 42.2 | Intermediate (w1=0.19, w2=-0.01)
+  6764.8 A | SNR 34.7 | Intermediate (w1=0.33, w2=-0.08)
+  7530.4 A | SNR 26.0 | Intermediate (w1=0.27, w2=-0.02)
+  6447.2 A | SNR 25.0 | Intermediate (w1=0.19, w2=-0.02)
+  6115.2 A | SNR 23.1 | Intermediate (w1=0.15, w2=-0.07)
+  5816.0 A | SNR 22.7 | Intermediate (w1=0.44, w2=0.03)
+  5804.0 A | SNR 22.4 | Intermediate (w1=0.44, w2=-0.04)
+  7194.4 A | SNR 21.4 | Intermediate (w1=0.15, w2=-0.09)
+  5976.8 A | SNR 34.2 | Intermediate (w1=0.36, w2=-0.03)
+  7149.6 A | SNR 33.5 | Intermediate (w1=0.17, w2=-0.09)
+  5969.6 A | SNR 29.2 | Intermediate (w1=0.44, w2=-0.06)
+  7006.4 A | SNR 27.1 | Intermediate (w1=0.27, w2=-0.05)
+  6248.0 A | SNR 25.7 | Intermediate (w1=0.22, w2=-0.01)
+  7440.8 A | SNR 24.7 | Intermediate (w1=0.38, w2=-0.04)
+  7005.6 A | SNR 23.5 | Intermediate (w1=0.28, w2=-0.03)
+  6540.8 A | SNR 23.3 | Intermediate (w1=0.21, w2=-0.10)
+  6031.2 A | SNR 23.2 | Intermediate (w1=0.61, w2=-0.06)
+  7149.6 A | SNR 22.7 | Intermediate (w1=0.29, w2=-0.09)
+  6504.0 A | SNR 22.5 | Intermediate (w1=0.42, w2=-0.06)
+  6844.0 A | SNR 22.2 | Intermediate (w1=0.24, w2=-0.05)
+  6788.8 A | SNR 22.2 | Intermediate (w1=0.21, w2=-0.10)
+  7161.6 A | SNR 21.8 | Intermediate (w1=0.27, w2=-0.04)
+  7132.8 A | SNR 21.7 | Intermediate (w1=0.21, w2=-0.07)
+  7204.0 A | SNR 21.5 | Intermediate (w1=0.34, w2=-0.13)
+  5815.2 A | SNR 21.4 | Intermediate (w1=0.24, w2=-0.01)
+  7150.4 A | SNR 21.2 | Intermediate (w1=0.43, w2=0.03)
+  7008.0 A | SNR 21.1 | Intermediate (w1=0.45, w2=0.02)
+  6028.8 A | SNR 33.4 | Intermediate (w1=0.21, w2=-0.06)
+  6621.6 A | SNR 32.5 | Intermediate (w1=0.16, w2=-0.08)
+  6003.2 A | SNR 31.2 | Intermediate (w1=0.28, w2=-0.05)
+  7036.8 A | SNR 24.7 | Intermediate (w1=0.24, w2=-0.06)
+  7328.8 A | SNR 23.8 | Intermediate (w1=0.42, w2=-0.06)
+  6664.8 A | SNR 22.9 | Intermediate (w1=0.47, w2=-0.05)
+  6055.2 A | SNR 21.7 | Intermediate (w1=0.21, w2=-0.05)
+  6446.4 A | SNR 21.2 | Intermediate (w1=0.25, w2=-0.08)
+  7196.0 A | SNR 20.9 | Intermediate (w1=0.20, w2=-0.06)
+  6045.6 A | SNR 31.5 | Intermediate (w1=0.18, w2=-0.04)
+  6471.2 A | SNR 27.9 | Intermediate (w1=0.16, w2=-0.06)
+  5940.8 A | SNR 24.2 | Intermediate (w1=0.24, w2=-0.11)
+  6349.6 A | SNR 27.2 | Intermediate (w1=0.25, w2=-0.05)
+  7032.0 A | SNR 27.1 | Intermediate (w1=0.23, w2=-0.05)
+  6062.4 A | SNR 25.2 | Intermediate (w1=0.19, w2=-0.08)
+  6345.6 A | SNR 23.4 | Intermediate (w1=0.24, w2=-0.06)
+  6816.8 A | SNR 22.2 | Intermediate (w1=0.22, w2=-0.06)
+  6112.8 A | SNR 21.9 | Intermediate (w1=0.37, w2=-0.07)
+  6491.2 A | SNR 21.4 | Intermediate (w1=0.34, w2=-0.05)
+  5964.8 A | SNR 21.3 | Intermediate (w1=0.20, w2=-0.03)
+  7136.0 A | SNR 23.6 | Intermediate (w1=0.17, w2=-0.06)
+  5982.4 A | SNR 23.3 | Intermediate (w1=0.37, w2=-0.04)
+  6111.2 A | SNR 20.3 | Intermediate (w1=0.46, w2=-0.03)
+  6820.0 A | SNR 20.3 | Intermediate (w1=0.32, w2=-0.03)
+  7276.8 A | SNR 19.0 | Intermediate (w1=0.32, w2=-0.06)
+  7412.8 A | SNR 18.8 | Intermediate (w1=0.20, w2=-0.02)
+  7269.6 A | SNR 18.7 | Intermediate (w1=0.22, w2=-0.07)
+  6591.2 A | SNR 18.4 | Intermediate (w1=0.49, w2=-0.06)
+  7017.6 A | SNR 18.3 | Intermediate (w1=0.50, w2=-0.04)
+  7120.8 A | SNR 18.3 | Intermediate (w1=0.26, w2=-0.08)
+  7267.2 A | SNR 17.3 | Intermediate (w1=0.27, w2=-0.06)
+  7036.0 A | SNR 20.5 | Intermediate (w1=0.25, w2=-0.07)
+  6801.6 A | SNR 20.4 | Intermediate (w1=0.36, w2=-0.05)
+  7040.8 A | SNR 20.3 | Intermediate (w1=0.27, w2=-0.04)
+  6212.0 A | SNR 20.1 | Intermediate (w1=0.48, w2=0.00)
+  7359.2 A | SNR 19.8 | Intermediate (w1=0.36, w2=-0.10)
+  6936.8 A | SNR 19.7 | Intermediate (w1=0.37, w2=-0.10)
+  6358.4 A | SNR 19.5 | Intermediate (w1=0.23, w2=-0.02)
+  7023.2 A | SNR 19.2 | Intermediate (w1=0.35, w2=-0.07)
+  7424.0 A | SNR 18.6 | Intermediate (w1=0.22, w2=-0.03)
+  6642.4 A | SNR 18.5 | Intermediate (w1=0.52, w2=0.00)
+  7085.6 A | SNR 17.8 | Intermediate (w1=0.24, w2=-0.10)
+  6136.0 A | SNR 17.2 | Intermediate (w1=0.20, w2=-0.05)
+  6458.4 A | SNR 17.2 | Intermediate (w1=0.59, w2=-0.02)
+  6125.6 A | SNR 20.3 | Intermediate (w1=0.20, w2=0.11)
+  7588.0 A | SNR 20.1 | Intermediate (w1=0.37, w2=-0.03)
+  7244.0 A | SNR 19.9 | Intermediate (w1=0.41, w2=-0.07)
+  5815.2 A | SNR 19.6 | Intermediate (w1=0.29, w2=-0.07)
+  6956.8 A | SNR 19.5 | Intermediate (w1=0.55, w2=-0.02)
+  6001.6 A | SNR 19.2 | Intermediate (w1=0.24, w2=-0.07)
+  6764.0 A | SNR 18.7 | Intermediate (w1=0.21, w2=-0.06)
+  6723.2 A | SNR 18.4 | Intermediate (w1=0.38, w2=-0.08)
+  6368.8 A | SNR 18.1 | Intermediate (w1=0.57, w2=0.04)
+  6920.0 A | SNR 17.8 | Intermediate (w1=0.23, w2=-0.08)
+  7461.6 A | SNR 17.6 | Intermediate (w1=0.29, w2=-0.06)
+  7442.4 A | SNR 17.4 | Intermediate (w1=0.24, w2=-0.15)
+  7228.0 A | SNR 17.4 | Intermediate (w1=0.44, w2=-0.04)
+  5922.4 A | SNR 17.3 | Intermediate (w1=0.34, w2=-0.03)
+  6145.6 A | SNR 17.3 | Intermediate (w1=0.21, w2=-0.04)
+  6448.0 A | SNR 17.2 | Intermediate (w1=0.23, w2=-0.12)
+  7512.0 A | SNR 17.2 | Intermediate (w1=0.22, w2=-0.08)
+  6637.6 A | SNR 17.0 | Intermediate (w1=0.35, w2=-0.02)
+  6322.4 A | SNR 19.8 | Intermediate (w1=0.23, w2=-0.01)
+  5922.4 A | SNR 19.1 | Intermediate (w1=0.23, w2=-0.14)
+  7437.6 A | SNR 17.5 | Intermediate (w1=0.22, w2=-0.10)
+  6410.4 A | SNR 19.6 | Intermediate (w1=0.25, w2=-0.06)
+  6123.2 A | SNR 19.2 | Intermediate (w1=0.44, w2=-0.01)
+  6424.0 A | SNR 18.0 | Intermediate (w1=0.34, w2=-0.06)
+  6431.2 A | SNR 18.0 | Intermediate (w1=0.23, w2=-0.05)
+  6761.6 A | SNR 19.1 | Intermediate (w1=0.22, w2=-0.06)
+  5870.4 A | SNR 19.0 | Intermediate (w1=0.32, w2=-0.01)
+  5955.2 A | SNR 17.5 | Intermediate (w1=0.28, w2=-0.01)
+  7278.4 A | SNR 17.0 | Intermediate (w1=0.21, w2=-0.01)
+  6892.8 A | SNR 18.1 | Intermediate (w1=0.22, w2=-0.10)
+  7240.8 A | SNR 17.2 | Intermediate (w1=0.36, w2=0.01)
+  5936.0 A | SNR 18.7 | Intermediate (w1=0.19, w2=-0.03)
+  6330.4 A | SNR 17.6 | Intermediate (w1=0.17, w2=-0.00)
+
+Results saved to laser_candidates/e9_forensic_results.csv
+
+============================================================
+FORENSICS COMPLETE
+============================================================

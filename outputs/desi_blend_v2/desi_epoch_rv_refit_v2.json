@@ -1,0 +1,87 @@
+{
+  "target_id": 39627745210139276,
+  "gaia_source_id": 3802130935635096832,
+  "file_hashes": {
+    "/home/primary/DESI-BH-CANDIDATE-SEARCH/data/desi_spectra/coadd_20268_20211219_p2.fits": "1f3aefba5e346da249c0daafcf5c23c6c0d74a50ff29bccc9a6b3117c89deb5c",
+    "/home/primary/DESI-BH-CANDIDATE-SEARCH/data/desi_spectra/coadd_24976_20220125_p7.fits": "87af27aa867295eed04580998f5d7b6c54be457a26bc0897b6538a9e52db69bc",
+    "/home/primary/DESI-BH-CANDIDATE-SEARCH/data/desi_spectra/coadd_23137_20220127_p0.fits": "0ee485970c0b14e09a322f90a4103d4fae0f0dab141a050a86c5bb60dbe40aee"
+  },
+  "template_info": {
+    "primary": "PHOENIX M0 (Teff=3800K, logg=4.5)",
+    "neighbor": "PHOENIX M5 (Teff=3000K, logg=5.0)"
+  },
+  "single_template_results": [
+    {
+      "label": "Epoch1",
+      "mjd": 59568.48825,
+      "rv_catalog": -86.39,
+      "rv_fitted": -105.82457052042832,
+      "rv_err": 0.019840222914724908,
+      "amplitude": 0.9629712160218044,
+      "chi2": 114853.36418592854,
+      "chi2_reduced": 43.5050621916396,
+      "dof": 2640
+    },
+    {
+      "label": "Epoch2",
+      "mjd": 59605.38003,
+      "rv_catalog": 59.68,
+      "rv_fitted": 60.931952831700706,
+      "rv_err": 0.037145428207678265,
+      "amplitude": 0.9606701667029245,
+      "chi2": 52973.75778616915,
+      "chi2_reduced": 20.405915942283958,
+      "dof": 2596
+    },
+    {
+      "label": "Epoch3",
+      "mjd": 59607.38,
+      "rv_catalog": 25.8,
+      "rv_fitted": 38.87057857374152,
+      "rv_err": 0.014145091236053984,
+      "amplitude": 0.9659198105226862,
+      "chi2": 69856.59973417252,
+      "chi2_reduced": 26.252010422462426,
+      "dof": 2661
+    }
+  ],
+  "two_template_results": [
+    {
+      "label": "Epoch1",
+      "v1": -131.64382340495325,
+      "v1_err": 0.01833781682131508,
+      "v2": -54.83170493692047,
+      "A": 0.947683978696639,
+      "b": 0.01,
+      "chi2": 123139.30646466943,
+      "chi2_reduced": 46.6790395999505,
+      "delta_bic": 8301.70086171104
+    },
+    {
+      "label": "Epoch2",
+      "v1": 108.39182335708567,
+      "v1_err": 0.038784565156246405,
+      "v2": 68.25422683031387,
+      "A": 0.9456837610453771,
+      "b": 0.01,
+      "chi2": 56891.82246120434,
+      "chi2_reduced": 21.93208267586906,
+      "delta_bic": 3933.7896694296505
+    },
+    {
+      "label": "Epoch3",
+      "v1": 60.833003885189314,
+      "v1_err": 0.030204442474309708,
+      "v2": 29.007150385572494,
+      "A": 0.9529175492916179,
+      "b": 0.01,
+      "chi2": 75459.52628792363,
+      "chi2_reduced": 28.37891172919279,
+      "delta_bic": 5618.700970922728
+    }
+  ],
+  "rv_swing": {
+    "catalog": 146.07,
+    "fitted": 166.75652335212902
+  }
+}

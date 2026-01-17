@@ -1,0 +1,46 @@
+[
+  {
+    "desi_targetid": 39627793289448405,
+    "gaia_id": 3833554806157884928,
+    "period": 0.5,
+    "ztf_data_found": true,
+    "classification": "INSUFFICIENT DATA",
+    "confidence": "N/A",
+    "notes": [
+      "Only 0 total ZTF points"
+    ]
+  },
+  {
+    "desi_targetid": 39627785240582464,
+    "gaia_id": 2507569101891941376,
+    "period": 0.7,
+    "ztf_data_found": true,
+    "classification": "INSUFFICIENT DATA",
+    "confidence": "N/A",
+    "notes": [
+      "Only 0 total ZTF points"
+    ]
+  },
+  {
+    "desi_targetid": 39627743385616469,
+    "gaia_id": 3251124869651250304,
+    "period": 1.1,
+    "ztf_data_found": false,
+    "classification": "NO ZTF DATA",
+    "confidence": "N/A",
+    "notes": [
+      "Target not in ZTF footprint or too faint"
+    ]
+  },
+  {
+    "desi_targetid": 39627842371195432,
+    "gaia_id": 3691992718441759104,
+    "period": 0.5,
+    "ztf_data_found": true,
+    "classification": "INSUFFICIENT DATA",
+    "confidence": "N/A",
+    "notes": [
+      "Only 0 total ZTF points"
+    ]
+  }
+]

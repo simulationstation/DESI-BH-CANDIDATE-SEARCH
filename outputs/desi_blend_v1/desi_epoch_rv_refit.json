@@ -1,0 +1,378 @@
+{
+  "target_id": 39627745210139276,
+  "gaia_source_id": 3802130935635096832,
+  "file_hashes": {
+    "/home/primary/DESI-BH-CANDIDATE-SEARCH/data/desi_spectra/coadd_20268_20211219_p2.fits": "1f3aefba5e346da249c0daafcf5c23c6c0d74a50ff29bccc9a6b3117c89deb5c",
+    "/home/primary/DESI-BH-CANDIDATE-SEARCH/data/desi_spectra/coadd_24976_20220125_p7.fits": "87af27aa867295eed04580998f5d7b6c54be457a26bc0897b6538a9e52db69bc",
+    "/home/primary/DESI-BH-CANDIDATE-SEARCH/data/desi_spectra/coadd_23137_20220127_p0.fits": "0ee485970c0b14e09a322f90a4103d4fae0f0dab141a050a86c5bb60dbe40aee"
+  },
+  "method": "Self-template cross-correlation",
+  "epochs": [
+    {
+      "label": "Epoch1 (MJD 59568)",
+      "mjd": 59568.48825,
+      "rv_catalog": -86.39,
+      "masks": {
+        "TiO-6500": {
+          "rv_relative": -0.02370902913689881,
+          "rv_err": 0.0172508177606241,
+          "fwhm": 64.47557647255144,
+          "fit_quality": "GOOD",
+          "peaks": [
+            {
+              "velocity": -0.02370902913689881,
+              "velocity_err": 0.0172508177606241,
+              "height": 0.9994109917182421,
+              "fwhm": 64.47557647255144,
+              "fit_quality": "GOOD"
+            },
+            {
+              "velocity": 78.00000000000001,
+              "velocity_err": 21.1810554964624,
+              "height": 0.37798442171764834,
+              "fwhm": 70.92995065021245,
+              "fit_quality": "GOOD"
+            }
+          ]
+        },
+        "TiO-7200": {
+          "rv_relative": 0.08227446742065617,
+          "rv_err": 0.01895586224115245,
+          "fwhm": 53.78291562144206,
+          "fit_quality": "GOOD",
+          "peaks": [
+            {
+              "velocity": 0.08227446742065617,
+              "velocity_err": 0.01895586224115245,
+              "height": 0.9995306387839245,
+              "fwhm": 53.78291562144206,
+              "fit_quality": "GOOD"
+            },
+            {
+              "velocity": 58.00000000000001,
+              "velocity_err": 12.793428903811987,
+              "height": 0.6511632189409122,
+              "fwhm": 63.52411830770753,
+              "fit_quality": "GOOD"
+            }
+          ]
+        },
+        "FarRed": {
+          "rv_relative": 0.19054374148322797,
+          "rv_err": 0.021080742286703393,
+          "fwhm": 50.157077820902146,
+          "fit_quality": "GOOD",
+          "peaks": [
+            {
+              "velocity": 0.19054374148322797,
+              "velocity_err": 0.021080742286703393,
+              "height": 0.9986406051294885,
+              "fwhm": 50.157077820902146,
+              "fit_quality": "GOOD"
+            },
+            {
+              "velocity": 177.0837465932808,
+              "velocity_err": 0.3895200605048397,
+              "height": 0.15645056624467468,
+              "fwhm": 288.8140035655303,
+              "fit_quality": "BROAD"
+            },
+            {
+              "velocity": 125.76277766474728,
+              "velocity_err": 3.133461441975645,
+              "height": 0.17275122667393278,
+              "fwhm": 16.62346467356839,
+              "fit_quality": "GOOD"
+            }
+          ]
+        },
+        "Combined": {
+          "rv_relative": -0.0178519129239483,
+          "rv_err": 0.013121725250325808,
+          "fwhm": 154.50293242562634,
+          "fit_quality": "BROAD",
+          "peaks": [
+            {
+              "velocity": -0.0178519129239483,
+              "velocity_err": 0.013121725250325808,
+              "height": 1.0014134253649256,
+              "fwhm": 154.50293242562634,
+              "fit_quality": "BROAD"
+            },
+            {
+              "velocity": 30.000000000000004,
+              "velocity_err": 20.42838655423892,
+              "height": 0.7848911775667141,
+              "fwhm": 54.14208496133246,
+              "fit_quality": "GOOD"
+            },
+            {
+              "velocity": -29.000000000000004,
+              "velocity_err": 21.44593555722926,
+              "height": 0.7711388786409488,
+              "fwhm": 61.69798537593828,
+              "fit_quality": "GOOD"
+            }
+          ]
+        }
+      },
+      "rv_mean_relative": 0.057814316710759255,
+      "rv_scatter": 0.08744545928536036,
+      "mask_consistency": "GOOD"
+    },
+    {
+      "label": "Epoch2 (MJD 59605)",
+      "mjd": 59605.38003,
+      "rv_catalog": 59.68,
+      "masks": {
+        "TiO-6500": {
+          "rv_relative": 11.13380422218664,
+          "rv_err": 0.052509443996299324,
+          "fwhm": 131.54278954339216,
+          "fit_quality": "GOOD",
+          "peaks": [
+            {
+              "velocity": 11.13380422218664,
+              "velocity_err": 0.052509443996299324,
+              "height": 0.5690640342805379,
+              "fwhm": 131.54278954339216,
+              "fit_quality": "GOOD"
+            },
+            {
+              "velocity": -144.73892424881333,
+              "velocity_err": 0.09122313456977386,
+              "height": 0.5188953683451334,
+              "fwhm": 143.83380905916283,
+              "fit_quality": "GOOD"
+            },
+            {
+              "velocity": -44.823820833485335,
+              "velocity_err": 6.908570579661051,
+              "height": 0.43743847378396256,
+              "fwhm": 16.269701797651663,
+              "fit_quality": "GOOD"
+            }
+          ]
+        },
+        "TiO-7200": {
+          "rv_relative": -124.09680947766243,
+          "rv_err": 0.14847794214173438,
+          "fwhm": 91.25945088531466,
+          "fit_quality": "GOOD",
+          "peaks": [
+            {
+              "velocity": -124.09680947766243,
+              "velocity_err": 0.14847794214173438,
+              "height": 0.38493648691314897,
+              "fwhm": 91.25945088531466,
+              "fit_quality": "GOOD"
+            },
+            {
+              "velocity": 18.24761523741945,
+              "velocity_err": 0.4482299334234503,
+              "height": 0.3789455431812079,
+              "fwhm": 470.99996446800867,
+              "fit_quality": "BROAD"
+            },
+            {
+              "velocity": -31.31052234497461,
+              "velocity_err": 0.6345937590822466,
+              "height": 0.3736225548048703,
+              "fwhm": 470.99976368414127,
+              "fit_quality": "BROAD"
+            }
+          ]
+        },
+        "FarRed": {
+          "rv_relative": -7.041411505405124,
+          "rv_err": 0.26245705393075197,
+          "fwhm": 470.9999798088872,
+          "fit_quality": "BROAD",
+          "peaks": [
+            {
+              "velocity": -7.041411505405124,
+              "velocity_err": 0.26245705393075197,
+              "height": 0.24301883016962156,
+              "fwhm": 470.9999798088872,
+              "fit_quality": "BROAD"
+            },
+            {
+              "velocity": -139.1557783299309,
+              "velocity_err": 0.25010778862968575,
+              "height": 0.1842599780394144,
+              "fwhm": 291.4690994394092,
+              "fit_quality": "BROAD"
+            },
+            {
+              "velocity": -74.6197017089401,
+              "velocity_err": 4.841907645566376,
+              "height": 0.18203732549871723,
+              "fwhm": 19.228147897450224,
+              "fit_quality": "GOOD"
+            }
+          ]
+        },
+        "Combined": {
+          "rv_relative": 6.942830187805609,
+          "rv_err": 1.4102112834000176,
+          "fwhm": 140.69831777563274,
+          "fit_quality": "GOOD",
+          "peaks": [
+            {
+              "velocity": 6.942830187805609,
+              "velocity_err": 1.4102112834000176,
+              "height": 0.47376700667121,
+              "fwhm": 140.69831777563274,
+              "fit_quality": "GOOD"
+            },
+            {
+              "velocity": -142.9222690360774,
+              "velocity_err": 1.1149641107487567,
+              "height": 0.46973163597210854,
+              "fwhm": 333.43116373530813,
+              "fit_quality": "BROAD"
+            },
+            {
+              "velocity": 11.432873271861235,
+              "velocity_err": 7.6129056234655925,
+              "height": 0.47453758670952906,
+              "fwhm": 445.2771898955432,
+              "fit_quality": "BROAD"
+            }
+          ]
+        }
+      },
+      "rv_mean_relative": -28.265396643268826,
+      "rv_scatter": 55.73605990827019,
+      "mask_consistency": "POOR"
+    },
+    {
+      "label": "Epoch3 (MJD 59607, coadd)",
+      "mjd": 59607.38,
+      "rv_catalog": 25.8,
+      "masks": {
+        "TiO-6500": {
+          "rv_relative": -76.65447566340414,
+          "rv_err": 0.6228850064770718,
+          "fwhm": 470.99973746555924,
+          "fit_quality": "BROAD",
+          "peaks": [
+            {
+              "velocity": -76.65447566340414,
+              "velocity_err": 0.6228850064770718,
+              "height": 0.5824330568357983,
+              "fwhm": 470.99973746555924,
+              "fit_quality": "BROAD"
+            },
+            {
+              "velocity": -83.46223713016379,
+              "velocity_err": 5.220289818405683,
+              "height": 0.5817586158053664,
+              "fwhm": 74.65974892228175,
+              "fit_quality": "GOOD"
+            },
+            {
+              "velocity": -61.151149705973964,
+              "velocity_err": 5.907816644917209,
+              "height": 0.5785113532070869,
+              "fwhm": 470.99999295711746,
+              "fit_quality": "BROAD"
+            }
+          ]
+        },
+        "TiO-7200": {
+          "rv_relative": -31.029830350496653,
+          "rv_err": 0.1543127690341656,
+          "fwhm": 55.609689663339914,
+          "fit_quality": "GOOD",
+          "peaks": [
+            {
+              "velocity": -31.029830350496653,
+              "velocity_err": 0.1543127690341656,
+              "height": 0.6375866334231711,
+              "fwhm": 55.609689663339914,
+              "fit_quality": "GOOD"
+            },
+            {
+              "velocity": 54.255737163862186,
+              "velocity_err": 0.257760938443788,
+              "height": 0.6128841953843399,
+              "fwhm": 470.97878955200764,
+              "fit_quality": "BROAD"
+            },
+            {
+              "velocity": 48.25554047242222,
+              "velocity_err": 4.251310802684505,
+              "height": 0.6113245131051905,
+              "fwhm": 18.892925570747337,
+              "fit_quality": "GOOD"
+            }
+          ]
+        },
+        "FarRed": {
+          "rv_relative": -10.041002054225237,
+          "rv_err": 0.13263149508289723,
+          "fwhm": 89.29349153204008,
+          "fit_quality": "GOOD",
+          "peaks": [
+            {
+              "velocity": -10.041002054225237,
+              "velocity_err": 0.13263149508289723,
+              "height": 0.30127539859542984,
+              "fwhm": 89.29349153204008,
+              "fit_quality": "GOOD"
+            },
+            {
+              "velocity": -140.6705908630814,
+              "velocity_err": 0.711163414923517,
+              "height": 0.1955431485299971,
+              "fwhm": 470.9995597103118,
+              "fit_quality": "BROAD"
+            },
+            {
+              "velocity": -140.43667189256388,
+              "velocity_err": 1.6030305813637689,
+              "height": 0.194745210066327,
+              "fwhm": 43.084301195789564,
+              "fit_quality": "GOOD"
+            }
+          ]
+        },
+        "Combined": {
+          "rv_relative": -51.570187283968544,
+          "rv_err": 0.810626770587832,
+          "fwhm": 13.796412591901989,
+          "fit_quality": "GOOD",
+          "peaks": [
+            {
+              "velocity": -51.570187283968544,
+              "velocity_err": 0.810626770587832,
+              "height": 0.6179302980596103,
+              "fwhm": 13.796412591901989,
+              "fit_quality": "GOOD"
+            },
+            {
+              "velocity": -73.8236501057395,
+              "velocity_err": 4.945409172074382,
+              "height": 0.5987272925894462,
+              "fwhm": 63.63535243546189,
+              "fit_quality": "GOOD"
+            },
+            {
+              "velocity": -40.76921993725005,
+              "velocity_err": 16.508783580657404,
+              "height": 0.6004461797240308,
+              "fwhm": 470.99999999999994,
+              "fit_quality": "BROAD"
+            }
+          ]
+        }
+      },
+      "rv_mean_relative": -42.323873838023644,
+      "rv_scatter": 24.666899698486624,
+      "mask_consistency": "POOR"
+    }
+  ],
+  "rv_swing_catalog": 146.07,
+  "rv_swing_measured": 42.381688154734405
+}

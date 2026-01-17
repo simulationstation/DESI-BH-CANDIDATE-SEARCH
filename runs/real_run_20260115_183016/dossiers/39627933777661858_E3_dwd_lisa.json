@@ -1,0 +1,16 @@
+{
+  "targetid": 39627933777661858,
+  "experiment": "E3_dwd_lisa",
+  "ra": 0.0,
+  "dec": 0.0,
+  "n_epochs": 5,
+  "delta_rv": 264.0161841338561,
+  "best_period": 2.97138551090938,
+  "best_K": 497.5318777657743,
+  "m2_min": 38.70384511007433,
+  "physics_score": 0.70836300617324,
+  "total_score": 0.7466785358026294,
+  "is_pathological": false,
+  "pathology_reasons": [],
+  "notes": "Basic dossier - full MCMC not run"
+}

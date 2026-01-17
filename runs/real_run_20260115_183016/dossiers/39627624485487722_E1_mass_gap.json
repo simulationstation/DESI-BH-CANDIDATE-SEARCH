@@ -1,0 +1,16 @@
+{
+  "targetid": 39627624485487722,
+  "experiment": "E1_mass_gap",
+  "ra": 0.0,
+  "dec": 0.0,
+  "n_epochs": 7,
+  "delta_rv": 58.70549733301581,
+  "best_period": 32.4757822794142,
+  "best_K": 128.19085247277314,
+  "m2_min": 8.939785071259884,
+  "physics_score": 0.5475571662962632,
+  "total_score": 0.7290228665185052,
+  "is_pathological": false,
+  "pathology_reasons": [],
+  "notes": "Basic dossier - full MCMC not run"
+}

@@ -1,0 +1,72 @@
+[
+  {
+    "desi_targetid": 39627793289448405,
+    "gaia_id": 3833554806157884928,
+    "ra": 150.370905,
+    "dec": 0.183262,
+    "period": 0.5,
+    "ztf_data_found": true,
+    "total_points": 763,
+    "max_amplitude": 1.226795349999998,
+    "classification": "FALSE POSITIVE - Contact Binary",
+    "confidence": "High",
+    "notes": [
+      "Large amplitude variation: 1.23 mag",
+      "W UMa-type contact binary signature",
+      "REJECT: This is a stellar binary, not a dark companion",
+      "CAUTION: Period (0.5d) near 1-day alias"
+    ]
+  },
+  {
+    "desi_targetid": 39627785240582464,
+    "gaia_id": 2507569101891941376,
+    "ra": 30.691535,
+    "dec": -0.000485,
+    "period": 0.7,
+    "ztf_data_found": true,
+    "total_points": 970,
+    "max_amplitude": 1.0004804699999994,
+    "classification": "FALSE POSITIVE - Contact Binary",
+    "confidence": "High",
+    "notes": [
+      "Large amplitude variation: 1.00 mag",
+      "W UMa-type contact binary signature",
+      "REJECT: This is a stellar binary, not a dark companion"
+    ]
+  },
+  {
+    "desi_targetid": 39627743385616469,
+    "gaia_id": 3251124869651250304,
+    "ra": 55.751012,
+    "dec": -1.852596,
+    "period": 1.1,
+    "ztf_data_found": true,
+    "total_points": 835,
+    "max_amplitude": 0.25917240000000064,
+    "classification": "LIKELY FALSE POSITIVE - Eclipsing Binary",
+    "confidence": "Medium-High",
+    "notes": [
+      "Significant amplitude: 0.26 mag",
+      "Deep eclipses suggest stellar companion",
+      "Likely REJECT: Probably stellar binary"
+    ]
+  },
+  {
+    "desi_targetid": 39627842371195432,
+    "gaia_id": 3691992718441759104,
+    "ra": 195.961529,
+    "dec": 2.206382,
+    "period": 0.5,
+    "ztf_data_found": true,
+    "total_points": 766,
+    "max_amplitude": 0.06929910999999933,
+    "classification": "CANDIDATE - Possible Ellipsoidal",
+    "confidence": "Medium",
+    "notes": [
+      "Small amplitude: 0.069 mag",
+      "Could be ellipsoidal variation from tidal distortion",
+      "VALID with caution: Consistent with BD companion causing tidal distortion",
+      "CAUTION: Period (0.5d) near 1-day alias"
+    ]
+  }
+]
