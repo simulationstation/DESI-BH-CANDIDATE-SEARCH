@@ -1008,6 +1008,19 @@ DESI DR1 MWS per-epoch RV files:
 
 Download from: https://data.desi.lbl.gov/public/dr1/
 
+### Large data not included in this repository
+
+The core M-dwarf dark companion analysis depends on data products that are too large to store here (~8.8 GB total). You will need to obtain and place them locally before running the full pipeline:
+
+| Data | Approx. Size | How to Obtain |
+|------|--------------|---------------|
+| DESI raw RV files | 8.1 GB | Download `rvpix_exp-main-bright.fits` and `rvpix_exp-main-dark.fits` from https://data.desi.lbl.gov/public/dr1/ |
+| DESI spectra (target cutouts/coadds) | 640 MB | Retrieve target spectra from the DESI DR1 public data release (same site as above) |
+| PHOENIX templates | 60 MB | Download PHOENIX-ACES templates used by blend-aware RV fitting (see `scripts/desi_blend_aware_rv_v2.py` and `scripts/desi_blend_aware_rv_v4.py`) |
+| Everything else | < 3 MB | Included in this repository |
+
+If you are reviewing results only, you can inspect the JSON outputs and reports in `outputs/` without downloading the large raw data files.
+
 ---
 
 ## Limitations
