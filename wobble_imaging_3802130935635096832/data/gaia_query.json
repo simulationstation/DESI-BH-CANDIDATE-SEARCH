@@ -1,0 +1,53 @@
+{
+  "target": {
+    "source_id": 3802130935635096832,
+    "ra": 164.52349428314767,
+    "dec": -1.6601557742314024,
+    "parallax": 0.11894892049256606,
+    "parallax_error": 0.15998485684394836,
+    "pmra": -7.600405795077815,
+    "pmra_error": 0.17056076228618622,
+    "pmdec": 3.004263705149674,
+    "pmdec_error": 0.1349898725748062,
+    "phot_g_mean_mag": 17.272504806518555,
+    "phot_bp_mean_mag": 18.087648391723633,
+    "phot_rp_mean_mag": 16.199726104736328,
+    "ruwe": 1.9535599946975708,
+    "astrometric_excess_noise": 0.89570552110672,
+    "astrometric_excess_noise_sig": 16.493242263793945,
+    "ipd_gof_harmonic_amplitude": 0.06213189661502838,
+    "ipd_frac_multi_peak": 8.0,
+    "non_single_star": 0,
+    "rv_amplitude_robust": null,
+    "rv_nb_transits": null
+  },
+  "neighbors": [
+    {
+      "source_id": 3802130935634233472,
+      "ra": 164.5234497904232,
+      "dec": -1.6599700894078402,
+      "phot_g_mean_mag": 19.48349380493164,
+      "pmra": null,
+      "pmdec": null,
+      "parallax": null
+    },
+    {
+      "source_id": 3802130965699349248,
+      "ra": 164.5292955519731,
+      "dec": -1.6570601584154447,
+      "phot_g_mean_mag": 20.464067459106445,
+      "pmra": 2.7816423617842254,
+      "pmdec": -2.8393915684924917,
+      "parallax": -0.031044531241793065
+    },
+    {
+      "source_id": 3802130931340663680,
+      "ra": 164.52623871895818,
+      "dec": -1.6584708258397647,
+      "phot_g_mean_mag": 20.910364151000977,
+      "pmra": null,
+      "pmdec": null,
+      "parallax": null
+    }
+  ]
+}

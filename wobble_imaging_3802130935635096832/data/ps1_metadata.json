@@ -1,0 +1,502 @@
+[
+  {
+    "index": 0,
+    "filename": "/rings.v3.skycell/1273/053/rings.v3.skycell.1273.053.wrp.g.55242_40691.fits",
+    "local": "/home/primary/DESI-BH-CANDIDATE-SEARCH/wobble_imaging_3802130935635096832/data/ps1_images/cutout_000.fits",
+    "mjd": 55242.4073060268,
+    "filter": "g.00000",
+    "exptime": 52.0,
+    "seeing": null,
+    "date": "2010-02-15 09:46:31.241"
+  },
+  {
+    "index": 1,
+    "filename": "/rings.v3.skycell/1273/053/rings.v3.skycell.1273.053.wrp.g.55242_41597.fits",
+    "local": "/home/primary/DESI-BH-CANDIDATE-SEARCH/wobble_imaging_3802130935635096832/data/ps1_images/cutout_001.fits",
+    "mjd": 55242.4163687326,
+    "filter": "g.00000",
+    "exptime": 52.0,
+    "seeing": null,
+    "date": "2010-02-15 09:59:34.258"
+  },
+  {
+    "index": 14,
+    "filename": "/rings.v3.skycell/1273/053/rings.v3.skycell.1273.053.wrp.i.55251_35551.fits",
+    "local": "/home/primary/DESI-BH-CANDIDATE-SEARCH/wobble_imaging_3802130935635096832/data/ps1_images/cutout_014.fits",
+    "mjd": 55251.3559065679,
+    "filter": "i.00000",
+    "exptime": 32.0,
+    "seeing": null,
+    "date": "2010-02-24 08:32:30.327"
+  },
+  {
+    "index": 15,
+    "filename": "/rings.v3.skycell/1273/053/rings.v3.skycell.1273.053.wrp.i.55251_36469.fits",
+    "local": "/home/primary/DESI-BH-CANDIDATE-SEARCH/wobble_imaging_3802130935635096832/data/ps1_images/cutout_015.fits",
+    "mjd": 55251.3650826854,
+    "filter": "i.00000",
+    "exptime": 32.0,
+    "seeing": null,
+    "date": "2010-02-24 08:45:43.144"
+  },
+  {
+    "index": 16,
+    "filename": "/rings.v3.skycell/1273/053/rings.v3.skycell.1273.053.wrp.i.55267_44101.fits",
+    "local": "/home/primary/DESI-BH-CANDIDATE-SEARCH/wobble_imaging_3802130935635096832/data/ps1_images/cutout_016.fits",
+    "mjd": 55267.4414118817,
+    "filter": "i.00000",
+    "exptime": 32.0,
+    "seeing": null,
+    "date": "2010-03-12 10:35:37.987"
+  },
+  {
+    "index": 17,
+    "filename": "/rings.v3.skycell/1273/053/rings.v3.skycell.1273.053.wrp.i.55267_44972.fits",
+    "local": "/home/primary/DESI-BH-CANDIDATE-SEARCH/wobble_imaging_3802130935635096832/data/ps1_images/cutout_017.fits",
+    "mjd": 55267.4501205026,
+    "filter": "i.00000",
+    "exptime": 32.0,
+    "seeing": null,
+    "date": "2010-03-12 10:48:10.411"
+  },
+  {
+    "index": 2,
+    "filename": "/rings.v3.skycell/1273/053/rings.v3.skycell.1273.053.wrp.g.55272_46895.fits",
+    "local": "/home/primary/DESI-BH-CANDIDATE-SEARCH/wobble_imaging_3802130935635096832/data/ps1_images/cutout_002.fits",
+    "mjd": 55272.4693404096,
+    "filter": "g.00000",
+    "exptime": 52.0,
+    "seeing": null,
+    "date": "2010-03-17 11:15:51.011"
+  },
+  {
+    "index": 3,
+    "filename": "/rings.v3.skycell/1273/053/rings.v3.skycell.1273.053.wrp.g.55272_47892.fits",
+    "local": "/home/primary/DESI-BH-CANDIDATE-SEARCH/wobble_imaging_3802130935635096832/data/ps1_images/cutout_003.fits",
+    "mjd": 55272.4793192982,
+    "filter": "g.00000",
+    "exptime": 52.0,
+    "seeing": null,
+    "date": "2010-03-17 11:30:13.187"
+  },
+  {
+    "index": 4,
+    "filename": "/rings.v3.skycell/1273/053/rings.v3.skycell.1273.053.wrp.g.55629_52936.fits",
+    "local": "/home/primary/DESI-BH-CANDIDATE-SEARCH/wobble_imaging_3802130935635096832/data/ps1_images/cutout_004.fits",
+    "mjd": 55629.5297679403,
+    "filter": "g.00000",
+    "exptime": 43.0,
+    "seeing": null,
+    "date": "2011-03-09 12:42:51.950"
+  },
+  {
+    "index": 5,
+    "filename": "/rings.v3.skycell/1273/053/rings.v3.skycell.1273.053.wrp.g.55629_54034.fits",
+    "local": "/home/primary/DESI-BH-CANDIDATE-SEARCH/wobble_imaging_3802130935635096832/data/ps1_images/cutout_005.fits",
+    "mjd": 55629.5407310091,
+    "filter": "g.00000",
+    "exptime": 43.0,
+    "seeing": null,
+    "date": "2011-03-09 12:58:39.159"
+  },
+  {
+    "index": 18,
+    "filename": "/rings.v3.skycell/1273/053/rings.v3.skycell.1273.053.wrp.i.55630_45331.fits",
+    "local": "/home/primary/DESI-BH-CANDIDATE-SEARCH/wobble_imaging_3802130935635096832/data/ps1_images/cutout_018.fits",
+    "mjd": 55630.4537048154,
+    "filter": "i.00000",
+    "exptime": 45.0,
+    "seeing": null,
+    "date": "2011-03-10 10:53:20.096"
+  },
+  {
+    "index": 19,
+    "filename": "/rings.v3.skycell/1273/053/rings.v3.skycell.1273.053.wrp.i.55630_46477.fits",
+    "local": "/home/primary/DESI-BH-CANDIDATE-SEARCH/wobble_imaging_3802130935635096832/data/ps1_images/cutout_019.fits",
+    "mjd": 55630.4651629054,
+    "filter": "i.00000",
+    "exptime": 45.0,
+    "seeing": null,
+    "date": "2011-03-10 11:09:50.075"
+  },
+  {
+    "index": 20,
+    "filename": "/rings.v3.skycell/1273/053/rings.v3.skycell.1273.053.wrp.i.55972_52975.fits",
+    "local": "/home/primary/DESI-BH-CANDIDATE-SEARCH/wobble_imaging_3802130935635096832/data/ps1_images/cutout_020.fits",
+    "mjd": 55972.530146063,
+    "filter": "i.00000",
+    "exptime": 45.0,
+    "seeing": null,
+    "date": "2012-02-15 12:43:24.620"
+  },
+  {
+    "index": 21,
+    "filename": "/rings.v3.skycell/1273/053/rings.v3.skycell.1273.053.wrp.i.55972_54258.fits",
+    "local": "/home/primary/DESI-BH-CANDIDATE-SEARCH/wobble_imaging_3802130935635096832/data/ps1_images/cutout_021.fits",
+    "mjd": 55972.5429805476,
+    "filter": "i.00000",
+    "exptime": 45.0,
+    "seeing": null,
+    "date": "2012-02-15 13:01:53.519"
+  },
+  {
+    "index": 6,
+    "filename": "/rings.v3.skycell/1273/053/rings.v3.skycell.1273.053.wrp.g.55983_49229.fits",
+    "local": "/home/primary/DESI-BH-CANDIDATE-SEARCH/wobble_imaging_3802130935635096832/data/ps1_images/cutout_006.fits",
+    "mjd": 55983.4926916076,
+    "filter": "g.00000",
+    "exptime": 43.0,
+    "seeing": null,
+    "date": "2012-02-26 11:49:28.555"
+  },
+  {
+    "index": 7,
+    "filename": "/rings.v3.skycell/1273/053/rings.v3.skycell.1273.053.wrp.g.55983_50450.fits",
+    "local": "/home/primary/DESI-BH-CANDIDATE-SEARCH/wobble_imaging_3802130935635096832/data/ps1_images/cutout_007.fits",
+    "mjd": 55983.5049011442,
+    "filter": "g.00000",
+    "exptime": 43.0,
+    "seeing": null,
+    "date": "2012-02-26 12:07:03.459"
+  },
+  {
+    "index": 8,
+    "filename": "/rings.v3.skycell/1273/053/rings.v3.skycell.1273.053.wrp.g.56029_26902.fits",
+    "local": "/home/primary/DESI-BH-CANDIDATE-SEARCH/wobble_imaging_3802130935635096832/data/ps1_images/cutout_008.fits",
+    "mjd": 56029.2694212043,
+    "filter": "g.00000",
+    "exptime": 43.0,
+    "seeing": null,
+    "date": "2012-04-12 06:27:57.992"
+  },
+  {
+    "index": 9,
+    "filename": "/rings.v3.skycell/1273/053/rings.v3.skycell.1273.053.wrp.g.56029_28076.fits",
+    "local": "/home/primary/DESI-BH-CANDIDATE-SEARCH/wobble_imaging_3802130935635096832/data/ps1_images/cutout_009.fits",
+    "mjd": 56029.2811671704,
+    "filter": "g.00000",
+    "exptime": 43.0,
+    "seeing": null,
+    "date": "2012-04-12 06:44:52.844"
+  },
+  {
+    "index": 22,
+    "filename": "/rings.v3.skycell/1273/053/rings.v3.skycell.1273.053.wrp.i.56326_56865.fits",
+    "local": "/home/primary/DESI-BH-CANDIDATE-SEARCH/wobble_imaging_3802130935635096832/data/ps1_images/cutout_022.fits",
+    "mjd": 56326.5690555587,
+    "filter": "i.00000",
+    "exptime": 45.0,
+    "seeing": null,
+    "date": "2013-02-03 13:39:26.400"
+  },
+  {
+    "index": 23,
+    "filename": "/rings.v3.skycell/1273/053/rings.v3.skycell.1273.053.wrp.i.56326_57081.fits",
+    "local": "/home/primary/DESI-BH-CANDIDATE-SEARCH/wobble_imaging_3802130935635096832/data/ps1_images/cutout_023.fits",
+    "mjd": 56326.5712262639,
+    "filter": "i.00000",
+    "exptime": 45.0,
+    "seeing": null,
+    "date": "2013-02-03 13:42:33.949"
+  },
+  {
+    "index": 24,
+    "filename": "/rings.v3.skycell/1273/053/rings.v3.skycell.1273.053.wrp.i.56326_58104.fits",
+    "local": "/home/primary/DESI-BH-CANDIDATE-SEARCH/wobble_imaging_3802130935635096832/data/ps1_images/cutout_024.fits",
+    "mjd": 56326.5814580308,
+    "filter": "i.00000",
+    "exptime": 45.0,
+    "seeing": null,
+    "date": "2013-02-03 13:57:17.974"
+  },
+  {
+    "index": 25,
+    "filename": "/rings.v3.skycell/1273/053/rings.v3.skycell.1273.053.wrp.i.56326_58323.fits",
+    "local": "/home/primary/DESI-BH-CANDIDATE-SEARCH/wobble_imaging_3802130935635096832/data/ps1_images/cutout_025.fits",
+    "mjd": 56326.5836384773,
+    "filter": "i.00000",
+    "exptime": 45.0,
+    "seeing": null,
+    "date": "2013-02-03 14:00:26.364"
+  },
+  {
+    "index": 10,
+    "filename": "/rings.v3.skycell/1273/053/rings.v3.skycell.1273.053.wrp.g.56336_51591.fits",
+    "local": "/home/primary/DESI-BH-CANDIDATE-SEARCH/wobble_imaging_3802130935635096832/data/ps1_images/cutout_010.fits",
+    "mjd": 56336.5163242919,
+    "filter": "g.00000",
+    "exptime": 43.0,
+    "seeing": null,
+    "date": "2013-02-13 12:23:30.419"
+  },
+  {
+    "index": 11,
+    "filename": "/rings.v3.skycell/1273/053/rings.v3.skycell.1273.053.wrp.g.56336_51785.fits",
+    "local": "/home/primary/DESI-BH-CANDIDATE-SEARCH/wobble_imaging_3802130935635096832/data/ps1_images/cutout_011.fits",
+    "mjd": 56336.5182617232,
+    "filter": "g.00000",
+    "exptime": 43.0,
+    "seeing": null,
+    "date": "2013-02-13 12:26:17.813"
+  },
+  {
+    "index": 12,
+    "filename": "/rings.v3.skycell/1273/053/rings.v3.skycell.1273.053.wrp.g.56336_52749.fits",
+    "local": "/home/primary/DESI-BH-CANDIDATE-SEARCH/wobble_imaging_3802130935635096832/data/ps1_images/cutout_012.fits",
+    "mjd": 56336.5278969677,
+    "filter": "g.00000",
+    "exptime": 43.0,
+    "seeing": null,
+    "date": "2013-02-13 12:40:10.298"
+  },
+  {
+    "index": 13,
+    "filename": "/rings.v3.skycell/1273/053/rings.v3.skycell.1273.053.wrp.g.56336_52940.fits",
+    "local": "/home/primary/DESI-BH-CANDIDATE-SEARCH/wobble_imaging_3802130935635096832/data/ps1_images/cutout_013.fits",
+    "mjd": 56336.5298085404,
+    "filter": "g.00000",
+    "exptime": 43.0,
+    "seeing": null,
+    "date": "2013-02-13 12:42:55.458"
+  },
+  {
+    "index": 26,
+    "filename": "/rings.v3.skycell/1273/053/rings.v3.skycell.1273.053.wrp.i.56710_46478.fits",
+    "local": "/home/primary/DESI-BH-CANDIDATE-SEARCH/wobble_imaging_3802130935635096832/data/ps1_images/cutout_026.fits",
+    "mjd": 56710.4651915195,
+    "filter": "i.00000",
+    "exptime": 45.0,
+    "seeing": null,
+    "date": "2014-02-22 11:09:52.547"
+  },
+  {
+    "index": 27,
+    "filename": "/rings.v3.skycell/1273/053/rings.v3.skycell.1273.053.wrp.i.56710_46610.fits",
+    "local": "/home/primary/DESI-BH-CANDIDATE-SEARCH/wobble_imaging_3802130935635096832/data/ps1_images/cutout_027.fits",
+    "mjd": 56710.4665082665,
+    "filter": "i.00000",
+    "exptime": 45.0,
+    "seeing": null,
+    "date": "2014-02-22 11:11:46.314"
+  },
+  {
+    "index": 28,
+    "filename": "/rings.v3.skycell/1273/053/rings.v3.skycell.1273.053.wrp.i.56710_47699.fits",
+    "local": "/home/primary/DESI-BH-CANDIDATE-SEARCH/wobble_imaging_3802130935635096832/data/ps1_images/cutout_028.fits",
+    "mjd": 56710.4773995639,
+    "filter": "i.00000",
+    "exptime": 45.0,
+    "seeing": null,
+    "date": "2014-02-22 11:27:27.322"
+  },
+  {
+    "index": 29,
+    "filename": "/rings.v3.skycell/1273/053/rings.v3.skycell.1273.053.wrp.i.56710_47831.fits",
+    "local": "/home/primary/DESI-BH-CANDIDATE-SEARCH/wobble_imaging_3802130935635096832/data/ps1_images/cutout_029.fits",
+    "mjd": 56710.4787156549,
+    "filter": "i.00000",
+    "exptime": 45.0,
+    "seeing": null,
+    "date": "2014-02-22 11:29:21.033"
+  },
+  {
+    "index": 30,
+    "filename": "/rings.v3.skycell/1273/053/rings.v3.skycell.1273.053.wrp.i.56710_48914.fits",
+    "local": "/home/primary/DESI-BH-CANDIDATE-SEARCH/wobble_imaging_3802130935635096832/data/ps1_images/cutout_030.fits",
+    "mjd": 56710.4895534668,
+    "filter": "i.00000",
+    "exptime": 45.0,
+    "seeing": null,
+    "date": "2014-02-22 11:44:57.420"
+  },
+  {
+    "index": 31,
+    "filename": "/rings.v3.skycell/1273/053/rings.v3.skycell.1273.053.wrp.i.56710_49046.fits",
+    "local": "/home/primary/DESI-BH-CANDIDATE-SEARCH/wobble_imaging_3802130935635096832/data/ps1_images/cutout_031.fits",
+    "mjd": 56710.4908695268,
+    "filter": "i.00000",
+    "exptime": 45.0,
+    "seeing": null,
+    "date": "2014-02-22 11:46:51.127"
+  },
+  {
+    "index": 32,
+    "filename": "/rings.v3.skycell/1273/053/rings.v3.skycell.1273.053.wrp.i.56710_50130.fits",
+    "local": "/home/primary/DESI-BH-CANDIDATE-SEARCH/wobble_imaging_3802130935635096832/data/ps1_images/cutout_032.fits",
+    "mjd": 56710.501703877,
+    "filter": "i.00000",
+    "exptime": 45.0,
+    "seeing": null,
+    "date": "2014-02-22 12:02:27.215"
+  },
+  {
+    "index": 33,
+    "filename": "/rings.v3.skycell/1273/053/rings.v3.skycell.1273.053.wrp.i.56710_50262.fits",
+    "local": "/home/primary/DESI-BH-CANDIDATE-SEARCH/wobble_imaging_3802130935635096832/data/ps1_images/cutout_033.fits",
+    "mjd": 56710.5030223592,
+    "filter": "i.00000",
+    "exptime": 45.0,
+    "seeing": null,
+    "date": "2014-02-22 12:04:21.132"
+  },
+  {
+    "index": 34,
+    "filename": "/rings.v3.skycell/1273/053/rings.v3.skycell.1273.053.wrp.i.56765_34498.fits",
+    "local": "/home/primary/DESI-BH-CANDIDATE-SEARCH/wobble_imaging_3802130935635096832/data/ps1_images/cutout_034.fits",
+    "mjd": 56765.3453923756,
+    "filter": "i.00000",
+    "exptime": 45.0,
+    "seeing": null,
+    "date": "2014-04-18 08:17:21.901"
+  },
+  {
+    "index": 35,
+    "filename": "/rings.v3.skycell/1273/053/rings.v3.skycell.1273.053.wrp.i.56765_35568.fits",
+    "local": "/home/primary/DESI-BH-CANDIDATE-SEARCH/wobble_imaging_3802130935635096832/data/ps1_images/cutout_035.fits",
+    "mjd": 56765.3560897686,
+    "filter": "i.00000",
+    "exptime": 45.0,
+    "seeing": null,
+    "date": "2014-04-18 08:32:46.156"
+  },
+  {
+    "index": 36,
+    "filename": "/rings.v3.skycell/1273/053/rings.v3.skycell.1273.053.wrp.i.56765_35699.fits",
+    "local": "/home/primary/DESI-BH-CANDIDATE-SEARCH/wobble_imaging_3802130935635096832/data/ps1_images/cutout_036.fits",
+    "mjd": 56765.3574032848,
+    "filter": "i.00000",
+    "exptime": 45.0,
+    "seeing": null,
+    "date": "2014-04-18 08:34:39.644"
+  },
+  {
+    "index": 37,
+    "filename": "/rings.v3.skycell/1273/053/rings.v3.skycell.1273.053.wrp.i.56765_36771.fits",
+    "local": "/home/primary/DESI-BH-CANDIDATE-SEARCH/wobble_imaging_3802130935635096832/data/ps1_images/cutout_037.fits",
+    "mjd": 56765.36812022,
+    "filter": "i.00000",
+    "exptime": 45.0,
+    "seeing": null,
+    "date": "2014-04-18 08:50:05.587"
+  },
+  {
+    "index": 38,
+    "filename": "/rings.v3.skycell/1273/053/rings.v3.skycell.1273.053.wrp.i.56765_36903.fits",
+    "local": "/home/primary/DESI-BH-CANDIDATE-SEARCH/wobble_imaging_3802130935635096832/data/ps1_images/cutout_038.fits",
+    "mjd": 56765.3694368798,
+    "filter": "i.00000",
+    "exptime": 45.0,
+    "seeing": null,
+    "date": "2014-04-18 08:51:59.346"
+  },
+  {
+    "index": 39,
+    "filename": "/rings.v3.skycell/1273/053/rings.v3.skycell.1273.053.wrp.i.56765_37975.fits",
+    "local": "/home/primary/DESI-BH-CANDIDATE-SEARCH/wobble_imaging_3802130935635096832/data/ps1_images/cutout_039.fits",
+    "mjd": 56765.3801517626,
+    "filter": "i.00000",
+    "exptime": 45.0,
+    "seeing": null,
+    "date": "2014-04-18 09:07:25.112"
+  },
+  {
+    "index": 40,
+    "filename": "/rings.v3.skycell/1273/053/rings.v3.skycell.1273.053.wrp.i.56765_38105.fits",
+    "local": "/home/primary/DESI-BH-CANDIDATE-SEARCH/wobble_imaging_3802130935635096832/data/ps1_images/cutout_040.fits",
+    "mjd": 56765.3814652334,
+    "filter": "i.00000",
+    "exptime": 45.0,
+    "seeing": null,
+    "date": "2014-04-18 09:09:18.596"
+  },
+  {
+    "index": 41,
+    "filename": "/rings.v3.skycell/1273/053/rings.v3.skycell.1273.053.wrp.i.56998_57841.fits",
+    "local": "/home/primary/DESI-BH-CANDIDATE-SEARCH/wobble_imaging_3802130935635096832/data/ps1_images/cutout_041.fits",
+    "mjd": 56998.578822208,
+    "filter": "i.00000",
+    "exptime": 45.0,
+    "seeing": null,
+    "date": "2014-12-07 13:53:30.239"
+  },
+  {
+    "index": 42,
+    "filename": "/rings.v3.skycell/1273/053/rings.v3.skycell.1273.053.wrp.i.56998_59219.fits",
+    "local": "/home/primary/DESI-BH-CANDIDATE-SEARCH/wobble_imaging_3802130935635096832/data/ps1_images/cutout_042.fits",
+    "mjd": 56998.5925951294,
+    "filter": "i.00000",
+    "exptime": 45.0,
+    "seeing": null,
+    "date": "2014-12-07 14:13:20.219"
+  },
+  {
+    "index": 43,
+    "filename": "/rings.v3.skycell/1273/053/rings.v3.skycell.1273.053.wrp.i.56998_60596.fits",
+    "local": "/home/primary/DESI-BH-CANDIDATE-SEARCH/wobble_imaging_3802130935635096832/data/ps1_images/cutout_043.fits",
+    "mjd": 56998.6063755029,
+    "filter": "i.00000",
+    "exptime": 45.0,
+    "seeing": null,
+    "date": "2014-12-07 14:33:10.843"
+  },
+  {
+    "index": 44,
+    "filename": "/rings.v3.skycell/1273/053/rings.v3.skycell.1273.053.wrp.i.56998_61969.fits",
+    "local": "/home/primary/DESI-BH-CANDIDATE-SEARCH/wobble_imaging_3802130935635096832/data/ps1_images/cutout_044.fits",
+    "mjd": 56998.6201030871,
+    "filter": "i.00000",
+    "exptime": 45.0,
+    "seeing": null,
+    "date": "2014-12-07 14:52:56.907"
+  },
+  {
+    "index": 45,
+    "filename": "/rings.v3.skycell/1273/053/rings.v3.skycell.1273.053.wrp.i.56999_62351.fits",
+    "local": "/home/primary/DESI-BH-CANDIDATE-SEARCH/wobble_imaging_3802130935635096832/data/ps1_images/cutout_045.fits",
+    "mjd": 56999.623921419,
+    "filter": "i.00000",
+    "exptime": 45.0,
+    "seeing": null,
+    "date": "2014-12-08 14:58:26.811"
+  },
+  {
+    "index": 46,
+    "filename": "/rings.v3.skycell/1273/053/rings.v3.skycell.1273.053.wrp.i.56999_63281.fits",
+    "local": "/home/primary/DESI-BH-CANDIDATE-SEARCH/wobble_imaging_3802130935635096832/data/ps1_images/cutout_046.fits",
+    "mjd": 56999.6332281683,
+    "filter": "i.00000",
+    "exptime": 45.0,
+    "seeing": null,
+    "date": "2014-12-08 15:11:50.914"
+  },
+  {
+    "index": 47,
+    "filename": "/rings.v3.skycell/1273/053/rings.v3.skycell.1273.053.wrp.i.56999_63348.fits",
+    "local": "/home/primary/DESI-BH-CANDIDATE-SEARCH/wobble_imaging_3802130935635096832/data/ps1_images/cutout_047.fits",
+    "mjd": 56999.6338981097,
+    "filter": "i.00000",
+    "exptime": 45.0,
+    "seeing": null,
+    "date": "2014-12-08 15:12:48.797"
+  },
+  {
+    "index": 48,
+    "filename": "/rings.v3.skycell/1273/053/rings.v3.skycell.1273.053.wrp.i.56999_64216.fits",
+    "local": "/home/primary/DESI-BH-CANDIDATE-SEARCH/wobble_imaging_3802130935635096832/data/ps1_images/cutout_048.fits",
+    "mjd": 56999.6425808719,
+    "filter": "i.00000",
+    "exptime": 45.0,
+    "seeing": null,
+    "date": "2014-12-08 15:25:18.987"
+  },
+  {
+    "index": 49,
+    "filename": "/rings.v3.skycell/1273/053/rings.v3.skycell.1273.053.wrp.i.56999_65083.fits",
+    "local": "/home/primary/DESI-BH-CANDIDATE-SEARCH/wobble_imaging_3802130935635096832/data/ps1_images/cutout_049.fits",
+    "mjd": 56999.6512387176,
+    "filter": "i.00000",
+    "exptime": 45.0,
+    "seeing": null,
+    "date": "2014-12-08 15:37:47.025"
+  }
+]

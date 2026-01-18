@@ -1,0 +1,29 @@
+{
+  "wobble_statistics": {
+    "n_measurements": 32,
+    "mjd_range": [
+      55242.4073060268,
+      56999.6512387176
+    ],
+    "baseline_years": 4.811071684300613,
+    "x_rms_mas": 16.236260682230508,
+    "y_rms_mas": 33.66527896408585,
+    "total_rms_mas": 37.376023981572274,
+    "x_range_mas": 71.8909340684295,
+    "y_range_mas": 142.0777484523157,
+    "pm_x_masyr": 4.727829624904942,
+    "pm_y_masyr": 9.188341294810222
+  },
+  "wobble_limits": {
+    "parallax_mas": 0.11894892049256606,
+    "parallax_err_mas": 0.15998485684394836,
+    "distance_pc": 1000.0,
+    "wobble_rms_mas": 37.376023981572274,
+    "wobble_rms_arcsec": 0.037376023981572276,
+    "wobble_amplitude_au": 37.376023981572274,
+    "typical_ps1_precision_mas": 100.0,
+    "wobble_detection": false,
+    "interpretation": "Consistent with measurement noise"
+  },
+  "clean_measurements": 32
+}
