@@ -8,15 +8,15 @@ A conservative, fully reproducible search for radial-velocity variability in the
 
 ## Visual Overview
 
-### Multi-Epoch Imaging
+### PS1 Centroid Wobble Animation
 
-![Multi-Epoch Panels](WOBBLE_FIGURES/multi_epoch_panels.png)
+![Wobble Animation](WOBBLE_FIGURES/wobble_star.gif)
 
-*Pan-STARRS1 multi-epoch warp images spanning 4.8 years. Red cross marks the target position.*
+*Animated visualization of PS1 centroid measurements over 4.8 years. Star marker shows current epoch; faded points show all 33 "good" observations (same-night consistency filtered). Green = g-band, red = i-band. RMS = 38.4 mas.*
 
-![Blink Animation](WOBBLE_FIGURES/blink_animation.gif)
+![Same-Night Good Data](WOBBLE_FIGURES/same_night_good_data.png)
 
-*Animated blink of 20 PS1 epochs showing the target field.*
+*Centroid positions for observations passing same-night consistency test. The ~40 mas scatter is consistent with PS1 precision for a G=17.3 source with a 0.69" neighbor.*
 
 ### Astrometric Analysis
 
@@ -28,16 +28,13 @@ A conservative, fully reproducible search for radial-velocity variability in the
 
 *2D centroid track colored by time. PS1 precision (~100 mas) insufficient to detect the ~0.9 mas Gaia excess noise.*
 
-### What the Animation Shows (Systematic-Aware Interpretation)
+### What the Animation Shows
 
-> ⚠️ **The blink animation shows systematics, not orbital wobble.**
+The animation displays centroid positions from 33 PS1 observations that pass same-night consistency filtering. The ~38 mas RMS scatter represents PS1 measurement precision, not orbital signal.
 
-The centroid wander is consistent with:
-- **Filter-dependent offsets** (g vs i bands have systematic shifts)
-- **Seeing/PSF variations** blending with the 0.69" neighbor
-- **Normal PS1 noise** (~100 mas for G=17.3)
+**Same-night consistency test:** Observations taken on the same night should give consistent centroids. Groups with >50 mas intra-night scatter or >3σ outliers are rejected.
 
-**Key test:** Centroid motion is preferentially along the neighbor direction (PA = -13.5°), suggesting when seeing worsens, the neighbor's PSF wings contaminate the target centroid.
+**Key test:** Centroid motion is 1.8× stronger along the neighbor direction (PA = -13.5°), indicating blend/seeing-driven systematics.
 
 ---
 
@@ -312,11 +309,12 @@ The mixed-filter RMS is larger than per-filter RMS due to filter-dependent syste
 
 | File | Description |
 |------|-------------|
-| `WOBBLE_FIGURES/INTERPRETATION.md` | Systematic-aware interpretation |
+| `WOBBLE_FIGURES/INTERPRETATION.md` | Methodology and interpretation |
+| `WOBBLE_FIGURES/wobble_star.gif` | Animated centroid motion (33 good obs) |
+| `WOBBLE_FIGURES/wobble_timeseries.gif` | Centroid track with trail |
+| `WOBBLE_FIGURES/same_night_consistency.png` | Same-night consistency test |
+| `WOBBLE_FIGURES/same_night_good_data.png` | Good data by filter |
 | `WOBBLE_FIGURES/neighbor_axis_projection.png` | Neighbor-axis test results |
-| `WOBBLE_FIGURES/blink_g_only.gif` | g-band only animation |
-| `WOBBLE_FIGURES/blink_i_only.gif` | i-band only animation |
-| `WOBBLE_FIGURES/blink_MIXED_FILTERS_systematics_expected.gif` | Mixed filters (with warning) |
 | `wobble_imaging_3802130935635096832/` | Source code and raw data |
 
 ---
