@@ -1,0 +1,45 @@
+{
+  "filter_statistics": {
+    "g": {
+      "n_epochs": 10,
+      "x_rms_mas": 11.746628609765105,
+      "y_rms_mas": 21.20489482602618,
+      "total_rms_mas": 24.2410983306983,
+      "x_mean_mas": -2.309080648481654,
+      "y_mean_mas": -0.6574955088296974,
+      "mjd_range": [
+        55242.4073060268,
+        56336.5298085404
+      ]
+    },
+    "i": {
+      "n_epochs": 22,
+      "x_rms_mas": 17.890395714071687,
+      "y_rms_mas": 21.393061372797963,
+      "total_rms_mas": 27.88779901150994,
+      "x_mean_mas": 1.0783247000692695,
+      "y_mean_mas": 3.913548348900423,
+      "mjd_range": [
+        55251.3559065679,
+        56999.6512387176
+      ]
+    }
+  },
+  "neighbor_info": {
+    "source_id": 3802130935634233472,
+    "separation_arcsec": 0.6873718493690258,
+    "delta_G": 2.210988998413086,
+    "direction_ra": -0.2329257083734888,
+    "direction_dec": 0.9724945317988726,
+    "pa_deg": -13.469381860827237
+  },
+  "neighbor_axis_analysis": {
+    "neighbor_pa_deg": -13.469381860827237,
+    "neighbor_sep_arcsec": 0.6873718493690258,
+    "rms_neighbor_axis_mas": 32.63867300912728,
+    "rms_orthogonal_axis_mas": 18.212199012594052,
+    "ratio_neighbor_to_ortho": 1.7921324594881196,
+    "interpretation": "Motion preferentially along neighbor axis"
+  },
+  "n_measurements": 32
+}
