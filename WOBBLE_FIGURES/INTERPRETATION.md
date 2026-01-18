@@ -36,24 +36,9 @@ Data failing this test is flagged as problematic.
 | Dec (Y) | 33.7 |
 | Total | 38.4 |
 
-### Neighbor-Axis Projection Test
-
-The Gaia-resolved neighbor lies at PA = -13.5° and separation = 0.69".
-
-| Direction | RMS (mas) |
-|-----------|-----------|
-| Along neighbor axis | 32.6 |
-| Orthogonal to neighbor | 18.2 |
-| Ratio | 1.79 |
-
-Motion is preferentially along the neighbor direction.
-
 ### Files Generated
 
 - `wobble_timeseries.gif` - Animated centroid track over 4.8 years (33 good obs)
 - `wobble_star.gif` - Star marker animation with all positions shown
 - `same_night_consistency.png` - Same-night consistency test results
 - `same_night_good_data.png` - Good data centroid positions by filter
-- `neighbor_axis_projection.png` - Neighbor-axis projection analysis
-- `centroid_track.png` - Static centroid track
-- `centroid_by_filter.png` - Per-filter centroid statistics
