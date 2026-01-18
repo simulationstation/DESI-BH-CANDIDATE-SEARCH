@@ -208,6 +208,63 @@ Two LAMOST spectra exist (ObsIDs 437513049 and 870813030). These robustly suppor
 
 ---
 
+## Wobble Imaging Analysis
+
+Multi-epoch Pan-STARRS1 imaging to search for direct astrometric wobble detection.
+
+### Data Summary
+
+| Parameter | Value |
+|-----------|-------|
+| Survey | Pan-STARRS1 |
+| Image type | Warp (single-exposure) |
+| Epochs analyzed | 32 (after cleaning) |
+| Baseline | 4.81 years |
+| Filters | g, r, i |
+
+### Centroid Measurements
+
+![Wobble Time Series](WOBBLE_FIGURES/wobble_timeseries.png)
+
+*Centroid positions over time. X and Y residuals show scatter consistent with measurement noise.*
+
+![Centroid Track](WOBBLE_FIGURES/centroid_track.png)
+
+*2D centroid track colored by time. The RMS scatter of 37 mas is within PS1 precision limits for G=17.3.*
+
+### Multi-Epoch Imaging
+
+![Multi-Epoch Panels](WOBBLE_FIGURES/multi_epoch_panels.png)
+
+*Representative PS1 warp images across the 4.8-year baseline. Red cross marks the target position.*
+
+![Blink Animation](WOBBLE_FIGURES/blink_animation.gif)
+
+*Animated blink of 20 PS1 epochs showing the target field.*
+
+### Results
+
+| Metric | Value |
+|--------|-------|
+| X RMS | 16.2 mas |
+| Y RMS | 33.7 mas |
+| Total RMS | 37.4 mas |
+| Typical PS1 precision | ~100 mas |
+| Wobble detected? | No |
+
+**Conclusion:** The PS1 multi-epoch imaging does not provide sufficient precision to detect astrometric wobble at the level implied by Gaia excess noise (~0.9 mas). The 37 mas scatter is consistent with measurement noise for a G=17.3 source. HST or AO imaging would be needed to directly resolve the wobble.
+
+### Wobble Analysis Files
+
+| File | Description |
+|------|-------------|
+| `WOBBLE_FIGURES/REPORT.md` | Full analysis report |
+| `WOBBLE_FIGURES/wobble_limits.json` | Quantitative wobble limits |
+| `WOBBLE_FIGURES/astrometry_timeseries.csv` | Centroid measurements |
+| `wobble_imaging_3802130935635096832/` | Source code and raw data |
+
+---
+
 ## Roche Geometry
 
 ### Physical Configuration (P=21.8d, M₂=2.7 M☉)
