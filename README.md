@@ -51,14 +51,37 @@ Simple flux dilution bounds the maximum blend-induced RV bias:
 
 The observed 146 km/s swing is **~6× larger** than physically possible from a 13% contaminant.
 
-### What Remains Unresolved
+### R–Z Arm Discrepancy: RESOLVED
 
-The persistent R–Z arm discrepancy (~67 km/s) indicates wavelength-dependent systematics that are not fully understood. This could arise from:
-- Differential blending (b_Z > b_R for late-M neighbors)
-- Template mismatch
-- Wavelength calibration issues
+The previously concerning R–Z arm discrepancy (~67 km/s) has been **fully explained** through per-exposure, per-camera analysis:
 
-**The most efficient next step is high-resolution spectroscopy with spatial discrimination of the two components.**
+**Root Cause Identified:**
+- Downloaded per-exposure DESI `cframe` products (EXPIDs 114768, 120194, 120449, 120450)
+- Same-night exposures (120449 & 120450, 15 minutes apart) revealed:
+  - **R-arm RVs: stable** (+39.0 vs +39.0 km/s)
+  - **Full Z-arm RVs: unstable** (+58.2 vs +23.9 km/s = 34 km/s discrepancy)
+- The instability is **localized to the sky-dominated region (9000–9800 Å)**
+
+**Solution — Trusted Window:**
+- The **Ca II triplet window (8500–9000 Å)** yields stable, repeatable RVs
+- Same-night consistency improved from 34 km/s → **2.8 km/s** (12× improvement)
+- Trusted-window RV swing: **151 km/s** (from −85.6 to +65.6 km/s)
+
+**Why Catalog RVs Were Biased:**
+- DESI catalog RVs for the same-night pair were ~25 km/s lower than trusted-window values
+- The catalog solution was pulled by the unstable sky-dominated red end of the Z-arm
+
+This resolution converts the "arm discrepancy" from a potential fatal flaw into a **localized Z-arm sky-region calibration artifact**. The candidate is **stronger** after this analysis.
+
+### Remaining Limitations
+
+While the R–Z discrepancy is explained, some limitations remain:
+
+1. **Residual systematics**: A few km/s systematic floor persists even in the trusted window (χ²ν > 1)
+2. **Sparse cadence**: Only 4 DESI epochs (two nearly simultaneous) — period not uniquely determined
+3. **Blend requires attention**: The 0.69" neighbor is real and inside the fiber; high-resolution spectroscopy needed to fully separate components
+
+**The most efficient next step is spatially resolved, high-resolution spectroscopy to separate the blended components and establish a definitive orbit.**
 
 ---
 
