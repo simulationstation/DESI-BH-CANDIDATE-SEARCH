@@ -1,0 +1,248 @@
+{
+  "consistency_threshold_mas": 50.0,
+  "night_groups": [
+    {
+      "night": 55242,
+      "filter": "g",
+      "n_obs": 2,
+      "dt_min": 13.05029635434039,
+      "x_scatter_mas": 4.800577115249378,
+      "y_scatter_mas": 11.966312897973996,
+      "total_scatter_mas": 12.893338784491581,
+      "indices": [
+        0,
+        1
+      ]
+    },
+    {
+      "night": 55251,
+      "filter": "i",
+      "n_obs": 2,
+      "dt_min": 13.213609198573977,
+      "x_scatter_mas": 2.1290366452019285,
+      "y_scatter_mas": 8.97966237758963,
+      "total_scatter_mas": 9.228604090116301,
+      "indices": [
+        2,
+        3
+      ]
+    },
+    {
+      "night": 55267,
+      "filter": "i",
+      "n_obs": 2,
+      "dt_min": 12.540414099348709,
+      "x_scatter_mas": 4.462821801691542,
+      "y_scatter_mas": 17.43121079412388,
+      "total_scatter_mas": 17.99344014308643,
+      "indices": [
+        4,
+        5
+      ]
+    },
+    {
+      "night": 55272,
+      "filter": "g",
+      "n_obs": 2,
+      "dt_min": 14.3695995840244,
+      "x_scatter_mas": 3.611201867268087,
+      "y_scatter_mas": 27.96805793531379,
+      "total_scatter_mas": 28.20023126854156,
+      "indices": [
+        6,
+        7
+      ]
+    },
+    {
+      "night": 55629,
+      "filter": "g",
+      "n_obs": 2,
+      "dt_min": 15.786819075001404,
+      "x_scatter_mas": 3230.546447715906,
+      "y_scatter_mas": 933.1680150556678,
+      "total_scatter_mas": 3362.622918968583,
+      "indices": [
+        8,
+        9
+      ]
+    },
+    {
+      "night": 55630,
+      "filter": "i",
+      "n_obs": 2,
+      "dt_min": 16.499649595934898,
+      "x_scatter_mas": 6.492363762076021,
+      "y_scatter_mas": 15.785596143561696,
+      "total_scatter_mas": 17.068562705358286,
+      "indices": [
+        10,
+        11
+      ]
+    },
+    {
+      "night": 55972,
+      "filter": "i",
+      "n_obs": 2,
+      "dt_min": 18.48165782634169,
+      "x_scatter_mas": 6.989256257110994,
+      "y_scatter_mas": 3.260217240652631,
+      "total_scatter_mas": 7.712244775927035,
+      "indices": [
+        12,
+        13
+      ]
+    },
+    {
+      "night": 55983,
+      "filter": "g",
+      "n_obs": 2,
+      "dt_min": 17.581732707330957,
+      "x_scatter_mas": 1.5105956799663676,
+      "y_scatter_mas": 2.3218264202048147,
+      "total_scatter_mas": 2.7699778399644566,
+      "indices": [
+        14,
+        15
+      ]
+    },
+    {
+      "night": 56029,
+      "filter": "g",
+      "n_obs": 2,
+      "dt_min": 16.914191180840135,
+      "x_scatter_mas": 11.762942421024116,
+      "y_scatter_mas": 10.248088755139218,
+      "total_scatter_mas": 15.60096591668412,
+      "indices": [
+        16,
+        17
+      ]
+    },
+    {
+      "night": 56326,
+      "filter": "i",
+      "n_obs": 2,
+      "dt_min": 17.87358729634434,
+      "x_scatter_mas": 3.724543431094609,
+      "y_scatter_mas": 5.355529044790612,
+      "total_scatter_mas": 6.523336195514213,
+      "indices": [
+        19,
+        21
+      ]
+    },
+    {
+      "night": 56336,
+      "filter": "g",
+      "n_obs": 2,
+      "dt_min": 16.62741676904261,
+      "x_scatter_mas": 9.548447061653496,
+      "y_scatter_mas": 1.8629095454945044,
+      "total_scatter_mas": 9.728477438114036,
+      "indices": [
+        23,
+        25
+      ]
+    },
+    {
+      "night": 56710,
+      "filter": "i",
+      "n_obs": 4,
+      "dt_min": 52.57779480423778,
+      "x_scatter_mas": 18.327680735810826,
+      "y_scatter_mas": 20.592016882189707,
+      "total_scatter_mas": 27.566919313376264,
+      "indices": [
+        26,
+        28,
+        30,
+        32
+      ]
+    },
+    {
+      "night": 56765,
+      "filter": "i",
+      "n_obs": 4,
+      "dt_min": 51.9449152238667,
+      "x_scatter_mas": 26.981795426419303,
+      "y_scatter_mas": 31.568325363974512,
+      "total_scatter_mas": 41.528020067406274,
+      "indices": [
+        34,
+        36,
+        38,
+        40
+      ]
+    },
+    {
+      "night": 56999,
+      "filter": "i",
+      "n_obs": 5,
+      "dt_min": 39.33690998121165,
+      "x_scatter_mas": 14.769807396064836,
+      "y_scatter_mas": 12.597541330816158,
+      "total_scatter_mas": 19.41250262327021,
+      "indices": [
+        45,
+        46,
+        47,
+        48,
+        49
+      ]
+    }
+  ],
+  "good_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    19,
+    21,
+    23,
+    25,
+    26,
+    28,
+    30,
+    32,
+    34,
+    36,
+    38,
+    40,
+    45,
+    46,
+    47,
+    48,
+    49
+  ],
+  "bad_indices": [
+    35,
+    37,
+    39,
+    8,
+    9
+  ],
+  "unpaired_indices": [],
+  "outlier_indices": [
+    35,
+    37,
+    39
+  ],
+  "rms_good_data": {
+    "x_mas": 18.488155873765205,
+    "y_mas": 33.674790304734174,
+    "total_mas": 38.41618681858544,
+    "n_obs": 33
+  }
+}
