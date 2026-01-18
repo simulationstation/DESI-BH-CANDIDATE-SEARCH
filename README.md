@@ -6,6 +6,30 @@ A conservative, fully reproducible search for radial-velocity variability in the
 
 ---
 
+## Visual Overview
+
+### Multi-Epoch Imaging
+
+![Multi-Epoch Panels](WOBBLE_FIGURES/multi_epoch_panels.png)
+
+*Pan-STARRS1 multi-epoch warp images spanning 4.8 years. Red cross marks the target position.*
+
+![Blink Animation](WOBBLE_FIGURES/blink_animation.gif)
+
+*Animated blink of 20 PS1 epochs showing the target field.*
+
+### Astrometric Analysis
+
+![Wobble Time Series](WOBBLE_FIGURES/wobble_timeseries.png)
+
+*Centroid positions over time from PS1 imaging. RMS scatter of 37 mas is consistent with measurement noise for G=17.3.*
+
+![Centroid Track](WOBBLE_FIGURES/centroid_track.png)
+
+*2D centroid track colored by time. PS1 precision (~100 mas) insufficient to detect the ~0.9 mas Gaia excess noise.*
+
+---
+
 ## Top Candidate: Gaia DR3 3802130935635096832
 
 | Property | Value |
@@ -117,7 +141,9 @@ Two LAMOST spectra exist (ObsIDs 437513049 and 870813030). These robustly suppor
 
 ## RV Hardening Analysis
 
-### Hardened Metrics (5 epochs)
+> **Note:** This analysis includes 1 LAMOST epoch + 4 DESI epochs. The paper treats LAMOST RVs as **non-decisive** due to internal inconsistencies across extraction methods. The primary evidence is the 4 DESI epochs alone.
+
+### Hardened Metrics (5 epochs including LAMOST)
 
 | Metric | Value | Interpretation |
 |--------|-------|----------------|
@@ -160,6 +186,8 @@ Two LAMOST spectra exist (ObsIDs 437513049 and 870813030). These robustly suppor
 ---
 
 ## Bayesian Orbital Solution (MCMC)
+
+> **Note:** This MCMC analysis was performed during early exploration but is **not included in the final paper**. With only 4 DESI epochs (two nearly simultaneous), the orbital period cannot be uniquely determined. The results below should be treated as illustrative constraints rather than definitive orbital parameters.
 
 ### Method
 
@@ -222,60 +250,30 @@ Two LAMOST spectra exist (ObsIDs 437513049 and 870813030). These robustly suppor
 
 | Property | Value | Interpretation |
 |----------|-------|----------------|
-| RUWE | 1.95 | Poor astrometric fit |
-| AEN | 0.53 mas | Astrometric excess noise |
+| RUWE | 1.954 | Poor astrometric fit (>1.4 threshold) |
+| AEN | 0.90 mas | Astrometric excess noise |
 | AEN significance | 16.5σ | Highly significant |
-| Expected wobble | 0.31 mas | Matches observed AEN |
 
-**Conclusion:** Elevated RUWE is EXPLAINED by orbital photocenter motion of the dark companion.
+**Interpretation:** The elevated RUWE and significant AEN indicate a poor single-source astrometric fit, consistent with astrometric complexity (orbital motion and/or duplicity). However, these metrics are **not uniquely diagnostic** given the resolved neighbor at 0.69". The astrometric anomaly could arise from the companion's orbital wobble, the known blend, or both.
 
 ---
 
 ## Wobble Imaging Analysis
 
-Multi-epoch Pan-STARRS1 imaging to search for direct astrometric wobble detection.
+Multi-epoch Pan-STARRS1 imaging to search for direct astrometric wobble detection. See images at top of document.
 
-### Data Summary
+### Results Summary
 
 | Parameter | Value |
 |-----------|-------|
-| Survey | Pan-STARRS1 |
-| Image type | Warp (single-exposure) |
+| Survey | Pan-STARRS1 warp images |
 | Epochs analyzed | 32 (after cleaning) |
 | Baseline | 4.81 years |
-| Filters | g, r, i |
-
-### Centroid Measurements
-
-![Wobble Time Series](WOBBLE_FIGURES/wobble_timeseries.png)
-
-*Centroid positions over time. X and Y residuals show scatter consistent with measurement noise.*
-
-![Centroid Track](WOBBLE_FIGURES/centroid_track.png)
-
-*2D centroid track colored by time. The RMS scatter of 37 mas is within PS1 precision limits for G=17.3.*
-
-### Multi-Epoch Imaging
-
-![Multi-Epoch Panels](WOBBLE_FIGURES/multi_epoch_panels.png)
-
-*Representative PS1 warp images across the 4.8-year baseline. Red cross marks the target position.*
-
-![Blink Animation](WOBBLE_FIGURES/blink_animation.gif)
-
-*Animated blink of 20 PS1 epochs showing the target field.*
-
-### Results
-
-| Metric | Value |
-|--------|-------|
-| X RMS | 16.2 mas |
-| Y RMS | 33.7 mas |
 | Total RMS | 37.4 mas |
-| Typical PS1 precision | ~100 mas |
-| Wobble detected? | No |
+| Gaia AEN | 0.90 mas |
+| Wobble detected? | **No** |
 
-**Conclusion:** The PS1 multi-epoch imaging does not provide sufficient precision to detect astrometric wobble at the level implied by Gaia excess noise (~0.9 mas). The 37 mas scatter is consistent with measurement noise for a G=17.3 source. HST or AO imaging would be needed to directly resolve the wobble.
+**Conclusion:** PS1 precision (~100 mas for G=17.3) is insufficient to detect the ~0.9 mas Gaia excess noise. HST or AO imaging would be needed for direct wobble detection.
 
 ### Wobble Analysis Files
 
@@ -289,6 +287,8 @@ Multi-epoch Pan-STARRS1 imaging to search for direct astrometric wobble detectio
 ---
 
 ## Roche Geometry
+
+> **Note:** This analysis assumes the MCMC-derived period (~21.8 days) which is not uniquely constrained. These values are illustrative.
 
 ### Physical Configuration (P=21.8d, M₂=2.7 M☉)
 
@@ -320,11 +320,15 @@ Multi-epoch Pan-STARRS1 imaging to search for direct astrometric wobble detectio
 
 ### What Remains Consistent
 
+The multi-wavelength "negative space" validation is consistent with a dark compact companion:
+
 | Companion Type | Status |
 |----------------|--------|
-| Cool WD (T < 6000 K) | Possible (~13%) |
-| **Neutron Star** | **Most likely (~50%)** |
-| Black Hole | Possible (~37%) |
+| Cool WD (T < 6000 K) | Possible |
+| Neutron Star | Possible |
+| Black Hole | Possible |
+
+> **Note:** Specific probability estimates depend on assumed priors and the uncertain orbital period. The paper classifies this as a "strong but unconfirmed" candidate without assigning definitive companion-type probabilities.
 
 ### TESS Photometry
 
@@ -1272,12 +1276,13 @@ From the paper, several limitations prevent a definitive claim:
 - **Blend cannot explain the swing:** 13% flux contaminant produces ≤26 km/s bias, not 151 km/s
 - **Gaia astrometry supports binarity:** RUWE = 1.95, AEN = 0.90 mas (16.5σ)
 
-### What Remains Unresolved
+### Remaining Limitations
 
-- **R–Z arm discrepancy:** Now EXPLAINED as Z-arm sky-region (9000-9800 Å) calibration artifact; Ca II triplet (8500-9000 Å) is stable
-- **Blend is real:** Gaia-resolved neighbor at 0.69" contaminates the fiber (but cannot explain the 151 km/s swing)
-- **Period not uniquely determined:** Only 4 DESI epochs
-- **LAMOST RVs are inconsistent:** Cannot be used for independent confirmation
+1. **Sparse DESI cadence:** Only 4 epochs (two nearly simultaneous) — period not uniquely determined
+2. **Confirmed close neighbor inside the fiber:** Blend-aware inference is mandatory
+3. **Residual systematics:** A few km/s systematic floor persists even in the trusted window
+4. **LAMOST RVs not decisive:** Internal inconsistencies across extraction methods
+5. **Gaia RUWE/AEN not uniquely diagnostic:** Could be orbital wobble, blend, or both
 
 ### Required Follow-Up
 
@@ -1291,10 +1296,13 @@ From the paper, several limitations prevent a definitive claim:
 
 ## References
 
-- DESI Collaboration (2023), arXiv:2306.06308 — DESI DR1
-- Luo et al. (2015) — LAMOST DR1
-- Eggleton (1983) — Roche lobe approximation
-- Pecaut & Mamajek (2013) — M dwarf properties
+- Abdul Karim et al. (2025), arXiv:2503.14745 — DESI DR1 Milky Way Survey
+- Gaia Collaboration et al. (2023), A&A, 674, A1 — Gaia DR3
+- Bellm et al. (2019), PASP, 131, 018002 — ZTF
+- Ricker et al. (2015), JATIS, 1, 014003 — TESS
+- Wright et al. (2010), AJ, 140, 1868 — WISE
+- Martin et al. (2005), ApJL, 619, L1 — GALEX
+- Dey et al. (2019), AJ, 157, 168 — Legacy Surveys
 
 ---
 
@@ -1310,4 +1318,4 @@ For use with publicly released DESI data. See DESI data policies for usage terms
 
 ---
 
-*Last updated 2026-01-16. All results derived from public DESI DR1 (including per-exposure cframe files), LAMOST DR7/DR10, Gaia DR3, TESS, WISE, GALEX data, and PHOENIX-ACES stellar atmosphere models.*
+*Last updated 2026-01-17. All results derived from public DESI DR1 (including per-exposure cframe files), LAMOST DR7/DR10, Gaia DR3, TESS, WISE, GALEX, ZTF data, Legacy Survey imaging, and PHOENIX-ACES stellar atmosphere models.*
