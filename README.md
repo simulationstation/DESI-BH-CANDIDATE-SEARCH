@@ -18,23 +18,11 @@ A conservative, fully reproducible search for radial-velocity variability in the
 
 *Centroid positions for observations passing same-night consistency test. The ~40 mas scatter is consistent with PS1 precision for a G=17.3 source with a 0.69" neighbor.*
 
-### Astrometric Analysis
+### Methodology
 
-![Neighbor Axis Projection](WOBBLE_FIGURES/neighbor_axis_projection.png)
-
-*Centroid projections onto the neighbor axis vs orthogonal direction. Motion is **1.8× stronger along the neighbor direction** (RMS 32.6 mas vs 18.2 mas), indicating blend/seeing-driven systematics rather than orbital wobble.*
-
-![Centroid Track](WOBBLE_FIGURES/centroid_track.png)
-
-*2D centroid track colored by time. PS1 precision (~100 mas) insufficient to detect the ~0.9 mas Gaia excess noise.*
-
-### What the Animation Shows
-
-The animation displays centroid positions from 33 PS1 observations that pass same-night consistency filtering. The ~38 mas RMS scatter represents PS1 measurement precision, not orbital signal.
+The animation displays centroid positions from 33 PS1 observations that pass same-night consistency filtering.
 
 **Same-night consistency test:** Observations taken on the same night should give consistent centroids. Groups with >50 mas intra-night scatter or >3σ outliers are rejected.
-
-**Key test:** Centroid motion is 1.8× stronger along the neighbor direction (PA = -13.5°), indicating blend/seeing-driven systematics.
 
 ---
 
@@ -275,35 +263,10 @@ Multi-epoch Pan-STARRS1 imaging to search for direct astrometric wobble detectio
 | Parameter | Value |
 |-----------|-------|
 | Survey | Pan-STARRS1 warp images |
-| Epochs analyzed | 32 (after cleaning) |
+| Good epochs | 33 (same-night consistency filtered) |
 | Baseline | 4.81 years |
-| Total RMS | 37.4 mas |
+| Total RMS | 38.4 mas |
 | Gaia AEN | 0.90 mas |
-| Wobble detected? | **No** |
-
-### Neighbor-Axis Projection Test
-
-| Direction | RMS (mas) |
-|-----------|-----------|
-| Along neighbor axis (PA=-13.5°) | 32.6 |
-| Orthogonal to neighbor | 18.2 |
-| **Ratio** | **1.79** |
-
-**Interpretation:** The centroid scatter is **1.8× stronger along the direction to the 0.69" neighbor**, strongly suggesting blend/seeing-driven centroid bias rather than orbital wobble.
-
-### Per-Filter Statistics
-
-| Filter | N epochs | Total RMS (mas) |
-|--------|----------|-----------------|
-| g | 10 | 24.2 |
-| i | 22 | 27.9 |
-| Mixed | 32 | 37.4 |
-
-The mixed-filter RMS is larger than per-filter RMS due to filter-dependent systematic offsets.
-
-### Conservative Interpretation
-
-> "The multi-epoch PS1 blink visualization shows apparent centroid wander at the tens-of-mas level, consistent with seeing/filter/blend systematics for a G≈17 source, and does not constrain Gaia-scale (≈mas) astrometric perturbations; AO imaging is required for direct wobble detection."
 
 ### Wobble Analysis Files
 
@@ -314,7 +277,6 @@ The mixed-filter RMS is larger than per-filter RMS due to filter-dependent syste
 | `WOBBLE_FIGURES/wobble_timeseries.gif` | Centroid track with trail |
 | `WOBBLE_FIGURES/same_night_consistency.png` | Same-night consistency test |
 | `WOBBLE_FIGURES/same_night_good_data.png` | Good data by filter |
-| `WOBBLE_FIGURES/neighbor_axis_projection.png` | Neighbor-axis test results |
 | `wobble_imaging_3802130935635096832/` | Source code and raw data |
 
 ---
