@@ -6,26 +6,6 @@ A conservative, fully reproducible search for radial-velocity variability in the
 
 ---
 
-## Visual Overview
-
-### PS1 Centroid Wobble Animation
-
-![Wobble Animation](WOBBLE_FIGURES/wobble_star.gif)
-
-*Animated visualization of PS1 centroid measurements over 4.8 years. Star marker shows current epoch; faded points show all 33 "good" observations (same-night consistency filtered). Green = g-band, red = i-band. RMS = 38.4 mas.*
-
-![Same-Night Good Data](WOBBLE_FIGURES/same_night_good_data.png)
-
-*Centroid positions for observations passing same-night consistency test. The ~40 mas scatter is consistent with PS1 precision for a G=17.3 source with a 0.69" neighbor.*
-
-### Methodology
-
-The animation displays centroid positions from 33 PS1 observations that pass same-night consistency filtering.
-
-**Same-night consistency test:** Observations taken on the same night should give consistent centroids. Groups with >50 mas intra-night scatter or >3σ outliers are rejected.
-
----
-
 ## Top Candidate: Gaia DR3 3802130935635096832
 
 | Property | Value |
@@ -251,33 +231,6 @@ Two LAMOST spectra exist (ObsIDs 437513049 and 870813030). These robustly suppor
 | AEN significance | 16.5σ | Highly significant |
 
 **Interpretation:** The elevated RUWE and significant AEN indicate a poor single-source astrometric fit, consistent with astrometric complexity (orbital motion and/or duplicity). However, these metrics are **not uniquely diagnostic** given the resolved neighbor at 0.69". The astrometric anomaly could arise from the companion's orbital wobble, the known blend, or both.
-
----
-
-## Wobble Imaging Analysis
-
-Multi-epoch Pan-STARRS1 imaging to search for direct astrometric wobble detection. See images at top of document.
-
-### Results Summary
-
-| Parameter | Value |
-|-----------|-------|
-| Survey | Pan-STARRS1 warp images |
-| Good epochs | 33 (same-night consistency filtered) |
-| Baseline | 4.81 years |
-| Total RMS | 38.4 mas |
-| Gaia AEN | 0.90 mas |
-
-### Wobble Analysis Files
-
-| File | Description |
-|------|-------------|
-| `WOBBLE_FIGURES/INTERPRETATION.md` | Methodology and interpretation |
-| `WOBBLE_FIGURES/wobble_star.gif` | Animated centroid motion (33 good obs) |
-| `WOBBLE_FIGURES/wobble_timeseries.gif` | Centroid track with trail |
-| `WOBBLE_FIGURES/same_night_consistency.png` | Same-night consistency test |
-| `WOBBLE_FIGURES/same_night_good_data.png` | Good data by filter |
-| `wobble_imaging_3802130935635096832/` | Source code and raw data |
 
 ---
 
